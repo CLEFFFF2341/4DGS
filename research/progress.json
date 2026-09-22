@@ -1,15 +1,16 @@
 {
   "schema": "research-progress-v1",
   "authorized_stages": [
-    0
+    0,
+    1
   ],
-  "gpu_hours_consumed": 0.02,
+  "gpu_hours_consumed": 0.09,
   "cpu_selection_hours_consumed": 0.0,
   "resource_control_slots_used": 0,
   "queue": [
     {
-      "task": "P00",
-      "status": "RUNNING"
+      "task": "P01",
+      "status": "COMPLETED"
     }
   ],
   "runs": {
@@ -24,7 +25,8 @@
     "P00/finetune_smoke": "COMPLETED",
     "P00/k1": "COMPLETED",
     "P00/k2": "PROXY_INVALID",
-    "P00/k3": "NOT_RUN"
+    "P00/k3": "NOT_RUN",
+    "P01/R0-R5": "COMPLETED"
   },
   "failures": [
     {
@@ -36,13 +38,20 @@
         "P02",
         "P03"
       ]
+    },
+    {
+      "task": "P01/evaluation_decode",
+      "type": "implementation_error_resolved",
+      "summary": "OpenCV H.264 decoding corrupted R1 and one R2 evaluation pass. Built a derived frame cache accepted only when reference PSNR matched the frozen P00 per-frame value within 1e-5, then reran R1/R2. Original outputs remain under runs/research/P01/decode_invalid/.",
+      "artifact": "research_cache/verified_gt/p00-v1-1352x1014/manifest.json",
+      "status": "RESOLVED"
     }
   ],
   "frozen_test_manifest": null,
   "git": {
-    "commit": "22e228481a2ae8ab96761e70cc457146159602c3",
+    "commit": "ae3b480f45efaa7cf92e8fd8ce1dffdac8ae1227",
     "branch": "codex/astra-experiments-20260923",
     "dirty": true,
-    "dirty_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    "dirty_diff_sha256": "7906b09fb37e0fac2e0a2f90b5a004cc033d5c77b61fd1948db3cccb371990fb"
   }
 }
