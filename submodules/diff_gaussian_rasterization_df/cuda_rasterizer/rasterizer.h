@@ -60,6 +60,11 @@ namespace CudaRasterizer
 			float* out_acc,
 			float* out_flow,
 			int* out_idx,
+			bool collect_stats,
+			float* contrib_sum,
+			float* contrib_max,
+			int* contrib_hit_count,
+			int* out_tiles_touched,
 			int* radii = nullptr,
 			bool debug = false);
 

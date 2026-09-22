@@ -54,7 +54,8 @@ def render(viewpoint_camera, pc, pipe, bg_color : torch.Tensor, timestamp=None, 
         prefiltered=False,
         min_depth=near,
         max_depth=far,
-        debug=pipe.debug
+        debug=pipe.debug,
+        collect_stats=getattr(pipe, "collect_stats", False)
     )
 
     rasterizer = GaussianRasterizer(raster_settings=raster_settings)
@@ -97,7 +98,7 @@ def render(viewpoint_camera, pc, pipe, bg_color : torch.Tensor, timestamp=None, 
         colors_precomp = override_color
 
     # Rasterize visible Gaussians to image, obtain their radii (on screen). 
-    rendered_image, radii, rendered_depth, out_flow, acc, idxs = rasterizer(
+    rasterized = rasterizer(
         means3D = means3D,
         means2D = means2D,
         dir3D = flow,
@@ -108,10 +109,15 @@ def render(viewpoint_camera, pc, pipe, bg_color : torch.Tensor, timestamp=None, 
         rotations = rotations,
         cov3D_precomp = cov3D_precomp)
 
+    if getattr(pipe, "collect_stats", False):
+        rendered_image, radii, rendered_depth, out_flow, acc, idxs, contrib_sum, contrib_max, contrib_hit_count, tiles_touched = rasterized
+    else:
+        rendered_image, radii, rendered_depth, out_flow, acc, idxs = rasterized
+
     torch.cuda.synchronize()
     # Those Gaussians that were frustum culled or had a radius of 0 were not visible.
     # They will be excluded from value updates used in the splitting criteria.
-    return {
+    result = {
             "render": rendered_image,
             "depth": rendered_depth,
             "opticalflow": out_flow,
@@ -122,3 +128,11 @@ def render(viewpoint_camera, pc, pipe, bg_color : torch.Tensor, timestamp=None, 
             "visibility_filter" : radii > 0,
             "radii": radii
             }
+    if getattr(pipe, "collect_stats", False):
+        result.update({
+            "contrib_sum": contrib_sum,
+            "contrib_max": contrib_max,
+            "contrib_hit_count": contrib_hit_count,
+            "tiles_touched": tiles_touched,
+        })
+    return result

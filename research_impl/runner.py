@@ -8,7 +8,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from .adapter import load_reference
-from .cache import build_k0
+from .cache import build_k0, build_k1
 from .checks import run_adapter_checks
 from .config import ROOT, git_provenance
 from .evaluate import benchmark_latency, evaluate, retention_check, smoke_render
@@ -75,6 +75,7 @@ def main() -> None:
     subparsers.add_parser("evaluate-reference")
     subparsers.add_parser("benchmark")
     subparsers.add_parser("build-k0")
+    subparsers.add_parser("build-k1")
     subparsers.add_parser("finetune-smoke")
     args = parser.parse_args()
     initialize_progress()
@@ -110,6 +111,10 @@ def main() -> None:
             elif args.command == "build-k0":
                 samples = json.loads((MANIFEST_ROOT / "samples.json").read_text(encoding="utf-8"))
                 result = build_k0(adapter, samples["T24"], ROOT / "research_cache" / "cut_roasted_beef")
+            elif args.command == "build-k1":
+                samples = json.loads((MANIFEST_ROOT / "samples.json").read_text(encoding="utf-8"))
+                splits = json.loads((MANIFEST_ROOT / "splits.json").read_text(encoding="utf-8"))
+                result = build_k1(adapter, scene, splits["c4"], samples["T24"], samples["statistics_resolution"], ROOT / "research_cache" / "cut_roasted_beef")
             elif args.command == "finetune-smoke":
                 samples = json.loads((MANIFEST_ROOT / "samples.json").read_text(encoding="utf-8"))
                 splits = json.loads((MANIFEST_ROOT / "splits.json").read_text(encoding="utf-8"))

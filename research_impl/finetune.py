@@ -5,11 +5,13 @@ import time
 from pathlib import Path
 
 import torch
+import diff_gaussian_rasterization_df._C as raster_extension
 
 from gaussian_renderer import render
 from utils.loss_utils import l1_loss, ssim
 
 from .adapter import load_bundle
+from .config import sha256_file, sha256_json
 from .evaluate import VideoFrameDecoder, load_ground_truth, pipeline, render_one, select_camera
 
 
@@ -25,7 +27,22 @@ def _set_position_lrs(model, checkpoint_iteration: int) -> dict[str, float]:
 
 
 def finetune_smoke(adapter, scene, camera_names: list[str], times: list[int], output: Path) -> dict:
-    output.mkdir(parents=True, exist_ok=True)
+    run_specification = {
+        "schema": "finetune-smoke-v1",
+        "checkpoint_sha256": adapter.checkpoint_sha256,
+        "camera_names": camera_names,
+        "times": times,
+        "steps": 10,
+        "extension_sha256": sha256_file(Path(raster_extension.__file__)),
+    }
+    run_key = sha256_json(run_specification)
+    output = output / run_key
+    result_path = output / "finetune_smoke.json"
+    if result_path.exists():
+        result = json.loads(result_path.read_text(encoding="utf-8"))
+        result["reused"] = True
+        return result
+    output.mkdir(parents=True, exist_ok=False)
     model = adapter.gather(range(adapter.static_count), range(adapter.dynamic_count))
     model.model.spatial_lr_scale = float(scene.cameras_extent)
     model.model.training_setup(adapter.args)
@@ -79,6 +96,8 @@ def finetune_smoke(adapter, scene, camera_names: list[str], times: list[int], ou
     reload_max_abs = float((render_one(model, check_camera) - render_one(restored, check_camera)).abs().max())
     result = {
         "status": "COMPLETED",
+        "run_key": run_key,
+        "specification": run_specification,
         "steps": 10,
         "losses": losses,
         "step_seconds": step_times,
@@ -92,6 +111,7 @@ def finetune_smoke(adapter, scene, camera_names: list[str], times: list[int], ou
         "peak_allocated_bytes": torch.cuda.max_memory_allocated(),
         "peak_reserved_bytes": torch.cuda.max_memory_reserved(),
         "bundle": bundle_metadata,
+        "reused": False,
     }
-    (output / "finetune_smoke.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
+    result_path.write_text(json.dumps(result, indent=2), encoding="utf-8")
     return result

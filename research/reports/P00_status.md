@@ -14,6 +14,7 @@
 - V={cam01,cam02}×T24 reference：48 图，PSNR 35.65164248，SSIM 0.96526255，LPIPS-Alex 0.04315178，GT MSE 0.0002800102。
 - 延迟：20 warmup 后 3×100 次；三块 wall mean 为 11.355、11.402、11.381 ms，峰值 allocated 999,419,392 bytes。
 - K0 T24 缓存：key `a168c2921438bfad56a8d7f5b2a1da673dcbbb988e70aad45fc7afe76c38adde`，243,919,918 bytes。
+- K1 真实贡献缓存：新增默认关闭的 CUDA `collect_stats` 路径，统计每点 `sum(Tα)`、`max(Tα)`、命中数与 tile touches。关闭/开启统计的图像 max abs=0；C4×T24、338×254 缓存 key `423f658eb6f72ef91610420efcc4ad9a5a25caa164258a002898e85614395b14`，177,216,930 bytes，215,728 个点至少一次非零贡献。
 - 固定点数 10 步 FT smoke：点数未变，bundle 可重载且渲染 max abs=0；峰值 allocated 2,311,789,568 bytes。
 
 ## 新发现的数据事实
@@ -22,7 +23,7 @@
 
 ## 尚未完成
 
-- K1/K2/K3 需要 rasterizer 输出真实 `T*alpha` 贡献、完整候选 ray replay 与 CSR patch 覆盖；当前 `dominent_idxs`/radii 不足，未用代理冒充。
+- K2/K3 仍需完整候选 ray replay 与 CSR patch 覆盖；当前 K1 没有把 `dominent_idxs`/radii 冒充单删或覆盖统计。
 - 16/64 rays 与双尺寸相关性诊断依赖上述统计扩展。
 - 10 步 FT 已验证训练入口，但正式 1000 步只属于后续授权阶段。
 

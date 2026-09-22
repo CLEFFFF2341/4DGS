@@ -3,7 +3,7 @@
   "authorized_stages": [
     0
   ],
-  "gpu_hours_consumed": 0.01,
+  "gpu_hours_consumed": 0.02,
   "cpu_selection_hours_consumed": 0.0,
   "resource_control_slots_used": 0,
   "queue": [
@@ -22,7 +22,7 @@
     "P00/reference_latency": "COMPLETED",
     "P00/k0": "COMPLETED",
     "P00/finetune_smoke": "COMPLETED",
-    "P00/k1": "NOT_RUN",
+    "P00/k1": "COMPLETED",
     "P00/k2": "NOT_RUN",
     "P00/k3": "NOT_RUN"
   },

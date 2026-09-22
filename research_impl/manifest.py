@@ -9,6 +9,7 @@ from typing import Iterable
 
 import torch
 import cv2
+import diff_gaussian_rasterization_df._C as raster_extension
 
 from .config import DEFAULT_MODEL, DEFAULT_SOURCE, ROOT, git_provenance, parse_namespace, sha256_file, sha256_json
 
@@ -150,7 +151,8 @@ def build_manifests(output_dir: Path, hash_images: bool = False) -> dict:
         "torch_cuda": torch.version.cuda,
         "cuda_available": torch.cuda.is_available(),
         "gpu": torch.cuda.get_device_name(0) if torch.cuda.is_available() else None,
-        "pid": os.getpid(),
+        "raster_extension_path": str(Path(raster_extension.__file__).resolve()),
+        "raster_extension_sha256": sha256_file(Path(raster_extension.__file__)),
     }
     payloads = {
         "reference.json": reference,

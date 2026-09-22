@@ -288,6 +288,10 @@ renderCUDA(
 	float* __restrict__ out_acc,
 	float* __restrict__ out_flow,
 	int* __restrict__ out_idx,
+	bool collect_stats,
+	float* __restrict__ contrib_sum,
+	float* __restrict__ contrib_max,
+	int* __restrict__ contrib_hit_count,
 	float min_depth,
 	float max_depth,
 	const float* __restrict__ depth,
@@ -389,6 +393,15 @@ renderCUDA(
 			// Eq. (3) from 3D Gaussian splatting paper.
 			for (int ch = 0; ch < CHANNELS; ch++)
 				C[ch] += features[collected_id[j] * CHANNELS + ch] * alpha * T;
+
+			if (collect_stats)
+			{
+				const int gaussian_id = collected_id[j];
+				const float weight = alpha * T;
+				atomicAdd(contrib_sum + gaussian_id, weight);
+				atomicMax(reinterpret_cast<int*>(contrib_max + gaussian_id), __float_as_int(weight));
+				atomicAdd(contrib_hit_count + gaussian_id, 1);
+			}
 			
 			// Mean depth:
 			float dep = collected_depth[j];
@@ -477,6 +490,10 @@ void FORWARD::render(
 	float* out_acc,
 	float* out_flow,
 	int* out_idx,
+	bool collect_stats,
+	float* contrib_sum,
+	float* contrib_max,
+	int* contrib_hit_count,
 	float min_depth,
 	float max_depth,
 	const float* depth,
@@ -498,6 +515,10 @@ void FORWARD::render(
 		out_acc,
 		out_flow,
 		out_idx,
+		collect_stats,
+		contrib_sum,
+		contrib_max,
+		contrib_hit_count,
 		min_depth,
 		max_depth,
 		depth,

@@ -231,6 +231,11 @@ int CudaRasterizer::Rasterizer::forward(
 	float* out_acc,
 	float* out_flow,
 	int* out_idx,
+	bool collect_stats,
+	float* contrib_sum,
+	float* contrib_max,
+	int* contrib_hit_count,
+	int* out_tiles_touched,
 	int* radii,
 	bool debug)
 {
@@ -289,6 +294,11 @@ int CudaRasterizer::Rasterizer::forward(
 		geomState.tiles_touched,
 		prefiltered
 	), debug)
+
+	if (collect_stats)
+	{
+		CHECK_CUDA(cudaMemcpy(out_tiles_touched, geomState.tiles_touched, P * sizeof(uint32_t), cudaMemcpyDeviceToDevice), debug);
+	}
 
 	// Compute prefix sum over full list of touched tile counts by Gaussians
 	// E.g., [2, 3, 0, 2, 1] -> [2, 5, 5, 7, 8]
@@ -353,6 +363,10 @@ int CudaRasterizer::Rasterizer::forward(
 		out_acc, // TODO
 		out_flow, // TODO
 		out_idx, // TODO
+		collect_stats,
+		contrib_sum,
+		contrib_max,
+		contrib_hit_count,
 		min_depth,
 		max_depth,
 		geomState.depths,
