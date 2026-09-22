@@ -76,7 +76,14 @@ def _run_one(
     final = RUN_ROOT / config_hash
     status_path = final / "status.json"
     if status_path.exists() and json.loads(status_path.read_text(encoding="utf-8")).get("status") == "COMPLETED":
-        return json.loads((final / "summary.json").read_text(encoding="utf-8"))
+        summary = json.loads((final / "summary.json").read_text(encoding="utf-8"))
+        return {
+            **summary,
+            "rule": rule,
+            "config_hash": config_hash,
+            "resources": json.loads((final / "resources.json").read_text(encoding="utf-8")),
+            "timing": json.loads((final / "timing.json").read_text(encoding="utf-8")),
+        }
     temporary = RUN_ROOT / f".{config_hash}.partial-{os.getpid()}-{time.time_ns()}"
     temporary.mkdir(parents=True, exist_ok=False)
     _write_json(temporary / "resolved_config.json", resolved)
