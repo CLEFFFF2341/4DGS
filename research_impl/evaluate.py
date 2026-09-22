@@ -3,6 +3,7 @@ from __future__ import annotations
 import csv
 import copy
 import json
+import os
 import statistics
 import time
 from pathlib import Path
@@ -19,6 +20,11 @@ from lpipsPyTorch.modules.lpips import LPIPS
 from utils.general_utils import PILtoTorch
 from utils.image_utils import psnr
 from utils.loss_utils import ssim
+
+from .config import ROOT, sha256_file
+
+
+VERIFIED_GT_ROOT = ROOT / "research_cache" / "verified_gt" / "p00-v1-1352x1014"
 
 
 def camera_name(camera: Any) -> str:
@@ -76,7 +82,10 @@ class VideoFrameDecoder:
 def load_ground_truth(camera: Any, decoders: dict[Path, VideoFrameDecoder] | None = None) -> torch.Tensor:
     path = Path(camera.image_path)
     if path.suffix.lower() == ".mp4":
-        if decoders is None:
+        cached = VERIFIED_GT_ROOT / path.stem / f"{int(camera._research_frame_index):06d}.png"
+        if cached.exists():
+            image_source = Image.open(cached)
+        elif decoders is None:
             decoder = VideoFrameDecoder(path)
             image_source = decoder.read(int(camera._research_frame_index))
             decoder.close()
@@ -89,6 +98,75 @@ def load_ground_truth(camera: Any, decoders: dict[Path, VideoFrameDecoder] | Non
         image_source = Image.open(path)
     image = PILtoTorch(image_source, camera.resolution)[:3, ...]
     return (image / camera.im_scale).clamp(0, 1).cuda()
+
+
+@torch.no_grad()
+def build_verified_ground_truth_cache(
+    reference: Any,
+    scene: Any,
+    camera_names: list[str],
+    times: list[int],
+    reference_csv: Path,
+    max_attempts: int = 5,
+) -> dict[str, Any]:
+    """Freeze decoded V×T frames only after teacher PSNR matches P00 exactly."""
+    manifest_path = VERIFIED_GT_ROOT / "manifest.json"
+    expected_csv_sha256 = sha256_file(reference_csv)
+    if manifest_path.exists():
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        if manifest.get("reference_csv_sha256") == expected_csv_sha256:
+            return manifest
+    expected_rows = list(csv.DictReader(reference_csv.open("r", encoding="utf-8")))
+    expected = {(row["camera"], int(row["timestamp"])): float(row["psnr"]) for row in expected_rows}
+    failures = []
+    for attempt in range(1, max_attempts + 1):
+        temporary = VERIFIED_GT_ROOT.parent / f".{VERIFIED_GT_ROOT.name}.partial-{os.getpid()}-{attempt}-{time.time_ns()}"
+        temporary.mkdir(parents=True, exist_ok=False)
+        rows = []
+        passed = True
+        for name in camera_names:
+            base = select_camera(scene, name, times[0])
+            video = Path(base.image_path) if Path(base.image_path).suffix.lower() == ".mp4" else Path(base.image_path).parents[1] / f"{name}.mp4"
+            decoder = VideoFrameDecoder(video)
+            (temporary / name).mkdir(parents=True, exist_ok=True)
+            try:
+                for timestamp in times:
+                    camera = select_camera(scene, name, timestamp)
+                    source = decoder.read(timestamp)
+                    resized = PILtoTorch(source, camera.resolution)[:3, ...]
+                    gt = (resized / camera.im_scale).clamp(0, 1).cuda()
+                    teacher = render_one(reference, camera)
+                    measured = float(psnr(teacher[None], gt[None]).item())
+                    target = expected[(name, timestamp)]
+                    error = abs(measured - target)
+                    rows.append({"camera": name, "timestamp": timestamp, "measured_psnr": measured, "expected_psnr": target, "absolute_error": error})
+                    if error > 1e-5:
+                        passed = False
+                        break
+                    image = gt.mul(255).round().byte().permute(1, 2, 0).cpu().numpy()
+                    Image.fromarray(image).save(temporary / name / f"{timestamp:06d}.png")
+                if not passed:
+                    break
+            finally:
+                decoder.close()
+        if passed and len(rows) == len(camera_names) * len(times):
+            manifest = {
+                "schema": "verified-ground-truth-cache-v1",
+                "reference_csv": str(reference_csv),
+                "reference_csv_sha256": expected_csv_sha256,
+                "camera_names": camera_names,
+                "times": times,
+                "psnr_tolerance": 1e-5,
+                "attempt": attempt,
+                "rows": rows,
+            }
+            (temporary / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+            temporary.replace(VERIFIED_GT_ROOT)
+            return manifest
+        failure = {"attempt": attempt, "rows": rows, "status": "DECODE_MISMATCH"}
+        (temporary / "failure.json").write_text(json.dumps(failure, indent=2), encoding="utf-8")
+        failures.append(failure)
+    raise RuntimeError(f"Unable to reproduce P00 ground truth decoding after {max_attempts} attempts: {failures}")
 
 
 def pipeline() -> SimpleNamespace:

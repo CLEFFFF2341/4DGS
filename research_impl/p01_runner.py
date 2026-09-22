@@ -13,7 +13,7 @@ import torch
 from .adapter import load_reference
 from .cache import build_k1
 from .config import ROOT, git_provenance, sha256_file, sha256_json
-from .evaluate import benchmark_latency, evaluate_against_reference, save_comparison_visualizations, smoke_render
+from .evaluate import benchmark_latency, build_verified_ground_truth_cache, evaluate_against_reference, save_comparison_visualizations, smoke_render
 from .methods.p01 import RULES, correctness_checks, select
 from .runner import gpu_lock
 
@@ -213,6 +213,13 @@ def main() -> None:
         adapter, scene = load_reference(load_cameras=True)
         cache_meta = build_k1(adapter, scene, splits["c4"], samples["T24"], samples["statistics_resolution"], CACHE_ROOT)
         cache = torch.load(cache_meta["path"], map_location="cpu")
+        verified_gt = build_verified_ground_truth_cache(
+            adapter,
+            scene,
+            splits["development"],
+            samples["T24"],
+            ROOT / "runs" / "research" / "P00" / "reference_v_t24" / "per_frame.csv",
+        )
         checks = correctness_checks(adapter, cache)
         if not checks["passed"]:
             raise RuntimeError(f"P01 correctness checks failed: {checks}")
@@ -227,6 +234,7 @@ def main() -> None:
     aggregate = {
         "status": "COMPLETED",
         "cache_key": cache_meta["key"],
+        "verified_gt": verified_gt,
         "correctness_checks": checks,
         "runs": rows,
         "jaccard_overlap": overlap,
