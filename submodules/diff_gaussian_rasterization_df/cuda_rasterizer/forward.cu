@@ -292,6 +292,9 @@ renderCUDA(
 	float* __restrict__ contrib_sum,
 	float* __restrict__ contrib_max,
 	int* __restrict__ contrib_hit_count,
+	bool collect_deletions,
+	float* __restrict__ deletion_sq_sum,
+	float* __restrict__ replay_color,
 	float min_depth,
 	float max_depth,
 	const float* __restrict__ depth,
@@ -470,6 +473,59 @@ renderCUDA(
 			out_acc[pix_id] = acc;
 		for (int ch = 0; ch < 3; ch++)
 			out_flow[ch * H * W + pix_id] = F[ch];
+
+		if (collect_deletions)
+		{
+			float total_log_transmittance = 0.0f;
+			for (int entry = (int)range.x; entry < (int)range.y; ++entry)
+			{
+				const int gaussian_id = point_list[entry];
+				const float2 xy = points_xy_image[gaussian_id];
+				const float2 d = { xy.x - pixf.x, xy.y - pixf.y };
+				const float4 con_o = conic_opacity[gaussian_id];
+				const float power = -0.5f * (con_o.x * d.x * d.x + con_o.z * d.y * d.y) - con_o.y * d.x * d.y;
+				if (power > 0.0f)
+					continue;
+				const float alpha = min(0.99f, con_o.w * expf(power));
+				if (alpha < 1.0f / 255.0f)
+					continue;
+				total_log_transmittance += log1pf(-alpha);
+			}
+
+			float suffix_color[CHANNELS];
+			for (int ch = 0; ch < CHANNELS; ++ch)
+				suffix_color[ch] = bg_color[ch];
+			float suffix_log_transmittance = 0.0f;
+			for (int entry = (int)range.y - 1; entry >= (int)range.x; --entry)
+			{
+				const int gaussian_id = point_list[entry];
+				const float2 xy = points_xy_image[gaussian_id];
+				const float2 d = { xy.x - pixf.x, xy.y - pixf.y };
+				const float4 con_o = conic_opacity[gaussian_id];
+				const float power = -0.5f * (con_o.x * d.x * d.x + con_o.z * d.y * d.y) - con_o.y * d.x * d.y;
+				if (power > 0.0f)
+					continue;
+				const float alpha = min(0.99f, con_o.w * expf(power));
+				if (alpha < 1.0f / 255.0f)
+					continue;
+				const float log_one_minus_alpha = log1pf(-alpha);
+				const float log_prefix = total_log_transmittance - suffix_log_transmittance - log_one_minus_alpha;
+				const float prefix_transmittance = min(1.0f, max(0.0f, expf(log_prefix)));
+				const float weight = prefix_transmittance * alpha;
+				float squared_error = 0.0f;
+				for (int ch = 0; ch < CHANNELS; ++ch)
+				{
+					const float color = features[gaussian_id * CHANNELS + ch];
+					const float difference = weight * (color - suffix_color[ch]);
+					squared_error += difference * difference;
+					suffix_color[ch] = alpha * color + (1.0f - alpha) * suffix_color[ch];
+				}
+				atomicAdd(deletion_sq_sum + gaussian_id, squared_error / CHANNELS);
+				suffix_log_transmittance += log_one_minus_alpha;
+			}
+			for (int ch = 0; ch < CHANNELS; ++ch)
+				replay_color[ch * H * W + pix_id] = suffix_color[ch];
+		}
 	}
 
 }
@@ -494,6 +550,9 @@ void FORWARD::render(
 	float* contrib_sum,
 	float* contrib_max,
 	int* contrib_hit_count,
+	bool collect_deletions,
+	float* deletion_sq_sum,
+	float* replay_color,
 	float min_depth,
 	float max_depth,
 	const float* depth,
@@ -519,6 +578,9 @@ void FORWARD::render(
 		contrib_sum,
 		contrib_max,
 		contrib_hit_count,
+		collect_deletions,
+		deletion_sq_sum,
+		replay_color,
 		min_depth,
 		max_depth,
 		depth,

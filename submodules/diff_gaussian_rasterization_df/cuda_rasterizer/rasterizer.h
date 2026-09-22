@@ -65,6 +65,9 @@ namespace CudaRasterizer
 			float* contrib_max,
 			int* contrib_hit_count,
 			int* out_tiles_touched,
+			bool collect_deletions,
+			float* deletion_sq_sum,
+			float* replay_color,
 			int* radii = nullptr,
 			bool debug = false);
 

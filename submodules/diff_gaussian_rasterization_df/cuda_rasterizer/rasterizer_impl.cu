@@ -236,6 +236,9 @@ int CudaRasterizer::Rasterizer::forward(
 	float* contrib_max,
 	int* contrib_hit_count,
 	int* out_tiles_touched,
+	bool collect_deletions,
+	float* deletion_sq_sum,
+	float* replay_color,
 	int* radii,
 	bool debug)
 {
@@ -367,6 +370,9 @@ int CudaRasterizer::Rasterizer::forward(
 		contrib_sum,
 		contrib_max,
 		contrib_hit_count,
+		collect_deletions,
+		deletion_sq_sum,
+		replay_color,
 		min_depth,
 		max_depth,
 		geomState.depths,

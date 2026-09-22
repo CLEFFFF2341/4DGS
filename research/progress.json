@@ -23,10 +23,21 @@
     "P00/k0": "COMPLETED",
     "P00/finetune_smoke": "COMPLETED",
     "P00/k1": "COMPLETED",
-    "P00/k2": "NOT_RUN",
+    "P00/k2": "PROXY_INVALID",
     "P00/k3": "NOT_RUN"
   },
-  "failures": [],
+  "failures": [
+    {
+      "task": "P00/k2",
+      "type": "proxy_validation_failure",
+      "summary": "No-early-stop replay does not reproduce the renderer's early-stop semantics; 61/64 deletion comparisons passed, max relative error 0.51527848, replay max abs 0.00954908.",
+      "artifact": "runs/research/P00/k2_probe.json",
+      "downstream": [
+        "P02",
+        "P03"
+      ]
+    }
+  ],
   "frozen_test_manifest": null,
   "git": {
     "commit": "22e228481a2ae8ab96761e70cc457146159602c3",

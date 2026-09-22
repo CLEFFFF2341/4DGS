@@ -14,16 +14,21 @@
 - V={cam01,cam02}×T24 reference：48 图，PSNR 35.65164248，SSIM 0.96526255，LPIPS-Alex 0.04315178，GT MSE 0.0002800102。
 - 延迟：20 warmup 后 3×100 次；三块 wall mean 为 11.355、11.402、11.381 ms，峰值 allocated 999,419,392 bytes。
 - K0 T24 缓存：key `a168c2921438bfad56a8d7f5b2a1da673dcbbb988e70aad45fc7afe76c38adde`，243,919,918 bytes。
-- K1 真实贡献缓存：新增默认关闭的 CUDA `collect_stats` 路径，统计每点 `sum(Tα)`、`max(Tα)`、命中数与 tile touches。关闭/开启统计的图像 max abs=0；C4×T24、338×254 缓存 key `423f658eb6f72ef91610420efcc4ad9a5a25caa164258a002898e85614395b14`，177,216,930 bytes，215,728 个点至少一次非零贡献。
+- K1 真实贡献缓存：新增默认关闭的 CUDA `collect_stats` 路径，统计每点 `sum(Tα)`、`max(Tα)`、命中数与 tile touches。关闭/开启统计的图像 max abs=0；C4×T24、338×254 严格缓存 key `4fc05a59e4da8d4aa216f4a73f85088c5d94a277630c2ca4579e4fde78cab9c7`，177,216,930 bytes，215,728 个点至少一次非零贡献。
 - 固定点数 10 步 FT smoke：点数未变，bundle 可重载且渲染 max abs=0；峰值 allocated 2,311,789,568 bytes。
+- K2 诊断路径：新增默认关闭的 `collect_deletions`，实现完整候选的无提前终止 replay 与解析单删 MSE。32 个固定 stable ID × 2 个时间点共 64 次暴力单删对照，61/64 通过，有限相对误差中位数 0.003995、最大值 0.515278。
 
 ## 新发现的数据事实
 
 非 cam00 目录当前只含 `000000.png`，完整 300 帧保留在同名官方 MP4。评测器不向原数据目录补写 PNG，而是复制固定相机位姿并按真实时间戳顺序解码只读 MP4。cam01 的 MP4 第 0 帧与现有 PNG 逐像素完全一致。顺序解码仍出现过一次 ffmpeg/H.264 宏块警告；所有请求帧都返回成功，因此暂记数据质量警告，后续哈希与扫描继续核验。
 
+## K2 代理判定
+
+K2 当前标记为 `PROXY_INVALID`，不能供后续 P02/P03 使用。真实 renderer 在候选点令透射率跌破 `1e-4` 时跳过该点并终止；无提前终止 replay 因而无法完全复现原图：t=0/t=149 的最大绝对误差分别为 0.008356/0.009549，超过 `1e-4` 门限。该诊断失败被保留为实验结果，而不是把近似值冒充真实单删。
+
 ## 尚未完成
 
-- K2/K3 仍需完整候选 ray replay 与 CSR patch 覆盖；当前 K1 没有把 `dominent_idxs`/radii 冒充单删或覆盖统计。
+- K2 若要解锁，需要实现严格复现 renderer 提前终止边界的 counterfactual replay；K3 仍需 CSR patch 覆盖。
 - 16/64 rays 与双尺寸相关性诊断依赖上述统计扩展。
 - 10 步 FT 已验证训练入口，但正式 1000 步只属于后续授权阶段。
 

@@ -55,7 +55,8 @@ def render(viewpoint_camera, pc, pipe, bg_color : torch.Tensor, timestamp=None, 
         min_depth=near,
         max_depth=far,
         debug=pipe.debug,
-        collect_stats=getattr(pipe, "collect_stats", False)
+        collect_stats=getattr(pipe, "collect_stats", False),
+        collect_deletions=getattr(pipe, "collect_deletions", False)
     )
 
     rasterizer = GaussianRasterizer(raster_settings=raster_settings)
@@ -109,8 +110,8 @@ def render(viewpoint_camera, pc, pipe, bg_color : torch.Tensor, timestamp=None, 
         rotations = rotations,
         cov3D_precomp = cov3D_precomp)
 
-    if getattr(pipe, "collect_stats", False):
-        rendered_image, radii, rendered_depth, out_flow, acc, idxs, contrib_sum, contrib_max, contrib_hit_count, tiles_touched = rasterized
+    if getattr(pipe, "collect_stats", False) or getattr(pipe, "collect_deletions", False):
+        rendered_image, radii, rendered_depth, out_flow, acc, idxs, contrib_sum, contrib_max, contrib_hit_count, tiles_touched, deletion_sq_sum, replay_color = rasterized
     else:
         rendered_image, radii, rendered_depth, out_flow, acc, idxs = rasterized
 
@@ -134,5 +135,10 @@ def render(viewpoint_camera, pc, pipe, bg_color : torch.Tensor, timestamp=None, 
             "contrib_max": contrib_max,
             "contrib_hit_count": contrib_hit_count,
             "tiles_touched": tiles_touched,
+        })
+    if getattr(pipe, "collect_deletions", False):
+        result.update({
+            "deletion_sq_sum": deletion_sq_sum,
+            "replay_color": replay_color,
         })
     return result

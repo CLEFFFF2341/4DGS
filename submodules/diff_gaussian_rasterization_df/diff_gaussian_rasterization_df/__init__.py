@@ -86,31 +86,32 @@ class _RasterizeGaussians(torch.autograd.Function):
             raster_settings.min_depth,
             raster_settings.max_depth,
             raster_settings.debug,
-            raster_settings.collect_stats
+            raster_settings.collect_stats,
+            raster_settings.collect_deletions
         )
 
         # Invoke C++/CUDA rasterizer
         if raster_settings.debug:
             cpu_args = cpu_deep_copy_tuple(args) # Copy them before they can be corrupted
             try:
-                num_rendered, color, radii, geomBuffer, binningBuffer, imgBuffer, depth, acc, flow, idxs, contrib_sum, contrib_max, contrib_hit_count, tiles_touched = _C.rasterize_gaussians(*args)
+                num_rendered, color, radii, geomBuffer, binningBuffer, imgBuffer, depth, acc, flow, idxs, contrib_sum, contrib_max, contrib_hit_count, tiles_touched, deletion_sq_sum, replay_color = _C.rasterize_gaussians(*args)
             except Exception as ex:
                 torch.save(cpu_args, "snapshot_fw.dump")
                 print("\nAn error occured in forward. Please forward snapshot_fw.dump for debugging.")
                 raise ex
         else:
-            num_rendered, color, radii, geomBuffer, binningBuffer, imgBuffer, depth, acc, flow, idxs, contrib_sum, contrib_max, contrib_hit_count, tiles_touched = _C.rasterize_gaussians(*args)
+            num_rendered, color, radii, geomBuffer, binningBuffer, imgBuffer, depth, acc, flow, idxs, contrib_sum, contrib_max, contrib_hit_count, tiles_touched, deletion_sq_sum, replay_color = _C.rasterize_gaussians(*args)
 
         # Keep relevant tensors for backward. flow is not used but save anyway
         ctx.raster_settings = raster_settings
         ctx.num_rendered = num_rendered
         ctx.save_for_backward(colors_precomp, means3D, scales, rotations, cov3Ds_precomp, radii, sh, geomBuffer, binningBuffer, imgBuffer, depth, acc, flow)
         
-        ctx.mark_non_differentiable(contrib_sum, contrib_max, contrib_hit_count, tiles_touched)
-        return color, radii, depth, flow, acc, idxs, contrib_sum, contrib_max, contrib_hit_count, tiles_touched
+        ctx.mark_non_differentiable(contrib_sum, contrib_max, contrib_hit_count, tiles_touched, deletion_sq_sum, replay_color)
+        return color, radii, depth, flow, acc, idxs, contrib_sum, contrib_max, contrib_hit_count, tiles_touched, deletion_sq_sum, replay_color
 
     @staticmethod
-    def backward(ctx, grad_out_color, _, grad_out_depth, grad_out_flow, grad_out_acc, grad_out_idx, _grad_sum, _grad_max, _grad_hits, _grad_tiles):
+    def backward(ctx, grad_out_color, _, grad_out_depth, grad_out_flow, grad_out_acc, grad_out_idx, _grad_sum, _grad_max, _grad_hits, _grad_tiles, _grad_deletion, _grad_replay):
 
         # Restore necessary values from context
         num_rendered = ctx.num_rendered
@@ -197,6 +198,7 @@ class GaussianRasterizationSettings(NamedTuple):
     max_depth : float
     debug : bool
     collect_stats: bool = False
+    collect_deletions: bool = False
 
 class GaussianRasterizer(nn.Module):
     def __init__(self, raster_settings):
@@ -252,4 +254,4 @@ class GaussianRasterizer(nn.Module):
             cov3D_precomp,
             raster_settings, 
         )
-        return outputs if raster_settings.collect_stats else outputs[:6]
+        return outputs if (raster_settings.collect_stats or raster_settings.collect_deletions) else outputs[:6]

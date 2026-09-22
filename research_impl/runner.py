@@ -9,7 +9,7 @@ from pathlib import Path
 
 from .adapter import load_reference
 from .cache import build_k0, build_k1
-from .checks import run_adapter_checks
+from .checks import probe_k2, run_adapter_checks
 from .config import ROOT, git_provenance
 from .evaluate import benchmark_latency, evaluate, retention_check, smoke_render
 from .finetune import finetune_smoke
@@ -72,6 +72,7 @@ def main() -> None:
     subparsers.add_parser("smoke")
     subparsers.add_parser("retention-check")
     subparsers.add_parser("adapter-checks")
+    subparsers.add_parser("probe-k2")
     subparsers.add_parser("evaluate-reference")
     subparsers.add_parser("benchmark")
     subparsers.add_parser("build-k0")
@@ -97,6 +98,10 @@ def main() -> None:
                 result = retention_check(adapter, scene, "cam03", 149, RUN_ROOT / "retention_check.json")
             elif args.command == "adapter-checks":
                 result = run_adapter_checks(adapter, scene, RUN_ROOT)
+            elif args.command == "probe-k2":
+                samples = json.loads((MANIFEST_ROOT / "samples.json").read_text(encoding="utf-8"))
+                splits = json.loads((MANIFEST_ROOT / "splits.json").read_text(encoding="utf-8"))
+                result = probe_k2(adapter, scene, splits["c4"][0], [0, 149], samples["statistics_resolution"], RUN_ROOT / "k2_probe.json")
             elif args.command == "evaluate-reference":
                 samples = json.loads((MANIFEST_ROOT / "samples.json").read_text(encoding="utf-8"))
                 splits = json.loads((MANIFEST_ROOT / "splits.json").read_text(encoding="utf-8"))

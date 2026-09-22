@@ -32,7 +32,7 @@ std::function<char*(size_t N)> resizeFunctional(torch::Tensor& t) {
     return lambda;
 }
 
-std::tuple<int, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor>
+std::tuple<int, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor>
 RasterizeGaussiansCUDA(
 	const torch::Tensor& background,
 	const torch::Tensor& means3D,
@@ -58,7 +58,8 @@ RasterizeGaussiansCUDA(
 	const float min_depth,
 	const float max_depth,
 	const bool debug,
-	const bool collect_stats)
+	const bool collect_stats,
+	const bool collect_deletions)
 {
   if (means3D.ndimension() != 2 || means3D.size(1) != 3) {
     AT_ERROR("means3D must have dimensions (num_points, 3)");
@@ -81,6 +82,8 @@ RasterizeGaussiansCUDA(
   torch::Tensor contrib_max = collect_stats ? torch::zeros({P}, float_opts) : torch::empty({0}, float_opts);
   torch::Tensor contrib_hit_count = collect_stats ? torch::zeros({P}, int_opts) : torch::empty({0}, int_opts);
   torch::Tensor tiles_touched = collect_stats ? torch::zeros({P}, int_opts) : torch::empty({0}, int_opts);
+  torch::Tensor deletion_sq_sum = collect_deletions ? torch::zeros({P}, float_opts) : torch::empty({0}, float_opts);
+  torch::Tensor replay_color = collect_deletions ? torch::zeros({NUM_CHANNELS, H, W}, float_opts) : torch::empty({0}, float_opts);
   
   torch::Device device(torch::kCUDA);
   torch::TensorOptions options(torch::kByte);
@@ -136,10 +139,13 @@ RasterizeGaussiansCUDA(
 		collect_stats ? contrib_max.contiguous().data<float>() : nullptr,
 		collect_stats ? contrib_hit_count.contiguous().data<int>() : nullptr,
 		collect_stats ? tiles_touched.contiguous().data<int>() : nullptr,
+		collect_deletions,
+		collect_deletions ? deletion_sq_sum.contiguous().data<float>() : nullptr,
+		collect_deletions ? replay_color.contiguous().data<float>() : nullptr,
 		radii.contiguous().data<int>(),
 		debug);
   }
-  return std::make_tuple(rendered, out_color, radii, geomBuffer, binningBuffer, imgBuffer, out_depth, out_acc, out_flow, out_idx, contrib_sum, contrib_max, contrib_hit_count, tiles_touched);
+  return std::make_tuple(rendered, out_color, radii, geomBuffer, binningBuffer, imgBuffer, out_depth, out_acc, out_flow, out_idx, contrib_sum, contrib_max, contrib_hit_count, tiles_touched, deletion_sq_sum, replay_color);
 }
 
 std::tuple<torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor>
