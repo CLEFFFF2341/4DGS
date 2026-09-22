@@ -1,0 +1,157 @@
+[
+  {
+    "path": "Papers\\4C4D 4 Camera 4D Gaussian Splatting.pdf",
+    "bytes": 9802691,
+    "sha256": "2de00d26c90532ed734e36ff44ffc8a8976c36df77937640078a0fbb4a58b2ab"
+  },
+  {
+    "path": "Papers\\4DGS.pdf",
+    "bytes": 5973035,
+    "sha256": "3314db44b84cbb0b21e00ad262fc3954de660fb0408c15f6d85267589c12f58a"
+  },
+  {
+    "path": "Papers\\CC-4DGS Computational Deformation and.pdf",
+    "bytes": 5668741,
+    "sha256": "6ee98bb5339e4cf9a793d7e7b8ab3296bcf3eee35b03b71ca95901a6154593b7"
+  },
+  {
+    "path": "Papers\\Compact 3D Gaussian Representation for Radiance Field.pdf",
+    "bytes": 11659801,
+    "sha256": "c7b9e5b8362dc60e9ae6910472b11c34993dc7b756247e36cbf85ae5fad297ac"
+  },
+  {
+    "path": "Papers\\Fully Explicit Dynamic Gaussian Splatting — Ex4DGS.pdf",
+    "bytes": 42351774,
+    "sha256": "c7869dd23dbfb8c7a420d5d9aa8e41dbfa6d52fd8c92fa0dc7a7bc029f9bc41f"
+  },
+  {
+    "path": "Papers\\Gaussian Herding across Pens An Optimal Transport.pdf",
+    "bytes": 15634506,
+    "sha256": "ee710832f1073f0d59b9a887daadd7f2564e1b7ee00f9ef199bb69f99bc179ac"
+  },
+  {
+    "path": "Papers\\GaussianPOP Principled Simplification Framework for.pdf",
+    "bytes": 30424727,
+    "sha256": "7dfe7ed0f6075cf1845175a93ad332eccb7b9044057066ddd8d7ab86de190eff"
+  },
+  {
+    "path": "Papers\\GaussianSpa An “Optimizing-Sparsifying” Simplification Framework for.pdf",
+    "bytes": 39043666,
+    "sha256": "f06a9b61b5966f8fd72b9b3d6fdc9c374a765d22748f428f87ed37804fd0671e"
+  },
+  {
+    "path": "Papers\\Light4GS Lightweight Compact 4D Gaussian.pdf",
+    "bytes": 12804382,
+    "sha256": "69a9260e97a86a2c3c255947346d117b05bb6a9c4b2bff297f9130bcaf7fd875"
+  },
+  {
+    "path": "Papers\\LightGaussian Unbounded 3D Gaussian Compression.pdf",
+    "bytes": 12954089,
+    "sha256": "803219bf205d0142621b1ac5339f8d918d3f883f814559f6336b8bfdec5ca634"
+  },
+  {
+    "path": "Papers\\LP-3DGS Learning to Prune 3D Gaussian Splatting.pdf",
+    "bytes": 15919450,
+    "sha256": "f80023aaedf7f77850ec4246cc464cd0072e14fdd2f59cd34f66d25f1705c50c"
+  },
+  {
+    "path": "Papers\\MaskGaussian Adaptive 3D Gaussian Representation from Probabilistic Masks.pdf",
+    "bytes": 10045085,
+    "sha256": "dbe25ff9fe89124095a03eb81bb14baa6ef3af129d3299f45d6dca6ea245b47b"
+  },
+  {
+    "path": "Papers\\MEGA Memory-Efficient 4D Gaussian Splatting for Dynamic Scenes.pdf",
+    "bytes": 4520828,
+    "sha256": "4b9728352dc56ae912b769324d982941ace7708c654510a0319b124066dcfd54"
+  },
+  {
+    "path": "Papers\\Mini-Splatting Representing Scenes with a.pdf",
+    "bytes": 9764042,
+    "sha256": "11debfff82395f3d87aa4aa799d1e2bfc4cadab13e4d06ca7ce564735716fdae"
+  },
+  {
+    "path": "Papers\\OPTIMIZED MINIMAL 4D GAUSSIAN SPLATTING.pdf",
+    "bytes": 11739854,
+    "sha256": "9be952530a08865140199da94c8201ee877f77364ff641d436ae0b21c8668002"
+  },
+  {
+    "path": "Papers\\PD-4DGS Progressive Decomposition of 4D Gaussian.pdf",
+    "bytes": 3402059,
+    "sha256": "ced7c19778601f15bf7362d45b63e28e54cbe104a342a74c479f803f18417667"
+  },
+  {
+    "path": "Papers\\PUP 3D-GS Principled Uncertainty Pruning.pdf",
+    "bytes": 12320402,
+    "sha256": "e03af16464f8d5471c979ede806d2c8f8ad87084af84e6ace573025631c2e2d2"
+  },
+  {
+    "path": "Papers\\RadSplat Radiance Field-Informed Gaussian Splatting for Robust Real-Time.pdf",
+    "bytes": 15059485,
+    "sha256": "a5a3c58ae88f74037b66cc84c737319c58dadf11246a747f2bd9fe2ab43158b1"
+  },
+  {
+    "path": "Papers\\ReconDrive Fast Feed-Forward 4D Gaussian.pdf",
+    "bytes": 17211682,
+    "sha256": "e221ca126a263b5926f32d78391cac40737353266248c453d801aebca9d54101"
+  },
+  {
+    "path": "Papers\\SafeguardGS 3D Gaussian Primitive Pruning While Avoiding Catastrophic.pdf",
+    "bytes": 39244142,
+    "sha256": "93bc711a120b35741abee7c7c14faf6f47d2a7e00fedfbea1227b3d753ca2b85"
+  },
+  {
+    "path": "Papers\\Speedy-Splat Fast 3D Gaussian Splatting with.pdf",
+    "bytes": 4418872,
+    "sha256": "c4fa061f4a981fb4ab62f9d152b04c725b8c5f9986f3c1d44fd3d25b12b227bb"
+  },
+  {
+    "path": "Papers\\SVR-GS Spatially Variant Regularization for Probabilistic Masks in.pdf",
+    "bytes": 17632648,
+    "sha256": "d437131bb609267e3008630662c0afd657dea62650cd0b6e8455a6717938e182"
+  },
+  {
+    "path": "Papers\\SWIFT4D ADAPTIVE DIVIDE-AND-CONQUER.pdf",
+    "bytes": 25734191,
+    "sha256": "b0cd67044098c4b05616fa1d456ea02f57e16f9d6aa3ed83043eb0a59cabc3c7"
+  },
+  {
+    "path": "Papers\\TAMING 3DGS HIGH-QUALITY RADIANCE FIELDS WITH.pdf",
+    "bytes": 41477637,
+    "sha256": "ebb0fc193915f8455b8784c47e33d034df548e9c1b8dfddaf62dcbd113c44a04"
+  },
+  {
+    "path": "Papers\\Temporal Smoothness-Aware Rate-Distortion.pdf",
+    "bytes": 48350287,
+    "sha256": "7fbe8c334ebe2b16fc1664e2286ed0e704bab3377864474a9792b9280fb4a2ba"
+  },
+  {
+    "path": "Papers\\Temporally Compressed 3D Gaussian.pdf",
+    "bytes": 4236472,
+    "sha256": "b05173e0e6eb82e810c9141ffc3ca406d663969b495108a1350420b0086ec9b4"
+  },
+  {
+    "path": "Papers\\Trim 3D Gaussian Splatting for Accurate Geometry.pdf",
+    "bytes": 18292043,
+    "sha256": "f4c20c6d4b013065c9a92d69a0468f6e5fee18dbe7bf9b57dad9c375acb0958a"
+  },
+  {
+    "path": "Papers\\Trimming the Fat Efficient Compression of.pdf",
+    "bytes": 3486359,
+    "sha256": "5013c8dc4b8ecea66274a1f32a646366c6403b5f97df5c529e5ced1cd58f71b9"
+  },
+  {
+    "path": "Papers\\UNCERTAINTY MATTERS IN DYNAMIC GAUSSIAN.pdf",
+    "bytes": 13199114,
+    "sha256": "9cedc4830e367184ebee906188bc7ad37c7b3cdc534062a37c7e256f9ca106da"
+  },
+  {
+    "path": "research\\sources\\4DGC.pdf",
+    "bytes": 8860680,
+    "sha256": "aa3f851a5c3090ced0ab437d4f5b656e5eb929cb83671d66afb1e1f2301d9644"
+  },
+  {
+    "path": "research\\sources\\Lazier_Than_Lazy_Greedy.pdf",
+    "bytes": 394505,
+    "sha256": "ad10595b737ccc27a6d4d3f7d0e58c8f97feffbd46ae393965dbaeb537a653e9"
+  }
+]

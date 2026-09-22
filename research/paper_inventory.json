@@ -1,0 +1,147 @@
+[
+  {
+    "pdf": "Papers\\4C4D 4 Camera 4D Gaussian Splatting.pdf",
+    "text": "research\\paper_text\\4C4D 4 Camera 4D Gaussian Splatting.txt",
+    "pages": 16
+  },
+  {
+    "pdf": "Papers\\4DGS.pdf",
+    "text": "research\\paper_text\\4DGS.txt",
+    "pages": 14
+  },
+  {
+    "pdf": "Papers\\CC-4DGS Computational Deformation and.pdf",
+    "text": "research\\paper_text\\CC-4DGS Computational Deformation and.txt",
+    "pages": 16
+  },
+  {
+    "pdf": "Papers\\Compact 3D Gaussian Representation for Radiance Field.pdf",
+    "text": "research\\paper_text\\Compact 3D Gaussian Representation for Radiance Field.txt",
+    "pages": 14
+  },
+  {
+    "pdf": "Papers\\Fully Explicit Dynamic Gaussian Splatting — Ex4DGS.pdf",
+    "text": "research\\paper_text\\Fully Explicit Dynamic Gaussian Splatting — Ex4DGS.txt",
+    "pages": 19
+  },
+  {
+    "pdf": "Papers\\Gaussian Herding across Pens An Optimal Transport.pdf",
+    "text": "research\\paper_text\\Gaussian Herding across Pens An Optimal Transport.txt",
+    "pages": 26
+  },
+  {
+    "pdf": "Papers\\GaussianPOP Principled Simplification Framework for.pdf",
+    "text": "research\\paper_text\\GaussianPOP Principled Simplification Framework for.txt",
+    "pages": 14
+  },
+  {
+    "pdf": "Papers\\GaussianSpa An “Optimizing-Sparsifying” Simplification Framework for.pdf",
+    "text": "research\\paper_text\\GaussianSpa An “Optimizing-Sparsifying” Simplification Framework for.txt",
+    "pages": 14
+  },
+  {
+    "pdf": "Papers\\Light4GS Lightweight Compact 4D Gaussian.pdf",
+    "text": "research\\paper_text\\Light4GS Lightweight Compact 4D Gaussian.txt",
+    "pages": 14
+  },
+  {
+    "pdf": "Papers\\LightGaussian Unbounded 3D Gaussian Compression.pdf",
+    "text": "research\\paper_text\\LightGaussian Unbounded 3D Gaussian Compression.txt",
+    "pages": 19
+  },
+  {
+    "pdf": "Papers\\LP-3DGS Learning to Prune 3D Gaussian Splatting.pdf",
+    "text": "research\\paper_text\\LP-3DGS Learning to Prune 3D Gaussian Splatting.txt",
+    "pages": 16
+  },
+  {
+    "pdf": "Papers\\MaskGaussian Adaptive 3D Gaussian Representation from Probabilistic Masks.pdf",
+    "text": "research\\paper_text\\MaskGaussian Adaptive 3D Gaussian Representation from Probabilistic Masks.txt",
+    "pages": 14
+  },
+  {
+    "pdf": "Papers\\MEGA Memory-Efficient 4D Gaussian Splatting for Dynamic Scenes.pdf",
+    "text": "research\\paper_text\\MEGA Memory-Efficient 4D Gaussian Splatting for Dynamic Scenes.txt",
+    "pages": 15
+  },
+  {
+    "pdf": "Papers\\Mini-Splatting Representing Scenes with a.pdf",
+    "text": "research\\paper_text\\Mini-Splatting Representing Scenes with a.txt",
+    "pages": 25
+  },
+  {
+    "pdf": "Papers\\OPTIMIZED MINIMAL 4D GAUSSIAN SPLATTING.pdf",
+    "text": "research\\paper_text\\OPTIMIZED MINIMAL 4D GAUSSIAN SPLATTING.txt",
+    "pages": 17
+  },
+  {
+    "pdf": "Papers\\PD-4DGS Progressive Decomposition of 4D Gaussian.pdf",
+    "text": "research\\paper_text\\PD-4DGS Progressive Decomposition of 4D Gaussian.txt",
+    "pages": 11
+  },
+  {
+    "pdf": "Papers\\PUP 3D-GS Principled Uncertainty Pruning.pdf",
+    "text": "research\\paper_text\\PUP 3D-GS Principled Uncertainty Pruning.txt",
+    "pages": 16
+  },
+  {
+    "pdf": "Papers\\RadSplat Radiance Field-Informed Gaussian Splatting for Robust Real-Time.pdf",
+    "text": "research\\paper_text\\RadSplat Radiance Field-Informed Gaussian Splatting for Robust Real-Time.txt",
+    "pages": 11
+  },
+  {
+    "pdf": "Papers\\ReconDrive Fast Feed-Forward 4D Gaussian.pdf",
+    "text": "research\\paper_text\\ReconDrive Fast Feed-Forward 4D Gaussian.txt",
+    "pages": 18
+  },
+  {
+    "pdf": "Papers\\SafeguardGS 3D Gaussian Primitive Pruning While Avoiding Catastrophic.pdf",
+    "text": "research\\paper_text\\SafeguardGS 3D Gaussian Primitive Pruning While Avoiding Catastrophic.txt",
+    "pages": 19
+  },
+  {
+    "pdf": "Papers\\Speedy-Splat Fast 3D Gaussian Splatting with.pdf",
+    "text": "research\\paper_text\\Speedy-Splat Fast 3D Gaussian Splatting with.txt",
+    "pages": 14
+  },
+  {
+    "pdf": "Papers\\SVR-GS Spatially Variant Regularization for Probabilistic Masks in.pdf",
+    "text": "research\\paper_text\\SVR-GS Spatially Variant Regularization for Probabilistic Masks in.txt",
+    "pages": 9
+  },
+  {
+    "pdf": "Papers\\SWIFT4D ADAPTIVE DIVIDE-AND-CONQUER.pdf",
+    "text": "research\\paper_text\\SWIFT4D ADAPTIVE DIVIDE-AND-CONQUER.txt",
+    "pages": 14
+  },
+  {
+    "pdf": "Papers\\TAMING 3DGS HIGH-QUALITY RADIANCE FIELDS WITH.pdf",
+    "text": "research\\paper_text\\TAMING 3DGS HIGH-QUALITY RADIANCE FIELDS WITH.txt",
+    "pages": 13
+  },
+  {
+    "pdf": "Papers\\Temporal Smoothness-Aware Rate-Distortion.pdf",
+    "text": "research\\paper_text\\Temporal Smoothness-Aware Rate-Distortion.txt",
+    "pages": 31
+  },
+  {
+    "pdf": "Papers\\Temporally Compressed 3D Gaussian.pdf",
+    "text": "research\\paper_text\\Temporally Compressed 3D Gaussian.txt",
+    "pages": 14
+  },
+  {
+    "pdf": "Papers\\Trim 3D Gaussian Splatting for Accurate Geometry.pdf",
+    "text": "research\\paper_text\\Trim 3D Gaussian Splatting for Accurate Geometry.txt",
+    "pages": 14
+  },
+  {
+    "pdf": "Papers\\Trimming the Fat Efficient Compression of.pdf",
+    "text": "research\\paper_text\\Trimming the Fat Efficient Compression of.txt",
+    "pages": 18
+  },
+  {
+    "pdf": "Papers\\UNCERTAINTY MATTERS IN DYNAMIC GAUSSIAN.pdf",
+    "text": "research\\paper_text\\UNCERTAINTY MATTERS IN DYNAMIC GAUSSIAN.txt",
+    "pages": 27
+  }
+]

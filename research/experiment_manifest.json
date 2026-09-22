@@ -1,0 +1,162 @@
+[
+  {
+    "id": "P01",
+    "name": "可复用标量与采样基线",
+    "type": "A",
+    "prompt": "prompts/P01_score_baselines.md",
+    "stage1_rows": 6,
+    "cache": "K0,K1"
+  },
+  {
+    "id": "P02",
+    "name": "单删除反事实误差迁移",
+    "type": "A",
+    "prompt": "prompts/P02_counterfactual_error.md",
+    "stage1_rows": 1,
+    "cache": "K2"
+  },
+  {
+    "id": "P03",
+    "name": "时间聚合与短暂事件诊断",
+    "type": "B",
+    "prompt": "prompts/P03_temporal_aggregation.md",
+    "stage1_rows": 3,
+    "cache": "K2"
+  },
+  {
+    "id": "P04",
+    "name": "饱和时空覆盖集合选择",
+    "type": "C",
+    "prompt": "prompts/P04_saturating_coverage.md",
+    "stage1_rows": 2,
+    "cache": "K3"
+  },
+  {
+    "id": "P05",
+    "name": "轨迹原型代表性选择",
+    "type": "B",
+    "prompt": "prompts/P05_trajectory_prototypes.md",
+    "stage1_rows": 2,
+    "cache": "K0,K1,K4"
+  },
+  {
+    "id": "P06",
+    "name": "最差时间段约束的预算分配",
+    "type": "C",
+    "prompt": "prompts/P06_worst_time_allocation.md",
+    "stage1_rows": 2,
+    "cache": "K2"
+  },
+  {
+    "id": "P07",
+    "name": "删点后重估的因果对照",
+    "type": "A",
+    "prompt": "prompts/P07_iterative_recalibration.md",
+    "stage1_rows": 2,
+    "cache": "K2，每轮失效重建"
+  },
+  {
+    "id": "P08",
+    "name": "联合删除的颜色与遮挡交互",
+    "type": "C",
+    "prompt": "prompts/P08_joint_deletion.md",
+    "stage1_rows": 2,
+    "cache": "K2,K3,K5"
+  },
+  {
+    "id": "P09",
+    "name": "邻居补偿可恢复性选择",
+    "type": "C",
+    "prompt": "prompts/P09_neighbor_recoverability.md",
+    "stage1_rows": 2,
+    "cache": "K2,K3,K4,K5"
+  },
+  {
+    "id": "P10",
+    "name": "消失后重现的事件保护诊断",
+    "type": "B",
+    "prompt": "prompts/P10_reappearance_guard.md",
+    "stage1_rows": 2,
+    "cache": "K1,K2,K4"
+  },
+  {
+    "id": "P11",
+    "name": "可恢复的定额掩码优化迁移",
+    "type": "A",
+    "prompt": "prompts/P11_learned_budget_gate.md",
+    "stage1_rows": 3,
+    "cache": "K2,K6，训练后全失效"
+  },
+  {
+    "id": "P12",
+    "name": "静动态容量分配诊断",
+    "type": "B",
+    "prompt": "prompts/P12_static_dynamic_allocation.md",
+    "stage1_rows": 3,
+    "cache": "K2"
+  },
+  {
+    "id": "P13",
+    "name": "轨迹一致的矩匹配合并迁移",
+    "type": "A",
+    "prompt": "prompts/P13_trajectory_merge.md",
+    "stage1_rows": 2,
+    "cache": "K0,K2,K4"
+  },
+  {
+    "id": "P14",
+    "name": "动态轨迹向线性静态表示回收",
+    "type": "C",
+    "prompt": "prompts/P14_dynamic_to_linear.md",
+    "stage1_rows": 2,
+    "cache": "K0,K1,K4"
+  },
+  {
+    "id": "P15",
+    "name": "自适应轨迹关键帧迁移",
+    "type": "A",
+    "prompt": "prompts/P15_adaptive_keyframes.md",
+    "stage1_rows": 2,
+    "cache": "K0,K4"
+  },
+  {
+    "id": "P16",
+    "name": "Haar轨迹压缩迁移",
+    "type": "A",
+    "prompt": "prompts/P16_haar_motion.md",
+    "stage1_rows": 2,
+    "cache": "K0"
+  },
+  {
+    "id": "P17",
+    "name": "跨轨迹共享低秩运动基",
+    "type": "A",
+    "prompt": "prompts/P17_shared_motion_basis.md",
+    "stage1_rows": 2,
+    "cache": "K0,K4"
+  },
+  {
+    "id": "P18",
+    "name": "受切换约束的时间活动集合",
+    "type": "C",
+    "prompt": "prompts/P18_temporal_active_set.md",
+    "stage1_rows": 2,
+    "cache": "K2,K6"
+  },
+  {
+    "id": "P19",
+    "name": "按实际资源成本选择",
+    "type": "C",
+    "prompt": "prompts/P19_resource_budget.md",
+    "stage1_rows": 3,
+    "cache": "K0,K1,K2"
+  },
+  {
+    "id": "P20",
+    "name": "按视时敏感度分配SH精度",
+    "type": "A",
+    "prompt": "prompts/P20_attribute_rate_allocation.md",
+    "stage1_rows": 2,
+    "cache": "K0,K1,K3"
+  }
+]

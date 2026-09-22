@@ -168,3 +168,13 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 .vscode
+
+# Local research assets and generated experiment state
+data/
+pretrained/
+Papers/
+tools/
+runs/
+research_cache/
+research/paper_text/
+research/sources/
