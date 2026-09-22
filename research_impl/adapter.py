@@ -202,3 +202,37 @@ def load_reference(
         args=args,
     )
     return adapter, scene
+
+
+def load_bundle(directory: Path, args: Any) -> ModelAdapter:
+    metadata = json.loads((directory / "bundle.json").read_text(encoding="utf-8"))
+    static_path = directory / "point_cloud.ply"
+    dynamic_path = directory / "dynamic_point_cloud.ply"
+    if sha256_file(static_path) != metadata["point_cloud_sha256"]:
+        raise RuntimeError(f"Static PLY checksum mismatch: {static_path}")
+    if sha256_file(dynamic_path) != metadata["dynamic_point_cloud_sha256"]:
+        raise RuntimeError(f"Dynamic PLY checksum mismatch: {dynamic_path}")
+    cls = getmodel(args.model)
+    model = cls(
+        args.sh_degree,
+        args.duration,
+        args.time_interval,
+        args.time_pad,
+        interp_type=args.interp_type,
+        rot_interp_type=args.rot_interp_type,
+        time_pad_type=args.time_pad_type,
+        var_pad=args.var_pad,
+        kernel_size=args.kernel_size,
+    )
+    model.load_ply(str(static_path))
+    stable = np.load(directory / "stable_ids.npz")
+    adapter = ModelAdapter(
+        model=model,
+        checkpoint_sha256=metadata["checkpoint_sha256"],
+        static_rows=stable["static_rows"],
+        dynamic_rows=stable["dynamic_rows"],
+        args=args,
+    )
+    if adapter.static_count != metadata["static_count"] or adapter.dynamic_count != metadata["dynamic_count"]:
+        raise RuntimeError("Bundle count mismatch")
+    return adapter

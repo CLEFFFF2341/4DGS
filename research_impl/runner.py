@@ -9,8 +9,10 @@ from pathlib import Path
 
 from .adapter import load_reference
 from .cache import build_k0
+from .checks import run_adapter_checks
 from .config import ROOT, git_provenance
-from .evaluate import evaluate, retention_check, smoke_render
+from .evaluate import benchmark_latency, evaluate, retention_check, smoke_render
+from .finetune import finetune_smoke
 from .manifest import build_manifests
 from .oracle import run_oracle_suite
 
@@ -69,8 +71,11 @@ def main() -> None:
     subparsers.add_parser("audit")
     subparsers.add_parser("smoke")
     subparsers.add_parser("retention-check")
+    subparsers.add_parser("adapter-checks")
     subparsers.add_parser("evaluate-reference")
+    subparsers.add_parser("benchmark")
     subparsers.add_parser("build-k0")
+    subparsers.add_parser("finetune-smoke")
     args = parser.parse_args()
     initialize_progress()
 
@@ -89,13 +94,26 @@ def main() -> None:
                 result = smoke_render(adapter, scene, ["cam03"], [0, 149], RUN_ROOT / "smoke")
             elif args.command == "retention-check":
                 result = retention_check(adapter, scene, "cam03", 149, RUN_ROOT / "retention_check.json")
+            elif args.command == "adapter-checks":
+                result = run_adapter_checks(adapter, scene, RUN_ROOT)
             elif args.command == "evaluate-reference":
                 samples = json.loads((MANIFEST_ROOT / "samples.json").read_text(encoding="utf-8"))
                 splits = json.loads((MANIFEST_ROOT / "splits.json").read_text(encoding="utf-8"))
                 result = evaluate(adapter, scene, splits["development"], samples["T24"], RUN_ROOT / "reference_v_t24")
+            elif args.command == "benchmark":
+                samples = json.loads((MANIFEST_ROOT / "samples.json").read_text(encoding="utf-8"))
+                splits = json.loads((MANIFEST_ROOT / "splits.json").read_text(encoding="utf-8"))
+                names = splits["c4"]
+                times = samples["T24"]
+                inputs = [(names[index % len(names)], times[index]) for index in range(10)]
+                result = benchmark_latency(adapter, scene, inputs, RUN_ROOT / "reference_latency.json")
             elif args.command == "build-k0":
                 samples = json.loads((MANIFEST_ROOT / "samples.json").read_text(encoding="utf-8"))
                 result = build_k0(adapter, samples["T24"], ROOT / "research_cache" / "cut_roasted_beef")
+            elif args.command == "finetune-smoke":
+                samples = json.loads((MANIFEST_ROOT / "samples.json").read_text(encoding="utf-8"))
+                splits = json.loads((MANIFEST_ROOT / "splits.json").read_text(encoding="utf-8"))
+                result = finetune_smoke(adapter, scene, splits["c4"], samples["T24"][:10], RUN_ROOT / "finetune_smoke")
             else:
                 raise AssertionError(args.command)
     print(json.dumps(result, indent=2))

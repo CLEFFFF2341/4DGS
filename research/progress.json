@@ -3,7 +3,7 @@
   "authorized_stages": [
     0
   ],
-  "gpu_hours_consumed": 0.0,
+  "gpu_hours_consumed": 0.01,
   "cpu_selection_hours_consumed": 0.0,
   "resource_control_slots_used": 0,
   "queue": [
@@ -12,7 +12,20 @@
       "status": "RUNNING"
     }
   ],
-  "runs": {},
+  "runs": {
+    "P00/oracle": "COMPLETED",
+    "P00/interface_audit": "COMPLETED",
+    "P00/smoke": "COMPLETED",
+    "P00/retention_check": "COMPLETED",
+    "P00/adapter_checks": "COMPLETED",
+    "P00/reference_v_t24": "COMPLETED",
+    "P00/reference_latency": "COMPLETED",
+    "P00/k0": "COMPLETED",
+    "P00/finetune_smoke": "COMPLETED",
+    "P00/k1": "NOT_RUN",
+    "P00/k2": "NOT_RUN",
+    "P00/k3": "NOT_RUN"
+  },
   "failures": [],
   "frozen_test_manifest": null,
   "git": {

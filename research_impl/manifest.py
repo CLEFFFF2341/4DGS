@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Iterable
 
 import torch
+import cv2
 
 from .config import DEFAULT_MODEL, DEFAULT_SOURCE, ROOT, git_provenance, parse_namespace, sha256_file, sha256_json
 
@@ -22,6 +23,35 @@ def _camera_images(source: Path) -> dict[str, list[Path]]:
         paths = sorted(directory.glob("*.png"))
         if paths:
             result[directory.name] = paths
+    return result
+
+
+def _camera_media(source: Path) -> dict[str, dict]:
+    image_directories = _camera_images(source)
+    names = sorted({*image_directories, *(path.stem for path in source.glob("cam[0-9][0-9].mp4"))})
+    result = {}
+    for name in names:
+        video = source / f"{name}.mp4"
+        pngs = image_directories.get(name, [])
+        if video.exists():
+            capture = cv2.VideoCapture(str(video))
+            frame_count = int(capture.get(cv2.CAP_PROP_FRAME_COUNT))
+            width = int(capture.get(cv2.CAP_PROP_FRAME_WIDTH))
+            height = int(capture.get(cv2.CAP_PROP_FRAME_HEIGHT))
+            fps = float(capture.get(cv2.CAP_PROP_FPS))
+            capture.release()
+        else:
+            frame_count = len(pngs)
+            width = height = 0
+            fps = 0.0
+        result[name] = {
+            "video": video if video.exists() else None,
+            "pngs": pngs,
+            "frame_count": frame_count,
+            "width": width,
+            "height": height,
+            "fps": fps,
+        }
     return result
 
 
@@ -43,7 +73,7 @@ def _inventory(paths: Iterable[Path], hash_images: bool) -> list[dict]:
 def build_manifests(output_dir: Path, hash_images: bool = False) -> dict:
     output_dir.mkdir(parents=True, exist_ok=True)
     cfg = parse_namespace(DEFAULT_MODEL / "cfg_args")
-    cameras = _camera_images(DEFAULT_SOURCE)
+    cameras = _camera_media(DEFAULT_SOURCE)
     if "cam00" not in cameras:
         raise RuntimeError("Required final-test camera cam00 is missing")
     development = [name for name in ("cam01", "cam02") if name in cameras]
@@ -52,7 +82,13 @@ def build_manifests(output_dir: Path, hash_images: bool = False) -> dict:
     fitting = [name for name in sorted(cameras) if name not in {"cam00", *development}]
     c4_indices = sorted({index * (len(fitting) - 1) // 3 for index in range(4)})
     c4 = [fitting[index] for index in c4_indices]
-    image_rows = _inventory((path for paths in cameras.values() for path in paths), hash_images)
+    media_paths = []
+    for media in cameras.values():
+        if media["video"] is not None:
+            media_paths.append(media["video"])
+        else:
+            media_paths.extend(media["pngs"])
+    image_rows = _inventory(media_paths, hash_images)
     reference = {
         "schema": "research-reference-v1",
         "scene": "cut_roasted_beef",
@@ -80,8 +116,19 @@ def build_manifests(output_dir: Path, hash_images: bool = False) -> dict:
         "development": development,
         "final_test": ["cam00"],
         "c4": c4,
-        "camera_frame_counts": {name: len(paths) for name, paths in cameras.items()},
-        "images": image_rows,
+        "camera_frame_counts": {name: media["frame_count"] for name, media in cameras.items()},
+        "camera_media": {
+            name: {
+                "video": media["video"].relative_to(ROOT).as_posix() if media["video"] is not None else None,
+                "extracted_png_count": len(media["pngs"]),
+                "frame_count": media["frame_count"],
+                "width": media["width"],
+                "height": media["height"],
+                "fps": media["fps"],
+            }
+            for name, media in cameras.items()
+        },
+        "media_inventory": image_rows,
         "leakage_note": "The pretrained checkpoint saw non-cam00 views; development is compression validation, not unseen-view validation.",
     }
     samples = {

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import csv
+import copy
 import json
 import statistics
 import time
@@ -10,6 +11,7 @@ from typing import Any
 
 import numpy as np
 import torch
+import cv2
 from PIL import Image
 
 from gaussian_renderer import render
@@ -26,13 +28,66 @@ def camera_name(camera: Any) -> str:
 def select_camera(scene: Any, name: str, timestamp: int) -> Any:
     pools = list(scene.train_cameras[1.0]) + list(scene.test_cameras[1.0])
     matches = [camera for camera in pools if camera_name(camera) == name and int(camera.timestamp) == int(timestamp)]
-    if len(matches) != 1:
-        raise RuntimeError(f"Expected one camera for {name}@{timestamp}, got {len(matches)}")
-    return matches[0]
+    if len(matches) == 1:
+        return matches[0]
+    base = [camera for camera in pools if camera_name(camera) == name]
+    if len(base) != 1:
+        raise RuntimeError(f"Expected one base camera for {name}, got {len(base)}")
+    # The local N3V preprocessing contains one pose-bearing PNG for train views,
+    # while the complete temporal signal remains in the read-only MP4.  Camera
+    # pose is fixed for N3V, so clone the audited pose and attach the requested
+    # video frame without mutating Scene or the source dataset.
+    camera = copy.copy(base[0])
+    video = Path(camera.image_path).parents[1] / f"{name}.mp4"
+    if not video.exists():
+        raise RuntimeError(f"No frame {timestamp} PNG and no source video: {video}")
+    camera.timestamp = int(timestamp)
+    camera.image_name = f"{timestamp:06d}.png"
+    camera.image_path = str(video)
+    camera._research_frame_index = int(timestamp)
+    return camera
 
 
-def load_ground_truth(camera: Any) -> torch.Tensor:
-    image = PILtoTorch(Image.open(camera.image_path), camera.resolution)[:3, ...]
+class VideoFrameDecoder:
+    def __init__(self, path: Path):
+        self.path = path
+        self.capture = cv2.VideoCapture(str(path))
+        if not self.capture.isOpened():
+            raise RuntimeError(f"Unable to open video: {path}")
+        self.next_index = 0
+
+    def read(self, index: int) -> Image.Image:
+        if index < self.next_index:
+            self.capture.release()
+            self.capture = cv2.VideoCapture(str(self.path))
+            self.next_index = 0
+        frame = None
+        while self.next_index <= index:
+            ok, frame = self.capture.read()
+            if not ok:
+                raise RuntimeError(f"Unable to decode frame {index} from {self.path}")
+            self.next_index += 1
+        return Image.fromarray(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
+
+    def close(self) -> None:
+        self.capture.release()
+
+
+def load_ground_truth(camera: Any, decoders: dict[Path, VideoFrameDecoder] | None = None) -> torch.Tensor:
+    path = Path(camera.image_path)
+    if path.suffix.lower() == ".mp4":
+        if decoders is None:
+            decoder = VideoFrameDecoder(path)
+            image_source = decoder.read(int(camera._research_frame_index))
+            decoder.close()
+        else:
+            if path not in decoders:
+                decoders[path] = VideoFrameDecoder(path)
+            decoder = decoders[path]
+            image_source = decoder.read(int(camera._research_frame_index))
+    else:
+        image_source = Image.open(path)
+    image = PILtoTorch(image_source, camera.resolution)[:3, ...]
     return (image / camera.im_scale).clamp(0, 1).cuda()
 
 
@@ -47,7 +102,7 @@ def render_one(adapter: Any, camera: Any) -> torch.Tensor:
         adapter.model,
         pipeline(),
         background,
-        timestamp=int(camera.timestamp),
+        timestamp=camera.timestamp,
         near=adapter.args.near,
         far=adapter.args.far,
     )["render"].clamp(0, 1)
@@ -91,12 +146,13 @@ def evaluate(adapter: Any, scene: Any, camera_names: list[str], times: list[int]
     output.mkdir(parents=True, exist_ok=True)
     lpips_model = LPIPS("alex", "0.1").cuda().eval()
     rows = []
+    decoders: dict[Path, VideoFrameDecoder] = {}
     torch.cuda.reset_peak_memory_stats()
     started = time.perf_counter()
     for name in camera_names:
         for timestamp in times:
             camera = select_camera(scene, name, timestamp)
-            gt = load_ground_truth(camera)
+            gt = load_ground_truth(camera, decoders)
             render_start = time.perf_counter()
             image = render_one(adapter, camera)
             render_seconds = time.perf_counter() - render_start
@@ -112,6 +168,8 @@ def evaluate(adapter: Any, scene: Any, camera_names: list[str], times: list[int]
             }
             rows.append(row)
             del gt, image
+    for decoder in decoders.values():
+        decoder.close()
     with (output / "per_frame.csv").open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
         writer.writeheader()
@@ -130,6 +188,51 @@ def evaluate(adapter: Any, scene: Any, camera_names: list[str], times: list[int]
     }
     (output / "summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
     return summary
+
+
+@torch.no_grad()
+def benchmark_latency(adapter: Any, scene: Any, inputs: list[tuple[str, int]], output: Path) -> dict:
+    cameras = [select_camera(scene, name, timestamp) for name, timestamp in inputs]
+    for index in range(20):
+        render_one(adapter, cameras[index % len(cameras)])
+    blocks = []
+    torch.cuda.reset_peak_memory_stats()
+    for block_index in range(3):
+        wall_values = []
+        gpu_values = []
+        for index in range(100):
+            camera = cameras[index % len(cameras)]
+            start_event = torch.cuda.Event(enable_timing=True)
+            end_event = torch.cuda.Event(enable_timing=True)
+            torch.cuda.synchronize()
+            wall_start = time.perf_counter()
+            start_event.record()
+            render_one(adapter, camera)
+            end_event.record()
+            torch.cuda.synchronize()
+            wall_values.append(time.perf_counter() - wall_start)
+            gpu_values.append(start_event.elapsed_time(end_event) / 1000.0)
+        blocks.append({
+            "block": block_index,
+            "wall_mean_seconds": statistics.fmean(wall_values),
+            "wall_p50_seconds": float(np.percentile(wall_values, 50)),
+            "wall_p95_seconds": float(np.percentile(wall_values, 95)),
+            "gpu_mean_seconds": statistics.fmean(gpu_values),
+            "gpu_p50_seconds": float(np.percentile(gpu_values, 50)),
+            "gpu_p95_seconds": float(np.percentile(gpu_values, 95)),
+        })
+    result = {
+        "status": "COMPLETED",
+        "warmup": 20,
+        "iterations_per_block": 100,
+        "inputs": [{"camera": name, "timestamp": timestamp} for name, timestamp in inputs],
+        "blocks": blocks,
+        "peak_allocated_bytes": torch.cuda.max_memory_allocated(),
+        "peak_reserved_bytes": torch.cuda.max_memory_reserved(),
+    }
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(json.dumps(result, indent=2), encoding="utf-8")
+    return result
 
 
 @torch.no_grad()

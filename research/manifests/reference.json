@@ -16,11 +16,11 @@
   "interp_type": "cube",
   "rot_interp_type": "slerp",
   "image_inventory_hash_mode": "metadata",
-  "image_inventory_sha256": "a07847f4ef9ff11e5765b251ddecccc38462006280b6cafb62b976a5ed902239",
+  "image_inventory_sha256": "a1ec35cef9a3e86e5a6103f20c5edccb9a144f318ad524fd6e425c817e967857",
   "git": {
-    "commit": "22e228481a2ae8ab96761e70cc457146159602c3",
+    "commit": "5a8722ccf75ae6712545c25f79e57092c5654d80",
     "branch": "codex/astra-experiments-20260923",
     "dirty": true,
-    "dirty_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    "dirty_diff_sha256": "53b1aabda091f00be54bd040e580f0b43c4413e10034b85f679b82634d6f88eb"
   }
 }
