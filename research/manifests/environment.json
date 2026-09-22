@@ -6,5 +6,6 @@
   "torch_cuda": "11.8",
   "cuda_available": true,
   "gpu": "NVIDIA GeForce RTX 4090",
-  "pid": 11672
+  "raster_extension_path": "E:\\4DGS\\submodules\\diff_gaussian_rasterization_df\\diff_gaussian_rasterization_df\\_C.cp39-win_amd64.pyd",
+  "raster_extension_sha256": "7a72590c728d2ad47e57e7d03b4bda58bd5c27333e0a59df58b2fd8af791e14b"
 }
