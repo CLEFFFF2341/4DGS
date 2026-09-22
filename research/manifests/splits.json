@@ -220,102 +220,122 @@
     {
       "path": "data/cut_roasted_beef/cam00.mp4",
       "bytes": 56108481,
-      "mtime_ns": 1647503380000000000
+      "mtime_ns": 1647503380000000000,
+      "sha256": "2dce3bab86071333b206809367e9e2ee16ed7545390f6f5583779ef32d453a8a"
     },
     {
       "path": "data/cut_roasted_beef/cam01.mp4",
       "bytes": 65414312,
-      "mtime_ns": 1647503410000000000
+      "mtime_ns": 1647503410000000000,
+      "sha256": "53b1b41bfed075f254a96cfff93fd09b0b56c9a6062a92e68de5ecfa0f66af6b"
     },
     {
       "path": "data/cut_roasted_beef/cam02.mp4",
       "bytes": 63140991,
-      "mtime_ns": 1647503380000000000
+      "mtime_ns": 1647503380000000000,
+      "sha256": "9ce8ff478aa867f009511cd5cdef260ecc313d8ddb3d11aeac0d268ec7b17c2a"
     },
     {
       "path": "data/cut_roasted_beef/cam03.mp4",
       "bytes": 62357762,
-      "mtime_ns": 1647503382000000000
+      "mtime_ns": 1647503382000000000,
+      "sha256": "5a387cc5d433e4937010d09600659af4e8d96b9d34b597217b25bab6a0ebbdbc"
     },
     {
       "path": "data/cut_roasted_beef/cam05.mp4",
       "bytes": 59011445,
-      "mtime_ns": 1647503374000000000
+      "mtime_ns": 1647503374000000000,
+      "sha256": "f2a3169e9f3dd9fcd9c58798eb2a5da597a75ba3ba0e68330034ec17044cecec"
     },
     {
       "path": "data/cut_roasted_beef/cam06.mp4",
       "bytes": 55678176,
-      "mtime_ns": 1647503376000000000
+      "mtime_ns": 1647503376000000000,
+      "sha256": "9f964c6cd5eb407b656b9f0b5d018d258ffe42bf889a74e1ff29d445dc297aad"
     },
     {
       "path": "data/cut_roasted_beef/cam07.mp4",
       "bytes": 54944916,
-      "mtime_ns": 1647503378000000000
+      "mtime_ns": 1647503378000000000,
+      "sha256": "c863dd594da04b304c01f0d47dcdb8e3f6084ac365d7d354127ebc65e6e9d12f"
     },
     {
       "path": "data/cut_roasted_beef/cam08.mp4",
       "bytes": 59071585,
-      "mtime_ns": 1647503382000000000
+      "mtime_ns": 1647503382000000000,
+      "sha256": "b9a1a699b3d076e668efe8e048730770f151975fc881f6ab4ee3ff8357d3fd0d"
     },
     {
       "path": "data/cut_roasted_beef/cam09.mp4",
       "bytes": 54923979,
-      "mtime_ns": 1647503368000000000
+      "mtime_ns": 1647503368000000000,
+      "sha256": "4ac981ecbe31dffb85adfad59e1f34922c3a1fa578e5ee1b9824ed5f25a209eb"
     },
     {
       "path": "data/cut_roasted_beef/cam10.mp4",
       "bytes": 58838138,
-      "mtime_ns": 1647503330000000000
+      "mtime_ns": 1647503330000000000,
+      "sha256": "6bd30af808503c453d2e8436e1c29c9d639ae8271f31292dc1b6d6573a65312d"
     },
     {
       "path": "data/cut_roasted_beef/cam11.mp4",
       "bytes": 55698443,
-      "mtime_ns": 1647503356000000000
+      "mtime_ns": 1647503356000000000,
+      "sha256": "24303ec735f81dcf3c48c14404ef23782865c9e7b02d0168ea62e38acc45b725"
     },
     {
       "path": "data/cut_roasted_beef/cam12.mp4",
       "bytes": 54983818,
-      "mtime_ns": 1647503378000000000
+      "mtime_ns": 1647503378000000000,
+      "sha256": "3e2439c745cbbacd61424751255899c91ab3837d8860699ef7511bedf4f3cd78"
     },
     {
       "path": "data/cut_roasted_beef/cam13.mp4",
       "bytes": 54756392,
-      "mtime_ns": 1647503144000000000
+      "mtime_ns": 1647503144000000000,
+      "sha256": "f5128890fb7eee8d8d8abf4de09eeb83724e67074a4ea51ed7e60e680dbb3b82"
     },
     {
       "path": "data/cut_roasted_beef/cam14.mp4",
       "bytes": 54622324,
-      "mtime_ns": 1647503160000000000
+      "mtime_ns": 1647503160000000000,
+      "sha256": "b0d2751408c361e92ee33c584dbb90c53b187e415c84f4c07b02f746abcfe9d2"
     },
     {
       "path": "data/cut_roasted_beef/cam15.mp4",
       "bytes": 54956221,
-      "mtime_ns": 1647503370000000000
+      "mtime_ns": 1647503370000000000,
+      "sha256": "1715a7db62dd7d11f2fcf11f7d89cffde94f1b508592fe1a8e941cc1a3c8d104"
     },
     {
       "path": "data/cut_roasted_beef/cam16.mp4",
       "bytes": 54147214,
-      "mtime_ns": 1647503338000000000
+      "mtime_ns": 1647503338000000000,
+      "sha256": "75e9f0d9d03bbd31262c520720dd14c07aaabe94612df9c260a0a6b7b90e26d0"
     },
     {
       "path": "data/cut_roasted_beef/cam17.mp4",
       "bytes": 55472298,
-      "mtime_ns": 1647503382000000000
+      "mtime_ns": 1647503382000000000,
+      "sha256": "bca46c9d0e7a4455a799c42f95fec736472650efa0471815a070043d7bb48ba4"
     },
     {
       "path": "data/cut_roasted_beef/cam18.mp4",
       "bytes": 53818092,
-      "mtime_ns": 1647503378000000000
+      "mtime_ns": 1647503378000000000,
+      "sha256": "468a3a9bc85aced66dc5c7a4d344067e665325e3b9323a42c449fb6009f757b1"
     },
     {
       "path": "data/cut_roasted_beef/cam19.mp4",
       "bytes": 57607976,
-      "mtime_ns": 1647503378000000000
+      "mtime_ns": 1647503378000000000,
+      "sha256": "d8d4d6139d8b69c67fa608ec15c6218f06920b10027e9d16b0c59f2dabe7f651"
     },
     {
       "path": "data/cut_roasted_beef/cam20.mp4",
       "bytes": 57724316,
-      "mtime_ns": 1647503154000000000
+      "mtime_ns": 1647503154000000000,
+      "sha256": "af01a0d9be55959aaff70355b748247693db1bc5155f4d10498d4fadd5e9abf4"
     }
   ],
   "leakage_note": "The pretrained checkpoint saw non-cam00 views; development is compression validation, not unseen-view validation."
