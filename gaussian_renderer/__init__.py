@@ -111,7 +111,7 @@ def render(viewpoint_camera, pc, pipe, bg_color : torch.Tensor, timestamp=None, 
         cov3D_precomp = cov3D_precomp)
 
     if getattr(pipe, "collect_stats", False) or getattr(pipe, "collect_deletions", False):
-        rendered_image, radii, rendered_depth, out_flow, acc, idxs, contrib_sum, contrib_max, contrib_hit_count, tiles_touched, deletion_sq_sum, replay_color = rasterized
+        rendered_image, radii, rendered_depth, out_flow, acc, idxs, contrib_sum, contrib_max, contrib_hit_count, transmittance_sum, tiles_touched, deletion_sq_sum, replay_color = rasterized
     else:
         rendered_image, radii, rendered_depth, out_flow, acc, idxs = rasterized
 
@@ -134,6 +134,7 @@ def render(viewpoint_camera, pc, pipe, bg_color : torch.Tensor, timestamp=None, 
             "contrib_sum": contrib_sum,
             "contrib_max": contrib_max,
             "contrib_hit_count": contrib_hit_count,
+            "transmittance_sum": transmittance_sum,
             "tiles_touched": tiles_touched,
         })
     if getattr(pipe, "collect_deletions", False):

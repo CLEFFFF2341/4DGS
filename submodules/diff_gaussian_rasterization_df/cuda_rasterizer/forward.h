@@ -71,6 +71,7 @@ namespace FORWARD
 		float* contrib_sum,
 		float* contrib_max,
 		int* contrib_hit_count,
+		float* transmittance_sum,
 		bool collect_deletions,
 		float* deletion_sq_sum,
 		float* replay_color,

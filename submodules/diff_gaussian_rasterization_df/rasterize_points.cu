@@ -32,7 +32,7 @@ std::function<char*(size_t N)> resizeFunctional(torch::Tensor& t) {
     return lambda;
 }
 
-std::tuple<int, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor>
+std::tuple<int, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor>
 RasterizeGaussiansCUDA(
 	const torch::Tensor& background,
 	const torch::Tensor& means3D,
@@ -81,6 +81,7 @@ RasterizeGaussiansCUDA(
   torch::Tensor contrib_sum = collect_stats ? torch::zeros({P}, float_opts) : torch::empty({0}, float_opts);
   torch::Tensor contrib_max = collect_stats ? torch::zeros({P}, float_opts) : torch::empty({0}, float_opts);
   torch::Tensor contrib_hit_count = collect_stats ? torch::zeros({P}, int_opts) : torch::empty({0}, int_opts);
+  torch::Tensor transmittance_sum = collect_stats ? torch::zeros({P}, float_opts) : torch::empty({0}, float_opts);
   torch::Tensor tiles_touched = collect_stats ? torch::zeros({P}, int_opts) : torch::empty({0}, int_opts);
   torch::Tensor deletion_sq_sum = collect_deletions ? torch::zeros({P}, float_opts) : torch::empty({0}, float_opts);
   torch::Tensor replay_color = collect_deletions ? torch::zeros({NUM_CHANNELS, H, W}, float_opts) : torch::empty({0}, float_opts);
@@ -138,6 +139,7 @@ RasterizeGaussiansCUDA(
 		collect_stats ? contrib_sum.contiguous().data<float>() : nullptr,
 		collect_stats ? contrib_max.contiguous().data<float>() : nullptr,
 		collect_stats ? contrib_hit_count.contiguous().data<int>() : nullptr,
+		collect_stats ? transmittance_sum.contiguous().data<float>() : nullptr,
 		collect_stats ? tiles_touched.contiguous().data<int>() : nullptr,
 		collect_deletions,
 		collect_deletions ? deletion_sq_sum.contiguous().data<float>() : nullptr,
@@ -145,7 +147,7 @@ RasterizeGaussiansCUDA(
 		radii.contiguous().data<int>(),
 		debug);
   }
-  return std::make_tuple(rendered, out_color, radii, geomBuffer, binningBuffer, imgBuffer, out_depth, out_acc, out_flow, out_idx, contrib_sum, contrib_max, contrib_hit_count, tiles_touched, deletion_sq_sum, replay_color);
+  return std::make_tuple(rendered, out_color, radii, geomBuffer, binningBuffer, imgBuffer, out_depth, out_acc, out_flow, out_idx, contrib_sum, contrib_max, contrib_hit_count, transmittance_sum, tiles_touched, deletion_sq_sum, replay_color);
 }
 
 std::tuple<torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor, torch::Tensor>

@@ -81,6 +81,7 @@ def build_k1(adapter, scene, camera_names: list[str], times: list[int], resoluti
     width, height = map(int, resolution)
     s_it = np.zeros((len(times), n), dtype=np.float64)
     hit_counts = np.zeros((len(times), n), dtype=np.int64)
+    transmittance_sum = np.zeros((len(times), n), dtype=np.float64)
     tile_touches = np.zeros((len(times), n), dtype=np.int64)
     max_weight = np.zeros(n, dtype=np.float32)
     background = torch.zeros(3, dtype=torch.float32, device="cuda")
@@ -106,6 +107,7 @@ def build_k1(adapter, scene, camera_names: list[str], times: list[int], resoluti
             )
             s_it[time_index] += stats["contrib_sum"].cpu().numpy().astype(np.float64) / (width * height * len(camera_names))
             hit_counts[time_index] += stats["contrib_hit_count"].cpu().numpy().astype(np.int64)
+            transmittance_sum[time_index] += stats["transmittance_sum"].cpu().numpy().astype(np.float64) / (width * height * len(camera_names))
             tile_touches[time_index] += stats["tiles_touched"].cpu().numpy().astype(np.int64)
             np.maximum(max_weight, stats["contrib_max"].cpu().numpy(), out=max_weight)
             if validation is None:
@@ -135,6 +137,7 @@ def build_k1(adapter, scene, camera_names: list[str], times: list[int], resoluti
         "s_it": torch.from_numpy(s_it),
         "m_i": torch.from_numpy(max_weight),
         "hit_counts": torch.from_numpy(hit_counts),
+        "transmittance_sum": torch.from_numpy(transmittance_sum),
         "tile_touches": torch.from_numpy(tile_touches),
         "visible_by_time": torch.from_numpy(s_it > 0),
         "opacity_by_time": opacities,

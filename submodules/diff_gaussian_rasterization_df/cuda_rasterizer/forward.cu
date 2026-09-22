@@ -292,6 +292,7 @@ renderCUDA(
 	float* __restrict__ contrib_sum,
 	float* __restrict__ contrib_max,
 	int* __restrict__ contrib_hit_count,
+	float* __restrict__ transmittance_sum,
 	bool collect_deletions,
 	float* __restrict__ deletion_sq_sum,
 	float* __restrict__ replay_color,
@@ -404,6 +405,7 @@ renderCUDA(
 				atomicAdd(contrib_sum + gaussian_id, weight);
 				atomicMax(reinterpret_cast<int*>(contrib_max + gaussian_id), __float_as_int(weight));
 				atomicAdd(contrib_hit_count + gaussian_id, 1);
+				atomicAdd(transmittance_sum + gaussian_id, T);
 			}
 			
 			// Mean depth:
@@ -550,6 +552,7 @@ void FORWARD::render(
 	float* contrib_sum,
 	float* contrib_max,
 	int* contrib_hit_count,
+	float* transmittance_sum,
 	bool collect_deletions,
 	float* deletion_sq_sum,
 	float* replay_color,
@@ -578,6 +581,7 @@ void FORWARD::render(
 		contrib_sum,
 		contrib_max,
 		contrib_hit_count,
+		transmittance_sum,
 		collect_deletions,
 		deletion_sq_sum,
 		replay_color,

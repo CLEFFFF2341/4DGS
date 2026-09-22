@@ -64,6 +64,7 @@ namespace CudaRasterizer
 			float* contrib_sum,
 			float* contrib_max,
 			int* contrib_hit_count,
+			float* transmittance_sum,
 			int* out_tiles_touched,
 			bool collect_deletions,
 			float* deletion_sq_sum,
