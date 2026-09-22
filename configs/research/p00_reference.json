@@ -1,0 +1,12 @@
+{
+  "schema": "research-config-v1",
+  "task": "P00",
+  "scene": "cut_roasted_beef",
+  "checkpoint": "pretrained/cut_roasted_beef/point_cloud/iteration_40000",
+  "statistics_times": "research/manifests/samples.json#T24",
+  "development_split": "research/manifests/splits.json#development",
+  "final_test_sealed": true,
+  "background": "black",
+  "near": 4.0,
+  "far": 300.0
+}

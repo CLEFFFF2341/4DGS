@@ -1,0 +1,1655 @@
+{
+  "schema": "research-splits-v1",
+  "fitting": [
+    "cam03",
+    "cam05",
+    "cam06",
+    "cam07",
+    "cam08",
+    "cam09",
+    "cam10",
+    "cam11",
+    "cam12",
+    "cam13",
+    "cam14",
+    "cam15",
+    "cam16",
+    "cam17",
+    "cam18",
+    "cam19",
+    "cam20"
+  ],
+  "development": [
+    "cam01",
+    "cam02"
+  ],
+  "final_test": [
+    "cam00"
+  ],
+  "c4": [
+    "cam03",
+    "cam09",
+    "cam14",
+    "cam20"
+  ],
+  "camera_frame_counts": {
+    "cam00": 300,
+    "cam01": 1,
+    "cam02": 1,
+    "cam03": 1,
+    "cam05": 1,
+    "cam06": 1,
+    "cam07": 1,
+    "cam08": 1,
+    "cam09": 1,
+    "cam10": 1,
+    "cam11": 1,
+    "cam12": 1,
+    "cam13": 1,
+    "cam14": 1,
+    "cam15": 1,
+    "cam16": 1,
+    "cam17": 1,
+    "cam18": 1,
+    "cam19": 1,
+    "cam20": 1
+  },
+  "images": [
+    {
+      "path": "data/cut_roasted_beef/cam00/000000.png",
+      "bytes": 4456376,
+      "mtime_ns": 1790015785109231700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000001.png",
+      "bytes": 4540042,
+      "mtime_ns": 1790015785202069000
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000002.png",
+      "bytes": 4536569,
+      "mtime_ns": 1790015785293409900
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000003.png",
+      "bytes": 4310458,
+      "mtime_ns": 1790015785382151800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000004.png",
+      "bytes": 4319878,
+      "mtime_ns": 1790015785471771600
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000005.png",
+      "bytes": 4384374,
+      "mtime_ns": 1790015785562087200
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000006.png",
+      "bytes": 4412707,
+      "mtime_ns": 1790015785653441500
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000007.png",
+      "bytes": 4437452,
+      "mtime_ns": 1790015785745239700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000008.png",
+      "bytes": 4461322,
+      "mtime_ns": 1790015785836029500
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000009.png",
+      "bytes": 4483451,
+      "mtime_ns": 1790015785931260400
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000010.png",
+      "bytes": 4510645,
+      "mtime_ns": 1790015786023379700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000011.png",
+      "bytes": 4534093,
+      "mtime_ns": 1790015786115680000
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000012.png",
+      "bytes": 4543793,
+      "mtime_ns": 1790015786209776800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000013.png",
+      "bytes": 4556050,
+      "mtime_ns": 1790015786302715600
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000014.png",
+      "bytes": 4573469,
+      "mtime_ns": 1790015786395378300
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000015.png",
+      "bytes": 4570483,
+      "mtime_ns": 1790015786489116800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000016.png",
+      "bytes": 4577387,
+      "mtime_ns": 1790015786580576600
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000017.png",
+      "bytes": 4578130,
+      "mtime_ns": 1790015786676103700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000018.png",
+      "bytes": 4375019,
+      "mtime_ns": 1790015786766019900
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000019.png",
+      "bytes": 4379114,
+      "mtime_ns": 1790015786856230200
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000020.png",
+      "bytes": 4414100,
+      "mtime_ns": 1790015786946653300
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000021.png",
+      "bytes": 4437744,
+      "mtime_ns": 1790015787037946600
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000022.png",
+      "bytes": 4475128,
+      "mtime_ns": 1790015787129192700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000023.png",
+      "bytes": 4494075,
+      "mtime_ns": 1790015787220949900
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000024.png",
+      "bytes": 4512598,
+      "mtime_ns": 1790015787313063800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000025.png",
+      "bytes": 4529678,
+      "mtime_ns": 1790015787408365000
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000026.png",
+      "bytes": 4547344,
+      "mtime_ns": 1790015787500574900
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000027.png",
+      "bytes": 4551054,
+      "mtime_ns": 1790015787594084400
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000028.png",
+      "bytes": 4559168,
+      "mtime_ns": 1790015787686207300
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000029.png",
+      "bytes": 4565148,
+      "mtime_ns": 1790015787779999700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000030.png",
+      "bytes": 4588327,
+      "mtime_ns": 1790015787872658000
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000031.png",
+      "bytes": 4576724,
+      "mtime_ns": 1790015787965210800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000032.png",
+      "bytes": 4596947,
+      "mtime_ns": 1790015788058878100
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000033.png",
+      "bytes": 4351523,
+      "mtime_ns": 1790015788147988700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000034.png",
+      "bytes": 4383931,
+      "mtime_ns": 1790015788238308100
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000035.png",
+      "bytes": 4406368,
+      "mtime_ns": 1790015788328395700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000036.png",
+      "bytes": 4426651,
+      "mtime_ns": 1790015788419167600
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000037.png",
+      "bytes": 4445276,
+      "mtime_ns": 1790015788510267300
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000038.png",
+      "bytes": 4483983,
+      "mtime_ns": 1790015788600688500
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000039.png",
+      "bytes": 4499355,
+      "mtime_ns": 1790015788692279700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000040.png",
+      "bytes": 4522225,
+      "mtime_ns": 1790015788781888300
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000041.png",
+      "bytes": 4528856,
+      "mtime_ns": 1790015788874047400
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000042.png",
+      "bytes": 4561941,
+      "mtime_ns": 1790015788967289300
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000043.png",
+      "bytes": 4545504,
+      "mtime_ns": 1790015789059727500
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000044.png",
+      "bytes": 4566253,
+      "mtime_ns": 1790015789151679500
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000045.png",
+      "bytes": 4568280,
+      "mtime_ns": 1790015789244149000
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000046.png",
+      "bytes": 4581127,
+      "mtime_ns": 1790015789337717700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000047.png",
+      "bytes": 4559805,
+      "mtime_ns": 1790015789431445300
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000048.png",
+      "bytes": 4348404,
+      "mtime_ns": 1790015789520133700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000049.png",
+      "bytes": 4368129,
+      "mtime_ns": 1790015789610565700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000050.png",
+      "bytes": 4416747,
+      "mtime_ns": 1790015789702379700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000051.png",
+      "bytes": 4427899,
+      "mtime_ns": 1790015789794192800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000052.png",
+      "bytes": 4462533,
+      "mtime_ns": 1790015789884080400
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000053.png",
+      "bytes": 4482414,
+      "mtime_ns": 1790015789974710900
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000054.png",
+      "bytes": 4509778,
+      "mtime_ns": 1790015790067958200
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000055.png",
+      "bytes": 4517608,
+      "mtime_ns": 1790015790161763800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000056.png",
+      "bytes": 4552225,
+      "mtime_ns": 1790015790254795800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000057.png",
+      "bytes": 4554213,
+      "mtime_ns": 1790015790346685100
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000058.png",
+      "bytes": 4571529,
+      "mtime_ns": 1790015790441351600
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000059.png",
+      "bytes": 4568148,
+      "mtime_ns": 1790015790534433700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000060.png",
+      "bytes": 4570363,
+      "mtime_ns": 1790015790628407500
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000061.png",
+      "bytes": 4565858,
+      "mtime_ns": 1790015790721354600
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000062.png",
+      "bytes": 4591467,
+      "mtime_ns": 1790015790814993300
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000063.png",
+      "bytes": 4367926,
+      "mtime_ns": 1790015790903635600
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000064.png",
+      "bytes": 4378774,
+      "mtime_ns": 1790015790993963800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000065.png",
+      "bytes": 4413638,
+      "mtime_ns": 1790015791084344300
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000066.png",
+      "bytes": 4460718,
+      "mtime_ns": 1790015791175960000
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000067.png",
+      "bytes": 4464422,
+      "mtime_ns": 1790015791267028700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000068.png",
+      "bytes": 4493588,
+      "mtime_ns": 1790015791357860400
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000069.png",
+      "bytes": 4507208,
+      "mtime_ns": 1790015791450659100
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000070.png",
+      "bytes": 4531751,
+      "mtime_ns": 1790015791543285600
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000071.png",
+      "bytes": 4541700,
+      "mtime_ns": 1790015791635375800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000072.png",
+      "bytes": 4568949,
+      "mtime_ns": 1790015791727583900
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000073.png",
+      "bytes": 4551423,
+      "mtime_ns": 1790015791820065100
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000074.png",
+      "bytes": 4577950,
+      "mtime_ns": 1790015791913070600
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000075.png",
+      "bytes": 4573272,
+      "mtime_ns": 1790015792005419500
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000076.png",
+      "bytes": 4586552,
+      "mtime_ns": 1790015792098364700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000077.png",
+      "bytes": 4586536,
+      "mtime_ns": 1790015792190773500
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000078.png",
+      "bytes": 4391412,
+      "mtime_ns": 1790015792282335300
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000079.png",
+      "bytes": 4380972,
+      "mtime_ns": 1790015792372080200
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000080.png",
+      "bytes": 4404710,
+      "mtime_ns": 1790015792462192700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000081.png",
+      "bytes": 4446011,
+      "mtime_ns": 1790015792552916200
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000082.png",
+      "bytes": 4478174,
+      "mtime_ns": 1790015792646322500
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000083.png",
+      "bytes": 4484770,
+      "mtime_ns": 1790015792737305700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000084.png",
+      "bytes": 4512392,
+      "mtime_ns": 1790015792829223300
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000085.png",
+      "bytes": 4516355,
+      "mtime_ns": 1790015792921496300
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000086.png",
+      "bytes": 4547971,
+      "mtime_ns": 1790015793014297000
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000087.png",
+      "bytes": 4548793,
+      "mtime_ns": 1790015793105982700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000088.png",
+      "bytes": 4582465,
+      "mtime_ns": 1790015793196640600
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000089.png",
+      "bytes": 4582246,
+      "mtime_ns": 1790015793289749500
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000090.png",
+      "bytes": 4600470,
+      "mtime_ns": 1790015793382453700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000091.png",
+      "bytes": 4595166,
+      "mtime_ns": 1790015793474987600
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000092.png",
+      "bytes": 4598850,
+      "mtime_ns": 1790015793567390500
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000093.png",
+      "bytes": 4378348,
+      "mtime_ns": 1790015793658477900
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000094.png",
+      "bytes": 4396736,
+      "mtime_ns": 1790015793748908300
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000095.png",
+      "bytes": 4434248,
+      "mtime_ns": 1790015793839314800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000096.png",
+      "bytes": 4459423,
+      "mtime_ns": 1790015793929708500
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000097.png",
+      "bytes": 4468841,
+      "mtime_ns": 1790015794021081600
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000098.png",
+      "bytes": 4524781,
+      "mtime_ns": 1790015794113069800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000099.png",
+      "bytes": 4535515,
+      "mtime_ns": 1790015794205628200
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000100.png",
+      "bytes": 4541793,
+      "mtime_ns": 1790015794298212100
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000101.png",
+      "bytes": 4559691,
+      "mtime_ns": 1790015794390066000
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000102.png",
+      "bytes": 4567241,
+      "mtime_ns": 1790015794482809600
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000103.png",
+      "bytes": 4570652,
+      "mtime_ns": 1790015794575341200
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000104.png",
+      "bytes": 4583996,
+      "mtime_ns": 1790015794668432200
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000105.png",
+      "bytes": 4590011,
+      "mtime_ns": 1790015794761286300
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000106.png",
+      "bytes": 4586358,
+      "mtime_ns": 1790015794853926300
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000107.png",
+      "bytes": 4573835,
+      "mtime_ns": 1790015794946326400
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000108.png",
+      "bytes": 4348111,
+      "mtime_ns": 1790015795034385200
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000109.png",
+      "bytes": 4371441,
+      "mtime_ns": 1790015795123955500
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000110.png",
+      "bytes": 4409220,
+      "mtime_ns": 1790015795215444300
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000111.png",
+      "bytes": 4424823,
+      "mtime_ns": 1790015795305443100
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000112.png",
+      "bytes": 4463675,
+      "mtime_ns": 1790015795396410300
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000113.png",
+      "bytes": 4494213,
+      "mtime_ns": 1790015795487156600
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000114.png",
+      "bytes": 4520063,
+      "mtime_ns": 1790015795579039700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000115.png",
+      "bytes": 4519593,
+      "mtime_ns": 1790015795670697300
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000116.png",
+      "bytes": 4540672,
+      "mtime_ns": 1790015795762293100
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000117.png",
+      "bytes": 4551576,
+      "mtime_ns": 1790015795855662000
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000118.png",
+      "bytes": 4577862,
+      "mtime_ns": 1790015795948645200
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000119.png",
+      "bytes": 4575972,
+      "mtime_ns": 1790015796040609600
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000120.png",
+      "bytes": 4587962,
+      "mtime_ns": 1790015796132092900
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000121.png",
+      "bytes": 4581056,
+      "mtime_ns": 1790015796225367500
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000122.png",
+      "bytes": 4584994,
+      "mtime_ns": 1790015796317831600
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000123.png",
+      "bytes": 4344531,
+      "mtime_ns": 1790015796406749400
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000124.png",
+      "bytes": 4360051,
+      "mtime_ns": 1790015796496067300
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000125.png",
+      "bytes": 4410075,
+      "mtime_ns": 1790015796587328100
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000126.png",
+      "bytes": 4450918,
+      "mtime_ns": 1790015796679180400
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000127.png",
+      "bytes": 4455084,
+      "mtime_ns": 1790015796771020800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000128.png",
+      "bytes": 4496738,
+      "mtime_ns": 1790015796863048800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000129.png",
+      "bytes": 4510621,
+      "mtime_ns": 1790015796956089300
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000130.png",
+      "bytes": 4537143,
+      "mtime_ns": 1790015797048620200
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000131.png",
+      "bytes": 4552155,
+      "mtime_ns": 1790015797141998600
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000132.png",
+      "bytes": 4561140,
+      "mtime_ns": 1790015797234922100
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000133.png",
+      "bytes": 4577791,
+      "mtime_ns": 1790015797328598600
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000134.png",
+      "bytes": 4581886,
+      "mtime_ns": 1790015797421452000
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000135.png",
+      "bytes": 4572355,
+      "mtime_ns": 1790015797515035900
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000136.png",
+      "bytes": 4578384,
+      "mtime_ns": 1790015797607213500
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000137.png",
+      "bytes": 4572670,
+      "mtime_ns": 1790015797699828600
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000138.png",
+      "bytes": 4356388,
+      "mtime_ns": 1790015797791964500
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000139.png",
+      "bytes": 4357421,
+      "mtime_ns": 1790015797880669800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000140.png",
+      "bytes": 4391859,
+      "mtime_ns": 1790015797969676200
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000141.png",
+      "bytes": 4406750,
+      "mtime_ns": 1790015798063589700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000142.png",
+      "bytes": 4450439,
+      "mtime_ns": 1790015798153297900
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000143.png",
+      "bytes": 4481598,
+      "mtime_ns": 1790015798244502800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000144.png",
+      "bytes": 4497074,
+      "mtime_ns": 1790015798334929400
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000145.png",
+      "bytes": 4507033,
+      "mtime_ns": 1790015798427235600
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000146.png",
+      "bytes": 4544180,
+      "mtime_ns": 1790015798519074600
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000147.png",
+      "bytes": 4537683,
+      "mtime_ns": 1790015798611962400
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000148.png",
+      "bytes": 4562286,
+      "mtime_ns": 1790015798703691700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000149.png",
+      "bytes": 4558527,
+      "mtime_ns": 1790015798796315500
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000150.png",
+      "bytes": 4568454,
+      "mtime_ns": 1790015798888257100
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000151.png",
+      "bytes": 4552840,
+      "mtime_ns": 1790015798980849900
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000152.png",
+      "bytes": 4580062,
+      "mtime_ns": 1790015799072970500
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000153.png",
+      "bytes": 4360249,
+      "mtime_ns": 1790015799161682700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000154.png",
+      "bytes": 4383659,
+      "mtime_ns": 1790015799250612000
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000155.png",
+      "bytes": 4405992,
+      "mtime_ns": 1790015799341414700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000156.png",
+      "bytes": 4426969,
+      "mtime_ns": 1790015799432010400
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000157.png",
+      "bytes": 4449153,
+      "mtime_ns": 1790015799522293700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000158.png",
+      "bytes": 4477998,
+      "mtime_ns": 1790015799614738200
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000159.png",
+      "bytes": 4500331,
+      "mtime_ns": 1790015799708324800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000160.png",
+      "bytes": 4511377,
+      "mtime_ns": 1790015799799010700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000161.png",
+      "bytes": 4525019,
+      "mtime_ns": 1790015799890871500
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000162.png",
+      "bytes": 4562254,
+      "mtime_ns": 1790015799984575800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000163.png",
+      "bytes": 4558816,
+      "mtime_ns": 1790015800076551800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000164.png",
+      "bytes": 4563834,
+      "mtime_ns": 1790015800169570500
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000165.png",
+      "bytes": 4583270,
+      "mtime_ns": 1790015800262606700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000166.png",
+      "bytes": 4581335,
+      "mtime_ns": 1790015800356311100
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000167.png",
+      "bytes": 4562282,
+      "mtime_ns": 1790015800450350900
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000168.png",
+      "bytes": 4337863,
+      "mtime_ns": 1790015800539922400
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000169.png",
+      "bytes": 4367105,
+      "mtime_ns": 1790015800628579000
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000170.png",
+      "bytes": 4404023,
+      "mtime_ns": 1790015800719773600
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000171.png",
+      "bytes": 4421517,
+      "mtime_ns": 1790015800811980100
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000172.png",
+      "bytes": 4452886,
+      "mtime_ns": 1790015800903202200
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000173.png",
+      "bytes": 4468460,
+      "mtime_ns": 1790015800996074200
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000174.png",
+      "bytes": 4506507,
+      "mtime_ns": 1790015801087210000
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000175.png",
+      "bytes": 4505248,
+      "mtime_ns": 1790015801178947500
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000176.png",
+      "bytes": 4516880,
+      "mtime_ns": 1790015801269811300
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000177.png",
+      "bytes": 4544122,
+      "mtime_ns": 1790015801362722900
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000178.png",
+      "bytes": 4542809,
+      "mtime_ns": 1790015801455418900
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000179.png",
+      "bytes": 4540101,
+      "mtime_ns": 1790015801547663700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000180.png",
+      "bytes": 4545921,
+      "mtime_ns": 1790015801639665200
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000181.png",
+      "bytes": 4546839,
+      "mtime_ns": 1790015801733572400
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000182.png",
+      "bytes": 4565681,
+      "mtime_ns": 1790015801825173900
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000183.png",
+      "bytes": 4341708,
+      "mtime_ns": 1790015801915246800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000184.png",
+      "bytes": 4358897,
+      "mtime_ns": 1790015802005547300
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000185.png",
+      "bytes": 4386105,
+      "mtime_ns": 1790015802096206200
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000186.png",
+      "bytes": 4422366,
+      "mtime_ns": 1790015802186290200
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000187.png",
+      "bytes": 4433658,
+      "mtime_ns": 1790015802277997800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000188.png",
+      "bytes": 4462752,
+      "mtime_ns": 1790015802368455900
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000189.png",
+      "bytes": 4500230,
+      "mtime_ns": 1790015802461188300
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000190.png",
+      "bytes": 4533796,
+      "mtime_ns": 1790015802552813500
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000191.png",
+      "bytes": 4523380,
+      "mtime_ns": 1790015802645149300
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000192.png",
+      "bytes": 4553260,
+      "mtime_ns": 1790015802737593800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000193.png",
+      "bytes": 4548128,
+      "mtime_ns": 1790015802829896400
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000194.png",
+      "bytes": 4563151,
+      "mtime_ns": 1790015802922975800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000195.png",
+      "bytes": 4556557,
+      "mtime_ns": 1790015803016086000
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000196.png",
+      "bytes": 4568713,
+      "mtime_ns": 1790015803108030800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000197.png",
+      "bytes": 4575684,
+      "mtime_ns": 1790015803201591200
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000198.png",
+      "bytes": 4367766,
+      "mtime_ns": 1790015803291816700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000199.png",
+      "bytes": 4366333,
+      "mtime_ns": 1790015803382772300
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000200.png",
+      "bytes": 4394955,
+      "mtime_ns": 1790015803472527000
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000201.png",
+      "bytes": 4413855,
+      "mtime_ns": 1790015803563369600
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000202.png",
+      "bytes": 4446734,
+      "mtime_ns": 1790015803654088400
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000203.png",
+      "bytes": 4485873,
+      "mtime_ns": 1790015803745719000
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000204.png",
+      "bytes": 4499943,
+      "mtime_ns": 1790015803836724000
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000205.png",
+      "bytes": 4512449,
+      "mtime_ns": 1790015803928408500
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000206.png",
+      "bytes": 4536531,
+      "mtime_ns": 1790015804020459900
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000207.png",
+      "bytes": 4538298,
+      "mtime_ns": 1790015804113077600
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000208.png",
+      "bytes": 4547074,
+      "mtime_ns": 1790015804204362700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000209.png",
+      "bytes": 4548076,
+      "mtime_ns": 1790015804297621400
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000210.png",
+      "bytes": 4560027,
+      "mtime_ns": 1790015804389151700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000211.png",
+      "bytes": 4563165,
+      "mtime_ns": 1790015804482739400
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000212.png",
+      "bytes": 4568888,
+      "mtime_ns": 1790015804574506900
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000213.png",
+      "bytes": 4351822,
+      "mtime_ns": 1790015804664778600
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000214.png",
+      "bytes": 4376359,
+      "mtime_ns": 1790015804753268900
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000215.png",
+      "bytes": 4400046,
+      "mtime_ns": 1790015804843462200
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000216.png",
+      "bytes": 4419264,
+      "mtime_ns": 1790015804934608300
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000217.png",
+      "bytes": 4450725,
+      "mtime_ns": 1790015805026157900
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000218.png",
+      "bytes": 4493237,
+      "mtime_ns": 1790015805118014900
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000219.png",
+      "bytes": 4503611,
+      "mtime_ns": 1790015805210395800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000220.png",
+      "bytes": 4518675,
+      "mtime_ns": 1790015805302210800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000221.png",
+      "bytes": 4537370,
+      "mtime_ns": 1790015805394749100
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000222.png",
+      "bytes": 4557270,
+      "mtime_ns": 1790015805487204800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000223.png",
+      "bytes": 4559208,
+      "mtime_ns": 1790015805579834400
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000224.png",
+      "bytes": 4569202,
+      "mtime_ns": 1790015805672779000
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000225.png",
+      "bytes": 4580937,
+      "mtime_ns": 1790015805766514900
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000226.png",
+      "bytes": 4586319,
+      "mtime_ns": 1790015805859379600
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000227.png",
+      "bytes": 4570784,
+      "mtime_ns": 1790015805951838300
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000228.png",
+      "bytes": 4349526,
+      "mtime_ns": 1790015806039985100
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000229.png",
+      "bytes": 4370508,
+      "mtime_ns": 1790015806129573600
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000230.png",
+      "bytes": 4427877,
+      "mtime_ns": 1790015806220830500
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000231.png",
+      "bytes": 4452076,
+      "mtime_ns": 1790015806311831900
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000232.png",
+      "bytes": 4465827,
+      "mtime_ns": 1790015806402622100
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000233.png",
+      "bytes": 4493705,
+      "mtime_ns": 1790015806494259400
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000234.png",
+      "bytes": 4527603,
+      "mtime_ns": 1790015806585605500
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000235.png",
+      "bytes": 4524388,
+      "mtime_ns": 1790015806678192700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000236.png",
+      "bytes": 4539849,
+      "mtime_ns": 1790015806770870800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000237.png",
+      "bytes": 4545647,
+      "mtime_ns": 1790015806863733700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000238.png",
+      "bytes": 4575559,
+      "mtime_ns": 1790015806956738600
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000239.png",
+      "bytes": 4565628,
+      "mtime_ns": 1790015807049899100
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000240.png",
+      "bytes": 4585511,
+      "mtime_ns": 1790015807141487200
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000241.png",
+      "bytes": 4581400,
+      "mtime_ns": 1790015807234734900
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000242.png",
+      "bytes": 4590530,
+      "mtime_ns": 1790015807328913800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000243.png",
+      "bytes": 4352403,
+      "mtime_ns": 1790015807418253400
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000244.png",
+      "bytes": 4385861,
+      "mtime_ns": 1790015807507690700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000245.png",
+      "bytes": 4414168,
+      "mtime_ns": 1790015807597922200
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000246.png",
+      "bytes": 4451732,
+      "mtime_ns": 1790015807688121100
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000247.png",
+      "bytes": 4467270,
+      "mtime_ns": 1790015807779314500
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000248.png",
+      "bytes": 4489130,
+      "mtime_ns": 1790015807870373900
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000249.png",
+      "bytes": 4487728,
+      "mtime_ns": 1790015807962272600
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000250.png",
+      "bytes": 4497863,
+      "mtime_ns": 1790015808051975500
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000251.png",
+      "bytes": 4515218,
+      "mtime_ns": 1790015808143098300
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000252.png",
+      "bytes": 4529241,
+      "mtime_ns": 1790015808234942800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000253.png",
+      "bytes": 4547867,
+      "mtime_ns": 1790015808327586800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000254.png",
+      "bytes": 4550225,
+      "mtime_ns": 1790015808421285100
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000255.png",
+      "bytes": 4563531,
+      "mtime_ns": 1790015808512964300
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000256.png",
+      "bytes": 4584024,
+      "mtime_ns": 1790015808606576900
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000257.png",
+      "bytes": 4579112,
+      "mtime_ns": 1790015808700173800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000258.png",
+      "bytes": 4340969,
+      "mtime_ns": 1790015808788046100
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000259.png",
+      "bytes": 4385996,
+      "mtime_ns": 1790015808878146300
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000260.png",
+      "bytes": 4418399,
+      "mtime_ns": 1790015808969089400
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000261.png",
+      "bytes": 4433976,
+      "mtime_ns": 1790015809060197400
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000262.png",
+      "bytes": 4466406,
+      "mtime_ns": 1790015809150479800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000263.png",
+      "bytes": 4505782,
+      "mtime_ns": 1790015809242103200
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000264.png",
+      "bytes": 4531705,
+      "mtime_ns": 1790015809333960400
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000265.png",
+      "bytes": 4545333,
+      "mtime_ns": 1790015809426909000
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000266.png",
+      "bytes": 4564296,
+      "mtime_ns": 1790015809518757900
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000267.png",
+      "bytes": 4568832,
+      "mtime_ns": 1790015809611409700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000268.png",
+      "bytes": 4583520,
+      "mtime_ns": 1790015809703912800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000269.png",
+      "bytes": 4587354,
+      "mtime_ns": 1790015809796667000
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000270.png",
+      "bytes": 4590364,
+      "mtime_ns": 1790015809889227600
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000271.png",
+      "bytes": 4584702,
+      "mtime_ns": 1790015809982255500
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000272.png",
+      "bytes": 4600532,
+      "mtime_ns": 1790015810074264000
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000273.png",
+      "bytes": 4382055,
+      "mtime_ns": 1790015810162856300
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000274.png",
+      "bytes": 4381546,
+      "mtime_ns": 1790015810252240900
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000275.png",
+      "bytes": 4420405,
+      "mtime_ns": 1790015810342152500
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000276.png",
+      "bytes": 4457547,
+      "mtime_ns": 1790015810433200800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000277.png",
+      "bytes": 4476730,
+      "mtime_ns": 1790015810523913900
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000278.png",
+      "bytes": 4499750,
+      "mtime_ns": 1790015810615651600
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000279.png",
+      "bytes": 4526688,
+      "mtime_ns": 1790015810708035500
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000280.png",
+      "bytes": 4547065,
+      "mtime_ns": 1790015810801220000
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000281.png",
+      "bytes": 4548899,
+      "mtime_ns": 1790015810892337200
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000282.png",
+      "bytes": 4572248,
+      "mtime_ns": 1790015810984524400
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000283.png",
+      "bytes": 4574062,
+      "mtime_ns": 1790015811077313500
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000284.png",
+      "bytes": 4596673,
+      "mtime_ns": 1790015811169384900
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000285.png",
+      "bytes": 4588557,
+      "mtime_ns": 1790015811262157600
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000286.png",
+      "bytes": 4603146,
+      "mtime_ns": 1790015811355384100
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000287.png",
+      "bytes": 4582344,
+      "mtime_ns": 1790015811447699100
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000288.png",
+      "bytes": 4385108,
+      "mtime_ns": 1790015811537530300
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000289.png",
+      "bytes": 4389635,
+      "mtime_ns": 1790015811627018700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000290.png",
+      "bytes": 4412955,
+      "mtime_ns": 1790015811719216500
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000291.png",
+      "bytes": 4442653,
+      "mtime_ns": 1790015811811171400
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000292.png",
+      "bytes": 4479471,
+      "mtime_ns": 1790015811901774200
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000293.png",
+      "bytes": 4501350,
+      "mtime_ns": 1790015811992188800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000294.png",
+      "bytes": 4512566,
+      "mtime_ns": 1790015812084097800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000295.png",
+      "bytes": 4536332,
+      "mtime_ns": 1790015812175864200
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000296.png",
+      "bytes": 4569432,
+      "mtime_ns": 1790015812267290600
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000297.png",
+      "bytes": 4558387,
+      "mtime_ns": 1790015812360065700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000298.png",
+      "bytes": 4535974,
+      "mtime_ns": 1790015812450598300
+    },
+    {
+      "path": "data/cut_roasted_beef/cam00/000299.png",
+      "bytes": 4549874,
+      "mtime_ns": 1790015812543739000
+    },
+    {
+      "path": "data/cut_roasted_beef/cam01/000000.png",
+      "bytes": 4408710,
+      "mtime_ns": 1790015812715930400
+    },
+    {
+      "path": "data/cut_roasted_beef/cam02/000000.png",
+      "bytes": 4288668,
+      "mtime_ns": 1790015812884982100
+    },
+    {
+      "path": "data/cut_roasted_beef/cam03/000000.png",
+      "bytes": 4270009,
+      "mtime_ns": 1790015813053549800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam05/000000.png",
+      "bytes": 4420615,
+      "mtime_ns": 1790015813224249700
+    },
+    {
+      "path": "data/cut_roasted_beef/cam06/000000.png",
+      "bytes": 4297333,
+      "mtime_ns": 1790015813392413100
+    },
+    {
+      "path": "data/cut_roasted_beef/cam07/000000.png",
+      "bytes": 4620279,
+      "mtime_ns": 1790015813566995400
+    },
+    {
+      "path": "data/cut_roasted_beef/cam08/000000.png",
+      "bytes": 4750400,
+      "mtime_ns": 1790015813740887200
+    },
+    {
+      "path": "data/cut_roasted_beef/cam09/000000.png",
+      "bytes": 4125455,
+      "mtime_ns": 1790015813905208300
+    },
+    {
+      "path": "data/cut_roasted_beef/cam10/000000.png",
+      "bytes": 4835601,
+      "mtime_ns": 1790015814084366200
+    },
+    {
+      "path": "data/cut_roasted_beef/cam11/000000.png",
+      "bytes": 4693049,
+      "mtime_ns": 1790015814258418500
+    },
+    {
+      "path": "data/cut_roasted_beef/cam12/000000.png",
+      "bytes": 4778399,
+      "mtime_ns": 1790015814433485200
+    },
+    {
+      "path": "data/cut_roasted_beef/cam13/000000.png",
+      "bytes": 4354510,
+      "mtime_ns": 1790015814602665900
+    },
+    {
+      "path": "data/cut_roasted_beef/cam14/000000.png",
+      "bytes": 4262667,
+      "mtime_ns": 1790015814769949400
+    },
+    {
+      "path": "data/cut_roasted_beef/cam15/000000.png",
+      "bytes": 4489403,
+      "mtime_ns": 1790015814943704900
+    },
+    {
+      "path": "data/cut_roasted_beef/cam16/000000.png",
+      "bytes": 4602516,
+      "mtime_ns": 1790015815115371400
+    },
+    {
+      "path": "data/cut_roasted_beef/cam17/000000.png",
+      "bytes": 4711306,
+      "mtime_ns": 1790015815289292100
+    },
+    {
+      "path": "data/cut_roasted_beef/cam18/000000.png",
+      "bytes": 4740903,
+      "mtime_ns": 1790015815464906000
+    },
+    {
+      "path": "data/cut_roasted_beef/cam19/000000.png",
+      "bytes": 4586483,
+      "mtime_ns": 1790015815638549800
+    },
+    {
+      "path": "data/cut_roasted_beef/cam20/000000.png",
+      "bytes": 4475286,
+      "mtime_ns": 1790015815808846800
+    }
+  ],
+  "leakage_note": "The pretrained checkpoint saw non-cam00 views; development is compression validation, not unseen-view validation."
+}

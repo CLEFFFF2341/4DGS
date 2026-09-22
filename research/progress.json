@@ -1,0 +1,24 @@
+{
+  "schema": "research-progress-v1",
+  "authorized_stages": [
+    0
+  ],
+  "gpu_hours_consumed": 0.0,
+  "cpu_selection_hours_consumed": 0.0,
+  "resource_control_slots_used": 0,
+  "queue": [
+    {
+      "task": "P00",
+      "status": "RUNNING"
+    }
+  ],
+  "runs": {},
+  "failures": [],
+  "frozen_test_manifest": null,
+  "git": {
+    "commit": "22e228481a2ae8ab96761e70cc457146159602c3",
+    "branch": "codex/astra-experiments-20260923",
+    "dirty": true,
+    "dirty_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

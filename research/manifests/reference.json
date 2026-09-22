@@ -1,0 +1,26 @@
+{
+  "schema": "research-reference-v1",
+  "scene": "cut_roasted_beef",
+  "model_path": "pretrained/cut_roasted_beef",
+  "source_path": "data/cut_roasted_beef",
+  "iteration": 40000,
+  "cfg_args_sha256": "8175faa0bd8e01404466114ef5910345d896fc9b3e659aa1ed6bf611751dd7c8",
+  "static_ply_sha256": "d0b66a2d2ae2dca1d864335ae015cf0f9ca212a04b8c6ebb2b11e23ab3753171",
+  "dynamic_ply_sha256": "3d48eb4eb4e65858fb5e88b2d8be03942ab29c2b242aa3bda223170e7f209e98",
+  "resolution": 2,
+  "duration": 300,
+  "near": 4.0,
+  "far": 300.0,
+  "white_background": false,
+  "model": "cubic",
+  "interp_type": "cube",
+  "rot_interp_type": "slerp",
+  "image_inventory_hash_mode": "metadata",
+  "image_inventory_sha256": "a07847f4ef9ff11e5765b251ddecccc38462006280b6cafb62b976a5ed902239",
+  "git": {
+    "commit": "22e228481a2ae8ab96761e70cc457146159602c3",
+    "branch": "codex/astra-experiments-20260923",
+    "dirty": true,
+    "dirty_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}
