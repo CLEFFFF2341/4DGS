@@ -1,0 +1,12 @@
+{
+  "schema": "p01-config-v1",
+  "scene": "cut_roasted_beef",
+  "model": "M0",
+  "budget_fraction": 0.5,
+  "seed": 0,
+  "rules": ["R0", "R1", "R2", "R3", "R4", "R5"],
+  "finetune_steps": 0,
+  "statistics_cache": "K1",
+  "evaluation_split": "development",
+  "evaluation_times": "T24"
+}

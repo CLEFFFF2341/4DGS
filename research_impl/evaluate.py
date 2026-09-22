@@ -191,6 +191,107 @@ def evaluate(adapter: Any, scene: Any, camera_names: list[str], times: list[int]
 
 
 @torch.no_grad()
+def evaluate_against_reference(
+    adapter: Any,
+    reference: Any,
+    scene: Any,
+    camera_names: list[str],
+    times: list[int],
+    output: Path,
+) -> dict:
+    """Evaluate a method against GT and its immutable teacher in one pass."""
+    if "cam00" in camera_names:
+        raise RuntimeError("Final test evaluation is sealed until research/progress.json freezes the final-test manifest")
+    output.mkdir(parents=True, exist_ok=True)
+    lpips_model = LPIPS("alex", "0.1").cuda().eval()
+    rows = []
+    decoders: dict[Path, VideoFrameDecoder] = {}
+    torch.cuda.reset_peak_memory_stats()
+    started = time.perf_counter()
+    for name in camera_names:
+        for timestamp in times:
+            camera = select_camera(scene, name, timestamp)
+            gt = load_ground_truth(camera, decoders)
+            render_start = time.perf_counter()
+            image = render_one(adapter, camera)
+            render_seconds = time.perf_counter() - render_start
+            teacher = render_one(reference, camera)
+            method_mse = torch.mean((image - gt) ** 2)
+            teacher_mse = torch.mean((teacher - gt) ** 2)
+            method_psnr = float(psnr(image[None], gt[None]).item())
+            teacher_psnr = float(psnr(teacher[None], gt[None]).item())
+            rows.append({
+                "camera": name,
+                "timestamp": timestamp,
+                "psnr": method_psnr,
+                "ssim": float(ssim(image[None], gt[None]).item()),
+                "lpips_alex": float(lpips_model(image[None], gt[None]).item()),
+                "gt_mse": float(method_mse.item()),
+                "teacher_mse": float(torch.mean((image - teacher) ** 2).item()),
+                "delta_mse": float((method_mse - teacher_mse).item()),
+                "reference_psnr": teacher_psnr,
+                "psnr_drop": teacher_psnr - method_psnr,
+                "render_seconds": render_seconds,
+            })
+            del gt, image, teacher
+    for decoder in decoders.values():
+        decoder.close()
+    with (output / "per_frame.csv").open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
+        writer.writeheader()
+        writer.writerows(rows)
+    tail_count = max(1, int(np.ceil(0.1 * len(rows))))
+    drop_descending = sorted(rows, key=lambda row: (-row["psnr_drop"], row["camera"], row["timestamp"]))
+    worst = drop_descending[0]
+    last_rows = [row for row in rows if row["timestamp"] >= 270]
+    summary = {
+        "status": "COMPLETED",
+        "count": len(rows),
+        "mean_psnr": statistics.fmean(row["psnr"] for row in rows),
+        "mean_ssim": statistics.fmean(row["ssim"] for row in rows),
+        "mean_lpips_alex": statistics.fmean(row["lpips_alex"] for row in rows),
+        "mean_gt_mse": statistics.fmean(row["gt_mse"] for row in rows),
+        "mean_teacher_mse": statistics.fmean(row["teacher_mse"] for row in rows),
+        "mean_delta_mse": statistics.fmean(row["delta_mse"] for row in rows),
+        "mean_psnr_drop": statistics.fmean(row["psnr_drop"] for row in rows),
+        "worst_10pct_mean_psnr_drop": statistics.fmean(row["psnr_drop"] for row in drop_descending[:tail_count]),
+        "p95_delta_mse": float(np.percentile([row["delta_mse"] for row in rows], 95)),
+        "worst_frame": {"camera": worst["camera"], "timestamp": worst["timestamp"], "psnr_drop": worst["psnr_drop"]},
+        "last_30_mean_psnr": statistics.fmean(row["psnr"] for row in last_rows),
+        "last_30_mean_delta_mse": statistics.fmean(row["delta_mse"] for row in last_rows),
+        "mean_render_seconds": statistics.fmean(row["render_seconds"] for row in rows),
+        "wall_seconds": time.perf_counter() - started,
+        "peak_allocated_bytes": torch.cuda.max_memory_allocated(),
+        "peak_reserved_bytes": torch.cuda.max_memory_reserved(),
+    }
+    (output / "summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
+    return summary
+
+
+@torch.no_grad()
+def save_comparison_visualizations(
+    adapter: Any,
+    reference: Any,
+    scene: Any,
+    camera_names: list[str],
+    times: list[int],
+    output: Path,
+) -> None:
+    output.mkdir(parents=True, exist_ok=True)
+    decoders: dict[Path, VideoFrameDecoder] = {}
+    for name in camera_names:
+        for timestamp in times:
+            camera = select_camera(scene, name, timestamp)
+            gt = load_ground_truth(camera, decoders)
+            teacher = render_one(reference, camera)
+            image = render_one(adapter, camera)
+            panel = torch.cat((gt, teacher, image), dim=2).mul(255).round().byte().permute(1, 2, 0).cpu().numpy()
+            Image.fromarray(panel).save(output / f"{name}_{timestamp:03d}_gt-reference-method.png")
+    for decoder in decoders.values():
+        decoder.close()
+
+
+@torch.no_grad()
 def benchmark_latency(adapter: Any, scene: Any, inputs: list[tuple[str, int]], output: Path) -> dict:
     cameras = [select_camera(scene, name, timestamp) for name, timestamp in inputs]
     for index in range(20):
