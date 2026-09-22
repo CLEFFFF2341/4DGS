@@ -18,9 +18,9 @@
   "image_inventory_hash_mode": "sha256",
   "image_inventory_sha256": "6b70e5e0115320bc46b2d52e10dd4a3614488c56d921344d2d44c39241a1101c",
   "git": {
-    "commit": "79a955b257a74732b046a7ea64081e5d54b1fa5c",
+    "commit": "05cdfe00328681a43d044621fd6d13a9f3638b2f",
     "branch": "codex/astra-experiments-20260923",
-    "dirty": false,
-    "dirty_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    "dirty": true,
+    "dirty_diff_sha256": "5bbc50e1f270c991af3a7c5f5dec263659cce6fa1362df868bd8c517183f883a"
   }
 }
