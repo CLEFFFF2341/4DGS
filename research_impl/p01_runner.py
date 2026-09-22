@@ -10,10 +10,10 @@ from typing import Any
 import numpy as np
 import torch
 
-from .adapter import load_reference
+from .adapter import load_bundle, load_reference
 from .cache import build_k1
 from .config import ROOT, git_provenance, sha256_file, sha256_json
-from .evaluate import benchmark_latency, build_verified_ground_truth_cache, evaluate_against_reference, save_comparison_visualizations, smoke_render
+from .evaluate import benchmark_latency, build_verified_ground_truth_cache, evaluate_against_reference, render_one, save_comparison_visualizations, select_camera, smoke_render
 from .methods.p01 import RULES, correctness_checks, select
 from .runner import gpu_lock
 
@@ -60,6 +60,27 @@ def _method_report(rule: str, summary: dict[str, Any], selection: Any, cache_key
 """
 
 
+def _bundle_reload_check(directory: Path, adapter: Any, scene: Any, camera_name: str) -> dict[str, Any]:
+    kept = np.load(directory / "kept_ids.npz")
+    expected = adapter.gather(kept["static_indices"], kept["dynamic_indices"])
+    reloaded = load_bundle(directory / "bundle", adapter.args)
+    camera = select_camera(scene, camera_name, 149)
+    expected_image = render_one(expected, camera)
+    reloaded_image = render_one(reloaded, camera)
+    difference = (expected_image - reloaded_image).abs()
+    result = {
+        "static_rows_equal": bool(np.array_equal(expected.static_rows, reloaded.static_rows)),
+        "dynamic_rows_equal": bool(np.array_equal(expected.dynamic_rows, reloaded.dynamic_rows)),
+        "render_max_abs": float(difference.max()),
+        "render_mean_abs": float(difference.mean()),
+    }
+    result["passed"] = result["static_rows_equal"] and result["dynamic_rows_equal"] and result["render_max_abs"] <= 1e-6
+    _write_json(directory / "bundle_reload_check.json", result)
+    if not result["passed"]:
+        raise RuntimeError(f"Bundle reload check failed for {directory}: {result}")
+    return result
+
+
 def _run_one(
     rule: str,
     config: dict[str, Any],
@@ -76,6 +97,7 @@ def _run_one(
     final = RUN_ROOT / config_hash
     status_path = final / "status.json"
     if status_path.exists() and json.loads(status_path.read_text(encoding="utf-8")).get("status") == "COMPLETED":
+        _bundle_reload_check(final, adapter, scene, splits["development"][0])
         summary = json.loads((final / "summary.json").read_text(encoding="utf-8"))
         return {
             **summary,
@@ -116,6 +138,7 @@ def _run_one(
     subset = adapter.gather(selection.static_indices, selection.dynamic_indices)
     bundle_started = time.perf_counter()
     bundle_meta = subset.save_bundle(temporary / "bundle")
+    _bundle_reload_check(temporary, adapter, scene, splits["development"][0])
     timing["serialization_seconds"] = time.perf_counter() - bundle_started
     smoke_started = time.perf_counter()
     smoke = smoke_render(subset, scene, [splits["development"][0]], [0, 149], temporary / "smoke")
