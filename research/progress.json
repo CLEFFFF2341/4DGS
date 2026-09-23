@@ -4,12 +4,12 @@
     0,
     1
   ],
-  "gpu_hours_consumed": 0.3727,
+  "gpu_hours_consumed": 0.3878,
   "cpu_selection_hours_consumed": 0.0184,
   "resource_control_slots_used": 2,
   "queue": [
     {
-      "task": "P06",
+      "task": "P07",
       "status": "NEXT"
     }
   ],
@@ -45,6 +45,9 @@
     ,"P15/R0": "ADVANCED_STAGE1"
     ,"P15/R1": "COMPLETED"
     ,"P15": "ADVANCED_STAGE1"
+    ,"P06/R0": "PROXY_INVALID"
+    ,"P06/R1": "PROXY_INVALID"
+    ,"P06": "PROXY_INVALID"
     ,"resource_control/P15_cap/P01_R4": "COMPLETED"
     ,"resource_control/P16_cap/P01_R4": "COMPLETED"
   },
@@ -81,6 +84,13 @@
       "summary": "The 128-trajectory algorithm smoke completed, but writing its result failed because the P15 output root did not yet exist. The output root is now created before the smoke; no formal run had started.",
       "artifact": "runs/research/P15/cut_roasted_beef/selection_smoke_128.json",
       "status": "RESOLVED"
+    },
+    {
+      "task": "P06",
+      "type": "proxy_invalid",
+      "summary": "The segment proxy is anti-correlated with the negative true development-view segment error (Spearman -0.542857). Five MW rounds are numerically indistinguishable from one uniform round and do not improve P02/P03/P01.",
+      "artifact": "runs/research/P06/cut_roasted_beef/aggregate.json",
+      "status": "PROXY_INVALID"
     }
   ],
   "frozen_test_manifest": null,
@@ -90,9 +100,9 @@
     "deterministic_methods": "verify seed-invariant IDs and evaluate once; do not report duplicate runs as independent samples"
   },
   "git": {
-    "commit": "3fe18f9cb03c642b0e75bd0c89eda4cddb8f894e",
+    "commit": "8d4a41b",
     "branch": "codex/astra-experiments-20260923",
     "dirty": true,
-    "dirty_diff_sha256": "09f9e9b0f477a31bce51cc82e8b5a68c081411f653fe4f372e2b7817ef04e8a5"
+    "dirty_diff_sha256": "4b5174c59b3f8704299976ff29ff8036bd539b204142963ce0e912ce8d9dbb9f"
   }
 }
