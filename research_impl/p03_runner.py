@@ -13,7 +13,7 @@ from .adapter import load_bundle, load_reference
 from .cache import build_k2
 from .config import ROOT, git_provenance, sha256_file
 from .evaluate import VERIFIED_GT_ROOT, VideoFrameDecoder, benchmark_latency, build_verified_ground_truth_cache, evaluate_against_reference, load_ground_truth, render_one, save_comparison_visualizations, select_camera, smoke_render
-from .methods.p03 import correctness_checks, select
+from .methods.p03 import correctness_checks, ranking_stability, select
 from .runner import gpu_lock
 
 
@@ -153,6 +153,8 @@ def main() -> None:
         if not checks["passed"]:
             raise RuntimeError(checks)
         consensus_gt = build_consensus_window_cache(scene, splits["development"], samples["windows"])
+        stability = ranking_stability(reference, k2, config["budget_fraction"])
+        dump(base / "odd_even_ranking_stability.json", stability)
         for rule in config["rules"]:
             output = base / rule
             output.mkdir(parents=True, exist_ok=True)
@@ -198,7 +200,7 @@ def main() -> None:
             dump(output / "status.json", {"status": "COMPLETED", "rule": rule})
             rows.append({"rule": rule, **summary, "selection": selection.diagnostics, "temporal": {key: value for key, value in temporal.items() if key != "pairs"}, **reuse})
             print(f"P03 {rule}: PSNR={summary['mean_psnr']:.6f}, incremental_TDE={temporal['incremental_tde']:.8f}", flush=True)
-    aggregate = {"status": "COMPLETED", "k2_key": k2_meta["key"], "correctness_checks": checks, "consensus_gt": consensus_gt, "runs": rows}
+    aggregate = {"status": "COMPLETED", "k2_key": k2_meta["key"], "correctness_checks": checks, "ranking_stability": stability, "consensus_gt": consensus_gt, "runs": rows}
     dump(base.parent / "aggregate.json", aggregate)
     print(json.dumps(aggregate, indent=2))
 

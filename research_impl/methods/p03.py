@@ -3,6 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 
 import numpy as np
+from scipy.stats import spearmanr
 
 from .p01 import quotas
 
@@ -88,3 +89,28 @@ def correctness_checks(adapter, cache: dict) -> dict:
     }
     checks["passed"] = all(value for value in checks.values() if isinstance(value, bool))
     return checks
+
+
+def ranking_stability(adapter, cache: dict, budget_fraction: float = 0.5) -> dict:
+    e_it = cache["e_it"].double().numpy()
+    result = {}
+    for rule in ("R0", "R1", "R2"):
+        odd_scores = aggregate(e_it[1::2], rule)
+        even_scores = aggregate(e_it[0::2], rule)
+        correlation = float(spearmanr(odd_scores, even_scores).statistic)
+        _, keep_static, keep_dynamic = quotas(adapter.static_count, adapter.dynamic_count, budget_fraction)
+        odd_ids = {
+            *(("static", int(row)) for row in _topk(odd_scores[: adapter.static_count], adapter.static_rows, keep_static)),
+            *(("dynamic", int(row)) for row in _topk(odd_scores[adapter.static_count :], adapter.dynamic_rows, keep_dynamic)),
+        }
+        even_ids = {
+            *(("static", int(row)) for row in _topk(even_scores[: adapter.static_count], adapter.static_rows, keep_static)),
+            *(("dynamic", int(row)) for row in _topk(even_scores[adapter.static_count :], adapter.dynamic_rows, keep_dynamic)),
+        }
+        result[rule] = {
+            "odd_even_spearman": correlation,
+            "odd_even_topk_jaccard": len(odd_ids & even_ids) / len(odd_ids | even_ids),
+            "odd_time_count": int(e_it[1::2].shape[0]),
+            "even_time_count": int(e_it[0::2].shape[0]),
+        }
+    return result
