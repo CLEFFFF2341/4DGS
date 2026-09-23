@@ -4,12 +4,12 @@
     0,
     1
   ],
-  "gpu_hours_consumed": 0.3878,
-  "cpu_selection_hours_consumed": 0.0184,
+  "gpu_hours_consumed": 0.7048,
+  "cpu_selection_hours_consumed": 0.0185,
   "resource_control_slots_used": 2,
   "queue": [
     {
-      "task": "P07",
+      "task": "P08",
       "status": "NEXT"
     }
   ],
@@ -48,6 +48,9 @@
     ,"P06/R0": "PROXY_INVALID"
     ,"P06/R1": "PROXY_INVALID"
     ,"P06": "PROXY_INVALID"
+    ,"P07/R0": "NEGATIVE"
+    ,"P07/R1": "COMPLETED_CONTROL"
+    ,"P07": "NEGATIVE"
     ,"resource_control/P15_cap/P01_R4": "COMPLETED"
     ,"resource_control/P16_cap/P01_R4": "COMPLETED"
   },
@@ -91,6 +94,13 @@
       "summary": "The segment proxy is anti-correlated with the negative true development-view segment error (Spearman -0.542857). Five MW rounds are numerically indistinguishable from one uniform round and do not improve P02/P03/P01.",
       "artifact": "runs/research/P06/cut_roasted_beef/aggregate.json",
       "status": "PROXY_INVALID"
+    },
+    {
+      "task": "P07",
+      "type": "negative",
+      "summary": "Four-round fresh K2 recalibration changes boundary IDs after millions of newly exposed contributor rays, but lowers PSNR by 0.385796 dB and worsens worst-10% drop by 0.823569 dB versus the stale/P02 control. All correctness checks pass.",
+      "artifact": "runs/research/P07/cut_roasted_beef/aggregate.json",
+      "status": "NEGATIVE"
     }
   ],
   "frozen_test_manifest": null,
@@ -100,9 +110,9 @@
     "deterministic_methods": "verify seed-invariant IDs and evaluate once; do not report duplicate runs as independent samples"
   },
   "git": {
-    "commit": "8d4a41b",
+    "commit": "c0159e0",
     "branch": "codex/astra-experiments-20260923",
     "dirty": true,
-    "dirty_diff_sha256": "4b5174c59b3f8704299976ff29ff8036bd539b204142963ce0e912ce8d9dbb9f"
+    "dirty_diff_sha256": "a8b643c4e723ebb2fd14099cca998d7afa89e44e0a0e5387c142299a7c3df2de"
   }
 }
