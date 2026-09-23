@@ -1,0 +1,11 @@
+{
+  "schema": "p02-config-v1",
+  "scene": "cut_roasted_beef",
+  "budget_fraction": 0.5,
+  "seed_policy": "deterministic; verify IDs for seeds 0,1,2 and evaluate once",
+  "rule": "mean_single_deletion_mse",
+  "finetune_steps": 0,
+  "statistics_cache": "K2",
+  "evaluation_split": "development",
+  "evaluation_times": "T24"
+}
