@@ -165,6 +165,94 @@ def build_k1(adapter, scene, camera_names: list[str], times: list[int], resoluti
 
 
 @torch.no_grad()
+def build_k2(adapter, scene, camera_names: list[str], times: list[int], resolution: list[int], output_root: Path) -> dict:
+    """Build exact single-deletion MSE using the renderer's early-stop control flow."""
+    import diff_gaussian_rasterization_df._C as raster_extension
+
+    extension_path = Path(raster_extension.__file__)
+    specification = {
+        "schema": "k2-exact-early-stop-deletion-v2",
+        "checkpoint_sha256": adapter.checkpoint_sha256,
+        "camera_names": camera_names,
+        "times": times,
+        "resolution": resolution,
+        "background": [0.0, 0.0, 0.0],
+        "alpha_cap": 0.99,
+        "alpha_floor": 1.0 / 255.0,
+        "early_stop_T": 1e-4,
+        "counterfactual": "remove matching Gaussian ID and replay exact early-stop semantics, including the stopping gate",
+        "extension_sha256": sha256_file(extension_path),
+    }
+    key = sha256_json(specification)
+    directory = output_root / key
+    directory.mkdir(parents=True, exist_ok=True)
+    final = directory / "k2.pt"
+    if final.exists():
+        return {"key": key, "path": str(final), "reused": True}
+    n = adapter.total_count
+    width, height = map(int, resolution)
+    e_it = np.zeros((len(times), n), dtype=np.float64)
+    background = torch.zeros(3, dtype=torch.float32, device="cuda")
+    deletion_pipe = pipeline()
+    deletion_pipe.collect_stats = True
+    deletion_pipe.collect_deletions = True
+    frame_timings = []
+    replay_max_abs = 0.0
+    started = time.perf_counter()
+    torch.cuda.reset_peak_memory_stats()
+    total_frames = len(times) * len(camera_names)
+    completed = 0
+    for time_index, timestamp in enumerate(times):
+        for name in camera_names:
+            camera = copy.copy(select_camera(scene, name, timestamp))
+            camera.image_width = width
+            camera.image_height = height
+            frame_started = time.perf_counter()
+            stats = render(
+                camera,
+                adapter.model,
+                deletion_pipe,
+                background,
+                timestamp=timestamp,
+                near=adapter.args.near,
+                far=adapter.args.far,
+            )
+            seconds = time.perf_counter() - frame_started
+            frame_replay = float((stats["render"] - stats["replay_color"]).abs().max())
+            replay_max_abs = max(replay_max_abs, frame_replay)
+            e_it[time_index] += stats["deletion_sq_sum"].cpu().numpy().astype(np.float64) / (width * height * len(camera_names))
+            completed += 1
+            frame_timings.append({"camera": name, "timestamp": timestamp, "seconds": seconds, "replay_max_abs": frame_replay})
+            print(f"K2 exact deletion {completed}/{total_frames}: {name} t={timestamp}, {seconds:.3f}s", flush=True)
+    payload = {
+        "specification": specification,
+        "static_rows": torch.from_numpy(adapter.static_rows.copy()),
+        "dynamic_rows": torch.from_numpy(adapter.dynamic_rows.copy()),
+        "e_it": torch.from_numpy(e_it),
+        "mean_e_i": torch.from_numpy(e_it.mean(axis=0)),
+        "frame_timings": frame_timings,
+        "replay_max_abs": replay_max_abs,
+    }
+    temporary = directory / "k2.pt.partial"
+    torch.save(payload, temporary)
+    temporary.replace(final)
+    metadata = {
+        "key": key,
+        "path": str(final),
+        "bytes": final.stat().st_size,
+        "seconds": time.perf_counter() - started,
+        "peak_allocated_bytes": torch.cuda.max_memory_allocated(),
+        "peak_reserved_bytes": torch.cuda.max_memory_reserved(),
+        "nonzero_points": int((e_it.sum(axis=0) > 0).sum()),
+        "replay_max_abs": replay_max_abs,
+        "mean_frame_seconds": float(np.mean([row["seconds"] for row in frame_timings])),
+        "reused": False,
+    }
+    (directory / "metadata.json").write_text(json.dumps(metadata, indent=2), encoding="utf-8")
+    return metadata
+
+
+@torch.no_grad()
 def build_k4(adapter, times: list[int], output_root: Path) -> dict:
     """Build the P05 trajectory-feature and same-kind 16-NN cache."""
     specification = {
