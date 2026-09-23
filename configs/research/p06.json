@@ -1,0 +1,13 @@
+{
+  "schema": "p06-config-v1",
+  "scene": "cut_roasted_beef",
+  "budget_fraction": 0.5,
+  "seed_policy": "deterministic; verify IDs for seeds 0,1,2 and evaluate once",
+  "rules": ["R0", "R1"],
+  "segments": 6,
+  "times_per_segment": 4,
+  "multiplicative_weight_rounds": 5,
+  "multiplicative_weight_eta": 2.0,
+  "finetune_steps": 0,
+  "statistics_cache": "K2"
+}
