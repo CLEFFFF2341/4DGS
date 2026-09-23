@@ -4,12 +4,12 @@
     0,
     1
   ],
-  "gpu_hours_consumed": 0.2392,
-  "cpu_selection_hours_consumed": 0.0127,
-  "resource_control_slots_used": 0,
+  "gpu_hours_consumed": 0.253,
+  "cpu_selection_hours_consumed": 0.0184,
+  "resource_control_slots_used": 2,
   "queue": [
     {
-      "task": "P15/resource_control",
+      "task": "P18",
       "status": "NEXT"
     }
   ],
@@ -38,13 +38,15 @@
     ,"P14": "BLOCKED_TARGET"
     ,"P16/R0": "NEGATIVE"
     ,"P16/R1": "COMPLETED"
-    ,"P16": "NEGATIVE_PENDING_RESOURCE_CONTROL"
+    ,"P16": "NEGATIVE"
     ,"P17/R0": "NEGATIVE"
     ,"P17/R1": "COMPLETED"
     ,"P17": "NEGATIVE"
-    ,"P15/R0": "ADVANCE_CANDIDATE_PENDING_RESOURCE_CONTROL"
+    ,"P15/R0": "ADVANCED_STAGE1"
     ,"P15/R1": "COMPLETED"
-    ,"P15": "ADVANCE_CANDIDATE_PENDING_RESOURCE_CONTROL"
+    ,"P15": "ADVANCED_STAGE1"
+    ,"resource_control/P15_cap/P01_R4": "COMPLETED"
+    ,"resource_control/P16_cap/P01_R4": "COMPLETED"
   },
   "failures": [
     {
@@ -86,9 +88,9 @@
     "deterministic_methods": "verify seed-invariant IDs and evaluate once; do not report duplicate runs as independent samples"
   },
   "git": {
-    "commit": "4e62432b9b1ac2460dac8d1f7819cdffb340f286",
+    "commit": "5a54ea0730330bb7f025825cc11854349a0245bb",
     "branch": "codex/astra-experiments-20260923",
     "dirty": true,
-    "dirty_diff_sha256": "4fd3abfac65b6228cb4160d4e50fe7e9a725f750bd859b06203eacaa90e92968"
+    "dirty_diff_sha256": "99db83f84c9b7b40e7cb4a38439c2a63e0418df10ee182a8a28b19ab86af88f6"
   }
 }
