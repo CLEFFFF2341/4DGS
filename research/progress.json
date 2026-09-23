@@ -4,7 +4,7 @@
     0,
     1
   ],
-  "gpu_hours_consumed": 0.09,
+  "gpu_hours_consumed": 0.112,
   "cpu_selection_hours_consumed": 0.0,
   "resource_control_slots_used": 0,
   "queue": [
@@ -27,6 +27,8 @@
     "P00/k2": "PROXY_INVALID",
     "P00/k3": "NOT_RUN",
     "P01/R0-R5": "COMPLETED"
+    ,"P01/R0/seeds_0_1_2": "COMPLETED"
+    ,"P01/R5/seeds_0_1_2": "COMPLETED"
   },
   "failures": [
     {
@@ -48,6 +50,11 @@
     }
   ],
   "frozen_test_manifest": null,
+  "seed_policy": {
+    "seeds": [0, 1, 2],
+    "randomized_methods": "run all three seeds",
+    "deterministic_methods": "verify seed-invariant IDs and evaluate once; do not report duplicate runs as independent samples"
+  },
   "git": {
     "commit": "ae3b480f45efaa7cf92e8fd8ce1dffdac8ae1227",
     "branch": "codex/astra-experiments-20260923",
