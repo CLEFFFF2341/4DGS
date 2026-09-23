@@ -91,6 +91,8 @@ def _run_one(
     splits: dict[str, Any],
     samples: dict[str, Any],
     checks: dict[str, Any],
+    selection_result: Any | None = None,
+    method_report_text: str | None = None,
 ) -> dict[str, Any]:
     resolved = {**config, "rule": rule, "cache_key": cache_meta["key"]}
     config_hash = sha256_json(resolved)
@@ -118,7 +120,7 @@ def _run_one(
     timing: dict[str, float] = {}
     started = time.perf_counter()
     selection_started = time.perf_counter()
-    selection = select(adapter, cache, rule, config["budget_fraction"], config["seed"])
+    selection = selection_result if selection_result is not None else select(adapter, cache, rule, config["budget_fraction"], config["seed"])
     timing["selection_seconds"] = time.perf_counter() - selection_started
     np.savez_compressed(
         temporary / "kept_ids.npz",
@@ -195,7 +197,7 @@ def _run_one(
     _write_json(temporary / "resources.json", resources)
     _write_json(temporary / "bundle_metadata.json", bundle_meta)
     (temporary / "method_report.md").write_text(
-        _method_report(rule, summary, selection, cache_meta["key"]), encoding="utf-8"
+        method_report_text or _method_report(rule, summary, selection, cache_meta["key"]), encoding="utf-8"
     )
     _write_json(temporary / "status.json", {"status": "COMPLETED", "rule": rule, "config_hash": config_hash})
     final.parent.mkdir(parents=True, exist_ok=True)

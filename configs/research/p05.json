@@ -1,0 +1,10 @@
+{
+  "schema": "p05-config-v1",
+  "scene": "cut_roasted_beef",
+  "budget_fraction": 0.5,
+  "seeds": [0, 1, 2],
+  "rules": ["R0", "R1"],
+  "randomized_rules": ["R0"],
+  "deterministic_rules": ["R1"],
+  "finetune_steps": 0
+}
