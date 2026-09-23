@@ -4,12 +4,12 @@
     0,
     1
   ],
-  "gpu_hours_consumed": 0.1773,
+  "gpu_hours_consumed": 0.1896,
   "cpu_selection_hours_consumed": 0.0,
   "resource_control_slots_used": 0,
   "queue": [
     {
-      "task": "P17",
+      "task": "P15",
       "status": "NEXT"
     }
   ],
@@ -39,6 +39,9 @@
     ,"P16/R0": "NEGATIVE"
     ,"P16/R1": "COMPLETED"
     ,"P16": "NEGATIVE_PENDING_RESOURCE_CONTROL"
+    ,"P17/R0": "NEGATIVE"
+    ,"P17/R1": "COMPLETED"
+    ,"P17": "NEGATIVE"
   },
   "failures": [
     {
@@ -73,9 +76,9 @@
     "deterministic_methods": "verify seed-invariant IDs and evaluate once; do not report duplicate runs as independent samples"
   },
   "git": {
-    "commit": "a0b45e77e5673a9ee0af48ba008efdf7eefff280",
+    "commit": "1a8673131fcb15395345056df33e3651f3da763d",
     "branch": "codex/astra-experiments-20260923",
     "dirty": true,
-    "dirty_diff_sha256": "43d3b4f0235e8320ca7c6b6eea0d3f99838245766b9341f8181d966605ecb845"
+    "dirty_diff_sha256": "f59ece92f0aeda5a4e9e07f7280b9758e535cf861c8b06af1dcd4bb7dc3a30f9"
   }
 }

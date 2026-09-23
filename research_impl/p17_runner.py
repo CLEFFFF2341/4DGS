@@ -138,7 +138,16 @@ def main() -> None:
             print(f"P17 {rule}: PSNR={summary['mean_psnr']:.6f}", flush=True)
             del transformed
             torch.cuda.empty_cache()
-    result = {"status": "COMPLETED", "correctness_checks": checks, "runs": rows}
+    r0, r1 = rows
+    result = {
+        "status": "NEGATIVE",
+        "failure_class": "NEGATIVE",
+        "reason": "The shared basis improves mean quality over DCT but violates the tail criterion and is dominated by the similarly sized P16 FP16 control.",
+        "r0_minus_r1_psnr": r0["mean_psnr"] - r1["mean_psnr"],
+        "r0_minus_r1_worst_10pct_drop": r0["worst_10pct_mean_psnr_drop"] - r1["worst_10pct_mean_psnr_drop"],
+        "correctness_checks": checks,
+        "runs": rows,
+    }
     base.mkdir(parents=True, exist_ok=True)
     dump(base / "aggregate.json", result)
     print(json.dumps(result, indent=2))
