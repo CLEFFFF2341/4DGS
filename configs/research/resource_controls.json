@@ -1,0 +1,10 @@
+{
+  "schema": "resource-controls-v1",
+  "rule": "P01-R4",
+  "seed": 0,
+  "max_byte_probes": 8,
+  "targets": [
+    {"name": "p15_cap", "source": "runs/research/P15/cut_roasted_beef/R0/resources.json"},
+    {"name": "p16_cap", "source": "runs/research/P16/cut_roasted_beef/R0/resources.json"}
+  ]
+}
