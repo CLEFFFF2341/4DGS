@@ -155,7 +155,16 @@ def main() -> None:
             print(f"P15 {rule}: PSNR={summary['mean_psnr']:.6f}", flush=True)
             del transformed
             torch.cuda.empty_cache()
-    result = {"status": "COMPLETED", "correctness_checks": checks, "selection_smoke_128": smoke, "runs": rows}
+    r0, r1 = rows
+    result = {
+        "status": "ADVANCE_CANDIDATE_PENDING_RESOURCE_CONTROL",
+        "r0_minus_r1_psnr": r0["mean_psnr"] - r1["mean_psnr"],
+        "r0_minus_r1_lpips": r0["mean_lpips_alex"] - r1["mean_lpips_alex"],
+        "r0_minus_r1_worst_10pct_drop": r0["worst_10pct_mean_psnr_drop"] - r1["worst_10pct_mean_psnr_drop"],
+        "correctness_checks": checks,
+        "selection_smoke_128": smoke,
+        "runs": rows,
+    }
     base.mkdir(parents=True, exist_ok=True)
     dump(base / "aggregate.json", result)
     print(json.dumps(result, indent=2))

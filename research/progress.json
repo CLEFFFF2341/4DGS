@@ -4,12 +4,12 @@
     0,
     1
   ],
-  "gpu_hours_consumed": 0.1896,
-  "cpu_selection_hours_consumed": 0.0,
+  "gpu_hours_consumed": 0.2392,
+  "cpu_selection_hours_consumed": 0.0127,
   "resource_control_slots_used": 0,
   "queue": [
     {
-      "task": "P15",
+      "task": "P15/resource_control",
       "status": "NEXT"
     }
   ],
@@ -42,6 +42,9 @@
     ,"P17/R0": "NEGATIVE"
     ,"P17/R1": "COMPLETED"
     ,"P17": "NEGATIVE"
+    ,"P15/R0": "ADVANCE_CANDIDATE_PENDING_RESOURCE_CONTROL"
+    ,"P15/R1": "COMPLETED"
+    ,"P15": "ADVANCE_CANDIDATE_PENDING_RESOURCE_CONTROL"
   },
   "failures": [
     {
@@ -67,6 +70,13 @@
       "summary": "Only 13/63862 dynamic points pass the frozen opacity and 2-degree rotation gates. Reachable saving is 13000 bytes versus a 31931000-byte target; the gates were not relaxed.",
       "artifact": "runs/research/P14/probe.json",
       "status": "BLOCKED_TARGET"
+    },
+    {
+      "task": "P15/selection_smoke_output",
+      "type": "implementation_error_resolved",
+      "summary": "The 128-trajectory algorithm smoke completed, but writing its result failed because the P15 output root did not yet exist. The output root is now created before the smoke; no formal run had started.",
+      "artifact": "runs/research/P15/cut_roasted_beef/selection_smoke_128.json",
+      "status": "RESOLVED"
     }
   ],
   "frozen_test_manifest": null,
@@ -76,9 +86,9 @@
     "deterministic_methods": "verify seed-invariant IDs and evaluate once; do not report duplicate runs as independent samples"
   },
   "git": {
-    "commit": "1a8673131fcb15395345056df33e3651f3da763d",
+    "commit": "4e62432b9b1ac2460dac8d1f7819cdffb340f286",
     "branch": "codex/astra-experiments-20260923",
     "dirty": true,
-    "dirty_diff_sha256": "f59ece92f0aeda5a4e9e07f7280b9758e535cf861c8b06af1dcd4bb7dc3a30f9"
+    "dirty_diff_sha256": "4fd3abfac65b6228cb4160d4e50fe7e9a725f750bd859b06203eacaa90e92968"
   }
 }
