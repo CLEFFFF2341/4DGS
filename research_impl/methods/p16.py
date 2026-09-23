@@ -1,9 +1,15 @@
 from __future__ import annotations
 
 import math
+from pathlib import Path
 
+import numpy as np
 import torch
 from torch import nn
+
+from scene import getmodel
+
+from ..adapter import DYNAMIC_PARAMETERS, STATIC_PARAMETERS, ModelAdapter
 
 
 def _haar_split(values: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor, int]:
@@ -28,6 +34,68 @@ def _fp16_decode(values: torch.Tensor) -> torch.Tensor:
     if not torch.isfinite(half).all():
         raise RuntimeError("FP16 position encoding overflowed")
     return half.float()
+
+
+@torch.no_grad()
+def save_compact_bundle(adapter, encoded: dict, rule: str, path: Path) -> int:
+    parameters = {}
+    for name in STATIC_PARAMETERS + DYNAMIC_PARAMETERS:
+        if name == "_xyz_motion":
+            continue
+        value = getattr(adapter.model, name)
+        parameters[name] = {"tensor": value.detach().cpu(), "requires_grad": bool(value.requires_grad)}
+    payload = {
+        "schema": "p16-compact-bundle-v1",
+        "rule": rule,
+        "encoded_motion": encoded,
+        "parameters": parameters,
+        "active_sh_degree": int(adapter.model.active_sh_degree),
+        "spatial_lr_scale": float(adapter.model.spatial_lr_scale),
+        "checkpoint_sha256": adapter.checkpoint_sha256,
+        "static_rows": torch.from_numpy(adapter.static_rows.copy()),
+        "dynamic_rows": torch.from_numpy(adapter.dynamic_rows.copy()),
+    }
+    torch.save(payload, path)
+    return path.stat().st_size
+
+
+@torch.no_grad()
+def load_compact_bundle(path: Path, args) -> ModelAdapter:
+    payload = torch.load(path, map_location="cpu")
+    if payload.get("schema") != "p16-compact-bundle-v1":
+        raise RuntimeError(f"Unsupported P16 compact bundle: {path}")
+    cls = getmodel(args.model)
+    model = cls(
+        args.sh_degree,
+        args.duration,
+        args.time_interval,
+        args.time_pad,
+        interp_type=args.interp_type,
+        rot_interp_type=args.rot_interp_type,
+        time_pad_type=args.time_pad_type,
+        var_pad=args.var_pad,
+        kernel_size=args.kernel_size,
+    )
+    model.active_sh_degree = payload["active_sh_degree"]
+    model.spatial_lr_scale = payload["spatial_lr_scale"]
+    for name, item in payload["parameters"].items():
+        tensor = item["tensor"].cuda()
+        setattr(model, name, nn.Parameter(tensor.requires_grad_(item["requires_grad"])))
+    encoded = payload["encoded_motion"]
+    if payload["rule"] == "R0":
+        decoded = _haar_decode(encoded["approximation"].cuda(), None, int(encoded["original_keyframes"]))
+    elif payload["rule"] == "R1":
+        decoded = encoded["position_fp16"].cuda().float()
+    else:
+        raise KeyError(payload["rule"])
+    model._xyz_motion = nn.Parameter(decoded)
+    return ModelAdapter(
+        model=model,
+        checkpoint_sha256=payload["checkpoint_sha256"],
+        static_rows=np.asarray(payload["static_rows"].numpy(), dtype=np.int64),
+        dynamic_rows=np.asarray(payload["dynamic_rows"].numpy(), dtype=np.int64),
+        args=args,
+    )
 
 
 @torch.no_grad()
