@@ -4,7 +4,7 @@
     0,
     1
   ],
-  "gpu_hours_consumed": 0.134,
+  "gpu_hours_consumed": 0.139,
   "cpu_selection_hours_consumed": 0.0,
   "resource_control_slots_used": 0,
   "queue": [
@@ -35,6 +35,7 @@
     ,"P04": "BLOCKED_CACHE"
     ,"P05/R0/seeds_0_1_2": "COMPLETED"
     ,"P05/R1/seed_invariant": "COMPLETED"
+    ,"P14": "BLOCKED_TARGET"
   },
   "failures": [
     {
@@ -53,6 +54,13 @@
       "summary": "OpenCV H.264 decoding corrupted R1 and one R2 evaluation pass. Built a derived frame cache accepted only when reference PSNR matched the frozen P00 per-frame value within 1e-5, then reran R1/R2. Original outputs remain under runs/research/P01/decode_invalid/.",
       "artifact": "research_cache/verified_gt/p00-v1-1352x1014/manifest.json",
       "status": "RESOLVED"
+    },
+    {
+      "task": "P14",
+      "type": "blocked_target",
+      "summary": "Only 13/63862 dynamic points pass the frozen opacity and 2-degree rotation gates. Reachable saving is 13000 bytes versus a 31931000-byte target; the gates were not relaxed.",
+      "artifact": "runs/research/P14/probe.json",
+      "status": "BLOCKED_TARGET"
     }
   ],
   "frozen_test_manifest": null,
