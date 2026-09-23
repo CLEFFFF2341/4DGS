@@ -9,7 +9,7 @@
   "resource_control_slots_used": 2,
   "queue": [
     {
-      "task": "P08",
+      "task": "P10",
       "status": "NEXT"
     }
   ],
@@ -51,6 +51,8 @@
     ,"P07/R0": "NEGATIVE"
     ,"P07/R1": "COMPLETED_CONTROL"
     ,"P07": "NEGATIVE"
+    ,"P08": "BLOCKED_CACHE"
+    ,"P09": "BLOCKED_CACHE"
     ,"resource_control/P15_cap/P01_R4": "COMPLETED"
     ,"resource_control/P16_cap/P01_R4": "COMPLETED"
   },
@@ -101,6 +103,20 @@
       "summary": "Four-round fresh K2 recalibration changes boundary IDs after millions of newly exposed contributor rays, but lowers PSNR by 0.385796 dB and worsens worst-10% drop by 0.823569 dB versus the stale/P02 control. All correctness checks pass.",
       "artifact": "runs/research/P07/cut_roasted_beef/aggregate.json",
       "status": "NEGATIVE"
+    },
+    {
+      "task": "P08",
+      "type": "blocked_cache",
+      "summary": "K3 ordered per-ray alpha/color lists and exact joint replay are unavailable; K1/K2 aggregates cannot substitute without changing the registered method.",
+      "artifact": "research/reports/P08_P09_blocked.md",
+      "status": "BLOCKED_CACHE"
+    },
+    {
+      "task": "P09",
+      "type": "blocked_cache",
+      "summary": "K3 signed per-ray RGB deletion vectors are unavailable; squared K2 e_it cannot recover signs and is explicitly disallowed as a substitute.",
+      "artifact": "research/reports/P08_P09_blocked.md",
+      "status": "BLOCKED_CACHE"
     }
   ],
   "frozen_test_manifest": null,
@@ -110,9 +126,9 @@
     "deterministic_methods": "verify seed-invariant IDs and evaluate once; do not report duplicate runs as independent samples"
   },
   "git": {
-    "commit": "c0159e0",
+    "commit": "ef4b7f8",
     "branch": "codex/astra-experiments-20260923",
     "dirty": true,
-    "dirty_diff_sha256": "a8b643c4e723ebb2fd14099cca998d7afa89e44e0a0e5387c142299a7c3df2de"
+    "dirty_diff_sha256": "644a02a476ef39444039f3bef4d2f4065d01d8b3c2dd305a0df31ebf9a3ce8c0"
   }
 }
