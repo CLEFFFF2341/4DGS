@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import copy
+import hashlib
 import time
 from pathlib import Path
 
@@ -14,6 +15,22 @@ from gaussian_renderer import render
 from .config import sha256_file, sha256_json
 from .evaluate import pipeline, select_camera
 from utils.sh_utils import SH2RGB
+
+
+def adapter_render_state_sha256(adapter) -> str:
+    """Hash all registered model parameters plus stable IDs for cache isolation."""
+    digest = hashlib.sha256()
+    digest.update(adapter.checkpoint_sha256.encode("utf-8"))
+    digest.update(str(int(adapter.model.active_sh_degree)).encode("ascii"))
+    for name, value in sorted(adapter.model.named_parameters()):
+        array = value.detach().cpu().contiguous().numpy()
+        digest.update(name.encode("utf-8"))
+        digest.update(str(array.dtype).encode("ascii"))
+        digest.update(np.asarray(array.shape, dtype=np.int64).tobytes())
+        digest.update(array.tobytes())
+    digest.update(np.asarray(adapter.static_rows, dtype=np.int64).tobytes())
+    digest.update(np.asarray(adapter.dynamic_rows, dtype=np.int64).tobytes())
+    return digest.hexdigest()
 
 
 @torch.no_grad()
@@ -171,8 +188,9 @@ def build_k2(adapter, scene, camera_names: list[str], times: list[int], resoluti
 
     extension_path = Path(raster_extension.__file__)
     specification = {
-        "schema": "k2-exact-early-stop-deletion-v2",
+        "schema": "k2-exact-early-stop-deletion-v3",
         "checkpoint_sha256": adapter.checkpoint_sha256,
+        "parent_model_sha256": adapter_render_state_sha256(adapter),
         "camera_names": camera_names,
         "times": times,
         "resolution": resolution,
@@ -192,6 +210,7 @@ def build_k2(adapter, scene, camera_names: list[str], times: list[int], resoluti
     n = adapter.total_count
     width, height = map(int, resolution)
     e_it = np.zeros((len(times), n), dtype=np.float64)
+    hit_counts = np.zeros((len(times), n), dtype=np.int64)
     background = torch.zeros(3, dtype=torch.float32, device="cuda")
     deletion_pipe = pipeline()
     deletion_pipe.collect_stats = True
@@ -221,6 +240,7 @@ def build_k2(adapter, scene, camera_names: list[str], times: list[int], resoluti
             frame_replay = float((stats["render"] - stats["replay_color"]).abs().max())
             replay_max_abs = max(replay_max_abs, frame_replay)
             e_it[time_index] += stats["deletion_sq_sum"].cpu().numpy().astype(np.float64) / (width * height * len(camera_names))
+            hit_counts[time_index] += stats["contrib_hit_count"].cpu().numpy().astype(np.int64)
             completed += 1
             frame_timings.append({"camera": name, "timestamp": timestamp, "seconds": seconds, "replay_max_abs": frame_replay})
             print(f"K2 exact deletion {completed}/{total_frames}: {name} t={timestamp}, {seconds:.3f}s", flush=True)
@@ -230,6 +250,7 @@ def build_k2(adapter, scene, camera_names: list[str], times: list[int], resoluti
         "dynamic_rows": torch.from_numpy(adapter.dynamic_rows.copy()),
         "e_it": torch.from_numpy(e_it),
         "mean_e_i": torch.from_numpy(e_it.mean(axis=0)),
+        "hit_counts": torch.from_numpy(hit_counts),
         "frame_timings": frame_timings,
         "replay_max_abs": replay_max_abs,
     }

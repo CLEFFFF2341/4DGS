@@ -1,0 +1,15 @@
+{
+  "schema": "p07-config-v1",
+  "scene": "cut_roasted_beef",
+  "budget_fraction": 0.5,
+  "rounds": 4,
+  "rules": {
+    "R0": "fresh K2 mean single-deletion error at every round",
+    "R1": "original K2 scores decide every round; fresh K2 rebuilt for matched-cost diagnostics"
+  },
+  "seed_policy": "deterministic; verify IDs for seeds 0,1,2 and evaluate once",
+  "finetune_steps": 0,
+  "statistics_cache": "K2 rebuilt for each parent model",
+  "evaluation_split": "development",
+  "evaluation_times": "T24"
+}
