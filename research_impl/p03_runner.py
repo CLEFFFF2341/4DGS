@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import json
 import time
 from pathlib import Path
@@ -11,7 +12,7 @@ import torch.nn.functional as functional
 from .adapter import load_bundle, load_reference
 from .cache import build_k2
 from .config import ROOT, git_provenance, sha256_file
-from .evaluate import VideoFrameDecoder, benchmark_latency, build_verified_ground_truth_cache, evaluate_against_reference, load_ground_truth, render_one, save_comparison_visualizations, select_camera, smoke_render
+from .evaluate import VERIFIED_GT_ROOT, VideoFrameDecoder, benchmark_latency, build_verified_ground_truth_cache, evaluate_against_reference, load_ground_truth, render_one, save_comparison_visualizations, select_camera, smoke_render
 from .methods.p03 import correctness_checks, select
 from .runner import gpu_lock
 
@@ -22,6 +23,57 @@ def dump(path: Path, value) -> None:
 
 def directory_bytes(path: Path) -> int:
     return sum(item.stat().st_size for item in path.rglob("*") if item.is_file())
+
+
+def build_consensus_window_cache(scene, camera_names: list[str], windows: list[list[int]], max_attempts: int = 5) -> dict:
+    times = sorted({timestamp for start, end in windows for timestamp in range(start, end + 1)})
+    report = {"schema": "p03-window-consensus-gt-v1", "required_matches": 2, "max_attempts": max_attempts, "cameras": {}}
+    for name in camera_names:
+        base_camera = select_camera(scene, name, times[0])
+        source = Path(base_camera.image_path)
+        if source.suffix.lower() != ".mp4":
+            source = source.parents[1] / f"{name}.mp4"
+        accepted = {}
+        counts = {}
+        attempts_used = 0
+        missing = [timestamp for timestamp in times if not (VERIFIED_GT_ROOT / name / f"{timestamp:06d}.png").exists()]
+        for attempt in range(max_attempts):
+            if not missing:
+                break
+            decoder = VideoFrameDecoder(source)
+            try:
+                for timestamp in times:
+                    image = decoder.read(timestamp)
+                    if timestamp not in missing:
+                        continue
+                    digest = hashlib.sha256(image.tobytes()).hexdigest()
+                    key = (timestamp, digest)
+                    counts[key] = counts.get(key, 0) + 1
+                    if counts[key] >= 2 and timestamp not in accepted:
+                        accepted[timestamp] = (digest, image.copy())
+            finally:
+                decoder.close()
+            attempts_used = attempt + 1
+            missing = [timestamp for timestamp in missing if timestamp not in accepted]
+        if missing:
+            raise RuntimeError(f"No two matching H.264 decodes for {name}: {missing}")
+        directory = VERIFIED_GT_ROOT / name
+        directory.mkdir(parents=True, exist_ok=True)
+        for timestamp, (_, image) in accepted.items():
+            destination = directory / f"{timestamp:06d}.png"
+            temporary = directory / f".{timestamp:06d}.p03.tmp"
+            image.save(temporary, format="PNG")
+            temporary.replace(destination)
+        report["cameras"][name] = {
+            "source": str(source),
+            "times": times,
+            "new_frames": len(accepted),
+            "attempts_used": attempts_used,
+            "sha256": {str(timestamp): digest for timestamp, (digest, _) in accepted.items()},
+        }
+    manifest = VERIFIED_GT_ROOT / "p03_window_consensus.json"
+    manifest.write_text(json.dumps(report, indent=2), encoding="utf-8")
+    return report
 
 
 def temporal_diagnostics(method, reference, scene, camera_names: list[str], windows: list[list[int]]) -> dict:
@@ -100,6 +152,7 @@ def main() -> None:
         checks = correctness_checks(reference, k2)
         if not checks["passed"]:
             raise RuntimeError(checks)
+        consensus_gt = build_consensus_window_cache(scene, splits["development"], samples["windows"])
         for rule in config["rules"]:
             output = base / rule
             output.mkdir(parents=True, exist_ok=True)
@@ -112,19 +165,25 @@ def main() -> None:
                 if not (np.array_equal(subset.static_rows, reference.static_rows[selection.static_indices]) and np.array_equal(subset.dynamic_rows, reference.dynamic_rows[selection.dynamic_indices])):
                     raise RuntimeError("P03 R0 selection does not match P02")
             else:
-                subset = reference.gather(selection.static_indices, selection.dynamic_indices)
                 bundle_dir = output / "bundle"
-                if not bundle_dir.exists():
-                    subset.save_bundle(bundle_dir)
-                roundtrip = reload_check(subset, load_bundle(bundle_dir, reference.args), scene, splits["development"][0])
-                if not roundtrip["passed"]:
-                    raise RuntimeError(roundtrip)
-                smoke_render(subset, scene, [splits["development"][0]], [0, 149], output / "smoke")
-                summary = evaluate_against_reference(subset, reference, scene, splits["development"], samples["T24"], output)
-                inputs = [(splits["development"][index % 2], samples["T24"][index]) for index in range(10)]
-                benchmark_latency(subset, scene, inputs, output / "latency.json")
-                save_comparison_visualizations(subset, reference, scene, splits["development"], samples["fixed_visualization_times"], output / "visualizations")
-                reuse = {"formal_quality_run_reused": False, "roundtrip": roundtrip, "bundle_bytes": directory_bytes(bundle_dir)}
+                completed = (output / "status.json").exists() and json.loads((output / "status.json").read_text(encoding="utf-8")).get("status") == "COMPLETED"
+                if completed:
+                    subset = load_bundle(bundle_dir, reference.args)
+                    summary = json.loads((output / "summary.json").read_text(encoding="utf-8"))
+                    reuse = {"formal_quality_run_reused": True, "reused_from": str(output), "bundle_bytes": directory_bytes(bundle_dir)}
+                else:
+                    subset = reference.gather(selection.static_indices, selection.dynamic_indices)
+                    if not bundle_dir.exists():
+                        subset.save_bundle(bundle_dir)
+                    roundtrip = reload_check(subset, load_bundle(bundle_dir, reference.args), scene, splits["development"][0])
+                    if not roundtrip["passed"]:
+                        raise RuntimeError(roundtrip)
+                    smoke_render(subset, scene, [splits["development"][0]], [0, 149], output / "smoke")
+                    summary = evaluate_against_reference(subset, reference, scene, splits["development"], samples["T24"], output)
+                    inputs = [(splits["development"][index % 2], samples["T24"][index]) for index in range(10)]
+                    benchmark_latency(subset, scene, inputs, output / "latency.json")
+                    save_comparison_visualizations(subset, reference, scene, splits["development"], samples["fixed_visualization_times"], output / "visualizations")
+                    reuse = {"formal_quality_run_reused": False, "roundtrip": roundtrip, "bundle_bytes": directory_bytes(bundle_dir)}
             temporal_started = time.perf_counter()
             temporal = temporal_diagnostics(subset, reference, scene, splits["development"], samples["windows"])
             temporal["seconds"] = time.perf_counter() - temporal_started
@@ -139,7 +198,7 @@ def main() -> None:
             dump(output / "status.json", {"status": "COMPLETED", "rule": rule})
             rows.append({"rule": rule, **summary, "selection": selection.diagnostics, "temporal": {key: value for key, value in temporal.items() if key != "pairs"}, **reuse})
             print(f"P03 {rule}: PSNR={summary['mean_psnr']:.6f}, incremental_TDE={temporal['incremental_tde']:.8f}", flush=True)
-    aggregate = {"status": "COMPLETED", "k2_key": k2_meta["key"], "correctness_checks": checks, "runs": rows}
+    aggregate = {"status": "COMPLETED", "k2_key": k2_meta["key"], "correctness_checks": checks, "consensus_gt": consensus_gt, "runs": rows}
     dump(base.parent / "aggregate.json", aggregate)
     print(json.dumps(aggregate, indent=2))
 
