@@ -478,7 +478,10 @@ renderCUDA(
 
 		if (collect_deletions)
 		{
-			float total_log_transmittance = 0.0f;
+			// Independently replay the renderer's exact early-stop semantics.  The
+			// Gaussian that would move T below the threshold is not accumulated.
+			float replay_T = 1.0f;
+			float replay_C[CHANNELS] = { 0 };
 			for (int entry = (int)range.x; entry < (int)range.y; ++entry)
 			{
 				const int gaussian_id = point_list[entry];
@@ -491,42 +494,71 @@ renderCUDA(
 				const float alpha = min(0.99f, con_o.w * expf(power));
 				if (alpha < 1.0f / 255.0f)
 					continue;
-				total_log_transmittance += log1pf(-alpha);
+				const float test_T = replay_T * (1.0f - alpha);
+				if (test_T < 0.0001f)
+					break;
+				for (int ch = 0; ch < CHANNELS; ++ch)
+					replay_C[ch] += features[gaussian_id * CHANNELS + ch] * alpha * replay_T;
+				replay_T = test_T;
 			}
-
-			float suffix_color[CHANNELS];
 			for (int ch = 0; ch < CHANNELS; ++ch)
-				suffix_color[ch] = bg_color[ch];
-			float suffix_log_transmittance = 0.0f;
-			for (int entry = (int)range.y - 1; entry >= (int)range.x; --entry)
+				replay_color[ch * H * W + pix_id] = replay_C[ch] + replay_T * bg_color[ch];
+
+			// Removing an accepted contributor can expose Gaussians beyond the
+			// original early-stop location.  Re-render each accepted deletion
+			// counterfactual exactly instead of using the no-early-stop suffix
+			// identity, which is not valid under this renderer's control flow.
+			float original_T = 1.0f;
+			for (int deleted_entry = (int)range.x; deleted_entry < (int)range.y; ++deleted_entry)
 			{
-				const int gaussian_id = point_list[entry];
-				const float2 xy = points_xy_image[gaussian_id];
-				const float2 d = { xy.x - pixf.x, xy.y - pixf.y };
-				const float4 con_o = conic_opacity[gaussian_id];
-				const float power = -0.5f * (con_o.x * d.x * d.x + con_o.z * d.y * d.y) - con_o.y * d.x * d.y;
-				if (power > 0.0f)
+				const int deleted_id = point_list[deleted_entry];
+				const float2 deleted_xy = points_xy_image[deleted_id];
+				const float2 deleted_d = { deleted_xy.x - pixf.x, deleted_xy.y - pixf.y };
+				const float4 deleted_con_o = conic_opacity[deleted_id];
+				const float deleted_power = -0.5f * (deleted_con_o.x * deleted_d.x * deleted_d.x + deleted_con_o.z * deleted_d.y * deleted_d.y) - deleted_con_o.y * deleted_d.x * deleted_d.y;
+				if (deleted_power > 0.0f)
 					continue;
-				const float alpha = min(0.99f, con_o.w * expf(power));
-				if (alpha < 1.0f / 255.0f)
+				const float deleted_alpha = min(0.99f, deleted_con_o.w * expf(deleted_power));
+				if (deleted_alpha < 1.0f / 255.0f)
 					continue;
-				const float log_one_minus_alpha = log1pf(-alpha);
-				const float log_prefix = total_log_transmittance - suffix_log_transmittance - log_one_minus_alpha;
-				const float prefix_transmittance = min(1.0f, max(0.0f, expf(log_prefix)));
-				const float weight = prefix_transmittance * alpha;
+				const float original_test_T = original_T * (1.0f - deleted_alpha);
+				if (original_test_T < 0.0001f)
+					break;
+
+				float counterfactual_T = 1.0f;
+				float counterfactual_C[CHANNELS] = { 0 };
+				for (int entry = (int)range.x; entry < (int)range.y; ++entry)
+				{
+					if (entry == deleted_entry)
+						continue;
+					const int gaussian_id = point_list[entry];
+					const float2 xy = points_xy_image[gaussian_id];
+					const float2 d = { xy.x - pixf.x, xy.y - pixf.y };
+					const float4 con_o = conic_opacity[gaussian_id];
+					const float power = -0.5f * (con_o.x * d.x * d.x + con_o.z * d.y * d.y) - con_o.y * d.x * d.y;
+					if (power > 0.0f)
+						continue;
+					const float alpha = min(0.99f, con_o.w * expf(power));
+					if (alpha < 1.0f / 255.0f)
+						continue;
+					const float test_T = counterfactual_T * (1.0f - alpha);
+					if (test_T < 0.0001f)
+						break;
+					for (int ch = 0; ch < CHANNELS; ++ch)
+						counterfactual_C[ch] += features[gaussian_id * CHANNELS + ch] * alpha * counterfactual_T;
+					counterfactual_T = test_T;
+				}
+
 				float squared_error = 0.0f;
 				for (int ch = 0; ch < CHANNELS; ++ch)
 				{
-					const float color = features[gaussian_id * CHANNELS + ch];
-					const float difference = weight * (color - suffix_color[ch]);
+					const float counterfactual = counterfactual_C[ch] + counterfactual_T * bg_color[ch];
+					const float difference = out_color[ch * H * W + pix_id] - counterfactual;
 					squared_error += difference * difference;
-					suffix_color[ch] = alpha * color + (1.0f - alpha) * suffix_color[ch];
 				}
-				atomicAdd(deletion_sq_sum + gaussian_id, squared_error / CHANNELS);
-				suffix_log_transmittance += log_one_minus_alpha;
+				atomicAdd(deletion_sq_sum + deleted_id, squared_error / CHANNELS);
+				original_T = original_test_T;
 			}
-			for (int ch = 0; ch < CHANNELS; ++ch)
-				replay_color[ch * H * W + pix_id] = suffix_color[ch];
 		}
 	}
 
