@@ -58,6 +58,7 @@ def main() -> None:
     splits = json.loads(splits_path.read_text(encoding="utf-8"))
     samples = json.loads(samples_path.read_text(encoding="utf-8"))
     base = ROOT / "runs" / "research" / "P15" / "cut_roasted_beef"
+    base.mkdir(parents=True, exist_ok=True)
     checks = correctness_checks()
     if not checks["passed"]:
         raise RuntimeError(checks)
