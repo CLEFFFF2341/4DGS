@@ -12,6 +12,7 @@ from scipy.spatial import cKDTree
 
 from gaussian_renderer import render
 
+from .adapter import DYNAMIC_PARAMETERS, STATIC_PARAMETERS
 from .config import sha256_file, sha256_json
 from .evaluate import pipeline, select_camera
 from utils.sh_utils import SH2RGB
@@ -22,7 +23,8 @@ def adapter_render_state_sha256(adapter) -> str:
     digest = hashlib.sha256()
     digest.update(adapter.checkpoint_sha256.encode("utf-8"))
     digest.update(str(int(adapter.model.active_sh_degree)).encode("ascii"))
-    for name, value in sorted(adapter.model.named_parameters()):
+    for name in STATIC_PARAMETERS + DYNAMIC_PARAMETERS:
+        value = getattr(adapter.model, name)
         array = value.detach().cpu().contiguous().numpy()
         digest.update(name.encode("utf-8"))
         digest.update(str(array.dtype).encode("ascii"))
