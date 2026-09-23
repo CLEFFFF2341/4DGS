@@ -7,11 +7,13 @@ from pathlib import Path
 
 import numpy as np
 import torch
+from scipy.spatial import cKDTree
 
 from gaussian_renderer import render
 
 from .config import sha256_file, sha256_json
 from .evaluate import pipeline, select_camera
+from utils.sh_utils import SH2RGB
 
 
 @torch.no_grad()
@@ -156,6 +158,111 @@ def build_k1(adapter, scene, camera_names: list[str], times: list[int], resoluti
         "peak_reserved_bytes": torch.cuda.max_memory_reserved(),
         "nonzero_points": int((s_it.sum(axis=0) > 0).sum()),
         "validation": validation,
+        "reused": False,
+    }
+    (directory / "metadata.json").write_text(json.dumps(metadata, indent=2), encoding="utf-8")
+    return metadata
+
+
+@torch.no_grad()
+def build_k4(adapter, times: list[int], output_root: Path) -> dict:
+    """Build the P05 trajectory-feature and same-kind 16-NN cache."""
+    specification = {
+        "schema": "k4-trajectory-knn-v1",
+        "checkpoint_sha256": adapter.checkpoint_sha256,
+        "times": times,
+        "neighbors_excluding_self": 16,
+        "position_reference_time": 149,
+        "standardization": "global median/IQR; IQR<1e-6->1; clip[-10,10]",
+        "similarity": "exp(-squared_distance/21)",
+    }
+    key = sha256_json(specification)
+    directory = output_root / key
+    directory.mkdir(parents=True, exist_ok=True)
+    final = directory / "k4.pt"
+    if final.exists():
+        return {"key": key, "path": str(final), "reused": True}
+    started = time.perf_counter()
+    positions = torch.stack([adapter.model.get_xyz_at_t(timestamp, training=False).cpu() for timestamp in times]).permute(1, 0, 2).double()
+    position_149 = adapter.model.get_xyz_at_t(149, training=False).cpu().double()
+    bounds = position_149.amax(dim=0) - position_149.amin(dim=0)
+    length = float(torch.linalg.vector_norm(bounds))
+    if length <= 1e-12:
+        length = 1.0
+    dc = SH2RGB(adapter.model.get_features()[:, 0, :].detach().cpu().double())
+    logscale = torch.log(adapter.model.get_scaling().detach().cpu().double().clamp_min(1e-30))
+    raw = torch.cat((positions.reshape(adapter.total_count, -1) / length, dc, logscale), dim=1)
+    median = torch.quantile(raw, 0.5, dim=0)
+    q25 = torch.quantile(raw, 0.25, dim=0)
+    q75 = torch.quantile(raw, 0.75, dim=0)
+    iqr = q75 - q25
+    iqr = torch.where(iqr < 1e-6, torch.ones_like(iqr), iqr)
+    features = ((raw - median) / iqr).clamp(-10, 10).float().numpy()
+    xyz = position_149.numpy()
+    neighbor_parts = []
+    similarity_parts = []
+    brute_checks = []
+    offset = 0
+    for kind, count in (("static", adapter.static_count), ("dynamic", adapter.dynamic_count)):
+        local_xyz = xyz[offset : offset + count]
+        local_features = features[offset : offset + count]
+        tree = cKDTree(local_xyz)
+        query_k = min(33, count)
+        distances, candidates = tree.query(local_xyz, k=query_k, workers=-1)
+        if query_k == 1:
+            distances = distances[:, None]
+            candidates = candidates[:, None]
+        keep_k = min(17, count)
+        neighbors = np.empty((count, keep_k), dtype=np.int32)
+        for row in range(count):
+            order = np.lexsort((candidates[row], distances[row]))
+            neighbors[row] = candidates[row, order[:keep_k]]
+            if row not in neighbors[row]:
+                neighbors[row, -1] = row
+        delta = local_features[:, None, :] - local_features[neighbors]
+        similarity = np.exp(-np.sum(delta * delta, axis=2) / 21.0).astype(np.float32)
+        self_column = np.argmax(neighbors == np.arange(count, dtype=np.int32)[:, None], axis=1)
+        similarity[np.arange(count), self_column] = 1.0
+        neighbor_parts.append(torch.from_numpy(neighbors))
+        similarity_parts.append(torch.from_numpy(similarity))
+
+        sample = np.linspace(0, count - 1, min(64, count), dtype=np.int64)
+        subset_xyz = local_xyz[sample]
+        subset_tree = cKDTree(subset_xyz)
+        kd_distance, kd_index = subset_tree.query(subset_xyz, k=min(17, len(sample)))
+        brute_distance = np.linalg.norm(subset_xyz[:, None, :] - subset_xyz[None, :, :], axis=2)
+        brute_index = np.argsort(brute_distance, axis=1, kind="stable")[:, : min(17, len(sample))]
+        brute_checks.append({
+            "kind": kind,
+            "subset_size": int(len(sample)),
+            "neighbor_sets_equal": bool(all(set(np.atleast_1d(kd_index[row]).tolist()) == set(brute_index[row].tolist()) for row in range(len(sample)))),
+            "max_distance_error": float(np.max(np.abs(np.take_along_axis(brute_distance, np.atleast_2d(kd_index), axis=1) - np.atleast_2d(kd_distance)))) if len(sample) else 0.0,
+        })
+        offset += count
+    payload = {
+        "specification": specification,
+        "static_rows": torch.from_numpy(adapter.static_rows.copy()),
+        "dynamic_rows": torch.from_numpy(adapter.dynamic_rows.copy()),
+        "features": torch.from_numpy(features),
+        "static_neighbors": neighbor_parts[0],
+        "dynamic_neighbors": neighbor_parts[1],
+        "static_similarity": similarity_parts[0],
+        "dynamic_similarity": similarity_parts[1],
+        "length_scale": length,
+        "median": median,
+        "iqr": iqr,
+        "brute_checks": brute_checks,
+    }
+    temporary = directory / "k4.pt.partial"
+    torch.save(payload, temporary)
+    temporary.replace(final)
+    metadata = {
+        "key": key,
+        "path": str(final),
+        "bytes": final.stat().st_size,
+        "seconds": time.perf_counter() - started,
+        "feature_shape": list(features.shape),
+        "brute_checks": brute_checks,
         "reused": False,
     }
     (directory / "metadata.json").write_text(json.dumps(metadata, indent=2), encoding="utf-8")
