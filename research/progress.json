@@ -4,12 +4,12 @@
     0,
     1
   ],
-  "gpu_hours_consumed": 0.253,
+  "gpu_hours_consumed": 0.3727,
   "cpu_selection_hours_consumed": 0.0184,
   "resource_control_slots_used": 2,
   "queue": [
     {
-      "task": "P18",
+      "task": "P06",
       "status": "NEXT"
     }
   ],
@@ -24,14 +24,14 @@
     "P00/k0": "COMPLETED",
     "P00/finetune_smoke": "COMPLETED",
     "P00/k1": "COMPLETED",
-    "P00/k2": "PROXY_INVALID",
+    "P00/k2": "COMPLETED",
     "P00/k3": "NOT_RUN",
     "P01/R0-R5": "COMPLETED"
     ,"P01/R0/seeds_0_1_2": "COMPLETED"
     ,"P01/R5/seeds_0_1_2": "COMPLETED"
     ,"P00/k4": "COMPLETED"
-    ,"P02": "BLOCKED_PROXY"
-    ,"P03": "BLOCKED_PROXY"
+    ,"P02": "COMPLETED_NOT_ADVANCED"
+    ,"P03": "COMPLETED_NOT_ADVANCED"
     ,"P04": "BLOCKED_CACHE"
     ,"P05/R0/seeds_0_1_2": "COMPLETED"
     ,"P05/R1/seed_invariant": "COMPLETED"
@@ -57,7 +57,9 @@
       "downstream": [
         "P02",
         "P03"
-      ]
+      ],
+      "status": "RESOLVED",
+      "resolution": "Exact CUDA counterfactual replay now matches renderer early-stop semantics, including removal of the stopping gate. Validation passes 64/64, replay max abs is 0, and max relative error is 2.40445e-6. Formal K2 cache d5073d9d688b15063013e59bf67524819aa99f033b67c6e3f2d0967542788014 completed."
     },
     {
       "task": "P01/evaluation_decode",
@@ -88,9 +90,9 @@
     "deterministic_methods": "verify seed-invariant IDs and evaluate once; do not report duplicate runs as independent samples"
   },
   "git": {
-    "commit": "5a54ea0730330bb7f025825cc11854349a0245bb",
+    "commit": "3fe18f9cb03c642b0e75bd0c89eda4cddb8f894e",
     "branch": "codex/astra-experiments-20260923",
     "dirty": true,
-    "dirty_diff_sha256": "99db83f84c9b7b40e7cb4a38439c2a63e0418df10ee182a8a28b19ab86af88f6"
+    "dirty_diff_sha256": "09f9e9b0f477a31bce51cc82e8b5a68c081411f653fe4f372e2b7817ef04e8a5"
   }
 }
