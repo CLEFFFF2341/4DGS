@@ -529,9 +529,9 @@ renderCUDA(
 				float counterfactual_C[CHANNELS] = { 0 };
 				for (int entry = (int)range.x; entry < (int)range.y; ++entry)
 				{
-					if (entry == deleted_entry)
-						continue;
 					const int gaussian_id = point_list[entry];
+					if (gaussian_id == deleted_id)
+						continue;
 					const float2 xy = points_xy_image[gaussian_id];
 					const float2 d = { xy.x - pixf.x, xy.y - pixf.y };
 					const float4 con_o = conic_opacity[gaussian_id];
