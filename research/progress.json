@@ -4,12 +4,12 @@
     0,
     1
   ],
-  "gpu_hours_consumed": 0.112,
+  "gpu_hours_consumed": 0.134,
   "cpu_selection_hours_consumed": 0.0,
   "resource_control_slots_used": 0,
   "queue": [
     {
-      "task": "P01",
+      "task": "P05",
       "status": "COMPLETED"
     }
   ],
@@ -29,6 +29,12 @@
     "P01/R0-R5": "COMPLETED"
     ,"P01/R0/seeds_0_1_2": "COMPLETED"
     ,"P01/R5/seeds_0_1_2": "COMPLETED"
+    ,"P00/k4": "COMPLETED"
+    ,"P02": "BLOCKED_PROXY"
+    ,"P03": "BLOCKED_PROXY"
+    ,"P04": "BLOCKED_CACHE"
+    ,"P05/R0/seeds_0_1_2": "COMPLETED"
+    ,"P05/R1/seed_invariant": "COMPLETED"
   },
   "failures": [
     {
