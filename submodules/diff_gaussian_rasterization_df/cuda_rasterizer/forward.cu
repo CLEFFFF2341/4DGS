@@ -522,8 +522,7 @@ renderCUDA(
 				if (deleted_alpha < 1.0f / 255.0f)
 					continue;
 				const float original_test_T = original_T * (1.0f - deleted_alpha);
-				if (original_test_T < 0.0001f)
-					break;
+				const bool stops_original = original_test_T < 0.0001f;
 
 				float counterfactual_T = 1.0f;
 				float counterfactual_C[CHANNELS] = { 0 };
@@ -557,6 +556,8 @@ renderCUDA(
 					squared_error += difference * difference;
 				}
 				atomicAdd(deletion_sq_sum + deleted_id, squared_error / CHANNELS);
+				if (stops_original)
+					break;
 				original_T = original_test_T;
 			}
 		}
