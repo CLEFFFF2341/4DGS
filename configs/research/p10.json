@@ -1,0 +1,20 @@
+{
+  "schema": "p10-config-v1",
+  "scene": "cut_roasted_beef",
+  "budget_fraction": 0.5,
+  "active_fraction_of_max": 0.05,
+  "minimum_gap_samples": 2,
+  "maximum_demands": 256,
+  "minimum_feasible_demands": 10,
+  "neighbor_count": 16,
+  "projection_radius_statistics_pixels": 8.0,
+  "dc_rgb_radius": 0.1,
+  "seed_policy": "deterministic; verify IDs for seeds 0,1,2 and evaluate once",
+  "rules": {
+    "R0": "P02 plus monotone reappearance-demand repair",
+    "R1": "P02 with the same demand construction and no repair"
+  },
+  "finetune_steps": 0,
+  "evaluation_split": "development",
+  "evaluation_times": "T24"
+}
