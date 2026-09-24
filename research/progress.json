@@ -4,12 +4,12 @@
     0,
     1
   ],
-  "gpu_hours_consumed": 0.7048,
-  "cpu_selection_hours_consumed": 0.0185,
+  "gpu_hours_consumed": 0.7268,
+  "cpu_selection_hours_consumed": 0.0195,
   "resource_control_slots_used": 2,
   "queue": [
     {
-      "task": "P10",
+      "task": "P11",
       "status": "NEXT"
     }
   ],
@@ -53,6 +53,9 @@
     ,"P07": "NEGATIVE"
     ,"P08": "BLOCKED_CACHE"
     ,"P09": "BLOCKED_CACHE"
+    ,"P10/R0": "NEGATIVE_NO_OPPORTUNITY"
+    ,"P10/R1": "COMPLETED_CONTROL"
+    ,"P10": "NEGATIVE"
     ,"resource_control/P15_cap/P01_R4": "COMPLETED"
     ,"resource_control/P16_cap/P01_R4": "COMPLETED"
   },
@@ -117,6 +120,13 @@
       "summary": "K3 signed per-ray RGB deletion vectors are unavailable; squared K2 e_it cannot recover signs and is explicitly disallowed as a substitute.",
       "artifact": "research/reports/P08_P09_blocked.md",
       "status": "BLOCKED_CACHE"
+    },
+    {
+      "task": "P10",
+      "type": "negative_no_opportunity",
+      "summary": "All 256 highest-risk feasible reappearance demands are already satisfied by the P02 set, so the registered monotone repair makes zero swaps. R0 and R1 are exactly identical globally, temporally, and in reappearance patches.",
+      "artifact": "runs/research/P10/cut_roasted_beef/aggregate.json",
+      "status": "NEGATIVE"
     }
   ],
   "frozen_test_manifest": null,
@@ -126,9 +136,9 @@
     "deterministic_methods": "verify seed-invariant IDs and evaluate once; do not report duplicate runs as independent samples"
   },
   "git": {
-    "commit": "ef4b7f8",
+    "commit": "a86e516",
     "branch": "codex/astra-experiments-20260923",
     "dirty": true,
-    "dirty_diff_sha256": "644a02a476ef39444039f3bef4d2f4065d01d8b3c2dd305a0df31ebf9a3ce8c0"
+    "dirty_diff_sha256": "3ec9f05d89605b02bd8ed88d0d7fea90a21e3891f22b3f00e8b6e13e9023fbca"
   }
 }
