@@ -22,3 +22,4 @@ dependencies:
     - submodules/diff_gaussian_rasterization_df
     - submodules/simple-knn
     - opencv-python
+    - imageio-ffmpeg==0.5.1

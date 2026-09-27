@@ -173,7 +173,7 @@ def pipeline() -> SimpleNamespace:
     return SimpleNamespace(convert_SHs_python=False, compute_cov3D_python=False, debug=False)
 
 
-def render_one(adapter: Any, camera: Any) -> torch.Tensor:
+def render_one(adapter: Any, camera: Any, mask_gate: torch.Tensor | None = None) -> torch.Tensor:
     background = torch.zeros(3, dtype=torch.float32, device="cuda")
     return render(
         camera,
@@ -183,6 +183,7 @@ def render_one(adapter: Any, camera: Any) -> torch.Tensor:
         timestamp=camera.timestamp,
         near=adapter.args.near,
         far=adapter.args.far,
+        mask_gate=mask_gate,
     )["render"].clamp(0, 1)
 
 
@@ -276,6 +277,7 @@ def evaluate_against_reference(
     camera_names: list[str],
     times: list[int],
     output: Path,
+    mask_gate: torch.Tensor | None = None,
 ) -> dict:
     """Evaluate a method against GT and its immutable teacher in one pass."""
     if "cam00" in camera_names:
@@ -291,7 +293,7 @@ def evaluate_against_reference(
             camera = select_camera(scene, name, timestamp)
             gt = load_ground_truth(camera, decoders)
             render_start = time.perf_counter()
-            image = render_one(adapter, camera)
+            image = render_one(adapter, camera, mask_gate=mask_gate)
             render_seconds = time.perf_counter() - render_start
             teacher = render_one(reference, camera)
             method_mse = torch.mean((image - gt) ** 2)

@@ -1,0 +1,22 @@
+{
+  "schema": "p11-config-v1",
+  "scene": "cut_roasted_beef",
+  "model": "M0",
+  "budget_fraction": 0.5,
+  "seeds": [0, 1, 2],
+  "rules": ["R0", "R1", "R2"],
+  "steps": 200,
+  "batch_size": 1,
+  "gate_learning_rate": 0.01,
+  "soft_budget_weight": 10.0,
+  "loss": "0.8*L1+0.2*(1-SSIM)",
+  "sampling": "seeded uniform C camera and uniform integer timestamp in [0,299]",
+  "r0": "groupwise hard top-K straight-through gate; all non-gate attributes frozen",
+  "r1": "soft sigmoid gate with group budget penalty; final groupwise hard top-K",
+  "r2": "P01.R2 hard subset followed by equal-step ordinary finetuning",
+  "evaluation_split": "development",
+  "evaluation_times": "T24",
+  "densification": false,
+  "opacity_reset": false,
+  "automatic_pruning": false
+}
