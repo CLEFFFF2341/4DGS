@@ -9,7 +9,7 @@
   "resource_control_slots_used": 4,
   "queue": [
     {
-      "task": "P20",
+      "task": "P99",
       "status": "NEXT"
     }
   ],
@@ -78,6 +78,7 @@
     ,"P19/C0_byte_P02": "COMPLETED_RESOURCE_CONTROL"
     ,"P19/C1_tile_P02": "COMPLETED_RESOURCE_CONTROL"
     ,"P19": "ADVANCED_STAGE1"
+    ,"P20": "BLOCKED_CACHE"
   },
   "failures": [
     {
@@ -182,6 +183,13 @@
       "summary": "At the same byte cap, E/byte improves PSNR by 0.194087 dB and LPIPS by 0.003137 over the pure-E packing control. At exactly the same 50% tile cap, E/tile improves PSNR by 1.342975 dB and LPIPS by 0.010470, while measured wall latency is 7.51% lower than the matched control and 48.24% lower than the full-model baseline. Byte and tile tracks remain separate trade-offs.",
       "artifact": "runs/research/P19/cut_roasted_beef/aggregate.json",
       "status": "ADVANCED_STAGE1"
+    },
+    {
+      "task": "P20",
+      "type": "blocked_cache",
+      "summary": "The required K3 ordered per-ray direction/weight/color cache does not exist. K1 aggregates and squared K2 deletion errors cannot recover the registered per-option SH distortion D_io, so no substitute or formal run was made.",
+      "artifact": "runs/research/P20/cut_roasted_beef/shac0.5/status.json",
+      "status": "BLOCKED_CACHE"
     }
   ],
   "frozen_test_manifest": null,
