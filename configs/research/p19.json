@@ -1,0 +1,17 @@
+{
+  "schema": "p19-config-v1",
+  "scene": "cut_roasted_beef",
+  "model": "M0",
+  "seed_policy": "deterministic; verify IDs for seeds 0,1,2 and evaluate once",
+  "rules": ["R0", "R1", "R2"],
+  "controls": ["C0_byte_p02", "C1_tile_p02"],
+  "byte_cap_fraction": 0.5,
+  "tile_cap_fraction": 0.5,
+  "point_cap_fraction": 0.5,
+  "static_payload_bytes": 260,
+  "dynamic_payload_bytes": 1260,
+  "stable_id_bytes_per_point": 8,
+  "finetune_steps": 0,
+  "evaluation_split": "development",
+  "evaluation_times": "T24"
+}
