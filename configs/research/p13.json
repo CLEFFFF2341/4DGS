@@ -1,0 +1,20 @@
+{
+  "schema": "p13-config-v1",
+  "scene": "cut_roasted_beef",
+  "model": "M0",
+  "budget_fraction": 0.5,
+  "seed_policy": "deterministic; verify IDs for seeds 0,1,2 and evaluate once",
+  "rules": ["R0", "R1"],
+  "neighbors": 16,
+  "position_reference_time": 149,
+  "position_times": "T24",
+  "color_gate": 0.1,
+  "position_gate_mean_scale_multiplier": 2.0,
+  "dynamic_opacity_envelope_gate": 0.1,
+  "eigenvalue_floor_length_scale_squared": 1e-8,
+  "probe_pairs": 32,
+  "probe_frames": 2,
+  "finetune_steps": 0,
+  "evaluation_split": "development",
+  "evaluation_times": "T24"
+}
