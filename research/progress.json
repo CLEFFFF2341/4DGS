@@ -9,8 +9,9 @@
   "resource_control_slots_used": 4,
   "queue": [
     {
-      "task": "P99",
-      "status": "NEXT"
+      "task": "STAGE2",
+      "status": "BLOCKED_DATA_AND_AUTHORIZATION",
+      "source": "runs/research/aggregate/20260927-stage1-a5e2cda/next_queue.json"
     }
   ],
   "runs": {
@@ -79,6 +80,8 @@
     ,"P19/C1_tile_P02": "COMPLETED_RESOURCE_CONTROL"
     ,"P19": "ADVANCED_STAGE1"
     ,"P20": "BLOCKED_CACHE"
+    ,"P99/stage1": "COMPLETED"
+    ,"stage1": "COMPLETED"
   },
   "failures": [
     {
@@ -199,7 +202,7 @@
     "deterministic_methods": "verify seed-invariant IDs and evaluate once; do not report duplicate runs as independent samples"
   },
   "git": {
-    "commit": "a26f6a6",
+    "commit": "b30771f",
     "branch": "codex/astra-experiments-20260923",
     "dirty": true,
     "dirty_diff_sha256": "report-and-progress-pending-commit"
