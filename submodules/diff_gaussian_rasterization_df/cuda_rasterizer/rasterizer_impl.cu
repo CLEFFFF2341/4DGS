@@ -213,6 +213,7 @@ int CudaRasterizer::Rasterizer::forward(
 	const float* shs,
 	const float* colors_precomp,
 	const float* opacities,
+	const float* mask_gate,
 	const float* scales,
 	const float scale_modifier,
 	const float* rotations,
@@ -360,6 +361,7 @@ int CudaRasterizer::Rasterizer::forward(
 		geomState.means2D,
 		feature_ptr,
 		geomState.conic_opacity,
+		mask_gate,
 		imgState.accum_alpha,
 		imgState.n_contrib,
 		background,
@@ -393,6 +395,7 @@ void CudaRasterizer::Rasterizer::backward(
 	const float* means3D,
 	const float* shs,
 	const float* colors_precomp,
+	const float* mask_gate,
 	const float* scales,
 	const float scale_modifier,
 	const float* rotations,
@@ -418,6 +421,7 @@ void CudaRasterizer::Rasterizer::backward(
 	float* dL_dmean2D,
 	float* dL_dconic,
 	float* dL_dopacity,
+	float* dL_dmask_gate,
 	float* dL_dcolor,
 	float* dL_dmean3D,
 	float* dL_dcov3D,
@@ -459,6 +463,7 @@ void CudaRasterizer::Rasterizer::backward(
 		geomState.means2D,
 		geomState.conic_opacity,
 		color_ptr,
+		mask_gate,
 		geomState.depths,
 		acc_depth,
 		acc,
@@ -474,6 +479,7 @@ void CudaRasterizer::Rasterizer::backward(
 		(float4*)dL_dconic,
 		dL_ddir,
 		dL_dopacity,
+		dL_dmask_gate,
 		dL_dcolor), debug)
 
 	// Take care of the rest of preprocessing. Was the precomputed covariance

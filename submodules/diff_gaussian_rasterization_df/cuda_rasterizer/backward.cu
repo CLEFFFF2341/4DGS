@@ -436,6 +436,7 @@ renderCUDA(
 	const float2* __restrict__ points_xy_image,
 	const float4* __restrict__ conic_opacity,
 	const float* __restrict__ colors,
+	const float* __restrict__ mask_gate,
 	const float* __restrict__ depths,
 	const float* __restrict__ depth_acc,
 	const float* __restrict__ d_weight_acc,
@@ -451,6 +452,7 @@ renderCUDA(
 	float4* __restrict__ dL_dconic2D,
 	float* __restrict__ dL_ddir,
 	float* __restrict__ dL_dopacity,
+	float* __restrict__ dL_dmask_gate,
 	float* __restrict__ dL_dcolors)
 {
 	// We rasterize again. Compute necessary block info.
@@ -585,9 +587,13 @@ renderCUDA(
 				continue;
 
 			const float G = exp(power);
-			const float alpha = min(0.99f, con_o.w * G);
-			if (alpha < 1.0f / 255.0f)
+			const float raw_alpha = min(0.99f, con_o.w * G);
+			if (raw_alpha < 1.0f / 255.0f)
 				continue;
+
+			const int global_id = collected_id[j];
+			const float gate = mask_gate ? mask_gate[global_id] : 1.0f;
+			const float alpha = gate * raw_alpha;
 
 			T = T / (1.f - alpha);
 			const float dchannel_dcolor = alpha * T;
@@ -596,8 +602,6 @@ renderCUDA(
 			// gradients w.r.t. alpha (blending factor for a Gaussian/pixel
 			// pair).
 			float dL_dalpha = 0.0f;
-			const int global_id = collected_id[j];
-
 			// gradients w.r.t. depth
 			////////////////////////////////////////////////////////////////////////////////////////
 			const float dep = collected_depth[j];
@@ -659,7 +663,11 @@ renderCUDA(
 			dL_dalpha += (-T_final / (1.f - alpha)) * bg_dot_dpixel;
 
 			// Helpful reusable temporary variables
-			const float dL_dG = con_o.w * dL_dalpha;
+			const float effective_alpha_grad = dL_dalpha + dL_dacc;
+			if (dL_dmask_gate)
+				atomicAdd(&(dL_dmask_gate[global_id]), raw_alpha * effective_alpha_grad);
+
+			const float dL_dG = gate * con_o.w * dL_dalpha;
 			const float gdx = G * d.x;
 			const float gdy = G * d.y;
 			const float dG_ddelx = -gdx * con_o.x - gdy * con_o.y;
@@ -675,8 +683,8 @@ renderCUDA(
 			atomicAdd(&dL_dconic2D[global_id].w, -0.5f * gdy * d.y * dL_dG);
 
 			// Update gradients w.r.t. opacity of the Gaussian
-			atomicAdd(&(dL_dopacity[global_id]), G * dL_dalpha);
-			atomicAdd(&(dL_dopacity[global_id]), G * dL_dacc);
+			atomicAdd(&(dL_dopacity[global_id]), gate * G * dL_dalpha);
+			atomicAdd(&(dL_dopacity[global_id]), gate * G * dL_dacc);
 		}
 	}
 }
@@ -764,6 +772,7 @@ void BACKWARD::render(
 	const float2* means2D,
 	const float4* conic_opacity,
 	const float* colors,
+	const float* mask_gate,
 	const float* depths,
 	const float* acc_depth,
 	const float* acc,
@@ -779,6 +788,7 @@ void BACKWARD::render(
 	float4* dL_dconic2D,
 	float* dL_ddir,
 	float* dL_dopacity,
+	float* dL_dmask_gate,
 	float* dL_dcolors)
 {
 	renderCUDA<NUM_CHANNELS> << <grid, block >> >(
@@ -792,6 +802,7 @@ void BACKWARD::render(
 		means2D,
 		conic_opacity,
 		colors,
+		mask_gate,
 		depths,
 		acc_depth,
 		acc,
@@ -807,6 +818,7 @@ void BACKWARD::render(
 		dL_dconic2D,
 		dL_ddir,
 		dL_dopacity,
+		dL_dmask_gate,
 		dL_dcolors
 		);
 }

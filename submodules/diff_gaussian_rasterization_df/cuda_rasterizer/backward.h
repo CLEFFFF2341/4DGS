@@ -32,6 +32,7 @@ namespace BACKWARD
 		const float2* means2D,
 		const float4* conic_opacity,
 		const float* colors,
+		const float* mask_gate,
 		const float* depths,
 		const float* acc_depth,
 		const float* acc,
@@ -47,6 +48,7 @@ namespace BACKWARD
 		float4* dL_dconic2D,
 		float* dL_ddir,
 		float* dL_dopacity,
+		float* dL_dmask_gate,
 		float* dL_dcolors);
 
 	void preprocess(

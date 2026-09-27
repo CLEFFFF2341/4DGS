@@ -16,7 +16,7 @@ from diff_gaussian_rasterization_df import GaussianRasterizationSettings, Gaussi
 from utils.sh_utils import eval_sh
 
 
-def render(viewpoint_camera, pc, pipe, bg_color : torch.Tensor, timestamp=None, scaling_modifier=1.0, override_color=None, subpixel_offset=None, mode=0, training=False, near=0.2, far=100.0):
+def render(viewpoint_camera, pc, pipe, bg_color : torch.Tensor, timestamp=None, scaling_modifier=1.0, override_color=None, subpixel_offset=None, mode=0, training=False, near=0.2, far=100.0, mask_gate=None):
     """
     Render the scene. 
     
@@ -106,6 +106,7 @@ def render(viewpoint_camera, pc, pipe, bg_color : torch.Tensor, timestamp=None, 
         shs = shs,
         colors_precomp = colors_precomp,
         opacities = opacity,
+        mask_gate = mask_gate,
         scales = scales,
         rotations = rotations,
         cov3D_precomp = cov3D_precomp)

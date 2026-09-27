@@ -281,6 +281,7 @@ renderCUDA(
 	const float2* __restrict__ points_xy_image,
 	const float* __restrict__ features,
 	const float4* __restrict__ conic_opacity,
+	const float* __restrict__ mask_gate,
 	float* __restrict__ final_T,
 	uint32_t* __restrict__ n_contrib,
 	const float* __restrict__ bg_color,
@@ -384,9 +385,12 @@ renderCUDA(
 			// Obtain alpha by multiplying with Gaussian opacity
 			// and its exponential falloff from mean.
 			// Avoid numerical instabilities (see paper appendix). 
-			float alpha = min(0.99f, con_o.w * exp(power));
-			if (alpha < 1.0f / 255.0f)
+			const int gaussian_id = collected_id[j];
+			const float raw_alpha = min(0.99f, con_o.w * exp(power));
+			if (raw_alpha < 1.0f / 255.0f)
 				continue;
+			const float gate = mask_gate ? mask_gate[gaussian_id] : 1.0f;
+			const float alpha = gate * raw_alpha;
 			float test_T = T * (1 - alpha);
 			if (test_T < 0.0001f)
 			{
@@ -400,7 +404,6 @@ renderCUDA(
 
 			if (collect_stats)
 			{
-				const int gaussian_id = collected_id[j];
 				const float weight = alpha * T;
 				atomicAdd(contrib_sum + gaussian_id, weight);
 				atomicMax(reinterpret_cast<int*>(contrib_max + gaussian_id), __float_as_int(weight));
@@ -491,9 +494,11 @@ renderCUDA(
 				const float power = -0.5f * (con_o.x * d.x * d.x + con_o.z * d.y * d.y) - con_o.y * d.x * d.y;
 				if (power > 0.0f)
 					continue;
-				const float alpha = min(0.99f, con_o.w * expf(power));
-				if (alpha < 1.0f / 255.0f)
+				const float raw_alpha = min(0.99f, con_o.w * expf(power));
+				if (raw_alpha < 1.0f / 255.0f)
 					continue;
+				const float gate = mask_gate ? mask_gate[gaussian_id] : 1.0f;
+				const float alpha = gate * raw_alpha;
 				const float test_T = replay_T * (1.0f - alpha);
 				if (test_T < 0.0001f)
 					break;
@@ -518,9 +523,11 @@ renderCUDA(
 				const float deleted_power = -0.5f * (deleted_con_o.x * deleted_d.x * deleted_d.x + deleted_con_o.z * deleted_d.y * deleted_d.y) - deleted_con_o.y * deleted_d.x * deleted_d.y;
 				if (deleted_power > 0.0f)
 					continue;
-				const float deleted_alpha = min(0.99f, deleted_con_o.w * expf(deleted_power));
-				if (deleted_alpha < 1.0f / 255.0f)
+				const float deleted_raw_alpha = min(0.99f, deleted_con_o.w * expf(deleted_power));
+				if (deleted_raw_alpha < 1.0f / 255.0f)
 					continue;
+				const float deleted_gate = mask_gate ? mask_gate[deleted_id] : 1.0f;
+				const float deleted_alpha = deleted_gate * deleted_raw_alpha;
 				const float original_test_T = original_T * (1.0f - deleted_alpha);
 				const bool stops_original = original_test_T < 0.0001f;
 
@@ -537,9 +544,11 @@ renderCUDA(
 					const float power = -0.5f * (con_o.x * d.x * d.x + con_o.z * d.y * d.y) - con_o.y * d.x * d.y;
 					if (power > 0.0f)
 						continue;
-					const float alpha = min(0.99f, con_o.w * expf(power));
-					if (alpha < 1.0f / 255.0f)
+					const float raw_alpha = min(0.99f, con_o.w * expf(power));
+					if (raw_alpha < 1.0f / 255.0f)
 						continue;
+					const float gate = mask_gate ? mask_gate[gaussian_id] : 1.0f;
+					const float alpha = gate * raw_alpha;
 					const float test_T = counterfactual_T * (1.0f - alpha);
 					if (test_T < 0.0001f)
 						break;
@@ -574,6 +583,7 @@ void FORWARD::render(
 	const float2* means2D,
 	const float* colors,
 	const float4* conic_opacity,
+	const float* mask_gate,
 	float* final_T,
 	uint32_t* n_contrib,
 	const float* bg_color,
@@ -603,6 +613,7 @@ void FORWARD::render(
 		means2D,
 		colors,
 		conic_opacity,
+		mask_gate,
 		final_T,
 		n_contrib,
 		bg_color,
