@@ -4,12 +4,12 @@
     0,
     1
   ],
-  "gpu_hours_consumed": 0.8168,
-  "cpu_selection_hours_consumed": 0.5201,
+  "gpu_hours_consumed": 0.8565,
+  "cpu_selection_hours_consumed": 0.5252,
   "resource_control_slots_used": 2,
   "queue": [
     {
-      "task": "P18",
+      "task": "P19",
       "status": "NEXT"
     }
   ],
@@ -69,6 +69,9 @@
     ,"P13/R0": "NEGATIVE"
     ,"P13/R1": "COMPLETED_CONTROL"
     ,"P13": "NEGATIVE"
+    ,"P18/R0": "NEGATIVE"
+    ,"P18/R1": "COMPLETED_CONTROL"
+    ,"P18": "NEGATIVE"
   },
   "failures": [
     {
@@ -159,6 +162,13 @@
       "summary": "Moment-matched merging loses 4.504748 dB PSNR and worsens LPIPS by 0.190864 versus the exact same-ID, same-byte keep-parent control. Static merging has ample opportunity (46,767 retained merges), while only 430 dynamic merged parents survive the frozen trajectory and opacity gates.",
       "artifact": "runs/research/P13/cut_roasted_beef/b0.5/aggregate.json",
       "status": "NEGATIVE"
+    },
+    {
+      "task": "P18",
+      "type": "negative",
+      "summary": "The switching penalty cuts proxy switches by 52.95% and teacher-residual TDE by 18.20%, but registered GT-residual TDE improves only 0.2289% versus gamma=0. End-to-end gather plus render is 30.65-32.25% slower than the full-model baseline, and both rules have a dynamic-group budget gap.",
+      "artifact": "runs/research/P18/cut_roasted_beef/active0.5/aggregate.json",
+      "status": "NEGATIVE"
     }
   ],
   "frozen_test_manifest": null,
@@ -168,7 +178,7 @@
     "deterministic_methods": "verify seed-invariant IDs and evaluate once; do not report duplicate runs as independent samples"
   },
   "git": {
-    "commit": "552593d",
+    "commit": "70d5b3e",
     "branch": "codex/astra-experiments-20260923",
     "dirty": true,
     "dirty_diff_sha256": "report-and-progress-pending-commit"
