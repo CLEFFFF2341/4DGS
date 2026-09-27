@@ -84,7 +84,7 @@ def _verified_training_frame(path: Path) -> bool:
         return False
     metadata = json.loads(sidecar.read_text(encoding="utf-8"))
     return bool(
-        metadata.get("schema") == "p11-training-frame-v2"
+        metadata.get("schema") == "p11-training-frame-v3"
         and metadata.get("decoder_backend") == "imageio-ffmpeg"
         and metadata.get("png_sha256") == sha256_file(path)
     )
@@ -96,7 +96,11 @@ def _decode_ffmpeg_frames(scene: Any, name: str, timestamps: list[int]) -> dict[
     if not source.exists():
         raise FileNotFoundError(source)
     requested = set(timestamps)
-    reader = imageio_ffmpeg.read_frames(str(source), pix_fmt="rgb24")
+    reader = imageio_ffmpeg.read_frames(
+        str(source),
+        pix_fmt="rgb24",
+        input_params=["-threads", "1"],
+    )
     metadata = next(reader)
     width, height = metadata["size"]
     result: dict[int, np.ndarray] = {}
@@ -142,20 +146,27 @@ def prepare_training_frames(scene: Any, schedule: list[dict[str, Any]]) -> dict[
         for timestamp in missing:
             image = decoded[timestamp]
             path = training_frame_path(name, timestamp)
+            previous = None
+            if path.with_suffix(".json").exists():
+                previous = json.loads(path.with_suffix(".json").read_text(encoding="utf-8"))
+            pixel_sha256 = hashlib.sha256(image.tobytes()).hexdigest()
             path.parent.mkdir(parents=True, exist_ok=True)
             Image.fromarray(image).save(path)
             dump(
                 path.with_suffix(".json"),
                 {
-                    "schema": "p11-training-frame-v2",
+                    "schema": "p11-training-frame-v3",
                     "camera": name,
                     "timestamp": timestamp,
                     "decoder_backend": "imageio-ffmpeg",
+                    "decoder_threads": 1,
                     "ffmpeg_version": imageio_ffmpeg.get_ffmpeg_version(),
                     "verification": "two independent sequential FFmpeg decodes are byte-identical",
                     "attempt": attempt,
-                    "pixel_sha256": hashlib.sha256(image.tobytes()).hexdigest(),
+                    "pixel_sha256": pixel_sha256,
                     "png_sha256": sha256_file(path),
+                    "superseded_schema": previous.get("schema") if previous else None,
+                    "superseded_pixel_match": previous.get("pixel_sha256") == pixel_sha256 if previous else None,
                 },
             )
             created.append(str(path.relative_to(ROOT)))
