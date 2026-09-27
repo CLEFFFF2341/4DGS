@@ -4,12 +4,12 @@
     0,
     1
   ],
-  "gpu_hours_consumed": 0.8565,
-  "cpu_selection_hours_consumed": 0.5252,
-  "resource_control_slots_used": 2,
+  "gpu_hours_consumed": 0.8705,
+  "cpu_selection_hours_consumed": 0.5262,
+  "resource_control_slots_used": 4,
   "queue": [
     {
-      "task": "P19",
+      "task": "P20",
       "status": "NEXT"
     }
   ],
@@ -72,6 +72,12 @@
     ,"P18/R0": "NEGATIVE"
     ,"P18/R1": "COMPLETED_CONTROL"
     ,"P18": "NEGATIVE"
+    ,"P19/R0": "ADVANCED_STAGE1"
+    ,"P19/R1": "ADVANCED_STAGE1"
+    ,"P19/R2": "COMPLETED_CONTROL"
+    ,"P19/C0_byte_P02": "COMPLETED_RESOURCE_CONTROL"
+    ,"P19/C1_tile_P02": "COMPLETED_RESOURCE_CONTROL"
+    ,"P19": "ADVANCED_STAGE1"
   },
   "failures": [
     {
@@ -169,6 +175,13 @@
       "summary": "The switching penalty cuts proxy switches by 52.95% and teacher-residual TDE by 18.20%, but registered GT-residual TDE improves only 0.2289% versus gamma=0. End-to-end gather plus render is 30.65-32.25% slower than the full-model baseline, and both rules have a dynamic-group budget gap.",
       "artifact": "runs/research/P18/cut_roasted_beef/active0.5/aggregate.json",
       "status": "NEGATIVE"
+    },
+    {
+      "task": "P19",
+      "type": "advanced_stage1",
+      "summary": "At the same byte cap, E/byte improves PSNR by 0.194087 dB and LPIPS by 0.003137 over the pure-E packing control. At exactly the same 50% tile cap, E/tile improves PSNR by 1.342975 dB and LPIPS by 0.010470, while measured wall latency is 7.51% lower than the matched control and 48.24% lower than the full-model baseline. Byte and tile tracks remain separate trade-offs.",
+      "artifact": "runs/research/P19/cut_roasted_beef/aggregate.json",
+      "status": "ADVANCED_STAGE1"
     }
   ],
   "frozen_test_manifest": null,
@@ -178,7 +191,7 @@
     "deterministic_methods": "verify seed-invariant IDs and evaluate once; do not report duplicate runs as independent samples"
   },
   "git": {
-    "commit": "70d5b3e",
+    "commit": "a26f6a6",
     "branch": "codex/astra-experiments-20260923",
     "dirty": true,
     "dirty_diff_sha256": "report-and-progress-pending-commit"
