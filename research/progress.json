@@ -4,12 +4,12 @@
     0,
     1
   ],
-  "gpu_hours_consumed": 0.8071,
-  "cpu_selection_hours_consumed": 0.5198,
+  "gpu_hours_consumed": 0.8168,
+  "cpu_selection_hours_consumed": 0.5201,
   "resource_control_slots_used": 2,
   "queue": [
     {
-      "task": "P13",
+      "task": "P18",
       "status": "NEXT"
     }
   ],
@@ -66,6 +66,9 @@
     ,"P12": "NEGATIVE"
     ,"resource_control/P15_cap/P01_R4": "COMPLETED"
     ,"resource_control/P16_cap/P01_R4": "COMPLETED"
+    ,"P13/R0": "NEGATIVE"
+    ,"P13/R1": "COMPLETED_CONTROL"
+    ,"P13": "NEGATIVE"
   },
   "failures": [
     {
@@ -149,6 +152,13 @@
       "summary": "Global top-K reallocates 1,176 points from static to dynamic, costs +1,176,000 bytes, and changes PSNR by -0.001150 dB. Risk balancing reallocates 5,403 points, costs +5,403,000 bytes, and lowers PSNR by 0.072804 dB. Neither count- nor byte-aware evidence supports the reallocation.",
       "artifact": "runs/research/P12/cut_roasted_beef/b0.5/aggregate.json",
       "status": "NEGATIVE"
+    },
+    {
+      "task": "P13",
+      "type": "negative",
+      "summary": "Moment-matched merging loses 4.504748 dB PSNR and worsens LPIPS by 0.190864 versus the exact same-ID, same-byte keep-parent control. Static merging has ample opportunity (46,767 retained merges), while only 430 dynamic merged parents survive the frozen trajectory and opacity gates.",
+      "artifact": "runs/research/P13/cut_roasted_beef/b0.5/aggregate.json",
+      "status": "NEGATIVE"
     }
   ],
   "frozen_test_manifest": null,
@@ -158,7 +168,7 @@
     "deterministic_methods": "verify seed-invariant IDs and evaluate once; do not report duplicate runs as independent samples"
   },
   "git": {
-    "commit": "f5859f8",
+    "commit": "552593d",
     "branch": "codex/astra-experiments-20260923",
     "dirty": true,
     "dirty_diff_sha256": "report-and-progress-pending-commit"
