@@ -4,12 +4,12 @@
     0,
     1
   ],
-  "gpu_hours_consumed": 0.7937,
-  "cpu_selection_hours_consumed": 0.5195,
+  "gpu_hours_consumed": 0.8071,
+  "cpu_selection_hours_consumed": 0.5198,
   "resource_control_slots_used": 2,
   "queue": [
     {
-      "task": "P12",
+      "task": "P13",
       "status": "NEXT"
     }
   ],
@@ -60,6 +60,10 @@
     ,"P11/R1": "OPTIMIZATION_FAILED"
     ,"P11/R2": "COMPLETED_CONTROL"
     ,"P11": "NEGATIVE"
+    ,"P12/R0": "COMPLETED_CONTROL"
+    ,"P12/R1": "NEGATIVE"
+    ,"P12/R2": "NEGATIVE"
+    ,"P12": "NEGATIVE"
     ,"resource_control/P15_cap/P01_R4": "COMPLETED"
     ,"resource_control/P16_cap/P01_R4": "COMPLETED"
   },
@@ -138,6 +142,13 @@
       "summary": "Across seeds 0/1/2, hard-STE R0 and soft-then-hard R1 trail equal-step ordinary-finetuning R2 by 2.640835 dB and 1.878369 dB. R1's dense soft state averages 31.940622 dB but loses 6.068814 dB on exact-budget hardening. R2 improves +0.499756 dB over P02 zero-FT, attributing the positive gain to extra training rather than learned selection.",
       "artifact": "runs/research/P11/cut_roasted_beef/b0.5/aggregate.json",
       "status": "NEGATIVE"
+    },
+    {
+      "task": "P12",
+      "type": "negative",
+      "summary": "Global top-K reallocates 1,176 points from static to dynamic, costs +1,176,000 bytes, and changes PSNR by -0.001150 dB. Risk balancing reallocates 5,403 points, costs +5,403,000 bytes, and lowers PSNR by 0.072804 dB. Neither count- nor byte-aware evidence supports the reallocation.",
+      "artifact": "runs/research/P12/cut_roasted_beef/b0.5/aggregate.json",
+      "status": "NEGATIVE"
     }
   ],
   "frozen_test_manifest": null,
@@ -147,7 +158,7 @@
     "deterministic_methods": "verify seed-invariant IDs and evaluate once; do not report duplicate runs as independent samples"
   },
   "git": {
-    "commit": "c0a4016",
+    "commit": "f5859f8",
     "branch": "codex/astra-experiments-20260923",
     "dirty": true,
     "dirty_diff_sha256": "report-and-progress-pending-commit"
