@@ -21,3 +21,28 @@ backup/
 .pytest_cache/
 imgui.ini
 __pycache__/
+
+# Local experiment assets; reproduce using deployment/ instead of committing binaries.
+/.conda/
+/.conda-pkgs/
+/downloads/
+/tools/
+/dataset/
+/output/
+*.pt
+*.pth
+*.train
+*.npy
+*.zip
+
+# Baseline configuration and environment manifests are part of the experiment.
+!/configs/fastergs4d_coffee_martini.yaml
+!/deployment/current-conda-explicit.txt
+!/deployment/current-pip-freeze.txt
+!/deployment/requirements-official.txt
+!/deployment/baseline_metrics_8bit.txt
+
+# Package-search/download diagnostics are local installation scratch data.
+/deployment/*-options.json
+/deployment/conda-runtime-options.json
+/deployment/*-release.json

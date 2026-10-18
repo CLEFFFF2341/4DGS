@@ -1,0 +1,34 @@
+{
+  "train": {
+    "count": 5100,
+    "cameras": [
+      "cam01",
+      "cam02",
+      "cam04",
+      "cam05",
+      "cam06",
+      "cam07",
+      "cam08",
+      "cam09",
+      "cam10",
+      "cam11",
+      "cam12",
+      "cam13",
+      "cam14",
+      "cam16",
+      "cam18",
+      "cam19",
+      "cam20"
+    ],
+    "min_time": 0.0,
+    "max_time": 9.966666666666667
+  },
+  "test": {
+    "count": 300,
+    "cameras": [
+      "cam00"
+    ],
+    "min_time": 0.0,
+    "max_time": 9.966666666666667
+  }
+}

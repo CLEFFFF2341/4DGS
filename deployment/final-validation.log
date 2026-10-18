@@ -1,0 +1,10 @@
+{
+  "status": "complete",
+  "metrics": {
+    "PSNR": 26.32111707687378,
+    "SSIM": 0.8939748666683833,
+    "LPIPS": 0.2125691955288251
+  },
+  "training_seconds": 2669.079451,
+  "video": "E:\\4D_Gaussian\\output\\FasterGS4D\\fastergs4d_coffee_martini_2026-10-18-11-20-32\\coffee_martini_cam00_dynamic.mp4"
+}

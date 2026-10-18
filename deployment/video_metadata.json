@@ -1,0 +1,128 @@
+[
+  {
+    "camera": "cam00",
+    "width": 2704,
+    "height": 2028,
+    "r_frame_rate": "30/1",
+    "nb_frames": "300"
+  },
+  {
+    "camera": "cam01",
+    "width": 2704,
+    "height": 2028,
+    "r_frame_rate": "30/1",
+    "nb_frames": "300"
+  },
+  {
+    "camera": "cam02",
+    "width": 2704,
+    "height": 2028,
+    "r_frame_rate": "30/1",
+    "nb_frames": "300"
+  },
+  {
+    "camera": "cam04",
+    "width": 2704,
+    "height": 2028,
+    "r_frame_rate": "30/1",
+    "nb_frames": "300"
+  },
+  {
+    "camera": "cam05",
+    "width": 2704,
+    "height": 2028,
+    "r_frame_rate": "30/1",
+    "nb_frames": "300"
+  },
+  {
+    "camera": "cam06",
+    "width": 2704,
+    "height": 2028,
+    "r_frame_rate": "30/1",
+    "nb_frames": "300"
+  },
+  {
+    "camera": "cam07",
+    "width": 2704,
+    "height": 2028,
+    "r_frame_rate": "30/1",
+    "nb_frames": "300"
+  },
+  {
+    "camera": "cam08",
+    "width": 2704,
+    "height": 2028,
+    "r_frame_rate": "30/1",
+    "nb_frames": "300"
+  },
+  {
+    "camera": "cam09",
+    "width": 2704,
+    "height": 2028,
+    "r_frame_rate": "30/1",
+    "nb_frames": "300"
+  },
+  {
+    "camera": "cam10",
+    "width": 2704,
+    "height": 2028,
+    "r_frame_rate": "30/1",
+    "nb_frames": "300"
+  },
+  {
+    "camera": "cam11",
+    "width": 2704,
+    "height": 2028,
+    "r_frame_rate": "30/1",
+    "nb_frames": "300"
+  },
+  {
+    "camera": "cam12",
+    "width": 2704,
+    "height": 2028,
+    "r_frame_rate": "30/1",
+    "nb_frames": "300"
+  },
+  {
+    "camera": "cam13",
+    "width": 2704,
+    "height": 2028,
+    "r_frame_rate": "30/1",
+    "nb_frames": "300"
+  },
+  {
+    "camera": "cam14",
+    "width": 2704,
+    "height": 2028,
+    "r_frame_rate": "30/1",
+    "nb_frames": "300"
+  },
+  {
+    "camera": "cam16",
+    "width": 2704,
+    "height": 2028,
+    "r_frame_rate": "30/1",
+    "nb_frames": "300"
+  },
+  {
+    "camera": "cam18",
+    "width": 2704,
+    "height": 2028,
+    "r_frame_rate": "30/1",
+    "nb_frames": "300"
+  },
+  {
+    "camera": "cam19",
+    "width": 2704,
+    "height": 2028,
+    "r_frame_rate": "30/1",
+    "nb_frames": "300"
+  },
+  {
+    "camera": "cam20",
+    "width": 2704,
+    "height": 2028,
+    "r_frame_rate": "30/1",
+    "nb_frames": "300"
+  }
+]

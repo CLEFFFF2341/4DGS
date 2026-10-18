@@ -1,0 +1,7 @@
+{
+  "frame": 0,
+  "mean_abs_difference_8bit": 1.7506389832288786e-05,
+  "max_abs_difference_8bit": 2.0,
+  "changed_pixel_percent": 0.0035012779664577573,
+  "psnr_between_renders_db": 95.24126275198563
+}

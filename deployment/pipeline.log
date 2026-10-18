@@ -1,0 +1,5 @@
+2.8.0 12.8 NVIDIA GeForce RTX 4090
+E:\4D_Gaussian\src\Methods\FasterGS4D\Model.py:17: RuntimeWarning: Using proprietary SimpleKNN extension for KNN distance computation. Ensure you comply with its license.
+  from Optim.knn_utils import compute_root_mean_squared_knn_distances
+Completed run: E:\4D_Gaussian\output\FasterGS4D\fastergs4d_coffee_martini_2026-10-18-11-20-32
+Dynamic held-out camera video: E:\4D_Gaussian\output\FasterGS4D\fastergs4d_coffee_martini_2026-10-18-11-20-32\coffee_martini_cam00_dynamic.mp4

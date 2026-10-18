@@ -1,0 +1,28 @@
+{
+  "camera_ids": [
+    "cam00",
+    "cam01",
+    "cam02",
+    "cam04",
+    "cam05",
+    "cam06",
+    "cam07",
+    "cam08",
+    "cam09",
+    "cam10",
+    "cam11",
+    "cam12",
+    "cam13",
+    "cam14",
+    "cam16",
+    "cam18",
+    "cam19",
+    "cam20"
+  ],
+  "poses_bounds_shape": [
+    18,
+    17
+  ],
+  "native_height": 2028,
+  "native_width": 2704
+}

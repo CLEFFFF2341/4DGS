@@ -1,0 +1,45 @@
+{
+  "run_directory": "E:\\4D_Gaussian\\output\\FasterGS4D\\fastergs4d_coffee_martini_2026-10-18-11-20-32",
+  "num_iterations_trained": 30000,
+  "all_floating_parameters_finite": true,
+  "parameter_shapes": {
+    "gaussians._spatial_means": [
+      2150292,
+      3
+    ],
+    "gaussians._temporal_means": [
+      2150292,
+      1
+    ],
+    "gaussians._sh_coefficients_0": [
+      2150292,
+      1,
+      3
+    ],
+    "gaussians._sh_coefficients_rest": [
+      2150292,
+      15,
+      3
+    ],
+    "gaussians._spatial_scales": [
+      2150292,
+      3
+    ],
+    "gaussians._temporal_scales": [
+      2150292,
+      1
+    ],
+    "gaussians._left_isoclinic_rotations": [
+      2150292,
+      4
+    ],
+    "gaussians._right_isoclinic_rotations": [
+      2150292,
+      4
+    ],
+    "gaussians._opacities": [
+      2150292,
+      1
+    ]
+  }
+}

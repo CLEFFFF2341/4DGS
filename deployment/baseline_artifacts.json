@@ -1,0 +1,26 @@
+{
+  "run_directory": "E:\\4D_Gaussian\\output\\FasterGS4D\\fastergs4d_coffee_martini_2026-10-18-11-20-32",
+  "artifacts_in_git": false,
+  "artifacts": [
+    {
+      "relative_path": "checkpoints/final.pt",
+      "bytes": 559079979,
+      "sha256": "58c0d0ba015ac391325ffd78c1e504846ab0e43461433cb7de1dc066d962571a"
+    },
+    {
+      "relative_path": "checkpoints/final.train",
+      "bytes": 559128071,
+      "sha256": "0afda818f13a426e122f7c25989c896f709d9d4acf938ac9c85e2a6651626f1e"
+    },
+    {
+      "relative_path": "coffee_martini_cam00_dynamic.mp4",
+      "bytes": 1527228,
+      "sha256": "6765fef8c0d96f3b831350ee1fbe368acb4c8259e9a00ae0ccf3ffd431c95d4b"
+    },
+    {
+      "relative_path": "inference/test_30000/metrics_8bit.txt",
+      "bytes": 7018,
+      "sha256": "f70eede3650da10c9675526e5c2027b8fc4af717276b7db12dca09829a8a5ba4"
+    }
+  ]
+}

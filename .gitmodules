@@ -1,3 +1,7 @@
 [submodule "src/ICGui"]
 	path = src/ICGui
-	url = ../../nerficg-project/icgui
+	url = https://github.com/nerficg-project/icgui.git
+[submodule "src/Methods/FasterGS4D"]
+	path = src/Methods/FasterGS4D
+	url = https://github.com/nerficg-project/faster-gaussian-splatting.git
+	branch = FasterGS4D

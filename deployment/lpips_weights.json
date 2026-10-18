@@ -1,0 +1,21 @@
+{
+  "source": {
+    "url": "https://huggingface.co/timm/vgg16.tv_in1k/resolve/b8d8aa2dd860af9233c8c67385a8097fd6c35d3f/pytorch_model.bin",
+    "sha256": "1d677a45f252c18f796d56251b7584e9fdc977dc3053ea0b2cd25d519f5d0fb2",
+    "size": 553441233,
+    "model_card": "https://huggingface.co/timm/vgg16.tv_in1k",
+    "description": "Original torchvision VGG16 ImageNet-1K weights, republished by timm."
+  },
+  "cache": "E:\\4D_Gaussian\\.cache\\torch\\hub\\checkpoints\\vgg16-397923af.pth",
+  "cache_sha256": "93c2958ff2024aa69b8b1ed8d613088623423b1ff1ec49db0855bd09d4f1c1e9",
+  "feature_tensors_unchanged": true,
+  "strict_state_dict_load": true,
+  "lpips_identity_score": 0.0,
+  "classifier_key_mapping": {
+    "pre_logits.fc1": "classifier.0",
+    "pre_logits.fc2": "classifier.3",
+    "head.fc": "classifier.6"
+  },
+  "framework_cache": "E:\\4D_Gaussian\\.cache\\checkpoints\\vgg16-397923af.pth",
+  "framework_cache_is_identical_hardlink": true
+}

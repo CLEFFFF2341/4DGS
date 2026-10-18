@@ -1,0 +1,120 @@
+{
+  "status": "complete",
+  "run_directory": "E:\\4D_Gaussian\\output\\FasterGS4D\\fastergs4d_coffee_martini_2026-10-18-11-20-32",
+  "iterations": 30000,
+  "resolution": [
+    1352,
+    1014
+  ],
+  "batch_size": 4,
+  "train_views": 5100,
+  "test_views": 300,
+  "metrics": {
+    "PSNR": 26.32111707687378,
+    "SSIM": 0.8939748666683833,
+    "LPIPS": 0.2125691955288251
+  },
+  "metrics_path": "E:\\4D_Gaussian\\output\\FasterGS4D\\fastergs4d_coffee_martini_2026-10-18-11-20-32\\inference\\test_30000\\metrics_8bit.txt",
+  "training_seconds": 2669.079451,
+  "final_gaussians": 2150292,
+  "vram_bytes": {
+    "VRAM_allocated": 3755045376,
+    "VRAM_reserved": 6729760768
+  },
+  "video": "E:\\4D_Gaussian\\output\\FasterGS4D\\fastergs4d_coffee_martini_2026-10-18-11-20-32\\coffee_martini_cam00_dynamic.mp4",
+  "video_probe": {
+    "width": 1352,
+    "height": 1014,
+    "r_frame_rate": "30/1",
+    "duration": "10.000000",
+    "nb_frames": "300",
+    "nb_read_frames": "300"
+  },
+  "dataset": {
+    "image_scale_factor": 0.5,
+    "width": 1352,
+    "height": 1014,
+    "frames_per_camera": 300,
+    "fps": 30,
+    "max_timestamp_exclusive_seconds": 10.0,
+    "test_camera": "cam00",
+    "train": {
+      "views": 5100,
+      "cameras": [
+        "cam01",
+        "cam02",
+        "cam04",
+        "cam05",
+        "cam06",
+        "cam07",
+        "cam08",
+        "cam09",
+        "cam10",
+        "cam11",
+        "cam12",
+        "cam13",
+        "cam14",
+        "cam16",
+        "cam18",
+        "cam19",
+        "cam20"
+      ]
+    },
+    "test": {
+      "views": 300,
+      "cameras": [
+        "cam00"
+      ]
+    },
+    "initial_point_cloud_vertices": 589789,
+    "initial_point_cloud_bytes": 15924550
+  },
+  "cache_preparation_seconds": 117.87997519999999,
+  "checkpoint_validation": {
+    "run_directory": "E:\\4D_Gaussian\\output\\FasterGS4D\\fastergs4d_coffee_martini_2026-10-18-11-20-32",
+    "num_iterations_trained": 30000,
+    "all_floating_parameters_finite": true,
+    "parameter_shapes": {
+      "gaussians._spatial_means": [
+        2150292,
+        3
+      ],
+      "gaussians._temporal_means": [
+        2150292,
+        1
+      ],
+      "gaussians._sh_coefficients_0": [
+        2150292,
+        1,
+        3
+      ],
+      "gaussians._sh_coefficients_rest": [
+        2150292,
+        15,
+        3
+      ],
+      "gaussians._spatial_scales": [
+        2150292,
+        3
+      ],
+      "gaussians._temporal_scales": [
+        2150292,
+        1
+      ],
+      "gaussians._left_isoclinic_rotations": [
+        2150292,
+        4
+      ],
+      "gaussians._right_isoclinic_rotations": [
+        2150292,
+        4
+      ],
+      "gaussians._opacities": [
+        2150292,
+        1
+      ]
+    }
+  },
+  "paper_reproduction_status": "not_verified_single_scene_only",
+  "paper_reproduction_audit": "deployment/PAPER_REPRODUCTION_AUDIT.md"
+}

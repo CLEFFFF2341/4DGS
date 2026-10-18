@@ -1,0 +1,39 @@
+{
+  "image_scale_factor": 0.5,
+  "width": 1352,
+  "height": 1014,
+  "frames_per_camera": 300,
+  "fps": 30,
+  "max_timestamp_exclusive_seconds": 10.0,
+  "test_camera": "cam00",
+  "train": {
+    "views": 5100,
+    "cameras": [
+      "cam01",
+      "cam02",
+      "cam04",
+      "cam05",
+      "cam06",
+      "cam07",
+      "cam08",
+      "cam09",
+      "cam10",
+      "cam11",
+      "cam12",
+      "cam13",
+      "cam14",
+      "cam16",
+      "cam18",
+      "cam19",
+      "cam20"
+    ]
+  },
+  "test": {
+    "views": 300,
+    "cameras": [
+      "cam00"
+    ]
+  },
+  "initial_point_cloud_vertices": 589789,
+  "initial_point_cloud_bytes": 15924550
+}
