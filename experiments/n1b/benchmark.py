@@ -12,6 +12,7 @@ import numpy as np
 import torch
 from .core import select_ids,build_proxy,render_cuda
 from .scenes import scene
+from .anchored import AnchoredProxy
 
 
 def sync(): torch.cuda.synchronize()
@@ -80,16 +81,18 @@ def evaluate_method(method,raw,cam,pix,bg,render,k):
     elif method=='linear':
         left,right=render(lo),render(hi); k-=2; G=(left+right)/2
         g=lambda t:left+(right-left)*((t-lo)/duration)
-    elif method in ('n1b','single_cv','pulse_mc','pulse_cv'):
+    elif method in ('n1b','single_cv','pulse_mc','pulse_cv','anchored','anchored_stratified'):
         ids,_=select_ids(raw,cam,pix,.5,duration)
         p=build_proxy(raw,cam,pix,ids,.5,duration,bg)
+        if method.startswith('anchored'):
+            p=AnchoredProxy(p)
         # Importance MC needs only the single-pulse proposal, not a pair integral.
         if method!='pulse_mc':
             G=p.integral(pair=method!='single_cv')
             g=lambda t:p.value(t-.5,pair=method!='single_cv')
     if method in ('pulse_mc','pulse_cv'):
         h,w=Proposal(p).sample(k); times=(h+.5).tolist()
-    elif method=='stratified':
+    elif method in ('stratified','anchored_stratified'):
         times=(lo+(torch.arange(k,device='cuda')+torch.rand(k,device='cuda'))*duration/k).tolist(); w=[1]*k
     else:
         times=(lo+torch.rand(k,device='cuda')*duration).tolist(); w=[1]*k
@@ -105,16 +108,19 @@ def gradient_diagnostic(raw,cam,pix,bg,render,p,seeds=48):
     def gradients(value):
         return [g.detach().flatten().double() for g in torch.autograd.grad(value,tuple(rr.values()))]
     rgs=[]; egs=[]
+    def make_proxy():
+        q=build_proxy(rr,cam,pix,ids,.5,.4,bg)
+        return AnchoredProxy(q) if isinstance(p,AnchoredProxy) else q
     torch.manual_seed(713)
     sync(); start=time.perf_counter()
     for t in (.3+.4*torch.rand(seeds,device='cuda')).tolist():
         r=render_cuda(rr,cam,t,bg)[:,12:20,12:20].mean()
         rg=gradients(r)
-        proxy=build_proxy(rr,cam,pix,ids,.5,.4,bg)
+        proxy=make_proxy()
         gg=gradients(proxy.value(t-.5).mean())
         rgs.append(rg); egs.append([a-b for a,b in zip(rg,gg)])
     sync(); elapsed=time.perf_counter()-start
-    proxy=build_proxy(rr,cam,pix,ids,.5,.4,bg)
+    proxy=make_proxy()
     Gg=gradients(proxy.integral().mean())
     result={}
     for j,key in enumerate(rr):
@@ -133,6 +139,10 @@ def run(args):
             'repeats':args.repeats,'baseline':'cc380cd03fd4b290baa74f2acb0a2a2e4470862f','scenes':{},
             'stop_rule':'Stop expansion to reconstruction training if dense/static-layer stress variance ratio > 4; retain diagnostics only.'}
     methods=['uniform','stratified','gauss','simpson','pulse_mc','single_cv','linear','adaptive_linear','n1b','pulse_cv']
+    revision=getattr(args,'revision',False)
+    if revision:
+        methods=['uniform','stratified','gauss','adaptive_linear','n1b','anchored','anchored_stratified']
+    output['proxy_revision']='anchored_segments_8' if revision else 'original'
     for name in ['single','double','triple','static','static_layers','dense','perspective','overflow']:
         raw,cam,pix,bg=scene(name)
         def render(t): return render_cuda(raw,cam,t,bg)[:,12:20,12:20].permute(1,2,0).reshape(-1,3).double()
@@ -140,6 +150,7 @@ def run(args):
             render(.5); sync(); torch.cuda.reset_peak_memory_stats()
             ids,stats=select_ids(raw,cam,pix,.5,.4)
             p=build_proxy(raw,cam,pix,ids,.5,.4,bg)
+            if revision: p=AnchoredProxy(p)
             ref0=quadrature(render,1025,.3,.7,'simpson')
             ref=quadrature(render,2049,.3,.7,'simpson')
             stats['reference_rms_change']=float((ref-ref0).square().mean().sqrt())
@@ -165,13 +176,14 @@ def run(args):
                           'peak_allocated_bytes':torch.cuda.max_memory_allocated(),
                           'peak_reserved_bytes':torch.cuda.max_memory_reserved()})
             # IID same-wall estimate: floor the measured CV time / per-R time.
-            n=max(1,int(args.calls*rows['n1b']['median_seconds']/rows['uniform']['median_seconds']))
+            measured='anchored' if revision else 'n1b'
+            n=max(1,int(args.calls*rows[measured]['median_seconds']/rows['uniform']['median_seconds']))
             stats['uniform_calls_in_n1b_time']=n
             stats['iid_same_wall_variance_ratio']=(ve/args.calls)/(vr/n) if vr>1e-18 else None
         grad=gradient_diagnostic(raw,cam,pix,bg,render,p)
         output['scenes'][name]={'diagnostics':stats,'methods':rows,'gradients':grad}
         print(name,json.dumps({'variance_ratio':stats['variance_ratio'],'same_wall_ratio':stats['iid_same_wall_variance_ratio'],
-                              'N1b_mse':rows['n1b']['mse'],'strat_mse':rows['stratified']['mse']}),flush=True)
+                              'N1b_mse':rows[measured]['mse'],'strat_mse':rows['stratified']['mse']}),flush=True)
         Path(args.output).parent.mkdir(parents=True,exist_ok=True)
         Path(args.output).write_text(json.dumps(output,indent=2),encoding='utf-8')
     output['decision']='STOP_BEFORE_TRAINING' if any(
@@ -184,7 +196,10 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser()
     parser.add_argument('--calls',type=int,default=16)
     parser.add_argument('--repeats',type=int,default=24)
+    parser.add_argument('--revision',action='store_true')
     parser.add_argument('--output',default='experiments/n1b/results/benchmark.json')
     args=parser.parse_args()
+    if args.revision and args.output=='experiments/n1b/results/benchmark.json':
+        args.output='experiments/n1b/results/anchored.json'
     if args.calls<10 or args.repeats<2: parser.error('need >=10 calls and >=2 repeats')
     run(args)
