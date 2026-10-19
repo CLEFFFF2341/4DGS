@@ -1,0 +1,90 @@
+{
+  "seed": 5,
+  "sigma": 0.001179726093253318,
+  "phase": -0.010219060619097487,
+  "staggered": true,
+  "reference_nodes": [
+    1092,
+    2184
+  ],
+  "reference_change": [
+    2.9899844751599776e-16,
+    2.3077857007616094e-19
+  ],
+  "rows": [
+    {
+      "method": "gauss",
+      "gradient": false,
+      "calls": 148,
+      "seconds": 0.02966169998398982,
+      "within_budget": true,
+      "mse": 4.3130322366348027e-07,
+      "max_abs": 0.0021451671814483667
+    },
+    {
+      "method": "stratified",
+      "gradient": false,
+      "calls": 157,
+      "seconds": 0.027221099997404963,
+      "within_budget": true,
+      "mse": 1.7736460485944105e-06,
+      "max_abs": 0.0038873995266259787
+    },
+    {
+      "method": "pulse",
+      "gradient": false,
+      "calls": 87,
+      "seconds": 0.030675799993332475,
+      "within_budget": true,
+      "mse": 9.185635575152239e-06,
+      "max_abs": 0.003944618700202865
+    },
+    {
+      "method": "partition",
+      "gradient": false,
+      "calls": 140,
+      "seconds": 0.02977419999660924,
+      "within_budget": true,
+      "mse": 2.314028584340213e-12,
+      "max_abs": 6.714956274418704e-06,
+      "intervals": 8
+    },
+    {
+      "method": "gauss",
+      "gradient": true,
+      "calls": 31,
+      "seconds": 0.02121340000303462,
+      "within_budget": true,
+      "mse": 9.58003792239374e-05,
+      "max_abs": 0.16967441534339384
+    },
+    {
+      "method": "stratified",
+      "gradient": true,
+      "calls": 43,
+      "seconds": 0.02846750000026077,
+      "within_budget": true,
+      "mse": 6.607582160957759e-06,
+      "max_abs": 0.0557970501655756
+    },
+    {
+      "method": "pulse",
+      "gradient": true,
+      "calls": 30,
+      "seconds": 0.02803220000350848,
+      "within_budget": true,
+      "mse": 6.601718713620198e-06,
+      "max_abs": 0.03285558017688056
+    },
+    {
+      "method": "partition",
+      "gradient": true,
+      "calls": 39,
+      "seconds": 0.02774009999120608,
+      "within_budget": true,
+      "mse": 2.4017832084337156e-13,
+      "max_abs": 5.744030629867367e-06,
+      "intervals": 8
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "seed": 59,
+  "allocation": "balanced",
+  "sigma": 0.0011636072257284974,
+  "phase": 0.007917896839020482,
+  "staggered": true,
+  "reference_nodes": [
+    1092,
+    2184
+  ],
+  "reference_change": [
+    7.997534979946911e-17,
+    2.6574356348699054e-19
+  ],
+  "rows": [
+    {
+      "method": "gauss",
+      "gradient": false,
+      "calls": 135,
+      "seconds": 0.028743799979565665,
+      "within_budget": true,
+      "mse": 3.1591248491192863e-07,
+      "max_abs": 0.0017552136487541323
+    },
+    {
+      "method": "stratified",
+      "gradient": false,
+      "calls": 163,
+      "seconds": 0.030082000012043864,
+      "within_budget": true,
+      "mse": 3.9092642633822065e-07,
+      "max_abs": 0.002433239122943423
+    },
+    {
+      "method": "pulse",
+      "gradient": false,
+      "calls": 77,
+      "seconds": 0.030695399997057393,
+      "within_budget": true,
+      "mse": 0.00014314912160533476,
+      "max_abs": 0.016039903183950044
+    },
+    {
+      "method": "partition",
+      "gradient": false,
+      "calls": 138,
+      "seconds": 0.02936270000645891,
+      "within_budget": true,
+      "mse": 4.2739455134083164e-12,
+      "max_abs": 6.737291561233205e-06,
+      "intervals": 8
+    },
+    {
+      "method": "gauss",
+      "gradient": true,
+      "calls": 38,
+      "seconds": 0.024039800016907975,
+      "within_budget": true,
+      "mse": 9.272472779343801e-05,
+      "max_abs": 0.14226615365801407
+    },
+    {
+      "method": "stratified",
+      "gradient": true,
+      "calls": 42,
+      "seconds": 0.03130449997843243,
+      "within_budget": true,
+      "mse": 0.0001299140493143186,
+      "max_abs": 0.23097603661673408
+    },
+    {
+      "method": "pulse",
+      "gradient": true,
+      "calls": 33,
+      "seconds": 0.03234049997990951,
+      "within_budget": true,
+      "mse": 1.960287393846996e-05,
+      "max_abs": 0.0821893396596395
+    },
+    {
+      "method": "partition",
+      "gradient": true,
+      "calls": 28,
+      "seconds": 0.027250499988440424,
+      "within_budget": true,
+      "mse": 5.372618431728839e-11,
+      "max_abs": 8.440319460598978e-05,
+      "intervals": 8
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "seed": 0,
+  "sigma": 0.001796251360714968,
+  "staggered": false,
+  "budget_seconds": 3.0,
+  "calls_per_step": 128,
+  "train_views": 1,
+  "trainable": [
+    "temporal_scales"
+  ],
+  "rows": [
+    {
+      "method": "gauss",
+      "accepted_steps": 53,
+      "elapsed": 3.03887429999304,
+      "rollback": true,
+      "last_estimated_loss": 6.423886832836823e-07,
+      "reference_train_mse": 5.842801175570859e-07,
+      "reference_check_mse": 5.553072123901417e-07,
+      "check_psnr": 62.55466685827094,
+      "position_mse": 0.0,
+      "log_scale_mse": 0.01880749873816967
+    }
+  ]
+}

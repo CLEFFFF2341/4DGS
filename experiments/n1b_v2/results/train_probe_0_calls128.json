@@ -1,0 +1,37 @@
+{
+  "seed": 0,
+  "sigma": 0.001796251360714968,
+  "staggered": false,
+  "budget_seconds": 3.0,
+  "calls_per_step": 128,
+  "trainable": [
+    "spatial_means",
+    "temporal_scales"
+  ],
+  "rows": [
+    {
+      "method": "gauss",
+      "accepted_steps": 32,
+      "elapsed": 3.0261099000053946,
+      "rollback": true,
+      "last_estimated_loss": 1.7123381561628066e-07,
+      "reference_train_mse": 1.0703485316641789e-07,
+      "reference_check_mse": 3.7779141183099235e-07,
+      "check_psnr": 64.2274791893087,
+      "position_mse": 0.01459043100476265,
+      "log_scale_mse": 0.11312460899353027
+    },
+    {
+      "method": "pulse_independent",
+      "accepted_steps": 35,
+      "elapsed": 3.0575397000066005,
+      "rollback": true,
+      "last_estimated_loss": -0.0002394936335474527,
+      "reference_train_mse": 1.8190479611948986e-06,
+      "reference_check_mse": 2.209366306729137e-06,
+      "check_psnr": 56.55732273353329,
+      "position_mse": 0.008976330980658531,
+      "log_scale_mse": 0.16795045137405396
+    }
+  ]
+}

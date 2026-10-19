@@ -1,0 +1,119 @@
+{
+  "fixture": {
+    "sigma": 0.001,
+    "phase": 0.003,
+    "staggered": false
+  },
+  "reference_nodes": [
+    444,
+    888
+  ],
+  "reference_change": {
+    "image": 7.953500947403027e-18,
+    "gradient": 3.211654364259258e-19
+  },
+  "rows": [
+    {
+      "gradient": false,
+      "method": "gauss",
+      "calls": 209,
+      "trials": [
+        {
+          "mse": 9.677786613888361e-08,
+          "max_abs": 0.0006833879105196672,
+          "seconds": 0.04016940001747571,
+          "within_budget": true
+        },
+        {
+          "mse": 9.677786613888361e-08,
+          "max_abs": 0.0006833879105196672,
+          "seconds": 0.04190899999230169,
+          "within_budget": true
+        },
+        {
+          "mse": 9.677786613888361e-08,
+          "max_abs": 0.0006833879105196672,
+          "seconds": 0.04084650002187118,
+          "within_budget": true
+        }
+      ]
+    },
+    {
+      "gradient": false,
+      "method": "partition",
+      "calls": 170,
+      "intervals": 1,
+      "trials": [
+        {
+          "mse": 3.93145275622941e-15,
+          "max_abs": 2.168116337228354e-07,
+          "seconds": 0.03745200001867488,
+          "within_budget": true
+        },
+        {
+          "mse": 3.93145275622941e-15,
+          "max_abs": 2.168116337228354e-07,
+          "seconds": 0.037891200016019866,
+          "within_budget": true
+        },
+        {
+          "mse": 3.93145275622941e-15,
+          "max_abs": 2.168116337228354e-07,
+          "seconds": 0.03792139998404309,
+          "within_budget": true
+        }
+      ]
+    },
+    {
+      "gradient": true,
+      "method": "gauss",
+      "calls": 52,
+      "trials": [
+        {
+          "mse": 1.6906178191294215e-09,
+          "max_abs": 0.00048507802857468153,
+          "seconds": 0.03360749999410473,
+          "within_budget": true
+        },
+        {
+          "mse": 1.6906178191294215e-09,
+          "max_abs": 0.00048507802857468153,
+          "seconds": 0.036566700000548735,
+          "within_budget": true
+        },
+        {
+          "mse": 1.6906178191294215e-09,
+          "max_abs": 0.00048507802857468153,
+          "seconds": 0.0394252999976743,
+          "within_budget": true
+        }
+      ]
+    },
+    {
+      "gradient": true,
+      "method": "partition",
+      "calls": 55,
+      "intervals": 1,
+      "trials": [
+        {
+          "mse": 1.3090929060220515e-15,
+          "max_abs": 4.784084480146864e-07,
+          "seconds": 0.03723089999402873,
+          "within_budget": true
+        },
+        {
+          "mse": 1.3090929060220515e-15,
+          "max_abs": 4.784084480146864e-07,
+          "seconds": 0.03767299998435192,
+          "within_budget": true
+        },
+        {
+          "mse": 1.3090929060220515e-15,
+          "max_abs": 4.784084480146864e-07,
+          "seconds": 0.040438199997879565,
+          "within_budget": true
+        }
+      ]
+    }
+  ]
+}

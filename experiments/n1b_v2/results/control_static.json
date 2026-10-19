@@ -1,0 +1,50 @@
+{
+  "scene": "static",
+  "rows": [
+    {
+      "gradient": false,
+      "calls": 16,
+      "reference_change": 8.948672992433258e-31,
+      "gauss_mse": 5.250727005047733e-31,
+      "partition_mse": 5.259072701473412e-31,
+      "direct_difference": 1.1102230246251565e-16,
+      "gauss_seconds": 0.0036082000005990267,
+      "partition_seconds": 0.09951079997699708,
+      "intervals": 1
+    },
+    {
+      "gradient": false,
+      "calls": 64,
+      "reference_change": 8.948672992433258e-31,
+      "gauss_mse": 5.315085164022674e-31,
+      "partition_mse": 5.24270229694612e-31,
+      "direct_difference": 1.1102230246251565e-16,
+      "gauss_seconds": 0.015853899996727705,
+      "partition_seconds": 0.015774200001033023,
+      "intervals": 1
+    },
+    {
+      "gradient": true,
+      "calls": 16,
+      "reference_change": 4.73723449125594e-26,
+      "gauss_mse": 8.989626414200396e-23,
+      "partition_mse": 9.023927109827818e-23,
+      "direct_difference": 2.5287695548659173e-11,
+      "gauss_seconds": 0.011374900001101196,
+      "partition_seconds": 0.011152300023240969,
+      "intervals": 1
+    },
+    {
+      "gradient": true,
+      "calls": 64,
+      "reference_change": 4.73723449125594e-26,
+      "gauss_mse": 1.1351836657889351e-23,
+      "partition_mse": 1.1351836655452002e-23,
+      "direct_difference": 4.336808689942018e-19,
+      "gauss_seconds": 0.05146160000003874,
+      "partition_seconds": 0.05132009999942966,
+      "intervals": 1
+    }
+  ],
+  "scope": "same-call regression, not equal-time superiority"
+}
