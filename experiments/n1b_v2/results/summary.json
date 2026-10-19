@@ -1,0 +1,82 @@
+{
+  "independent_seeds": [
+    20,
+    83
+  ],
+  "integration": {
+    "image": {
+      "eligible": 63,
+      "excluded": [
+        44
+      ],
+      "mean_ratio": 0.005264426057541026,
+      "median_ratio": 1.4040185204882754e-05,
+      "max_ratio": 0.08393269250566268,
+      "p95_ratio": 0.026533354945414214,
+      "bootstrap_mean_ratio_95": [
+        0.0024956082998377894,
+        0.00899637110063905
+      ],
+      "median_seconds": 0.029945699992822483,
+      "max_seconds": 0.034313400014070794,
+      "max_reference_mse_change": 3.1933203294342665e-14,
+      "wins": 63
+    },
+    "gradient": {
+      "eligible": 64,
+      "excluded": [],
+      "mean_ratio": 0.004907522623017608,
+      "median_ratio": 1.017595676272226e-06,
+      "max_ratio": 0.27718059155870123,
+      "p95_ratio": 0.004275841426683481,
+      "bootstrap_mean_ratio_95": [
+        0.00013146035474247668,
+        0.013968815618019824
+      ],
+      "median_seconds": 0.02920884999912232,
+      "max_seconds": 0.036138399998890236,
+      "max_reference_mse_change": 2.0968719209969076e-16,
+      "wins": 64
+    }
+  },
+  "temporal_recovery": [
+    {
+      "seed": 3,
+      "best_simple": "gauss",
+      "best_calls": 64,
+      "best_mse": 1.2924612784211345e-06,
+      "partition_mse": 1.9060666165823157e-08,
+      "mse_reduction_factor": 67.80777057722095,
+      "best_log_scale_mse": 0.018936436623334885,
+      "partition_log_scale_mse": 0.0003176963946316391,
+      "parameter_reduction_factor": 59.605450182370504,
+      "psnr_gain": 18.312794656286307
+    },
+    {
+      "seed": 4,
+      "best_simple": "stratified_independent",
+      "best_calls": 32,
+      "best_mse": 2.705583033694229e-06,
+      "partition_mse": 4.287764275451894e-12,
+      "mse_reduction_factor": 631000.8806183926,
+      "best_log_scale_mse": 0.037100471556186676,
+      "partition_log_scale_mse": 7.05703087078291e-08,
+      "parameter_reduction_factor": 525723.5264449216,
+      "psnr_gain": 58.00029965341506
+    },
+    {
+      "seed": 5,
+      "best_simple": "stratified_independent",
+      "best_calls": 32,
+      "best_mse": 9.55622079183196e-07,
+      "partition_mse": 8.829936523355744e-09,
+      "mse_reduction_factor": 108.2252490327099,
+      "best_log_scale_mse": 0.012817666865885258,
+      "partition_log_scale_mse": 0.00011101318523287773,
+      "parameter_reduction_factor": 115.4607611609109,
+      "psnr_gain": 20.34328593823676
+    }
+  ],
+  "decision": "CONFIRMED_CONDITIONAL_BENEFIT_FOR_TEMPORAL_INTEGRATION_AND_KNOWN_GEOMETRY_TEMPORAL_FIT",
+  "limits": "Joint geometry fitting inconsistent; no real-dataset gain established; no global unbiased gradient claim."
+}
