@@ -112,6 +112,16 @@ def main():
     (out / 'protocol.json').write_text(json.dumps(record, indent=2))
     Framework.setup(config_path=config_path)
     torch.set_num_threads(4)
+    # The official train.py constructs the Trainer before loading the Dataset.
+    # This also keeps its allocator capability probe ahead of CUDA allocations.
+    model = FasterGS4DModel(out.name).build()
+    model.output_directory = out
+    if args.arm == 'field':
+        renderer = FieldRenderer(model)
+        trainer = FieldTrainer(model=model, renderer=renderer)
+    else:
+        renderer = FasterGS4DRenderer(model)
+        trainer = AuditedNativeTrainer(model=model, renderer=renderer)
     verified = set()
     if args.dataset == 'coffee':
         verified = install_coffee_cache(ROOT)
@@ -123,15 +133,6 @@ def main():
     else:
         dataset = DSECNativeDataset(args.root, args.start, args.seed)
         record['dataset'] = dataset.dynamic.manifest()
-    model = FasterGS4DModel(out.name).build()
-    model.output_directory = out
-    if args.arm == 'field':
-        model.temporal_field = torch.nn.Parameter(torch.zeros((8, 3, 4), device='cuda'))
-        renderer = FieldRenderer(model)
-        trainer = FieldTrainer(model=model, renderer=renderer)
-    else:
-        renderer = FasterGS4DRenderer(model)
-        trainer = AuditedNativeTrainer(model=model, renderer=renderer)
     torch.cuda.synchronize()
     begin = time.perf_counter()
     trainer.run(dataset)

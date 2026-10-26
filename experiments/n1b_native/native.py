@@ -107,6 +107,9 @@ class AuditedNativeTrainer(FasterGS4DTrainer):
         row = {'iteration': iteration + 1,
                'count': len(self.model.gaussians.spatial_means),
                'active_sh_degree': self.model.gaussians.active_sh_degree,
+               'cuda_allocated': torch.cuda.memory_allocated(),
+               'cuda_reserved': torch.cuda.memory_reserved(),
+               'requires_empty_cache': self.requires_empty_cache,
                'seconds': time.perf_counter() - self.training_started}
         self.audit_rows.append(row)
         with (self.output_directory / 'progress.jsonl').open('a') as f:
@@ -117,6 +120,9 @@ class AuditedNativeTrainer(FasterGS4DTrainer):
 class FieldTrainer(AuditedNativeTrainer):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+        # Match official construction order: the allocator capability probe in
+        # the parent constructor must run before any extra CUDA allocations.
+        self.model.temporal_field = torch.nn.Parameter(torch.zeros((8, 3, 4), device='cuda'))
         # Density-control utilities assume all native optimizer groups have N
         # rows. Keep the global 96 parameters in a separate identical optimizer.
         self.field_optimizer = FusedAdam([self.model.temporal_field], lr=3e-5, eps=1e-15)
