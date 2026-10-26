@@ -1,0 +1,1042 @@
+{
+  "aggregate": {
+    "initial": {
+      "mean_psnr": 28.431417962001294,
+      "mean_ssim": 0.8083846204810672,
+      "mean_roi_psnr": 30.426240569816255,
+      "lpips_vgg": 0.45847253860146914
+    },
+    "original": {
+      "mean_psnr": 30.406761527352646,
+      "mean_ssim": 0.8470935264119395,
+      "mean_roi_psnr": 32.627124557712754,
+      "lpips_vgg": 0.4095413163304329
+    },
+    "modified": {
+      "mean_psnr": 30.461015634489897,
+      "mean_ssim": 0.8503989930506105,
+      "mean_roi_psnr": 32.86649825921748,
+      "lpips_vgg": 0.40151175773806036
+    },
+    "gauss": {
+      "mean_psnr": 30.46189767056451,
+      "mean_ssim": 0.8504069259873143,
+      "mean_roi_psnr": 32.86831006272605,
+      "lpips_vgg": 0.4015108520785968
+    }
+  },
+  "environment": {
+    "torch": "2.8.0",
+    "cuda": "12.8",
+    "git_head": "2561d7dd9adbe729f35d39972b72c9f74752e19e",
+    "source_sha256": {
+      "real_dynamic.py": "b35f417227b16ef40acc46790872f783c9e7fa44444bdf613839111788378caf",
+      "real_dynamic_audit.py": "6436ec1605b8b36483dbda0e8d48afc0539d948d30a73e405e15b6df9e4ba6a3",
+      "joint_optimization.py": "3d978d2a2de4d6937a90d6567b713615e772da1f748bb343043d795fb5b3defb",
+      "partition.py": "ce5891ba61dbc2a459159df0840ec966642db8959d49751125e1304ede890ca4",
+      "real_cdavis.py": "95ea49507cba01df1713bed95d5515140c670f81e89f284b2fc1abb7b4279ab5",
+      "download_dsec.py": "1594c0f42bb3569e57f9c0bd51559d6890c1b53e9191cbcbf5ae1686b0ce3f8f"
+    }
+  },
+  "runs": [
+    {
+      "sequence": "zurich_city_04_c",
+      "start": 120,
+      "seed": 0,
+      "output": "E:\\4D_Gaussian\\output\\dsec_c120_s0",
+      "arms": {
+        "initial": {
+          "lpips_vgg": 0.46648675700028736,
+          "per_view_lpips": [
+            0.4433080852031708,
+            0.435269832611084,
+            0.45333564281463623,
+            0.44308680295944214,
+            0.4780558943748474,
+            0.46351757645606995,
+            0.47521379590034485,
+            0.48574668169021606,
+            0.4868033528327942,
+            0.4794553220272064,
+            0.4763445258140564,
+            0.4777035713195801
+          ],
+          "quadrature_mse_32_vs_64": 3.168372783463972e-11,
+          "roi_quadrature_mse_32_vs_64": 1.5058738291340763e-11,
+          "mean_parameter_position_displacement": 0.0,
+          "median_parameter_velocity_rig_units_per_second": 0.0648222267627716,
+          "median_temporal_sigma_seconds": 0.11524228751659393,
+          "checkpoint_sha256": "6647d0b3d387131f46416d697baaf37bb1834e179d8895f4fb7307345ab8ad49"
+        },
+        "original": {
+          "lpips_vgg": 0.40916264802217484,
+          "per_view_lpips": [
+            0.3891657590866089,
+            0.3798791170120239,
+            0.4063672423362732,
+            0.3911844789981842,
+            0.4134463667869568,
+            0.4071972668170929,
+            0.4130443334579468,
+            0.41174784302711487,
+            0.4277896583080292,
+            0.4308475852012634,
+            0.41864678263664246,
+            0.4206353425979614
+          ],
+          "quadrature_mse_32_vs_64": 1.9961809693639736e-11,
+          "roi_quadrature_mse_32_vs_64": 2.454794151516652e-11,
+          "mean_parameter_position_displacement": 0.1738046109676361,
+          "median_parameter_velocity_rig_units_per_second": 0.11423590779304504,
+          "median_temporal_sigma_seconds": 0.12583665549755096,
+          "checkpoint_sha256": "f43bdfee05707275691e2a4d86b35e9ea0d2534aedad3a349459aacd5da08d97"
+        },
+        "modified": {
+          "lpips_vgg": 0.4026096339027087,
+          "per_view_lpips": [
+            0.3860957622528076,
+            0.37423574924468994,
+            0.38999679684638977,
+            0.3791171908378601,
+            0.4061107039451599,
+            0.39882928133010864,
+            0.41580113768577576,
+            0.4133087992668152,
+            0.41946834325790405,
+            0.4155169129371643,
+            0.4137972295284271,
+            0.41903769969940186
+          ],
+          "quadrature_mse_32_vs_64": 2.4913294951328657e-11,
+          "roi_quadrature_mse_32_vs_64": 2.749027387382678e-11,
+          "mean_parameter_position_displacement": 0.08312977105379105,
+          "median_parameter_velocity_rig_units_per_second": 0.11502180993556976,
+          "median_temporal_sigma_seconds": 0.1266086846590042,
+          "checkpoint_sha256": "4e174b8efdcaf7f59d72d757ec96731a74166592c226d97f163672ece6b0ef1a"
+        },
+        "gauss": {
+          "lpips_vgg": 0.40253691375255585,
+          "per_view_lpips": [
+            0.3861292898654938,
+            0.3742280602455139,
+            0.3897472023963928,
+            0.37882184982299805,
+            0.4063420295715332,
+            0.3989759683609009,
+            0.4158405661582947,
+            0.41304588317871094,
+            0.41937851905822754,
+            0.41525232791900635,
+            0.4135964512825012,
+            0.4190848171710968
+          ],
+          "quadrature_mse_32_vs_64": 2.381366826821607e-11,
+          "roi_quadrature_mse_32_vs_64": 1.9728949304682424e-11,
+          "mean_parameter_position_displacement": 0.08314278721809387,
+          "median_parameter_velocity_rig_units_per_second": 0.1156582236289978,
+          "median_temporal_sigma_seconds": 0.12663710117340088,
+          "checkpoint_sha256": "c234b1cbdf9776aee2a05f4e7895318469029cd8bccd0d3f9b35e0f12dbf91b6"
+        }
+      },
+      "max_parameter_difference_modified_gauss": {
+        "spatial_means": 0.06494617462158203,
+        "temporal_means": 0.010547816753387451,
+        "spatial_scales": 0.12697458267211914,
+        "temporal_scales": 0.6992485523223877,
+        "left_isoclinic_rotations": 0.006110610440373421,
+        "right_isoclinic_rotations": 0.005899426527321339,
+        "opacities": 0.14880484342575073,
+        "sh_coefficients_0": 0.12250471115112305,
+        "sh_coefficients_rest": 0.006909995339810848
+      }
+    },
+    {
+      "sequence": "zurich_city_04_c",
+      "start": 120,
+      "seed": 1,
+      "output": "E:\\4D_Gaussian\\output\\dsec_c120_s1",
+      "arms": {
+        "initial": {
+          "lpips_vgg": 0.46130528549353284,
+          "per_view_lpips": [
+            0.44156715273857117,
+            0.4315272569656372,
+            0.45212501287460327,
+            0.4361409842967987,
+            0.4751091003417969,
+            0.46558448672294617,
+            0.46325117349624634,
+            0.46738117933273315,
+            0.48084333539009094,
+            0.47827547788619995,
+            0.46969932317733765,
+            0.4741589426994324
+          ],
+          "quadrature_mse_32_vs_64": 4.5025776799119864e-11,
+          "roi_quadrature_mse_32_vs_64": 1.1366620065606422e-11,
+          "mean_parameter_position_displacement": 0.0,
+          "median_parameter_velocity_rig_units_per_second": 0.06329701840877533,
+          "median_temporal_sigma_seconds": 0.11523173004388809,
+          "checkpoint_sha256": "d6f59be48791c45d1ceda0b84979b1080efe5597242a496af64c0503fb3179e3"
+        },
+        "original": {
+          "lpips_vgg": 0.40757957100868225,
+          "per_view_lpips": [
+            0.38691678643226624,
+            0.38834553956985474,
+            0.40392041206359863,
+            0.39073559641838074,
+            0.4214373826980591,
+            0.406909316778183,
+            0.40613919496536255,
+            0.4079582393169403,
+            0.4139055013656616,
+            0.41203024983406067,
+            0.4205470085144043,
+            0.43210962414741516
+          ],
+          "quadrature_mse_32_vs_64": 3.659589724718896e-11,
+          "roi_quadrature_mse_32_vs_64": 1.7771362904120864e-11,
+          "mean_parameter_position_displacement": 0.1752001941204071,
+          "median_parameter_velocity_rig_units_per_second": 0.11365663260221481,
+          "median_temporal_sigma_seconds": 0.12614139914512634,
+          "checkpoint_sha256": "0fc7186afcf638bc6d289b1dd666c42a7b664577396e16e482ec24c8d52dc6a2"
+        },
+        "modified": {
+          "lpips_vgg": 0.39917170256376266,
+          "per_view_lpips": [
+            0.3835948705673218,
+            0.3733760714530945,
+            0.38607996702194214,
+            0.3703794479370117,
+            0.4144750237464905,
+            0.3971555829048157,
+            0.4111669063568115,
+            0.40748003125190735,
+            0.41361114382743835,
+            0.4065715968608856,
+            0.4116675853729248,
+            0.41450220346450806
+          ],
+          "quadrature_mse_32_vs_64": 8.379494378466894e-11,
+          "roi_quadrature_mse_32_vs_64": 2.748277835052752e-11,
+          "mean_parameter_position_displacement": 0.08408479392528534,
+          "median_parameter_velocity_rig_units_per_second": 0.11841962486505508,
+          "median_temporal_sigma_seconds": 0.12712056934833527,
+          "checkpoint_sha256": "577d655e7b95dcbc4dab2e1b9588683c8f49a35f8890cc6e7e83a72b1458dd1a"
+        },
+        "gauss": {
+          "lpips_vgg": 0.39908937613169354,
+          "per_view_lpips": [
+            0.3834398686885834,
+            0.37320342659950256,
+            0.385221391916275,
+            0.3700631856918335,
+            0.4145675301551819,
+            0.397329181432724,
+            0.4110751748085022,
+            0.40736812353134155,
+            0.41375625133514404,
+            0.40678444504737854,
+            0.41177207231521606,
+            0.4144918620586395
+          ],
+          "quadrature_mse_32_vs_64": 1.9334515831530747e-11,
+          "roi_quadrature_mse_32_vs_64": 1.1346020585729921e-11,
+          "mean_parameter_position_displacement": 0.08409377932548523,
+          "median_parameter_velocity_rig_units_per_second": 0.11848517507314682,
+          "median_temporal_sigma_seconds": 0.12712115049362183,
+          "checkpoint_sha256": "e02e1b33652bac06f22c168ce00c78d77d0c726ccb475a955899279e064fe977"
+        }
+      },
+      "max_parameter_difference_modified_gauss": {
+        "spatial_means": 0.10061264038085938,
+        "temporal_means": 0.007968306541442871,
+        "spatial_scales": 0.06325113773345947,
+        "temporal_scales": 0.6768518686294556,
+        "left_isoclinic_rotations": 0.007802050560712814,
+        "right_isoclinic_rotations": 0.007188289426267147,
+        "opacities": 0.1762075424194336,
+        "sh_coefficients_0": 0.12355770170688629,
+        "sh_coefficients_rest": 0.006622537039220333
+      }
+    },
+    {
+      "sequence": "zurich_city_04_c",
+      "start": 120,
+      "seed": 2,
+      "output": "E:\\4D_Gaussian\\output\\dsec_c120_s2",
+      "arms": {
+        "initial": {
+          "lpips_vgg": 0.46253007153669995,
+          "per_view_lpips": [
+            0.43578046560287476,
+            0.4304133653640747,
+            0.4510153830051422,
+            0.44477730989456177,
+            0.4794083833694458,
+            0.4720541834831238,
+            0.4666416049003601,
+            0.4737836718559265,
+            0.4763076901435852,
+            0.47461673617362976,
+            0.472956120967865,
+            0.47260594367980957
+          ],
+          "quadrature_mse_32_vs_64": 2.655923079843599e-11,
+          "roi_quadrature_mse_32_vs_64": 2.1319068327826003e-11,
+          "mean_parameter_position_displacement": 0.0,
+          "median_parameter_velocity_rig_units_per_second": 0.06073649227619171,
+          "median_temporal_sigma_seconds": 0.11522650718688965,
+          "checkpoint_sha256": "733c854e442439485a14ff333c2f4db7435e1c29f28f11f21a0d42dab71e2105"
+        },
+        "original": {
+          "lpips_vgg": 0.4096246709426244,
+          "per_view_lpips": [
+            0.37667229771614075,
+            0.382983535528183,
+            0.3982669711112976,
+            0.3950522541999817,
+            0.41805562376976013,
+            0.4106243848800659,
+            0.41956472396850586,
+            0.4168941378593445,
+            0.42402470111846924,
+            0.42087048292160034,
+            0.4228934943675995,
+            0.42959344387054443
+          ],
+          "quadrature_mse_32_vs_64": 3.089566760703285e-11,
+          "roi_quadrature_mse_32_vs_64": 1.6167035483787007e-11,
+          "mean_parameter_position_displacement": 0.1703890860080719,
+          "median_parameter_velocity_rig_units_per_second": 0.10540398955345154,
+          "median_temporal_sigma_seconds": 0.12630988657474518,
+          "checkpoint_sha256": "536594bd304423fd702dbc1be0b7edc14f6c58ae61659bab3d37062ac8896684"
+        },
+        "modified": {
+          "lpips_vgg": 0.4011535743872325,
+          "per_view_lpips": [
+            0.37538668513298035,
+            0.3705903887748718,
+            0.38703393936157227,
+            0.3733697533607483,
+            0.4187650680541992,
+            0.4027933180332184,
+            0.4141900837421417,
+            0.4129340350627899,
+            0.4138161540031433,
+            0.4068950116634369,
+            0.4185372292995453,
+            0.4195312261581421
+          ],
+          "quadrature_mse_32_vs_64": 2.3616311019038678e-11,
+          "roi_quadrature_mse_32_vs_64": 1.751148159494e-11,
+          "mean_parameter_position_displacement": 0.08343233168125153,
+          "median_parameter_velocity_rig_units_per_second": 0.10882546752691269,
+          "median_temporal_sigma_seconds": 0.12695938348770142,
+          "checkpoint_sha256": "5050636187fc0ba9c7e8c3ed1dfd7fd75bba7485cf8d8ca9ea33217c2092c86b"
+        },
+        "gauss": {
+          "lpips_vgg": 0.40126394232114154,
+          "per_view_lpips": [
+            0.37564408779144287,
+            0.37091517448425293,
+            0.38716554641723633,
+            0.37326323986053467,
+            0.4185158610343933,
+            0.4025154709815979,
+            0.414337158203125,
+            0.4129484295845032,
+            0.4142221510410309,
+            0.4071618616580963,
+            0.4186418056488037,
+            0.41983652114868164
+          ],
+          "quadrature_mse_32_vs_64": 2.197354096999486e-11,
+          "roi_quadrature_mse_32_vs_64": 1.674118150242025e-11,
+          "mean_parameter_position_displacement": 0.08342812955379486,
+          "median_parameter_velocity_rig_units_per_second": 0.10860659927129745,
+          "median_temporal_sigma_seconds": 0.12699300050735474,
+          "checkpoint_sha256": "65b22b69d46d3540b5e65c26a7157afd638f0a03f6df1713b699941ce240c203"
+        }
+      },
+      "max_parameter_difference_modified_gauss": {
+        "spatial_means": 0.053476810455322266,
+        "temporal_means": 0.013666659593582153,
+        "spatial_scales": 0.08650612831115723,
+        "temporal_scales": 2.0271902084350586,
+        "left_isoclinic_rotations": 0.00942101888358593,
+        "right_isoclinic_rotations": 0.010367907583713531,
+        "opacities": 0.14928340911865234,
+        "sh_coefficients_0": 0.07124948501586914,
+        "sh_coefficients_rest": 0.016539113596081734
+      }
+    },
+    {
+      "sequence": "zurich_city_04_c",
+      "start": 260,
+      "seed": 0,
+      "output": "E:\\4D_Gaussian\\output\\dsec_c260_s0",
+      "arms": {
+        "initial": {
+          "lpips_vgg": 0.5062262862920761,
+          "per_view_lpips": [
+            0.4955422878265381,
+            0.5038253664970398,
+            0.5077590346336365,
+            0.5063794851303101,
+            0.5105679035186768,
+            0.5065282583236694,
+            0.5109504461288452,
+            0.5058670043945312,
+            0.5076035261154175,
+            0.5094176530838013,
+            0.5053721070289612,
+            0.5049023628234863
+          ],
+          "quadrature_mse_32_vs_64": 2.649081742451172e-11,
+          "roi_quadrature_mse_32_vs_64": 1.0557792234506166e-11,
+          "mean_parameter_position_displacement": 0.0,
+          "median_parameter_velocity_rig_units_per_second": 0.0442870557308197,
+          "median_temporal_sigma_seconds": 0.11516634374856949,
+          "checkpoint_sha256": "97fd1bbb86ec87fb52086da4161b40914d96ab6e5facd1c3610b59a7c59a3009"
+        },
+        "original": {
+          "lpips_vgg": 0.44190836946169537,
+          "per_view_lpips": [
+            0.4475570321083069,
+            0.4509997069835663,
+            0.4489593505859375,
+            0.4451197385787964,
+            0.4357616603374481,
+            0.4302195906639099,
+            0.42924535274505615,
+            0.42873144149780273,
+            0.4398219585418701,
+            0.4363497495651245,
+            0.4590427875518799,
+            0.45109206438064575
+          ],
+          "quadrature_mse_32_vs_64": 1.4245953303011297e-11,
+          "roi_quadrature_mse_32_vs_64": 8.319509541635425e-12,
+          "mean_parameter_position_displacement": 0.1740066409111023,
+          "median_parameter_velocity_rig_units_per_second": 0.06525522470474243,
+          "median_temporal_sigma_seconds": 0.12623699009418488,
+          "checkpoint_sha256": "76f7960384a02d12625679f0d810a8b0a980d83834e3d8de2f061bf3c5221210"
+        },
+        "modified": {
+          "lpips_vgg": 0.4365783433119456,
+          "per_view_lpips": [
+            0.4354167580604553,
+            0.4420490264892578,
+            0.43930262327194214,
+            0.4414283335208893,
+            0.4324303865432739,
+            0.4360749125480652,
+            0.4266749620437622,
+            0.4341461956501007,
+            0.43314868211746216,
+            0.4318379759788513,
+            0.44605153799057007,
+            0.44037872552871704
+          ],
+          "quadrature_mse_32_vs_64": 2.7239209730393437e-11,
+          "roi_quadrature_mse_32_vs_64": 1.238582594415468e-11,
+          "mean_parameter_position_displacement": 0.07899606227874756,
+          "median_parameter_velocity_rig_units_per_second": 0.06728912144899368,
+          "median_temporal_sigma_seconds": 0.12313057482242584,
+          "checkpoint_sha256": "53edea3e1d4750f574f841d99007732423d209f1717eeb75bf809702230dc991"
+        },
+        "gauss": {
+          "lpips_vgg": 0.4366256495316823,
+          "per_view_lpips": [
+            0.4355318546295166,
+            0.4421490430831909,
+            0.4393412172794342,
+            0.44134485721588135,
+            0.43197861313819885,
+            0.4361119568347931,
+            0.42635366320610046,
+            0.43454980850219727,
+            0.4335426688194275,
+            0.43196532130241394,
+            0.44592320919036865,
+            0.44071558117866516
+          ],
+          "quadrature_mse_32_vs_64": 5.295794192350841e-11,
+          "roi_quadrature_mse_32_vs_64": 9.091551368805203e-12,
+          "mean_parameter_position_displacement": 0.07900078594684601,
+          "median_parameter_velocity_rig_units_per_second": 0.06734766066074371,
+          "median_temporal_sigma_seconds": 0.12308282405138016,
+          "checkpoint_sha256": "7fdb5b01e436fd7ed22f2ad9085ff4fdd54b4c02e636aaafd04c6a45f8ef627b"
+        }
+      },
+      "max_parameter_difference_modified_gauss": {
+        "spatial_means": 0.24614715576171875,
+        "temporal_means": 0.009554609656333923,
+        "spatial_scales": 0.09169280529022217,
+        "temporal_scales": 0.7638381719589233,
+        "left_isoclinic_rotations": 0.015081018209457397,
+        "right_isoclinic_rotations": 0.016128122806549072,
+        "opacities": 0.23677664995193481,
+        "sh_coefficients_0": 0.20570826530456543,
+        "sh_coefficients_rest": 0.011301064863801003
+      }
+    },
+    {
+      "sequence": "zurich_city_04_c",
+      "start": 260,
+      "seed": 1,
+      "output": "E:\\4D_Gaussian\\output\\dsec_c260_s1",
+      "arms": {
+        "initial": {
+          "lpips_vgg": 0.5073838879664739,
+          "per_view_lpips": [
+            0.49690911173820496,
+            0.505267858505249,
+            0.5178300142288208,
+            0.5106136798858643,
+            0.5061228275299072,
+            0.5022966861724854,
+            0.5067147612571716,
+            0.49945732951164246,
+            0.5163931846618652,
+            0.508645236492157,
+            0.5120646953582764,
+            0.5062912702560425
+          ],
+          "quadrature_mse_32_vs_64": 3.069785528206359e-11,
+          "roi_quadrature_mse_32_vs_64": 1.0567798227935818e-11,
+          "mean_parameter_position_displacement": 0.0,
+          "median_parameter_velocity_rig_units_per_second": 0.044367726892232895,
+          "median_temporal_sigma_seconds": 0.11516472697257996,
+          "checkpoint_sha256": "a0472acec1fb66ffacb119688283ab93761c32d67d7899e759c03f4b5772dd16"
+        },
+        "original": {
+          "lpips_vgg": 0.443407878279686,
+          "per_view_lpips": [
+            0.4471937417984009,
+            0.465059757232666,
+            0.44722989201545715,
+            0.4409468173980713,
+            0.4427265524864197,
+            0.4395698606967926,
+            0.433727890253067,
+            0.43146246671676636,
+            0.4328960180282593,
+            0.4255383014678955,
+            0.45729395747184753,
+            0.4572492837905884
+          ],
+          "quadrature_mse_32_vs_64": 8.755684220186633e-11,
+          "roi_quadrature_mse_32_vs_64": 8.306785995460439e-12,
+          "mean_parameter_position_displacement": 0.17298084497451782,
+          "median_parameter_velocity_rig_units_per_second": 0.0655965581536293,
+          "median_temporal_sigma_seconds": 0.12657998502254486,
+          "checkpoint_sha256": "5b6d43d585feefd8886d78bba87d26588959d833b97b72e32cbf9e451a4e2b12"
+        },
+        "modified": {
+          "lpips_vgg": 0.4383570949236552,
+          "per_view_lpips": [
+            0.4456444978713989,
+            0.45332789421081543,
+            0.44868218898773193,
+            0.4392865002155304,
+            0.4368404448032379,
+            0.4379347860813141,
+            0.42498838901519775,
+            0.42465221881866455,
+            0.4305294454097748,
+            0.4316386878490448,
+            0.44448545575141907,
+            0.44227463006973267
+          ],
+          "quadrature_mse_32_vs_64": 4.569965947910185e-11,
+          "roi_quadrature_mse_32_vs_64": 8.643029109252354e-12,
+          "mean_parameter_position_displacement": 0.07721394300460815,
+          "median_parameter_velocity_rig_units_per_second": 0.06917930394411087,
+          "median_temporal_sigma_seconds": 0.12322109937667847,
+          "checkpoint_sha256": "7400c9a838a608cba8f6ed3603ab0f9bfdefcd783178b04becf536f87e46fcfd"
+        },
+        "gauss": {
+          "lpips_vgg": 0.43834836035966873,
+          "per_view_lpips": [
+            0.44592219591140747,
+            0.4535272717475891,
+            0.44856059551239014,
+            0.4396987557411194,
+            0.4366312026977539,
+            0.43770742416381836,
+            0.4250762164592743,
+            0.42469727993011475,
+            0.4303829073905945,
+            0.43175235390663147,
+            0.444070041179657,
+            0.44215407967567444
+          ],
+          "quadrature_mse_32_vs_64": 3.279381945396157e-11,
+          "roi_quadrature_mse_32_vs_64": 1.1616010923686896e-11,
+          "mean_parameter_position_displacement": 0.07721473276615143,
+          "median_parameter_velocity_rig_units_per_second": 0.06926186382770538,
+          "median_temporal_sigma_seconds": 0.12312118709087372,
+          "checkpoint_sha256": "e69b6abd4f8c13052e4448e98b152635faf4d6638372987ed12c22867b598456"
+        }
+      },
+      "max_parameter_difference_modified_gauss": {
+        "spatial_means": 0.07152175903320312,
+        "temporal_means": 0.012501165270805359,
+        "spatial_scales": 0.04985326528549194,
+        "temporal_scales": 0.5613433718681335,
+        "left_isoclinic_rotations": 0.009165044873952866,
+        "right_isoclinic_rotations": 0.009355632588267326,
+        "opacities": 0.21995335817337036,
+        "sh_coefficients_0": 0.11196072399616241,
+        "sh_coefficients_rest": 0.008785644546151161
+      }
+    },
+    {
+      "sequence": "zurich_city_04_c",
+      "start": 260,
+      "seed": 2,
+      "output": "E:\\4D_Gaussian\\output\\dsec_c260_s2",
+      "arms": {
+        "initial": {
+          "lpips_vgg": 0.5094617108503977,
+          "per_view_lpips": [
+            0.5045161843299866,
+            0.5080525875091553,
+            0.5168845653533936,
+            0.516545295715332,
+            0.5035231709480286,
+            0.5008153319358826,
+            0.5116598010063171,
+            0.5086983442306519,
+            0.5195360779762268,
+            0.5085532069206238,
+            0.5087449550628662,
+            0.5060110092163086
+          ],
+          "quadrature_mse_32_vs_64": 4.0824129667049736e-11,
+          "roi_quadrature_mse_32_vs_64": 1.5362466091629657e-11,
+          "mean_parameter_position_displacement": 0.0,
+          "median_parameter_velocity_rig_units_per_second": 0.04361504688858986,
+          "median_temporal_sigma_seconds": 0.11516334861516953,
+          "checkpoint_sha256": "d85de69ee5e606b9beb79faa09b048173c18f5b5ddb1efbb9614f37b8a873cd1"
+        },
+        "original": {
+          "lpips_vgg": 0.4388931517799695,
+          "per_view_lpips": [
+            0.4377973973751068,
+            0.45765841007232666,
+            0.44501227140426636,
+            0.4406276345252991,
+            0.4305371046066284,
+            0.4325840473175049,
+            0.4365244507789612,
+            0.42857038974761963,
+            0.43189093470573425,
+            0.43012627959251404,
+            0.4476512670516968,
+            0.4477376341819763
+          ],
+          "quadrature_mse_32_vs_64": 1.652488273532852e-11,
+          "roi_quadrature_mse_32_vs_64": 5.1023453582869915e-12,
+          "mean_parameter_position_displacement": 0.16849559545516968,
+          "median_parameter_velocity_rig_units_per_second": 0.06392212212085724,
+          "median_temporal_sigma_seconds": 0.1270204484462738,
+          "checkpoint_sha256": "d3c95628b2eda42c23ac805bcd6e7b214b84b464c735508151f78a17178a20ac"
+        },
+        "modified": {
+          "lpips_vgg": 0.4337560286124547,
+          "per_view_lpips": [
+            0.43000584840774536,
+            0.4479730725288391,
+            0.4365071654319763,
+            0.43399640917778015,
+            0.4305364191532135,
+            0.43125563859939575,
+            0.4309495985507965,
+            0.4247497320175171,
+            0.4294455051422119,
+            0.4263705015182495,
+            0.4447724223136902,
+            0.4385100305080414
+          ],
+          "quadrature_mse_32_vs_64": 3.823663029719112e-11,
+          "roi_quadrature_mse_32_vs_64": 7.552530938611154e-12,
+          "mean_parameter_position_displacement": 0.07650204002857208,
+          "median_parameter_velocity_rig_units_per_second": 0.06524098664522171,
+          "median_temporal_sigma_seconds": 0.12385635077953339,
+          "checkpoint_sha256": "5897747877f3fdee4ecfd3805b914d47cda3ac1a6ec9cd4691639bcf77a1df5d"
+        },
+        "gauss": {
+          "lpips_vgg": 0.4337814822793007,
+          "per_view_lpips": [
+            0.4302809238433838,
+            0.4485158324241638,
+            0.43592554330825806,
+            0.43441513180732727,
+            0.4304063320159912,
+            0.4310910403728485,
+            0.43078604340553284,
+            0.42467477917671204,
+            0.42966586351394653,
+            0.42656779289245605,
+            0.4447711706161499,
+            0.43827733397483826
+          ],
+          "quadrature_mse_32_vs_64": 2.409105098570563e-11,
+          "roi_quadrature_mse_32_vs_64": 7.079091942271039e-12,
+          "mean_parameter_position_displacement": 0.0765141025185585,
+          "median_parameter_velocity_rig_units_per_second": 0.06499974429607391,
+          "median_temporal_sigma_seconds": 0.1237955391407013,
+          "checkpoint_sha256": "ab755694cf37597020bf4b5880b24ae7fe9dba714abe328b26b1d1c500c81c66"
+        }
+      },
+      "max_parameter_difference_modified_gauss": {
+        "spatial_means": 0.23584747314453125,
+        "temporal_means": 0.011258240789175034,
+        "spatial_scales": 0.08230209350585938,
+        "temporal_scales": 1.1397075653076172,
+        "left_isoclinic_rotations": 0.013272114098072052,
+        "right_isoclinic_rotations": 0.012460708618164062,
+        "opacities": 0.21388143301010132,
+        "sh_coefficients_0": 0.16976797580718994,
+        "sh_coefficients_rest": 0.009438025765120983
+      }
+    },
+    {
+      "sequence": "zurich_city_09_a",
+      "start": 120,
+      "seed": 0,
+      "output": "E:\\4D_Gaussian\\output\\dsec_n120_s0",
+      "arms": {
+        "initial": {
+          "lpips_vgg": 0.40450357645750046,
+          "per_view_lpips": [
+            0.37973660230636597,
+            0.38208234310150146,
+            0.3904839754104614,
+            0.3824763894081116,
+            0.4060521721839905,
+            0.3944305181503296,
+            0.4094509482383728,
+            0.41106581687927246,
+            0.42996513843536377,
+            0.4237770736217499,
+            0.42318859696388245,
+            0.42133334279060364
+          ],
+          "quadrature_mse_32_vs_64": 7.031725433407725e-11,
+          "roi_quadrature_mse_32_vs_64": 1.0264918978477218e-10,
+          "mean_parameter_position_displacement": 0.0,
+          "median_parameter_velocity_rig_units_per_second": 0.07998371124267578,
+          "median_temporal_sigma_seconds": 0.11658794432878494,
+          "checkpoint_sha256": "f9e1d5f6f1d85ece5006b0489f8d65fd27fd7a4cafdceb96e61540220de620e0"
+        },
+        "original": {
+          "lpips_vgg": 0.377890241642793,
+          "per_view_lpips": [
+            0.3556344509124756,
+            0.34784168004989624,
+            0.3731265664100647,
+            0.36227619647979736,
+            0.3785287141799927,
+            0.36713340878486633,
+            0.37937644124031067,
+            0.38155364990234375,
+            0.3985021412372589,
+            0.402124285697937,
+            0.38954588770866394,
+            0.39903947710990906
+          ],
+          "quadrature_mse_32_vs_64": 4.525578933591475e-10,
+          "roi_quadrature_mse_32_vs_64": 1.5887229191357173e-09,
+          "mean_parameter_position_displacement": 0.1214662492275238,
+          "median_parameter_velocity_rig_units_per_second": 0.0896991640329361,
+          "median_temporal_sigma_seconds": 0.12207397818565369,
+          "checkpoint_sha256": "2cf02e6a8daa7ed5f33df6e262f1f4bf5c623a9789b0cba3864df341b7dd9936"
+        },
+        "modified": {
+          "lpips_vgg": 0.36595480640729267,
+          "per_view_lpips": [
+            0.3382263779640198,
+            0.339703232049942,
+            0.35952603816986084,
+            0.3486768901348114,
+            0.36812877655029297,
+            0.35705482959747314,
+            0.37567344307899475,
+            0.37314945459365845,
+            0.3805638551712036,
+            0.3836495876312256,
+            0.3817031979560852,
+            0.38540199398994446
+          ],
+          "quadrature_mse_32_vs_64": 6.126565024975698e-11,
+          "roi_quadrature_mse_32_vs_64": 7.851615827410748e-11,
+          "mean_parameter_position_displacement": 0.03548460453748703,
+          "median_parameter_velocity_rig_units_per_second": 0.07440871745347977,
+          "median_temporal_sigma_seconds": 0.12864576280117035,
+          "checkpoint_sha256": "6ee98b76d09547d35616673e08aaba6b156b3cc53469b20eb58eb87c873c6049"
+        },
+        "gauss": {
+          "lpips_vgg": 0.3659315879146258,
+          "per_view_lpips": [
+            0.33823326230049133,
+            0.33966097235679626,
+            0.3594963252544403,
+            0.3486035168170929,
+            0.3681931495666504,
+            0.3570360839366913,
+            0.37558847665786743,
+            0.3730922341346741,
+            0.38055115938186646,
+            0.38364747166633606,
+            0.3817310333251953,
+            0.38534536957740784
+          ],
+          "quadrature_mse_32_vs_64": 6.675489270154451e-11,
+          "roi_quadrature_mse_32_vs_64": 7.946950996567947e-11,
+          "mean_parameter_position_displacement": 0.03548339754343033,
+          "median_parameter_velocity_rig_units_per_second": 0.07440710812807083,
+          "median_temporal_sigma_seconds": 0.12864330410957336,
+          "checkpoint_sha256": "e455c9e0532b171b0bc051b0f111a66a72c8d5007961ab6cfb5fc8c5a1b2d693"
+        }
+      },
+      "max_parameter_difference_modified_gauss": {
+        "spatial_means": 0.017738819122314453,
+        "temporal_means": 0.0032798126339912415,
+        "spatial_scales": 0.019490063190460205,
+        "temporal_scales": 0.47722476720809937,
+        "left_isoclinic_rotations": 0.0025057208258658648,
+        "right_isoclinic_rotations": 0.0025095497258007526,
+        "opacities": 0.01821720600128174,
+        "sh_coefficients_0": 0.013571500778198242,
+        "sh_coefficients_rest": 0.001034710556268692
+      }
+    },
+    {
+      "sequence": "zurich_city_09_a",
+      "start": 120,
+      "seed": 1,
+      "output": "E:\\4D_Gaussian\\output\\dsec_n120_s1",
+      "arms": {
+        "initial": {
+          "lpips_vgg": 0.403056579331557,
+          "per_view_lpips": [
+            0.3759816288948059,
+            0.37218037247657776,
+            0.395877480506897,
+            0.3847610056400299,
+            0.40782368183135986,
+            0.39505845308303833,
+            0.40624481439590454,
+            0.4115898013114929,
+            0.422271728515625,
+            0.4199952781200409,
+            0.41898760199546814,
+            0.42590710520744324
+          ],
+          "quadrature_mse_32_vs_64": 9.334077391218165e-11,
+          "roi_quadrature_mse_32_vs_64": 1.8421637276953376e-10,
+          "mean_parameter_position_displacement": 0.0,
+          "median_parameter_velocity_rig_units_per_second": 0.08142121881246567,
+          "median_temporal_sigma_seconds": 0.1165931448340416,
+          "checkpoint_sha256": "7a5d2214d2a6fd75bf31149869ca3b9424e2141d69074a193b5c68bfcb2d27e4"
+        },
+        "original": {
+          "lpips_vgg": 0.37878911197185516,
+          "per_view_lpips": [
+            0.3570723533630371,
+            0.3617803454399109,
+            0.3705117702484131,
+            0.36658045649528503,
+            0.38361895084381104,
+            0.36890432238578796,
+            0.3799809217453003,
+            0.3767019212245941,
+            0.3888190984725952,
+            0.38441550731658936,
+            0.4044204652309418,
+            0.4026632308959961
+          ],
+          "quadrature_mse_32_vs_64": 8.330629241992682e-11,
+          "roi_quadrature_mse_32_vs_64": 6.361570182670621e-11,
+          "mean_parameter_position_displacement": 0.12134644389152527,
+          "median_parameter_velocity_rig_units_per_second": 0.09049370884895325,
+          "median_temporal_sigma_seconds": 0.1222948208451271,
+          "checkpoint_sha256": "be527610dd286d20e504175f496a5b1116005b373992e6805c2178f460cf2045"
+        },
+        "modified": {
+          "lpips_vgg": 0.36930619180202484,
+          "per_view_lpips": [
+            0.33877480030059814,
+            0.3407764434814453,
+            0.3570116460323334,
+            0.3589453399181366,
+            0.3783881366252899,
+            0.36706361174583435,
+            0.37638944387435913,
+            0.3723601698875427,
+            0.3845556378364563,
+            0.38002219796180725,
+            0.38785508275032043,
+            0.38953179121017456
+          ],
+          "quadrature_mse_32_vs_64": 2.0621104910439891e-10,
+          "roi_quadrature_mse_32_vs_64": 5.491181031292794e-10,
+          "mean_parameter_position_displacement": 0.03564397618174553,
+          "median_parameter_velocity_rig_units_per_second": 0.07515233010053635,
+          "median_temporal_sigma_seconds": 0.1286987066268921,
+          "checkpoint_sha256": "62d858eacfac0f1c34699bbf10ad6be6681839256ab9820373ab880738082bc8"
+        },
+        "gauss": {
+          "lpips_vgg": 0.36933030436436337,
+          "per_view_lpips": [
+            0.3386830687522888,
+            0.34082165360450745,
+            0.35706445574760437,
+            0.3589267134666443,
+            0.37842726707458496,
+            0.3671468496322632,
+            0.37637045979499817,
+            0.3723585605621338,
+            0.38455989956855774,
+            0.38006046414375305,
+            0.38799214363098145,
+            0.38955211639404297
+          ],
+          "quadrature_mse_32_vs_64": 1.2549825299338716e-10,
+          "roi_quadrature_mse_32_vs_64": 2.9456840930595457e-10,
+          "mean_parameter_position_displacement": 0.035651031881570816,
+          "median_parameter_velocity_rig_units_per_second": 0.07515931874513626,
+          "median_temporal_sigma_seconds": 0.12867498397827148,
+          "checkpoint_sha256": "6871b9bacf833cf08f514b2a05524ce058f4e1e2f26083d0c4cf89c8a3d957b4"
+        }
+      },
+      "max_parameter_difference_modified_gauss": {
+        "spatial_means": 0.11469316482543945,
+        "temporal_means": 0.013901174068450928,
+        "spatial_scales": 0.14027661085128784,
+        "temporal_scales": 0.3916635513305664,
+        "left_isoclinic_rotations": 0.012818880379199982,
+        "right_isoclinic_rotations": 0.012723512947559357,
+        "opacities": 0.09501802921295166,
+        "sh_coefficients_0": 0.09618639945983887,
+        "sh_coefficients_rest": 0.00602068193256855
+      }
+    },
+    {
+      "sequence": "zurich_city_09_a",
+      "start": 120,
+      "seed": 2,
+      "output": "E:\\4D_Gaussian\\output\\dsec_n120_s2",
+      "arms": {
+        "initial": {
+          "lpips_vgg": 0.4052986924846967,
+          "per_view_lpips": [
+            0.37866297364234924,
+            0.37406861782073975,
+            0.39742839336395264,
+            0.39178407192230225,
+            0.4043915867805481,
+            0.3971814811229706,
+            0.4174538850784302,
+            0.4202399253845215,
+            0.42080289125442505,
+            0.41595277190208435,
+            0.4221270680427551,
+            0.42349064350128174
+          ],
+          "quadrature_mse_32_vs_64": 8.445460693631834e-11,
+          "roi_quadrature_mse_32_vs_64": 1.1635324677119104e-10,
+          "mean_parameter_position_displacement": 0.0,
+          "median_parameter_velocity_rig_units_per_second": 0.07786345481872559,
+          "median_temporal_sigma_seconds": 0.11658517271280289,
+          "checkpoint_sha256": "8357fb52953eac21d07609d74becf73c096acbd97999a1c8abd463c9ca09996e"
+        },
+        "original": {
+          "lpips_vgg": 0.37861620386441547,
+          "per_view_lpips": [
+            0.343977153301239,
+            0.35077857971191406,
+            0.3662073612213135,
+            0.36414963006973267,
+            0.3842092454433441,
+            0.3787832260131836,
+            0.3850504159927368,
+            0.38175952434539795,
+            0.3920518755912781,
+            0.3955741226673126,
+            0.39731544256210327,
+            0.4035378694534302
+          ],
+          "quadrature_mse_32_vs_64": 1.6802856964611332e-10,
+          "roi_quadrature_mse_32_vs_64": 4.785919250604084e-10,
+          "mean_parameter_position_displacement": 0.11969639360904694,
+          "median_parameter_velocity_rig_units_per_second": 0.0872918888926506,
+          "median_temporal_sigma_seconds": 0.12187241017818451,
+          "checkpoint_sha256": "7658ac70b577c0341b40aeae4d3541d392fffc6fe95fe54dca2feb481b05a859"
+        },
+        "modified": {
+          "lpips_vgg": 0.36671844373146695,
+          "per_view_lpips": [
+            0.3353160321712494,
+            0.3430369198322296,
+            0.3538569509983063,
+            0.3509448170661926,
+            0.3730733096599579,
+            0.3611266314983368,
+            0.3793657422065735,
+            0.3775113523006439,
+            0.3810676634311676,
+            0.38266217708587646,
+            0.3804571032524109,
+            0.3822026252746582
+          ],
+          "quadrature_mse_32_vs_64": 7.579168340386226e-11,
+          "roi_quadrature_mse_32_vs_64": 1.1781307671330601e-10,
+          "mean_parameter_position_displacement": 0.03543662652373314,
+          "median_parameter_velocity_rig_units_per_second": 0.07255441695451736,
+          "median_temporal_sigma_seconds": 0.12852022051811218,
+          "checkpoint_sha256": "d60b51875ec9104a62d1451ddf098fed725b8159217eaa678e4affbd77a64d4c"
+        },
+        "gauss": {
+          "lpips_vgg": 0.3666900520523389,
+          "per_view_lpips": [
+            0.33519247174263,
+            0.3429337739944458,
+            0.35391154885292053,
+            0.35099533200263977,
+            0.3731255531311035,
+            0.3611099123954773,
+            0.3793640434741974,
+            0.3773992657661438,
+            0.3809957504272461,
+            0.3826618194580078,
+            0.38042357563972473,
+            0.3821675777435303
+          ],
+          "quadrature_mse_32_vs_64": 8.227672044826735e-11,
+          "roi_quadrature_mse_32_vs_64": 1.4185655514836748e-10,
+          "mean_parameter_position_displacement": 0.03543775901198387,
+          "median_parameter_velocity_rig_units_per_second": 0.0725591853260994,
+          "median_temporal_sigma_seconds": 0.1285141408443451,
+          "checkpoint_sha256": "c7f4cdd8bde015ceec2808291261a35da108ebae68939900b5f2763d1c8180cf"
+        }
+      },
+      "max_parameter_difference_modified_gauss": {
+        "spatial_means": 0.07781153917312622,
+        "temporal_means": 0.01248091459274292,
+        "spatial_scales": 0.0788872241973877,
+        "temporal_scales": 0.5460946559906006,
+        "left_isoclinic_rotations": 0.009961648844182491,
+        "right_isoclinic_rotations": 0.009880725294351578,
+        "opacities": 0.08679714798927307,
+        "sh_coefficients_0": 0.05186271667480469,
+        "sh_coefficients_rest": 0.004085607826709747
+      }
+    }
+  ]
+}

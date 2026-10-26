@@ -1,0 +1,190 @@
+{"stage": "warmup", "step": 200, "loss": 0.03315235301852226, "seconds": 1.0373932000002242}
+{"stage": "warmup", "step": 400, "loss": 0.02576381154358387, "seconds": 2.057344599999851}
+{"stage": "warmup", "step": 600, "loss": 0.006765047088265419, "seconds": 3.0436165000000983}
+{"stage": "warmup", "step": 800, "loss": 0.0016770397778600454, "seconds": 4.037090700000135}
+{"stage": "warmup", "step": 1000, "loss": 0.0026537696830928326, "seconds": 5.0746156999998675}
+{"stage": "warmup", "step": 1200, "loss": 0.001535923802293837, "seconds": 6.108525600000121}
+{"kind": "affine_spline", "step": 1, "loss": 0.03946997597813606, "seconds": 0.017343299999993178}
+{"kind": "affine_spline", "step": 1600, "loss": 0.01641705259680748, "seconds": 2.786181899999974}
+{"kind": "affine_spline", "step": 3200, "loss": 0.015223669819533825, "seconds": 5.556678799999645}
+{"kind": "affine_spline", "step": 4800, "loss": 0.013538594357669353, "seconds": 8.17588379999961}
+{"kind": "affine_spline", "step": 6400, "loss": 0.011592650786042213, "seconds": 10.782751299999745}
+{"kind": "native", "step": 1, "loss": 0.03946997597813606, "seconds": 0.0016301999999086547}
+{"kind": "native", "step": 1600, "loss": 0.016915200278162956, "seconds": 1.787283699999989}
+{"kind": "native", "step": 3200, "loss": 0.01591923087835312, "seconds": 3.5617631000000074}
+{"kind": "native", "step": 4800, "loss": 0.014249790459871292, "seconds": 5.367302300000119}
+{"kind": "native", "step": 6400, "loss": 0.012625367380678654, "seconds": 7.169780799999899}
+{"completed": "output\\n1b_v3\\confirm01_c05_s3_renders", "delta_psnr": 0.456915527146343}
+{"kind": "affine_spline", "step": 1, "loss": 0.03946997597813606, "seconds": 0.002051999999821419}
+{"kind": "native", "step": 1, "loss": 0.03946997597813606, "seconds": 0.0016349000002264802}
+{"kind": "native", "step": 7500, "loss": 0.012415638193488121, "seconds": 9.730961000000207}
+{"completed": "output\\n1b_v3\\confirm01_c05_s3_time", "delta_psnr": 0.48566711717485944}
+{"stage": "warmup", "step": 200, "loss": 0.04482760652899742, "seconds": 1.1452130000002398}
+{"stage": "warmup", "step": 400, "loss": 0.03009234182536602, "seconds": 2.1301720000001296}
+{"stage": "warmup", "step": 600, "loss": 0.003520301776006818, "seconds": 3.1206315000003997}
+{"stage": "warmup", "step": 800, "loss": 0.001722565502859652, "seconds": 4.101012200000241}
+{"stage": "warmup", "step": 1000, "loss": 0.001515208394266665, "seconds": 5.0823692000003575}
+{"stage": "warmup", "step": 1200, "loss": 0.0014553713845089078, "seconds": 6.073548100000153}
+{"kind": "native", "step": 1, "loss": 0.039978813380002975, "seconds": 0.0016491999999743712}
+{"kind": "native", "step": 1600, "loss": 0.021094635128974915, "seconds": 1.9030143999998472}
+{"kind": "native", "step": 3200, "loss": 0.013862276449799538, "seconds": 3.882447200000115}
+{"kind": "native", "step": 4800, "loss": 0.013634633272886276, "seconds": 5.8816281999997955}
+{"kind": "native", "step": 6400, "loss": 0.01230408251285553, "seconds": 7.957570300000043}
+{"kind": "affine_spline", "step": 1, "loss": 0.039978813380002975, "seconds": 0.003326399999878049}
+{"kind": "affine_spline", "step": 1600, "loss": 0.020389065146446228, "seconds": 2.773883400000159}
+{"kind": "affine_spline", "step": 3200, "loss": 0.01331357192248106, "seconds": 5.438229599999886}
+{"kind": "affine_spline", "step": 4800, "loss": 0.013253134675323963, "seconds": 8.11679839999988}
+{"kind": "affine_spline", "step": 6400, "loss": 0.01196001935750246, "seconds": 10.719098099999883}
+{"completed": "output\\n1b_v3\\confirm01_c05_s4_renders", "delta_psnr": 0.3875698419140825}
+{"kind": "native", "step": 1, "loss": 0.039978813380002975, "seconds": 0.002035700000305951}
+{"kind": "native", "step": 7500, "loss": 0.012587005272507668, "seconds": 8.843098500000451}
+{"kind": "affine_spline", "step": 1, "loss": 0.039978813380002975, "seconds": 0.0021655000000464497}
+{"completed": "output\\n1b_v3\\confirm01_c05_s4_time", "delta_psnr": 0.2023099696913384}
+{"stage": "warmup", "step": 200, "loss": 0.06968680024147034, "seconds": 1.0848260000002483}
+{"stage": "warmup", "step": 400, "loss": 0.025405900552868843, "seconds": 2.053402300000016}
+{"stage": "warmup", "step": 600, "loss": 0.0043684556148946285, "seconds": 3.014178300000367}
+{"stage": "warmup", "step": 800, "loss": 0.001958917360752821, "seconds": 3.975621100000353}
+{"stage": "warmup", "step": 1000, "loss": 0.0016235787188634276, "seconds": 4.9304424000001745}
+{"stage": "warmup", "step": 1200, "loss": 0.0014069817261770368, "seconds": 5.905181300000095}
+{"kind": "affine_spline", "step": 1, "loss": 0.04302685707807541, "seconds": 0.0022879000002831162}
+{"kind": "affine_spline", "step": 1600, "loss": 0.019643548876047134, "seconds": 2.457238100000268}
+{"kind": "affine_spline", "step": 3200, "loss": 0.01370962243527174, "seconds": 4.9420491999999285}
+{"kind": "affine_spline", "step": 4800, "loss": 0.014560231938958168, "seconds": 7.488691300000028}
+{"kind": "affine_spline", "step": 6400, "loss": 0.012754728086292744, "seconds": 10.080061000000114}
+{"kind": "native", "step": 1, "loss": 0.04302685707807541, "seconds": 0.0016666999999870313}
+{"kind": "native", "step": 1600, "loss": 0.019804980605840683, "seconds": 1.8799122999998872}
+{"kind": "native", "step": 3200, "loss": 0.014626380056142807, "seconds": 3.817358499999955}
+{"kind": "native", "step": 4800, "loss": 0.015158409252762794, "seconds": 5.7659522999997534}
+{"kind": "native", "step": 6400, "loss": 0.01318652555346489, "seconds": 7.795904399999927}
+{"completed": "output\\n1b_v3\\confirm01_c05_s5_renders", "delta_psnr": 0.6881252567718938}
+{"kind": "affine_spline", "step": 1, "loss": 0.04302685707807541, "seconds": 0.0021047999998700107}
+{"kind": "native", "step": 1, "loss": 0.04302685707807541, "seconds": 0.0018657999999049935}
+{"kind": "native", "step": 7500, "loss": 0.0114834513515234, "seconds": 8.913391899999624}
+{"completed": "output\\n1b_v3\\confirm01_c05_s5_time", "delta_psnr": 0.3965343568101325}
+{"stage": "warmup", "step": 200, "loss": 0.01713450811803341, "seconds": 1.1587272000001576}
+{"stage": "warmup", "step": 400, "loss": 0.0056276521645486355, "seconds": 2.22300099999984}
+{"stage": "warmup", "step": 600, "loss": 0.0037409435026347637, "seconds": 3.3050437000001693}
+{"stage": "warmup", "step": 800, "loss": 0.00503575848415494, "seconds": 4.356116899999961}
+{"stage": "warmup", "step": 1000, "loss": 0.00494989613071084, "seconds": 5.441393699999935}
+{"stage": "warmup", "step": 1200, "loss": 0.002359120873734355, "seconds": 6.490388300000177}
+{"kind": "affine_spline", "step": 1, "loss": 0.0762205496430397, "seconds": 0.002186200000323879}
+{"kind": "affine_spline", "step": 1600, "loss": 0.047075867652893066, "seconds": 2.723887800000284}
+{"kind": "affine_spline", "step": 3200, "loss": 0.03970043361186981, "seconds": 5.4735161000003245}
+{"kind": "affine_spline", "step": 4800, "loss": 0.03321118652820587, "seconds": 8.123709500000132}
+{"kind": "affine_spline", "step": 6400, "loss": 0.03064928948879242, "seconds": 10.805708500000037}
+{"kind": "native", "step": 1, "loss": 0.0762205496430397, "seconds": 0.001707300000362011}
+{"kind": "native", "step": 1600, "loss": 0.048401109874248505, "seconds": 1.937416900000244}
+{"kind": "native", "step": 3200, "loss": 0.04109609127044678, "seconds": 3.8811751000002914}
+{"kind": "native", "step": 4800, "loss": 0.03473006933927536, "seconds": 5.793284300000323}
+{"kind": "native", "step": 6400, "loss": 0.03093184158205986, "seconds": 7.554730800000016}
+{"completed": "output\\n1b_v3\\confirm01_c08_s3_renders", "delta_psnr": 0.2828103027717148}
+{"kind": "affine_spline", "step": 1, "loss": 0.0762205496430397, "seconds": 0.0034679000000323867}
+{"kind": "native", "step": 1, "loss": 0.0762205496430397, "seconds": 0.0026132000002689892}
+{"kind": "native", "step": 7500, "loss": 0.030756304040551186, "seconds": 11.068555600000309}
+{"completed": "output\\n1b_v3\\confirm01_c08_s3_time", "delta_psnr": 0.14519741482689952}
+{"stage": "warmup", "step": 200, "loss": 0.030736282467842102, "seconds": 1.3262117999997827}
+{"stage": "warmup", "step": 400, "loss": 0.021176371723413467, "seconds": 2.4999841999997443}
+{"stage": "warmup", "step": 600, "loss": 0.003535843687132001, "seconds": 3.6935942999998588}
+{"stage": "warmup", "step": 800, "loss": 0.0031808577477931976, "seconds": 4.885238500000014}
+{"stage": "warmup", "step": 1000, "loss": 0.005237475503236055, "seconds": 5.886168199999702}
+{"stage": "warmup", "step": 1200, "loss": 0.00220789504237473, "seconds": 6.910144599999967}
+{"kind": "native", "step": 1, "loss": 0.07595053315162659, "seconds": 0.001628099999834376}
+{"kind": "native", "step": 1600, "loss": 0.045088790357112885, "seconds": 1.793848799999978}
+{"kind": "native", "step": 3200, "loss": 0.03938836604356766, "seconds": 3.5645924000000377}
+{"kind": "native", "step": 4800, "loss": 0.03179079666733742, "seconds": 5.37238219999972}
+{"kind": "native", "step": 6400, "loss": 0.028904225677251816, "seconds": 7.157792399999835}
+{"kind": "affine_spline", "step": 1, "loss": 0.07595053315162659, "seconds": 0.002589199999874836}
+{"kind": "affine_spline", "step": 1600, "loss": 0.04456795006990433, "seconds": 2.5288602000000537}
+{"kind": "affine_spline", "step": 3200, "loss": 0.038889311254024506, "seconds": 5.031608400000096}
+{"kind": "affine_spline", "step": 4800, "loss": 0.030058864504098892, "seconds": 7.5673391000000265}
+{"kind": "affine_spline", "step": 6400, "loss": 0.027494050562381744, "seconds": 10.072333799999797}
+{"completed": "output\\n1b_v3\\confirm01_c08_s4_renders", "delta_psnr": 0.22352260135022917}
+{"kind": "native", "step": 1, "loss": 0.07595053315162659, "seconds": 0.001932300000135001}
+{"kind": "native", "step": 7500, "loss": 0.03083912655711174, "seconds": 8.507474900000034}
+{"kind": "affine_spline", "step": 1, "loss": 0.07595053315162659, "seconds": 0.002039300000433286}
+{"kind": "affine_spline", "step": 7500, "loss": 0.030400793999433517, "seconds": 11.758021500000268}
+{"completed": "output\\n1b_v3\\confirm01_c08_s4_time", "delta_psnr": 0.013129663592820862}
+{"stage": "warmup", "step": 200, "loss": 0.02881862036883831, "seconds": 1.0947753000000375}
+{"stage": "warmup", "step": 400, "loss": 0.020642472431063652, "seconds": 2.078272299999753}
+{"stage": "warmup", "step": 600, "loss": 0.01596537046134472, "seconds": 3.0607700999998997}
+{"stage": "warmup", "step": 800, "loss": 0.003655834123492241, "seconds": 4.021028099999967}
+{"stage": "warmup", "step": 1000, "loss": 0.002314915182068944, "seconds": 4.984386599999652}
+{"stage": "warmup", "step": 1200, "loss": 0.002104543149471283, "seconds": 5.9510973999999806}
+{"kind": "affine_spline", "step": 1, "loss": 0.0700531005859375, "seconds": 0.00209949999998571}
+{"kind": "affine_spline", "step": 1600, "loss": 0.043137066066265106, "seconds": 2.4130810000001475}
+{"kind": "affine_spline", "step": 3200, "loss": 0.03670726343989372, "seconds": 4.879827100000057}
+{"kind": "affine_spline", "step": 4800, "loss": 0.04760679602622986, "seconds": 7.385207499999979}
+{"kind": "affine_spline", "step": 6400, "loss": 0.03179139643907547, "seconds": 9.966353700000127}
+{"kind": "native", "step": 1, "loss": 0.0700531005859375, "seconds": 0.0015554000001429813}
+{"kind": "native", "step": 1600, "loss": 0.04285317659378052, "seconds": 1.9085245000001123}
+{"kind": "native", "step": 3200, "loss": 0.03759290277957916, "seconds": 3.7440670999999384}
+{"kind": "native", "step": 4800, "loss": 0.048496782779693604, "seconds": 5.515784100000019}
+{"kind": "native", "step": 6400, "loss": 0.03164026886224747, "seconds": 7.2835556}
+{"completed": "output\\n1b_v3\\confirm01_c08_s5_renders", "delta_psnr": 0.17490962341851457}
+{"kind": "affine_spline", "step": 1, "loss": 0.0700531005859375, "seconds": 0.0020614000000023225}
+{"kind": "native", "step": 1, "loss": 0.0700531005859375, "seconds": 0.0019412000001466367}
+{"kind": "native", "step": 7500, "loss": 0.03990582376718521, "seconds": 9.57636249999996}
+{"completed": "output\\n1b_v3\\confirm01_c08_s5_time", "delta_psnr": 0.20021206362929078}
+{"stage": "warmup", "step": 200, "loss": 0.0017373546725139022, "seconds": 1.197110000000066}
+{"stage": "warmup", "step": 400, "loss": 0.0013351187808439136, "seconds": 2.2258005000003322}
+{"stage": "warmup", "step": 600, "loss": 0.0012784356949850917, "seconds": 3.250214700000015}
+{"stage": "warmup", "step": 800, "loss": 0.0007660403498448431, "seconds": 4.284425000000283}
+{"stage": "warmup", "step": 1000, "loss": 0.0005056538502685726, "seconds": 5.313840000000255}
+{"stage": "warmup", "step": 1200, "loss": 0.0007235770463012159, "seconds": 6.325939199999993}
+{"kind": "affine_spline", "step": 1, "loss": 0.020214054733514786, "seconds": 0.0022122999998828163}
+{"kind": "affine_spline", "step": 1600, "loss": 0.01202915608882904, "seconds": 2.7402243999999882}
+{"kind": "affine_spline", "step": 3200, "loss": 0.010857521556317806, "seconds": 5.575644300000022}
+{"kind": "affine_spline", "step": 4800, "loss": 0.009490866214036942, "seconds": 8.471963899999992}
+{"kind": "affine_spline", "step": 6400, "loss": 0.009922767989337444, "seconds": 11.350569700000051}
+{"kind": "native", "step": 1, "loss": 0.020214054733514786, "seconds": 0.001973299999917799}
+{"kind": "native", "step": 1600, "loss": 0.012295370921492577, "seconds": 2.0730507999996917}
+{"kind": "native", "step": 3200, "loss": 0.010908292606472969, "seconds": 3.9635966000000735}
+{"kind": "native", "step": 4800, "loss": 0.009685400873422623, "seconds": 5.7927004999996825}
+{"kind": "native", "step": 6400, "loss": 0.010089701041579247, "seconds": 7.6107584999999744}
+{"completed": "output\\n1b_v3\\confirm01_n260_s3_renders", "delta_psnr": 0.17022000998472464}
+{"kind": "affine_spline", "step": 1, "loss": 0.020214054733514786, "seconds": 0.002102800000102434}
+{"kind": "native", "step": 1, "loss": 0.020214054733514786, "seconds": 0.001706000000012864}
+{"kind": "native", "step": 7500, "loss": 0.009369559586048126, "seconds": 9.337569799999983}
+{"completed": "output\\n1b_v3\\confirm01_n260_s3_time", "delta_psnr": 0.10360769218750931}
+{"stage": "warmup", "step": 200, "loss": 0.0013486812822520733, "seconds": 1.1200407999999697}
+{"stage": "warmup", "step": 400, "loss": 0.0010711181676015258, "seconds": 2.200807199999872}
+{"stage": "warmup", "step": 600, "loss": 0.0008490505279041827, "seconds": 3.2522054999999455}
+{"stage": "warmup", "step": 800, "loss": 0.0006404849118553102, "seconds": 4.31773770000018}
+{"stage": "warmup", "step": 1000, "loss": 0.0007008151733316481, "seconds": 5.372158099999979}
+{"stage": "warmup", "step": 1200, "loss": 0.0006652664160355926, "seconds": 6.389114099999915}
+{"kind": "native", "step": 1, "loss": 0.02045445702970028, "seconds": 0.0020386000001053617}
+{"kind": "native", "step": 1600, "loss": 0.012320056557655334, "seconds": 1.9254123000000618}
+{"kind": "native", "step": 3200, "loss": 0.011306842789053917, "seconds": 3.891652400000112}
+{"kind": "native", "step": 4800, "loss": 0.00976016279309988, "seconds": 5.850049900000158}
+{"kind": "native", "step": 6400, "loss": 0.009029144421219826, "seconds": 7.803177400000095}
+{"kind": "affine_spline", "step": 1, "loss": 0.02045445702970028, "seconds": 0.002033199999914359}
+{"kind": "affine_spline", "step": 1600, "loss": 0.012264082208275795, "seconds": 2.5787939000001643}
+{"kind": "affine_spline", "step": 3200, "loss": 0.011191003955900669, "seconds": 5.136823300000287}
+{"kind": "affine_spline", "step": 4800, "loss": 0.009603995829820633, "seconds": 7.65661799999998}
+{"kind": "affine_spline", "step": 6400, "loss": 0.008934015408158302, "seconds": 10.196153500000037}
+{"completed": "output\\n1b_v3\\confirm01_n260_s4_renders", "delta_psnr": 0.09519512239450023}
+{"kind": "native", "step": 1, "loss": 0.02045445702970028, "seconds": 0.001584899999670597}
+{"kind": "native", "step": 7500, "loss": 0.009349890984594822, "seconds": 8.716908399999738}
+{"kind": "affine_spline", "step": 1, "loss": 0.02045445702970028, "seconds": 0.0029703000000154134}
+{"completed": "output\\n1b_v3\\confirm01_n260_s4_time", "delta_psnr": -0.048053978627464744}
+{"stage": "warmup", "step": 200, "loss": 0.0015096204588189721, "seconds": 1.1845260000000053}
+{"stage": "warmup", "step": 400, "loss": 0.001119569526053965, "seconds": 2.226075099999889}
+{"stage": "warmup", "step": 600, "loss": 0.0009194670128636062, "seconds": 3.2571985999998105}
+{"stage": "warmup", "step": 800, "loss": 0.0006652325391769409, "seconds": 4.262029299999995}
+{"stage": "warmup", "step": 1000, "loss": 0.0006463388563133776, "seconds": 5.273530400000254}
+{"stage": "warmup", "step": 1200, "loss": 0.0005528123583644629, "seconds": 6.2980610999998135}
+{"kind": "affine_spline", "step": 1, "loss": 0.019449632614850998, "seconds": 0.002106800000092335}
+{"kind": "affine_spline", "step": 1600, "loss": 0.01266452670097351, "seconds": 2.6111187000001337}
+{"kind": "affine_spline", "step": 3200, "loss": 0.010990388691425323, "seconds": 5.191548799999964}
+{"kind": "affine_spline", "step": 4800, "loss": 0.00991347897797823, "seconds": 7.923758999999791}
+{"kind": "affine_spline", "step": 6400, "loss": 0.009990015998482704, "seconds": 10.710292299999765}
+{"kind": "native", "step": 1, "loss": 0.019449632614850998, "seconds": 0.001960300000064308}
+{"kind": "native", "step": 1600, "loss": 0.012776901945471764, "seconds": 1.912339399999837}
+{"kind": "native", "step": 3200, "loss": 0.011104041710495949, "seconds": 3.8389498999999887}
+{"kind": "native", "step": 4800, "loss": 0.009943969547748566, "seconds": 5.774171600000045}
+{"kind": "native", "step": 6400, "loss": 0.010063856840133667, "seconds": 7.7618296000000555}
+{"completed": "output\\n1b_v3\\confirm01_n260_s5_renders", "delta_psnr": 0.18367386000651464}
+{"kind": "affine_spline", "step": 1, "loss": 0.019449632614850998, "seconds": 0.0020902000001115084}
+{"kind": "native", "step": 1, "loss": 0.019449632614850998, "seconds": 0.001565900000059628}
+{"kind": "native", "step": 7500, "loss": 0.008745305240154266, "seconds": 8.86808740000015}
+{"completed": "output\\n1b_v3\\confirm01_n260_s5_time", "delta_psnr": 0.18341501201570054}

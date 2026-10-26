@@ -1,0 +1,17 @@
+{
+  "declared_date": "2026-10-26",
+  "source_sha256": {
+    "experiments/n1b_v3/models.py": "de5d12df5a36f323b928774d28f9dffde2831152a69e70f6fbfd7481d4036dbc",
+    "experiments/n1b_v3/search.py": "80e187bfa27de93239ef1492b8ccc12632cce5ca1690471777c9fba065f7b41e",
+    "experiments/n1b_v3/confirm.py": "fb4df6afefbbe140e3d13936216881156c71df113c392db6da0a60092f51296d",
+    "experiments/n1b_v3/CONFIRMATION01_PROTOCOL.md": "5c39df562ecdd9d0da8c10b30c9e2a74f45b1d6ec22c1ae11f98bf7181c7d741",
+    "experiments/n1b_v3/HELDOUT_PLAN.md": "164530d90321a34f0bf5624816bb3790ca47249259c65a476090465de28abde3",
+    "experiments/n1b_v2/real_dynamic.py": "b35f417227b16ef40acc46790872f783c9e7fa44444bdf613839111788378caf",
+    "experiments/n1b_v2/real_fastergs.py": "66ea06357323341da9177d8fa6c36cf0096f4b2e0cadfb43767ad7ad238ed223",
+    "experiments/n1b_v2/joint_optimization.py": "3d978d2a2de4d6937a90d6567b713615e772da1f748bb343043d795fb5b3defb",
+    "experiments/n1b/core.py": "2efc436ba7638e5e8d86c585472ec9504933964ca8c324eabea4776393b40277",
+    "src/Methods/FasterGS4D/Loss.py": "2bf65d4dc596df6b41f1eea1cb772ae4fd6f1b2836d2d78a81d6a30455ddc5d3",
+    "src/Methods/FasterGS4D/Trainer.py": "283a22459534993b7af691bfb9ccbdf8bc99da360e572e7dddb1a7d334aaaad1",
+    ".conda/nerficg/Lib/site-packages/FasterGS4DCudaBackend/torch_bindings/adam.py": "9b2b92caa719e6140293ea22b8353eb7c372f274542a66c7efe9e8fba069ab14"
+  }
+}

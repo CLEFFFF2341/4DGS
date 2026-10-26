@@ -1,0 +1,272 @@
+{
+  "args": {
+    "root": "dataset/evdeblurnerf_real/ev-deblurnerf_cdavis",
+    "scene": "blurlabequipment",
+    "seed": 1,
+    "points": 8192,
+    "warmup": 1200,
+    "steps": 600,
+    "calls": 8,
+    "out": "output/real_cdavis_blurlabequipment_s1"
+  },
+  "dataset": {
+    "scene": "blurlabequipment",
+    "train": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "test": [
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "resolution": [
+      346,
+      260
+    ],
+    "exposure_seconds": [
+      0.099999,
+      0.099999,
+      0.099999,
+      0.099999,
+      0.09999899999999995,
+      0.09999899999999995,
+      0.09999900000000006,
+      0.09999900000000006,
+      0.09999899999999995,
+      0.09999899999999995,
+      0.09999800000000003,
+      0.09999999999999987,
+      0.09999899999999995,
+      0.09999899999999995,
+      0.09999899999999995,
+      0.09999900000000017,
+      0.09999899999999995
+    ],
+    "trajectory_seconds": [
+      0.00079925,
+      1.9908945
+    ],
+    "extrapolated_edge_seconds": [
+      0.00079925,
+      0.0025614999999998833
+    ],
+    "test_times_from_slider_position": {
+      "17": 0.04657639188986118,
+      "18": 0.6331986090291247,
+      "19": 0.9265394872930016,
+      "20": 1.2199358867160257,
+      "21": 1.9042907510384528
+    },
+    "file_sha256": {
+      "all_poses_bounds.npy": "78e4377d5b88356b289b0cb72f76662abcfcdacb91d5ed2610703bf2f7af6ec7",
+      "all_timestamps.npy": "5725cf6bfd906b1e2aab3d1558fd76ffd8b4ce0cc597e6032e08ce35d724af92",
+      "ev_map.npz": "849d4e273d09a91c9aa889efa958f8807e7759b5072b5a49576509167e39e5ed",
+      "poses_bounds.npy": "306671de3d4b5b6d6ce8d56ab856268cdcdcbaf65d228c518612476381f6a821",
+      "images_1\\00.png": "0b2d928f96b6b90d34f44cf8a197cf4491601da664c82d474e87a388bba5405d",
+      "images_1\\01.png": "73fb5f3e57ee6c8d61a10728d0d451549a080d32a32adca9c6ccead389958396",
+      "images_1\\02.png": "e6b3dc38d24b55278e181aac82609be93c744bd4b4fb8c8c7119065e543b6686",
+      "images_1\\03.png": "060c2f0c4d8abf15328765c0520bd524dbaff5f4e5715e4115b9435956cf409d",
+      "images_1\\04.png": "c0a78596d18121897022346864f727a9d6a9bfe8a253fa448dbe3bae2302ca9b",
+      "images_1\\05.png": "58b1193d40ad59f051590a7c93b048606a36f39a04bbb6849051185bc3536079",
+      "images_1\\06.png": "74dab75c2cbb97eec9d750269574b7c1b40cf5e38386fcfce1dc26ff29aec204",
+      "images_1\\07.png": "a61b977bb0f1e2b8b7d2dee2d601ad879346e84e174fc53424683d4eb3b90823",
+      "images_1\\08.png": "d641cb3c279c8aba29e4fb6ad0528ac85380727494111430240c10567a86c093",
+      "images_1\\09.png": "b7fe9aa6adb2193e703ea116d16a98dba55691181378f700f1f845792a3f3b7e",
+      "images_1\\10.png": "5d596e3949afb0a1b17ff4c5b20588f0015131bf1e9bb21002e9473c73f0e9bd",
+      "images_1\\11.png": "bf1e3e1034a372e8c692da59c0e3abbe2e498aea913a02185686369c806bd731",
+      "images_1\\12.png": "4800388e3f528f089b83001402f316a78c0f85c24a4b1cf58a59b85e64b66092",
+      "images_1\\13.png": "a12ef6854fb99ac604fbd7bf1d132553fdc972bf5e61c111d78b19ab3f48e1b3",
+      "images_1\\14.png": "a5aaf021c53fe11c8fd5f53ea17973bd896de274090abc81629e6ddb1cfae9ae",
+      "images_1\\15.png": "3b12f851dcdcf6f76101abc1776d604c01dfe03b2e71f9b216d6fdf26169183b",
+      "images_1\\16.png": "7f815641106ebad79c2e3791586dbe22fbb77c8198a67a5db103b54894ab3f6c",
+      "images_1\\17.png": "b9211e5fd21a9b0e9d64635a337e75f523280acaa6811a14a8d4ee5cf4a98d85",
+      "images_1\\18.png": "4ec50f011aa217bc0c20950045dd1212bebeec1d6092cab88bf86e7dfda5f3ea",
+      "images_1\\19.png": "13ee22c9fdb95ecd28600473f07dc5aa8c4453c86af69d53aa899eff5afa074a",
+      "images_1\\20.png": "54cce5b3302881e4eafa11c4ea7711668756be187b742292f61d972c6b5a1c9e",
+      "images_1\\21.png": "81aaacca7a36d81e24870f2880281036ca5b47bf28d917b4529cfc99069604b6",
+      "images_1\\timestamps.npz": "14970ed67095d6cad450a59d48f40b8cc8606f43f1174b367bfb508d1498cd6f"
+    }
+  },
+  "protocol": "shared train-only warmup; all arms same order and steps; no test selection; RGB frame loss only; all XYZ trainable; static slider scene",
+  "code_sha256": "95ea49507cba01df1713bed95d5515140c670f81e89f284b2fc1abb7b4279ab5",
+  "warmup_training": {
+    "seconds": 8.352697599999374,
+    "steps": 1200,
+    "global_gauss_identical_schedule_steps": 1200,
+    "loss_first": 0.04676822945475578,
+    "loss_last": 0.000298621307592839
+  },
+  "initial": {
+    "sharp_test": [
+      {
+        "index": 17,
+        "psnr": 23.526726203680212,
+        "ssim": 0.6713483929634094
+      },
+      {
+        "index": 18,
+        "psnr": 26.40271569572188,
+        "ssim": 0.7302595973014832
+      },
+      {
+        "index": 19,
+        "psnr": 28.461194249522734,
+        "ssim": 0.7710552215576172
+      },
+      {
+        "index": 20,
+        "psnr": 28.950095745877213,
+        "ssim": 0.7738865613937378
+      },
+      {
+        "index": 21,
+        "psnr": 26.825986584657908,
+        "ssim": 0.7359071969985962
+      }
+    ],
+    "mean_psnr": 26.83334369589199,
+    "mean_ssim": 0.7364913940429687,
+    "train_mse_double_order": 0.0003396443721345242,
+    "quadrature_mse_calls_vs_double": 3.295538022866019e-08
+  },
+  "arms": {
+    "original": {
+      "seconds": 4.485980700002983,
+      "steps": 600,
+      "global_gauss_identical_schedule_steps": 600,
+      "loss_first": 0.00041643818258307874,
+      "loss_last": 0.0016021871706470847,
+      "metrics": {
+        "sharp_test": [
+          {
+            "index": 17,
+            "psnr": 22.548575264708624,
+            "ssim": 0.6360409259796143
+          },
+          {
+            "index": 18,
+            "psnr": 24.82943211119585,
+            "ssim": 0.6891598701477051
+          },
+          {
+            "index": 19,
+            "psnr": 26.5525737689851,
+            "ssim": 0.7298798561096191
+          },
+          {
+            "index": 20,
+            "psnr": 27.15457817662226,
+            "ssim": 0.7392931580543518
+          },
+          {
+            "index": 21,
+            "psnr": 24.85727114758136,
+            "ssim": 0.6852310299873352
+          }
+        ],
+        "mean_psnr": 25.18848609381864,
+        "mean_ssim": 0.6959209680557251,
+        "train_mse_double_order": 0.0011295748751281815,
+        "quadrature_mse_calls_vs_double": 1.0070545182075233e-08
+      }
+    },
+    "modified": {
+      "seconds": 4.697518400003901,
+      "steps": 600,
+      "global_gauss_identical_schedule_steps": 527,
+      "loss_first": 0.00041643818258307874,
+      "loss_last": 0.0003258211654610932,
+      "metrics": {
+        "sharp_test": [
+          {
+            "index": 17,
+            "psnr": 24.11776604280481,
+            "ssim": 0.7133479714393616
+          },
+          {
+            "index": 18,
+            "psnr": 27.069396530326042,
+            "ssim": 0.7660391926765442
+          },
+          {
+            "index": 19,
+            "psnr": 29.34098053143222,
+            "ssim": 0.8024870157241821
+          },
+          {
+            "index": 20,
+            "psnr": 29.698146889355357,
+            "ssim": 0.8009862303733826
+          },
+          {
+            "index": 21,
+            "psnr": 27.68822095666598,
+            "ssim": 0.767329216003418
+          }
+        ],
+        "mean_psnr": 27.58290219011688,
+        "mean_ssim": 0.7700379252433777,
+        "train_mse_double_order": 0.00021641171170973822,
+        "quadrature_mse_calls_vs_double": 3.8502784960314784e-08
+      }
+    },
+    "gauss": {
+      "seconds": 4.23820789999445,
+      "steps": 600,
+      "global_gauss_identical_schedule_steps": 600,
+      "loss_first": 0.00041643818258307874,
+      "loss_last": 0.0003257879870943725,
+      "metrics": {
+        "sharp_test": [
+          {
+            "index": 17,
+            "psnr": 24.11747793453642,
+            "ssim": 0.7133310437202454
+          },
+          {
+            "index": 18,
+            "psnr": 27.069973826368336,
+            "ssim": 0.7660834193229675
+          },
+          {
+            "index": 19,
+            "psnr": 29.34271892447675,
+            "ssim": 0.8025140762329102
+          },
+          {
+            "index": 20,
+            "psnr": 29.700366043191142,
+            "ssim": 0.8010125160217285
+          },
+          {
+            "index": 21,
+            "psnr": 27.687536646071468,
+            "ssim": 0.7672733068466187
+          }
+        ],
+        "mean_psnr": 27.58361467492882,
+        "mean_ssim": 0.770042872428894,
+        "train_mse_double_order": 0.00021632124074077343,
+        "quadrature_mse_calls_vs_double": 3.916719915717776e-08
+      }
+    }
+  }
+}

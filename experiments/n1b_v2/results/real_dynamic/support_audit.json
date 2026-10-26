@@ -1,0 +1,3249 @@
+{
+  "checked_exposures": 324,
+  "intervals_min": 16,
+  "intervals_max": 1038,
+  "fallback8_fraction": 1.0,
+  "fallback32_fraction": 0.9907407407407407,
+  "rows": [
+    {
+      "run": "dsec_c120_s0",
+      "method": "original",
+      "side": 0,
+      "frame": 122,
+      "pre_fallback_intervals": 26,
+      "whole_shutter_covering_primitives": 12339,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s0",
+      "method": "original",
+      "side": 1,
+      "frame": 122,
+      "pre_fallback_intervals": 29,
+      "whole_shutter_covering_primitives": 12338,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s0",
+      "method": "original",
+      "side": 0,
+      "frame": 126,
+      "pre_fallback_intervals": 48,
+      "whole_shutter_covering_primitives": 15121,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s0",
+      "method": "original",
+      "side": 1,
+      "frame": 126,
+      "pre_fallback_intervals": 56,
+      "whole_shutter_covering_primitives": 15117,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s0",
+      "method": "original",
+      "side": 0,
+      "frame": 130,
+      "pre_fallback_intervals": 60,
+      "whole_shutter_covering_primitives": 17151,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s0",
+      "method": "original",
+      "side": 1,
+      "frame": 130,
+      "pre_fallback_intervals": 67,
+      "whole_shutter_covering_primitives": 17150,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s0",
+      "method": "original",
+      "side": 0,
+      "frame": 134,
+      "pre_fallback_intervals": 57,
+      "whole_shutter_covering_primitives": 16708,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s0",
+      "method": "original",
+      "side": 1,
+      "frame": 134,
+      "pre_fallback_intervals": 61,
+      "whole_shutter_covering_primitives": 16706,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s0",
+      "method": "original",
+      "side": 0,
+      "frame": 138,
+      "pre_fallback_intervals": 41,
+      "whole_shutter_covering_primitives": 14452,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s0",
+      "method": "original",
+      "side": 1,
+      "frame": 138,
+      "pre_fallback_intervals": 53,
+      "whole_shutter_covering_primitives": 14444,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s0",
+      "method": "original",
+      "side": 0,
+      "frame": 142,
+      "pre_fallback_intervals": 32,
+      "whole_shutter_covering_primitives": 10953,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s0",
+      "method": "original",
+      "side": 1,
+      "frame": 142,
+      "pre_fallback_intervals": 37,
+      "whole_shutter_covering_primitives": 10948,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s0",
+      "method": "modified",
+      "side": 0,
+      "frame": 122,
+      "pre_fallback_intervals": 25,
+      "whole_shutter_covering_primitives": 12596,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s0",
+      "method": "modified",
+      "side": 1,
+      "frame": 122,
+      "pre_fallback_intervals": 26,
+      "whole_shutter_covering_primitives": 12596,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s0",
+      "method": "modified",
+      "side": 0,
+      "frame": 126,
+      "pre_fallback_intervals": 44,
+      "whole_shutter_covering_primitives": 15482,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s0",
+      "method": "modified",
+      "side": 1,
+      "frame": 126,
+      "pre_fallback_intervals": 45,
+      "whole_shutter_covering_primitives": 15482,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s0",
+      "method": "modified",
+      "side": 0,
+      "frame": 130,
+      "pre_fallback_intervals": 52,
+      "whole_shutter_covering_primitives": 17631,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s0",
+      "method": "modified",
+      "side": 1,
+      "frame": 130,
+      "pre_fallback_intervals": 58,
+      "whole_shutter_covering_primitives": 17628,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s0",
+      "method": "modified",
+      "side": 0,
+      "frame": 134,
+      "pre_fallback_intervals": 48,
+      "whole_shutter_covering_primitives": 17029,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s0",
+      "method": "modified",
+      "side": 1,
+      "frame": 134,
+      "pre_fallback_intervals": 50,
+      "whole_shutter_covering_primitives": 17028,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s0",
+      "method": "modified",
+      "side": 0,
+      "frame": 138,
+      "pre_fallback_intervals": 38,
+      "whole_shutter_covering_primitives": 14836,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s0",
+      "method": "modified",
+      "side": 1,
+      "frame": 138,
+      "pre_fallback_intervals": 44,
+      "whole_shutter_covering_primitives": 14831,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s0",
+      "method": "modified",
+      "side": 0,
+      "frame": 142,
+      "pre_fallback_intervals": 37,
+      "whole_shutter_covering_primitives": 11430,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s0",
+      "method": "modified",
+      "side": 1,
+      "frame": 142,
+      "pre_fallback_intervals": 42,
+      "whole_shutter_covering_primitives": 11425,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s0",
+      "method": "gauss",
+      "side": 0,
+      "frame": 122,
+      "pre_fallback_intervals": 23,
+      "whole_shutter_covering_primitives": 12599,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s0",
+      "method": "gauss",
+      "side": 1,
+      "frame": 122,
+      "pre_fallback_intervals": 24,
+      "whole_shutter_covering_primitives": 12598,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s0",
+      "method": "gauss",
+      "side": 0,
+      "frame": 126,
+      "pre_fallback_intervals": 38,
+      "whole_shutter_covering_primitives": 15491,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s0",
+      "method": "gauss",
+      "side": 1,
+      "frame": 126,
+      "pre_fallback_intervals": 40,
+      "whole_shutter_covering_primitives": 15490,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s0",
+      "method": "gauss",
+      "side": 0,
+      "frame": 130,
+      "pre_fallback_intervals": 50,
+      "whole_shutter_covering_primitives": 17623,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s0",
+      "method": "gauss",
+      "side": 1,
+      "frame": 130,
+      "pre_fallback_intervals": 55,
+      "whole_shutter_covering_primitives": 17620,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s0",
+      "method": "gauss",
+      "side": 0,
+      "frame": 134,
+      "pre_fallback_intervals": 52,
+      "whole_shutter_covering_primitives": 17015,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s0",
+      "method": "gauss",
+      "side": 1,
+      "frame": 134,
+      "pre_fallback_intervals": 53,
+      "whole_shutter_covering_primitives": 17014,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s0",
+      "method": "gauss",
+      "side": 0,
+      "frame": 138,
+      "pre_fallback_intervals": 40,
+      "whole_shutter_covering_primitives": 14831,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s0",
+      "method": "gauss",
+      "side": 1,
+      "frame": 138,
+      "pre_fallback_intervals": 43,
+      "whole_shutter_covering_primitives": 14829,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s0",
+      "method": "gauss",
+      "side": 0,
+      "frame": 142,
+      "pre_fallback_intervals": 27,
+      "whole_shutter_covering_primitives": 11430,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s0",
+      "method": "gauss",
+      "side": 1,
+      "frame": 142,
+      "pre_fallback_intervals": 34,
+      "whole_shutter_covering_primitives": 11423,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "original",
+      "side": 0,
+      "frame": 122,
+      "pre_fallback_intervals": 29,
+      "whole_shutter_covering_primitives": 12364,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "original",
+      "side": 1,
+      "frame": 122,
+      "pre_fallback_intervals": 30,
+      "whole_shutter_covering_primitives": 12364,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "original",
+      "side": 0,
+      "frame": 126,
+      "pre_fallback_intervals": 56,
+      "whole_shutter_covering_primitives": 15205,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "original",
+      "side": 1,
+      "frame": 126,
+      "pre_fallback_intervals": 62,
+      "whole_shutter_covering_primitives": 15202,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "original",
+      "side": 0,
+      "frame": 130,
+      "pre_fallback_intervals": 62,
+      "whole_shutter_covering_primitives": 17102,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "original",
+      "side": 1,
+      "frame": 130,
+      "pre_fallback_intervals": 76,
+      "whole_shutter_covering_primitives": 17095,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "original",
+      "side": 0,
+      "frame": 134,
+      "pre_fallback_intervals": 54,
+      "whole_shutter_covering_primitives": 16710,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "original",
+      "side": 1,
+      "frame": 134,
+      "pre_fallback_intervals": 60,
+      "whole_shutter_covering_primitives": 16705,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "original",
+      "side": 0,
+      "frame": 138,
+      "pre_fallback_intervals": 55,
+      "whole_shutter_covering_primitives": 14450,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "original",
+      "side": 1,
+      "frame": 138,
+      "pre_fallback_intervals": 63,
+      "whole_shutter_covering_primitives": 14446,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "original",
+      "side": 0,
+      "frame": 142,
+      "pre_fallback_intervals": 30,
+      "whole_shutter_covering_primitives": 10953,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "original",
+      "side": 1,
+      "frame": 142,
+      "pre_fallback_intervals": 37,
+      "whole_shutter_covering_primitives": 10946,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "modified",
+      "side": 0,
+      "frame": 122,
+      "pre_fallback_intervals": 28,
+      "whole_shutter_covering_primitives": 12575,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "modified",
+      "side": 1,
+      "frame": 122,
+      "pre_fallback_intervals": 39,
+      "whole_shutter_covering_primitives": 12573,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "modified",
+      "side": 0,
+      "frame": 126,
+      "pre_fallback_intervals": 51,
+      "whole_shutter_covering_primitives": 15482,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "modified",
+      "side": 1,
+      "frame": 126,
+      "pre_fallback_intervals": 54,
+      "whole_shutter_covering_primitives": 15482,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "modified",
+      "side": 0,
+      "frame": 130,
+      "pre_fallback_intervals": 38,
+      "whole_shutter_covering_primitives": 17788,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "modified",
+      "side": 1,
+      "frame": 130,
+      "pre_fallback_intervals": 41,
+      "whole_shutter_covering_primitives": 17787,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "modified",
+      "side": 0,
+      "frame": 134,
+      "pre_fallback_intervals": 44,
+      "whole_shutter_covering_primitives": 17091,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "modified",
+      "side": 1,
+      "frame": 134,
+      "pre_fallback_intervals": 49,
+      "whole_shutter_covering_primitives": 17087,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "modified",
+      "side": 0,
+      "frame": 138,
+      "pre_fallback_intervals": 38,
+      "whole_shutter_covering_primitives": 14564,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "modified",
+      "side": 1,
+      "frame": 138,
+      "pre_fallback_intervals": 42,
+      "whole_shutter_covering_primitives": 14561,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "modified",
+      "side": 0,
+      "frame": 142,
+      "pre_fallback_intervals": 21,
+      "whole_shutter_covering_primitives": 11257,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "modified",
+      "side": 1,
+      "frame": 142,
+      "pre_fallback_intervals": 26,
+      "whole_shutter_covering_primitives": 11252,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "gauss",
+      "side": 0,
+      "frame": 122,
+      "pre_fallback_intervals": 29,
+      "whole_shutter_covering_primitives": 12582,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "gauss",
+      "side": 1,
+      "frame": 122,
+      "pre_fallback_intervals": 33,
+      "whole_shutter_covering_primitives": 12581,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "gauss",
+      "side": 0,
+      "frame": 126,
+      "pre_fallback_intervals": 47,
+      "whole_shutter_covering_primitives": 15487,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "gauss",
+      "side": 1,
+      "frame": 126,
+      "pre_fallback_intervals": 51,
+      "whole_shutter_covering_primitives": 15485,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "gauss",
+      "side": 0,
+      "frame": 130,
+      "pre_fallback_intervals": 39,
+      "whole_shutter_covering_primitives": 17802,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "gauss",
+      "side": 1,
+      "frame": 130,
+      "pre_fallback_intervals": 44,
+      "whole_shutter_covering_primitives": 17799,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "gauss",
+      "side": 0,
+      "frame": 134,
+      "pre_fallback_intervals": 53,
+      "whole_shutter_covering_primitives": 17090,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "gauss",
+      "side": 1,
+      "frame": 134,
+      "pre_fallback_intervals": 57,
+      "whole_shutter_covering_primitives": 17088,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "gauss",
+      "side": 0,
+      "frame": 138,
+      "pre_fallback_intervals": 54,
+      "whole_shutter_covering_primitives": 14549,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "gauss",
+      "side": 1,
+      "frame": 138,
+      "pre_fallback_intervals": 56,
+      "whole_shutter_covering_primitives": 14548,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "gauss",
+      "side": 0,
+      "frame": 142,
+      "pre_fallback_intervals": 28,
+      "whole_shutter_covering_primitives": 11260,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s1",
+      "method": "gauss",
+      "side": 1,
+      "frame": 142,
+      "pre_fallback_intervals": 33,
+      "whole_shutter_covering_primitives": 11255,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "original",
+      "side": 0,
+      "frame": 122,
+      "pre_fallback_intervals": 25,
+      "whole_shutter_covering_primitives": 12338,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "original",
+      "side": 1,
+      "frame": 122,
+      "pre_fallback_intervals": 28,
+      "whole_shutter_covering_primitives": 12337,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "original",
+      "side": 0,
+      "frame": 126,
+      "pre_fallback_intervals": 45,
+      "whole_shutter_covering_primitives": 15096,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "original",
+      "side": 1,
+      "frame": 126,
+      "pre_fallback_intervals": 48,
+      "whole_shutter_covering_primitives": 15094,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "original",
+      "side": 0,
+      "frame": 130,
+      "pre_fallback_intervals": 47,
+      "whole_shutter_covering_primitives": 17031,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "original",
+      "side": 1,
+      "frame": 130,
+      "pre_fallback_intervals": 52,
+      "whole_shutter_covering_primitives": 17028,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "original",
+      "side": 0,
+      "frame": 134,
+      "pre_fallback_intervals": 42,
+      "whole_shutter_covering_primitives": 16901,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "original",
+      "side": 1,
+      "frame": 134,
+      "pre_fallback_intervals": 48,
+      "whole_shutter_covering_primitives": 16897,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "original",
+      "side": 0,
+      "frame": 138,
+      "pre_fallback_intervals": 48,
+      "whole_shutter_covering_primitives": 14522,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "original",
+      "side": 1,
+      "frame": 138,
+      "pre_fallback_intervals": 56,
+      "whole_shutter_covering_primitives": 14519,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "original",
+      "side": 0,
+      "frame": 142,
+      "pre_fallback_intervals": 25,
+      "whole_shutter_covering_primitives": 10956,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "original",
+      "side": 1,
+      "frame": 142,
+      "pre_fallback_intervals": 31,
+      "whole_shutter_covering_primitives": 10950,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "modified",
+      "side": 0,
+      "frame": 122,
+      "pre_fallback_intervals": 19,
+      "whole_shutter_covering_primitives": 12684,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "modified",
+      "side": 1,
+      "frame": 122,
+      "pre_fallback_intervals": 22,
+      "whole_shutter_covering_primitives": 12683,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "modified",
+      "side": 0,
+      "frame": 126,
+      "pre_fallback_intervals": 32,
+      "whole_shutter_covering_primitives": 15428,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "modified",
+      "side": 1,
+      "frame": 126,
+      "pre_fallback_intervals": 37,
+      "whole_shutter_covering_primitives": 15426,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "modified",
+      "side": 0,
+      "frame": 130,
+      "pre_fallback_intervals": 67,
+      "whole_shutter_covering_primitives": 17428,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "modified",
+      "side": 1,
+      "frame": 130,
+      "pre_fallback_intervals": 72,
+      "whole_shutter_covering_primitives": 17428,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "modified",
+      "side": 0,
+      "frame": 134,
+      "pre_fallback_intervals": 48,
+      "whole_shutter_covering_primitives": 17296,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "modified",
+      "side": 1,
+      "frame": 134,
+      "pre_fallback_intervals": 53,
+      "whole_shutter_covering_primitives": 17292,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "modified",
+      "side": 0,
+      "frame": 138,
+      "pre_fallback_intervals": 30,
+      "whole_shutter_covering_primitives": 14805,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "modified",
+      "side": 1,
+      "frame": 138,
+      "pre_fallback_intervals": 36,
+      "whole_shutter_covering_primitives": 14801,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "modified",
+      "side": 0,
+      "frame": 142,
+      "pre_fallback_intervals": 26,
+      "whole_shutter_covering_primitives": 11403,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "modified",
+      "side": 1,
+      "frame": 142,
+      "pre_fallback_intervals": 30,
+      "whole_shutter_covering_primitives": 11399,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "gauss",
+      "side": 0,
+      "frame": 122,
+      "pre_fallback_intervals": 20,
+      "whole_shutter_covering_primitives": 12677,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "gauss",
+      "side": 1,
+      "frame": 122,
+      "pre_fallback_intervals": 20,
+      "whole_shutter_covering_primitives": 12677,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "gauss",
+      "side": 0,
+      "frame": 126,
+      "pre_fallback_intervals": 37,
+      "whole_shutter_covering_primitives": 15430,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "gauss",
+      "side": 1,
+      "frame": 126,
+      "pre_fallback_intervals": 41,
+      "whole_shutter_covering_primitives": 15430,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "gauss",
+      "side": 0,
+      "frame": 130,
+      "pre_fallback_intervals": 68,
+      "whole_shutter_covering_primitives": 17428,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "gauss",
+      "side": 1,
+      "frame": 130,
+      "pre_fallback_intervals": 75,
+      "whole_shutter_covering_primitives": 17426,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "gauss",
+      "side": 0,
+      "frame": 134,
+      "pre_fallback_intervals": 46,
+      "whole_shutter_covering_primitives": 17302,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "gauss",
+      "side": 1,
+      "frame": 134,
+      "pre_fallback_intervals": 52,
+      "whole_shutter_covering_primitives": 17299,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "gauss",
+      "side": 0,
+      "frame": 138,
+      "pre_fallback_intervals": 38,
+      "whole_shutter_covering_primitives": 14796,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "gauss",
+      "side": 1,
+      "frame": 138,
+      "pre_fallback_intervals": 42,
+      "whole_shutter_covering_primitives": 14795,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "gauss",
+      "side": 0,
+      "frame": 142,
+      "pre_fallback_intervals": 27,
+      "whole_shutter_covering_primitives": 11380,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c120_s2",
+      "method": "gauss",
+      "side": 1,
+      "frame": 142,
+      "pre_fallback_intervals": 31,
+      "whole_shutter_covering_primitives": 11376,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "original",
+      "side": 0,
+      "frame": 262,
+      "pre_fallback_intervals": 26,
+      "whole_shutter_covering_primitives": 12399,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "original",
+      "side": 1,
+      "frame": 262,
+      "pre_fallback_intervals": 27,
+      "whole_shutter_covering_primitives": 12399,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "original",
+      "side": 0,
+      "frame": 266,
+      "pre_fallback_intervals": 41,
+      "whole_shutter_covering_primitives": 15486,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "original",
+      "side": 1,
+      "frame": 266,
+      "pre_fallback_intervals": 42,
+      "whole_shutter_covering_primitives": 15486,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "original",
+      "side": 0,
+      "frame": 270,
+      "pre_fallback_intervals": 50,
+      "whole_shutter_covering_primitives": 16873,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "original",
+      "side": 1,
+      "frame": 270,
+      "pre_fallback_intervals": 56,
+      "whole_shutter_covering_primitives": 16870,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "original",
+      "side": 0,
+      "frame": 274,
+      "pre_fallback_intervals": 53,
+      "whole_shutter_covering_primitives": 16401,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "original",
+      "side": 1,
+      "frame": 274,
+      "pre_fallback_intervals": 56,
+      "whole_shutter_covering_primitives": 16399,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "original",
+      "side": 0,
+      "frame": 278,
+      "pre_fallback_intervals": 36,
+      "whole_shutter_covering_primitives": 14496,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "original",
+      "side": 1,
+      "frame": 278,
+      "pre_fallback_intervals": 39,
+      "whole_shutter_covering_primitives": 14494,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "original",
+      "side": 0,
+      "frame": 282,
+      "pre_fallback_intervals": 21,
+      "whole_shutter_covering_primitives": 10807,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "original",
+      "side": 1,
+      "frame": 282,
+      "pre_fallback_intervals": 23,
+      "whole_shutter_covering_primitives": 10805,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "modified",
+      "side": 0,
+      "frame": 262,
+      "pre_fallback_intervals": 26,
+      "whole_shutter_covering_primitives": 12436,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "modified",
+      "side": 1,
+      "frame": 262,
+      "pre_fallback_intervals": 26,
+      "whole_shutter_covering_primitives": 12436,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "modified",
+      "side": 0,
+      "frame": 266,
+      "pre_fallback_intervals": 32,
+      "whole_shutter_covering_primitives": 15558,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "modified",
+      "side": 1,
+      "frame": 266,
+      "pre_fallback_intervals": 38,
+      "whole_shutter_covering_primitives": 15557,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "modified",
+      "side": 0,
+      "frame": 270,
+      "pre_fallback_intervals": 45,
+      "whole_shutter_covering_primitives": 16923,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "modified",
+      "side": 1,
+      "frame": 270,
+      "pre_fallback_intervals": 48,
+      "whole_shutter_covering_primitives": 16922,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "modified",
+      "side": 0,
+      "frame": 274,
+      "pre_fallback_intervals": 46,
+      "whole_shutter_covering_primitives": 16478,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "modified",
+      "side": 1,
+      "frame": 274,
+      "pre_fallback_intervals": 48,
+      "whole_shutter_covering_primitives": 16478,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "modified",
+      "side": 0,
+      "frame": 278,
+      "pre_fallback_intervals": 41,
+      "whole_shutter_covering_primitives": 14395,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "modified",
+      "side": 1,
+      "frame": 278,
+      "pre_fallback_intervals": 42,
+      "whole_shutter_covering_primitives": 14394,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "modified",
+      "side": 0,
+      "frame": 282,
+      "pre_fallback_intervals": 29,
+      "whole_shutter_covering_primitives": 11152,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "modified",
+      "side": 1,
+      "frame": 282,
+      "pre_fallback_intervals": 31,
+      "whole_shutter_covering_primitives": 11150,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "gauss",
+      "side": 0,
+      "frame": 262,
+      "pre_fallback_intervals": 32,
+      "whole_shutter_covering_primitives": 12431,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "gauss",
+      "side": 1,
+      "frame": 262,
+      "pre_fallback_intervals": 32,
+      "whole_shutter_covering_primitives": 12431,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "gauss",
+      "side": 0,
+      "frame": 266,
+      "pre_fallback_intervals": 34,
+      "whole_shutter_covering_primitives": 15558,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "gauss",
+      "side": 1,
+      "frame": 266,
+      "pre_fallback_intervals": 36,
+      "whole_shutter_covering_primitives": 15558,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "gauss",
+      "side": 0,
+      "frame": 270,
+      "pre_fallback_intervals": 50,
+      "whole_shutter_covering_primitives": 16928,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "gauss",
+      "side": 1,
+      "frame": 270,
+      "pre_fallback_intervals": 52,
+      "whole_shutter_covering_primitives": 16928,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "gauss",
+      "side": 0,
+      "frame": 274,
+      "pre_fallback_intervals": 43,
+      "whole_shutter_covering_primitives": 16476,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "gauss",
+      "side": 1,
+      "frame": 274,
+      "pre_fallback_intervals": 45,
+      "whole_shutter_covering_primitives": 16474,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "gauss",
+      "side": 0,
+      "frame": 278,
+      "pre_fallback_intervals": 36,
+      "whole_shutter_covering_primitives": 14389,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "gauss",
+      "side": 1,
+      "frame": 278,
+      "pre_fallback_intervals": 39,
+      "whole_shutter_covering_primitives": 14387,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "gauss",
+      "side": 0,
+      "frame": 282,
+      "pre_fallback_intervals": 32,
+      "whole_shutter_covering_primitives": 11152,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s0",
+      "method": "gauss",
+      "side": 1,
+      "frame": 282,
+      "pre_fallback_intervals": 33,
+      "whole_shutter_covering_primitives": 11151,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "original",
+      "side": 0,
+      "frame": 262,
+      "pre_fallback_intervals": 24,
+      "whole_shutter_covering_primitives": 12381,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "original",
+      "side": 1,
+      "frame": 262,
+      "pre_fallback_intervals": 24,
+      "whole_shutter_covering_primitives": 12381,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "original",
+      "side": 0,
+      "frame": 266,
+      "pre_fallback_intervals": 52,
+      "whole_shutter_covering_primitives": 15589,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "original",
+      "side": 1,
+      "frame": 266,
+      "pre_fallback_intervals": 53,
+      "whole_shutter_covering_primitives": 15589,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "original",
+      "side": 0,
+      "frame": 270,
+      "pre_fallback_intervals": 47,
+      "whole_shutter_covering_primitives": 16722,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "original",
+      "side": 1,
+      "frame": 270,
+      "pre_fallback_intervals": 50,
+      "whole_shutter_covering_primitives": 16720,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "original",
+      "side": 0,
+      "frame": 274,
+      "pre_fallback_intervals": 50,
+      "whole_shutter_covering_primitives": 16417,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "original",
+      "side": 1,
+      "frame": 274,
+      "pre_fallback_intervals": 53,
+      "whole_shutter_covering_primitives": 16417,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "original",
+      "side": 0,
+      "frame": 278,
+      "pre_fallback_intervals": 46,
+      "whole_shutter_covering_primitives": 14502,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "original",
+      "side": 1,
+      "frame": 278,
+      "pre_fallback_intervals": 47,
+      "whole_shutter_covering_primitives": 14502,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "original",
+      "side": 0,
+      "frame": 282,
+      "pre_fallback_intervals": 25,
+      "whole_shutter_covering_primitives": 10807,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "original",
+      "side": 1,
+      "frame": 282,
+      "pre_fallback_intervals": 27,
+      "whole_shutter_covering_primitives": 10805,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "modified",
+      "side": 0,
+      "frame": 262,
+      "pre_fallback_intervals": 33,
+      "whole_shutter_covering_primitives": 12456,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "modified",
+      "side": 1,
+      "frame": 262,
+      "pre_fallback_intervals": 33,
+      "whole_shutter_covering_primitives": 12456,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "modified",
+      "side": 0,
+      "frame": 266,
+      "pre_fallback_intervals": 43,
+      "whole_shutter_covering_primitives": 15703,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "modified",
+      "side": 1,
+      "frame": 266,
+      "pre_fallback_intervals": 47,
+      "whole_shutter_covering_primitives": 15701,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "modified",
+      "side": 0,
+      "frame": 270,
+      "pre_fallback_intervals": 39,
+      "whole_shutter_covering_primitives": 16749,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "modified",
+      "side": 1,
+      "frame": 270,
+      "pre_fallback_intervals": 39,
+      "whole_shutter_covering_primitives": 16749,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "modified",
+      "side": 0,
+      "frame": 274,
+      "pre_fallback_intervals": 31,
+      "whole_shutter_covering_primitives": 16386,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "modified",
+      "side": 1,
+      "frame": 274,
+      "pre_fallback_intervals": 32,
+      "whole_shutter_covering_primitives": 16385,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "modified",
+      "side": 0,
+      "frame": 278,
+      "pre_fallback_intervals": 47,
+      "whole_shutter_covering_primitives": 14366,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "modified",
+      "side": 1,
+      "frame": 278,
+      "pre_fallback_intervals": 49,
+      "whole_shutter_covering_primitives": 14364,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "modified",
+      "side": 0,
+      "frame": 282,
+      "pre_fallback_intervals": 24,
+      "whole_shutter_covering_primitives": 10907,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "modified",
+      "side": 1,
+      "frame": 282,
+      "pre_fallback_intervals": 28,
+      "whole_shutter_covering_primitives": 10903,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "gauss",
+      "side": 0,
+      "frame": 262,
+      "pre_fallback_intervals": 32,
+      "whole_shutter_covering_primitives": 12452,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "gauss",
+      "side": 1,
+      "frame": 262,
+      "pre_fallback_intervals": 35,
+      "whole_shutter_covering_primitives": 12451,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "gauss",
+      "side": 0,
+      "frame": 266,
+      "pre_fallback_intervals": 43,
+      "whole_shutter_covering_primitives": 15696,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "gauss",
+      "side": 1,
+      "frame": 266,
+      "pre_fallback_intervals": 47,
+      "whole_shutter_covering_primitives": 15694,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "gauss",
+      "side": 0,
+      "frame": 270,
+      "pre_fallback_intervals": 37,
+      "whole_shutter_covering_primitives": 16749,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "gauss",
+      "side": 1,
+      "frame": 270,
+      "pre_fallback_intervals": 37,
+      "whole_shutter_covering_primitives": 16749,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "gauss",
+      "side": 0,
+      "frame": 274,
+      "pre_fallback_intervals": 33,
+      "whole_shutter_covering_primitives": 16376,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "gauss",
+      "side": 1,
+      "frame": 274,
+      "pre_fallback_intervals": 33,
+      "whole_shutter_covering_primitives": 16376,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "gauss",
+      "side": 0,
+      "frame": 278,
+      "pre_fallback_intervals": 48,
+      "whole_shutter_covering_primitives": 14361,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "gauss",
+      "side": 1,
+      "frame": 278,
+      "pre_fallback_intervals": 51,
+      "whole_shutter_covering_primitives": 14359,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "gauss",
+      "side": 0,
+      "frame": 282,
+      "pre_fallback_intervals": 26,
+      "whole_shutter_covering_primitives": 10896,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s1",
+      "method": "gauss",
+      "side": 1,
+      "frame": 282,
+      "pre_fallback_intervals": 30,
+      "whole_shutter_covering_primitives": 10892,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "original",
+      "side": 0,
+      "frame": 262,
+      "pre_fallback_intervals": 28,
+      "whole_shutter_covering_primitives": 12484,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "original",
+      "side": 1,
+      "frame": 262,
+      "pre_fallback_intervals": 28,
+      "whole_shutter_covering_primitives": 12484,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "original",
+      "side": 0,
+      "frame": 266,
+      "pre_fallback_intervals": 48,
+      "whole_shutter_covering_primitives": 15535,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "original",
+      "side": 1,
+      "frame": 266,
+      "pre_fallback_intervals": 48,
+      "whole_shutter_covering_primitives": 15535,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "original",
+      "side": 0,
+      "frame": 270,
+      "pre_fallback_intervals": 53,
+      "whole_shutter_covering_primitives": 16912,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "original",
+      "side": 1,
+      "frame": 270,
+      "pre_fallback_intervals": 56,
+      "whole_shutter_covering_primitives": 16909,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "original",
+      "side": 0,
+      "frame": 274,
+      "pre_fallback_intervals": 50,
+      "whole_shutter_covering_primitives": 16618,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "original",
+      "side": 1,
+      "frame": 274,
+      "pre_fallback_intervals": 53,
+      "whole_shutter_covering_primitives": 16617,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "original",
+      "side": 0,
+      "frame": 278,
+      "pre_fallback_intervals": 45,
+      "whole_shutter_covering_primitives": 14545,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "original",
+      "side": 1,
+      "frame": 278,
+      "pre_fallback_intervals": 46,
+      "whole_shutter_covering_primitives": 14545,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "original",
+      "side": 0,
+      "frame": 282,
+      "pre_fallback_intervals": 26,
+      "whole_shutter_covering_primitives": 10808,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "original",
+      "side": 1,
+      "frame": 282,
+      "pre_fallback_intervals": 27,
+      "whole_shutter_covering_primitives": 10807,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "modified",
+      "side": 0,
+      "frame": 262,
+      "pre_fallback_intervals": 16,
+      "whole_shutter_covering_primitives": 12596,
+      "fallback_at_order8": true,
+      "fallback_at_order32": false
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "modified",
+      "side": 1,
+      "frame": 262,
+      "pre_fallback_intervals": 16,
+      "whole_shutter_covering_primitives": 12596,
+      "fallback_at_order8": true,
+      "fallback_at_order32": false
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "modified",
+      "side": 0,
+      "frame": 266,
+      "pre_fallback_intervals": 38,
+      "whole_shutter_covering_primitives": 15777,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "modified",
+      "side": 1,
+      "frame": 266,
+      "pre_fallback_intervals": 40,
+      "whole_shutter_covering_primitives": 15777,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "modified",
+      "side": 0,
+      "frame": 270,
+      "pre_fallback_intervals": 61,
+      "whole_shutter_covering_primitives": 16840,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "modified",
+      "side": 1,
+      "frame": 270,
+      "pre_fallback_intervals": 61,
+      "whole_shutter_covering_primitives": 16840,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "modified",
+      "side": 0,
+      "frame": 274,
+      "pre_fallback_intervals": 49,
+      "whole_shutter_covering_primitives": 16645,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "modified",
+      "side": 1,
+      "frame": 274,
+      "pre_fallback_intervals": 51,
+      "whole_shutter_covering_primitives": 16644,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "modified",
+      "side": 0,
+      "frame": 278,
+      "pre_fallback_intervals": 42,
+      "whole_shutter_covering_primitives": 14537,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "modified",
+      "side": 1,
+      "frame": 278,
+      "pre_fallback_intervals": 43,
+      "whole_shutter_covering_primitives": 14536,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "modified",
+      "side": 0,
+      "frame": 282,
+      "pre_fallback_intervals": 31,
+      "whole_shutter_covering_primitives": 11076,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "modified",
+      "side": 1,
+      "frame": 282,
+      "pre_fallback_intervals": 32,
+      "whole_shutter_covering_primitives": 11075,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "gauss",
+      "side": 0,
+      "frame": 262,
+      "pre_fallback_intervals": 16,
+      "whole_shutter_covering_primitives": 12592,
+      "fallback_at_order8": true,
+      "fallback_at_order32": false
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "gauss",
+      "side": 1,
+      "frame": 262,
+      "pre_fallback_intervals": 18,
+      "whole_shutter_covering_primitives": 12592,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "gauss",
+      "side": 0,
+      "frame": 266,
+      "pre_fallback_intervals": 33,
+      "whole_shutter_covering_primitives": 15777,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "gauss",
+      "side": 1,
+      "frame": 266,
+      "pre_fallback_intervals": 33,
+      "whole_shutter_covering_primitives": 15777,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "gauss",
+      "side": 0,
+      "frame": 270,
+      "pre_fallback_intervals": 58,
+      "whole_shutter_covering_primitives": 16855,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "gauss",
+      "side": 1,
+      "frame": 270,
+      "pre_fallback_intervals": 60,
+      "whole_shutter_covering_primitives": 16854,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "gauss",
+      "side": 0,
+      "frame": 274,
+      "pre_fallback_intervals": 51,
+      "whole_shutter_covering_primitives": 16643,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "gauss",
+      "side": 1,
+      "frame": 274,
+      "pre_fallback_intervals": 56,
+      "whole_shutter_covering_primitives": 16641,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "gauss",
+      "side": 0,
+      "frame": 278,
+      "pre_fallback_intervals": 45,
+      "whole_shutter_covering_primitives": 14539,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "gauss",
+      "side": 1,
+      "frame": 278,
+      "pre_fallback_intervals": 46,
+      "whole_shutter_covering_primitives": 14538,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "gauss",
+      "side": 0,
+      "frame": 282,
+      "pre_fallback_intervals": 28,
+      "whole_shutter_covering_primitives": 11071,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_c260_s2",
+      "method": "gauss",
+      "side": 1,
+      "frame": 282,
+      "pre_fallback_intervals": 31,
+      "whole_shutter_covering_primitives": 11068,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "original",
+      "side": 0,
+      "frame": 122,
+      "pre_fallback_intervals": 437,
+      "whole_shutter_covering_primitives": 11894,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "original",
+      "side": 1,
+      "frame": 122,
+      "pre_fallback_intervals": 437,
+      "whole_shutter_covering_primitives": 11894,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "original",
+      "side": 0,
+      "frame": 126,
+      "pre_fallback_intervals": 780,
+      "whole_shutter_covering_primitives": 15057,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "original",
+      "side": 1,
+      "frame": 126,
+      "pre_fallback_intervals": 780,
+      "whole_shutter_covering_primitives": 15057,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "original",
+      "side": 0,
+      "frame": 130,
+      "pre_fallback_intervals": 971,
+      "whole_shutter_covering_primitives": 16197,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "original",
+      "side": 1,
+      "frame": 130,
+      "pre_fallback_intervals": 971,
+      "whole_shutter_covering_primitives": 16197,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "original",
+      "side": 0,
+      "frame": 134,
+      "pre_fallback_intervals": 921,
+      "whole_shutter_covering_primitives": 16108,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "original",
+      "side": 1,
+      "frame": 134,
+      "pre_fallback_intervals": 921,
+      "whole_shutter_covering_primitives": 16108,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "original",
+      "side": 0,
+      "frame": 138,
+      "pre_fallback_intervals": 782,
+      "whole_shutter_covering_primitives": 14424,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "original",
+      "side": 1,
+      "frame": 138,
+      "pre_fallback_intervals": 782,
+      "whole_shutter_covering_primitives": 14424,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "original",
+      "side": 0,
+      "frame": 142,
+      "pre_fallback_intervals": 462,
+      "whole_shutter_covering_primitives": 10735,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "original",
+      "side": 1,
+      "frame": 142,
+      "pre_fallback_intervals": 462,
+      "whole_shutter_covering_primitives": 10735,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "modified",
+      "side": 0,
+      "frame": 122,
+      "pre_fallback_intervals": 401,
+      "whole_shutter_covering_primitives": 12290,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "modified",
+      "side": 1,
+      "frame": 122,
+      "pre_fallback_intervals": 401,
+      "whole_shutter_covering_primitives": 12290,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "modified",
+      "side": 0,
+      "frame": 126,
+      "pre_fallback_intervals": 659,
+      "whole_shutter_covering_primitives": 15981,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "modified",
+      "side": 1,
+      "frame": 126,
+      "pre_fallback_intervals": 659,
+      "whole_shutter_covering_primitives": 15981,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "modified",
+      "side": 0,
+      "frame": 130,
+      "pre_fallback_intervals": 795,
+      "whole_shutter_covering_primitives": 17546,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "modified",
+      "side": 1,
+      "frame": 130,
+      "pre_fallback_intervals": 795,
+      "whole_shutter_covering_primitives": 17546,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "modified",
+      "side": 0,
+      "frame": 134,
+      "pre_fallback_intervals": 755,
+      "whole_shutter_covering_primitives": 17074,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "modified",
+      "side": 1,
+      "frame": 134,
+      "pre_fallback_intervals": 755,
+      "whole_shutter_covering_primitives": 17074,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "modified",
+      "side": 0,
+      "frame": 138,
+      "pre_fallback_intervals": 597,
+      "whole_shutter_covering_primitives": 15026,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "modified",
+      "side": 1,
+      "frame": 138,
+      "pre_fallback_intervals": 597,
+      "whole_shutter_covering_primitives": 15026,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "modified",
+      "side": 0,
+      "frame": 142,
+      "pre_fallback_intervals": 381,
+      "whole_shutter_covering_primitives": 11342,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "modified",
+      "side": 1,
+      "frame": 142,
+      "pre_fallback_intervals": 381,
+      "whole_shutter_covering_primitives": 11342,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "gauss",
+      "side": 0,
+      "frame": 122,
+      "pre_fallback_intervals": 401,
+      "whole_shutter_covering_primitives": 12291,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "gauss",
+      "side": 1,
+      "frame": 122,
+      "pre_fallback_intervals": 401,
+      "whole_shutter_covering_primitives": 12291,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "gauss",
+      "side": 0,
+      "frame": 126,
+      "pre_fallback_intervals": 662,
+      "whole_shutter_covering_primitives": 15982,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "gauss",
+      "side": 1,
+      "frame": 126,
+      "pre_fallback_intervals": 662,
+      "whole_shutter_covering_primitives": 15982,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "gauss",
+      "side": 0,
+      "frame": 130,
+      "pre_fallback_intervals": 787,
+      "whole_shutter_covering_primitives": 17553,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "gauss",
+      "side": 1,
+      "frame": 130,
+      "pre_fallback_intervals": 787,
+      "whole_shutter_covering_primitives": 17553,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "gauss",
+      "side": 0,
+      "frame": 134,
+      "pre_fallback_intervals": 758,
+      "whole_shutter_covering_primitives": 17073,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "gauss",
+      "side": 1,
+      "frame": 134,
+      "pre_fallback_intervals": 758,
+      "whole_shutter_covering_primitives": 17073,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "gauss",
+      "side": 0,
+      "frame": 138,
+      "pre_fallback_intervals": 596,
+      "whole_shutter_covering_primitives": 15026,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "gauss",
+      "side": 1,
+      "frame": 138,
+      "pre_fallback_intervals": 596,
+      "whole_shutter_covering_primitives": 15026,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "gauss",
+      "side": 0,
+      "frame": 142,
+      "pre_fallback_intervals": 380,
+      "whole_shutter_covering_primitives": 11343,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s0",
+      "method": "gauss",
+      "side": 1,
+      "frame": 142,
+      "pre_fallback_intervals": 380,
+      "whole_shutter_covering_primitives": 11343,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "original",
+      "side": 0,
+      "frame": 122,
+      "pre_fallback_intervals": 451,
+      "whole_shutter_covering_primitives": 11958,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "original",
+      "side": 1,
+      "frame": 122,
+      "pre_fallback_intervals": 451,
+      "whole_shutter_covering_primitives": 11958,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "original",
+      "side": 0,
+      "frame": 126,
+      "pre_fallback_intervals": 869,
+      "whole_shutter_covering_primitives": 15163,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "original",
+      "side": 1,
+      "frame": 126,
+      "pre_fallback_intervals": 869,
+      "whole_shutter_covering_primitives": 15163,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "original",
+      "side": 0,
+      "frame": 130,
+      "pre_fallback_intervals": 993,
+      "whole_shutter_covering_primitives": 16222,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "original",
+      "side": 1,
+      "frame": 130,
+      "pre_fallback_intervals": 993,
+      "whole_shutter_covering_primitives": 16222,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "original",
+      "side": 0,
+      "frame": 134,
+      "pre_fallback_intervals": 955,
+      "whole_shutter_covering_primitives": 16156,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "original",
+      "side": 1,
+      "frame": 134,
+      "pre_fallback_intervals": 955,
+      "whole_shutter_covering_primitives": 16156,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "original",
+      "side": 0,
+      "frame": 138,
+      "pre_fallback_intervals": 826,
+      "whole_shutter_covering_primitives": 14494,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "original",
+      "side": 1,
+      "frame": 138,
+      "pre_fallback_intervals": 826,
+      "whole_shutter_covering_primitives": 14494,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "original",
+      "side": 0,
+      "frame": 142,
+      "pre_fallback_intervals": 476,
+      "whole_shutter_covering_primitives": 10724,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "original",
+      "side": 1,
+      "frame": 142,
+      "pre_fallback_intervals": 476,
+      "whole_shutter_covering_primitives": 10724,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "modified",
+      "side": 0,
+      "frame": 122,
+      "pre_fallback_intervals": 373,
+      "whole_shutter_covering_primitives": 12379,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "modified",
+      "side": 1,
+      "frame": 122,
+      "pre_fallback_intervals": 373,
+      "whole_shutter_covering_primitives": 12379,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "modified",
+      "side": 0,
+      "frame": 126,
+      "pre_fallback_intervals": 635,
+      "whole_shutter_covering_primitives": 16135,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "modified",
+      "side": 1,
+      "frame": 126,
+      "pre_fallback_intervals": 635,
+      "whole_shutter_covering_primitives": 16135,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "modified",
+      "side": 0,
+      "frame": 130,
+      "pre_fallback_intervals": 803,
+      "whole_shutter_covering_primitives": 17492,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "modified",
+      "side": 1,
+      "frame": 130,
+      "pre_fallback_intervals": 803,
+      "whole_shutter_covering_primitives": 17492,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "modified",
+      "side": 0,
+      "frame": 134,
+      "pre_fallback_intervals": 738,
+      "whole_shutter_covering_primitives": 17091,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "modified",
+      "side": 1,
+      "frame": 134,
+      "pre_fallback_intervals": 738,
+      "whole_shutter_covering_primitives": 17091,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "modified",
+      "side": 0,
+      "frame": 138,
+      "pre_fallback_intervals": 644,
+      "whole_shutter_covering_primitives": 14966,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "modified",
+      "side": 1,
+      "frame": 138,
+      "pre_fallback_intervals": 644,
+      "whole_shutter_covering_primitives": 14966,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "modified",
+      "side": 0,
+      "frame": 142,
+      "pre_fallback_intervals": 396,
+      "whole_shutter_covering_primitives": 11265,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "modified",
+      "side": 1,
+      "frame": 142,
+      "pre_fallback_intervals": 396,
+      "whole_shutter_covering_primitives": 11265,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "gauss",
+      "side": 0,
+      "frame": 122,
+      "pre_fallback_intervals": 373,
+      "whole_shutter_covering_primitives": 12379,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "gauss",
+      "side": 1,
+      "frame": 122,
+      "pre_fallback_intervals": 373,
+      "whole_shutter_covering_primitives": 12379,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "gauss",
+      "side": 0,
+      "frame": 126,
+      "pre_fallback_intervals": 630,
+      "whole_shutter_covering_primitives": 16142,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "gauss",
+      "side": 1,
+      "frame": 126,
+      "pre_fallback_intervals": 630,
+      "whole_shutter_covering_primitives": 16142,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "gauss",
+      "side": 0,
+      "frame": 130,
+      "pre_fallback_intervals": 804,
+      "whole_shutter_covering_primitives": 17490,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "gauss",
+      "side": 1,
+      "frame": 130,
+      "pre_fallback_intervals": 804,
+      "whole_shutter_covering_primitives": 17490,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "gauss",
+      "side": 0,
+      "frame": 134,
+      "pre_fallback_intervals": 737,
+      "whole_shutter_covering_primitives": 17090,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "gauss",
+      "side": 1,
+      "frame": 134,
+      "pre_fallback_intervals": 737,
+      "whole_shutter_covering_primitives": 17090,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "gauss",
+      "side": 0,
+      "frame": 138,
+      "pre_fallback_intervals": 642,
+      "whole_shutter_covering_primitives": 14969,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "gauss",
+      "side": 1,
+      "frame": 138,
+      "pre_fallback_intervals": 642,
+      "whole_shutter_covering_primitives": 14969,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "gauss",
+      "side": 0,
+      "frame": 142,
+      "pre_fallback_intervals": 396,
+      "whole_shutter_covering_primitives": 11266,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s1",
+      "method": "gauss",
+      "side": 1,
+      "frame": 142,
+      "pre_fallback_intervals": 396,
+      "whole_shutter_covering_primitives": 11266,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "original",
+      "side": 0,
+      "frame": 122,
+      "pre_fallback_intervals": 491,
+      "whole_shutter_covering_primitives": 11923,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "original",
+      "side": 1,
+      "frame": 122,
+      "pre_fallback_intervals": 491,
+      "whole_shutter_covering_primitives": 11923,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "original",
+      "side": 0,
+      "frame": 126,
+      "pre_fallback_intervals": 853,
+      "whole_shutter_covering_primitives": 15153,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "original",
+      "side": 1,
+      "frame": 126,
+      "pre_fallback_intervals": 853,
+      "whole_shutter_covering_primitives": 15153,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "original",
+      "side": 0,
+      "frame": 130,
+      "pre_fallback_intervals": 985,
+      "whole_shutter_covering_primitives": 16015,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "original",
+      "side": 1,
+      "frame": 130,
+      "pre_fallback_intervals": 985,
+      "whole_shutter_covering_primitives": 16015,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "original",
+      "side": 0,
+      "frame": 134,
+      "pre_fallback_intervals": 1038,
+      "whole_shutter_covering_primitives": 16058,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "original",
+      "side": 1,
+      "frame": 134,
+      "pre_fallback_intervals": 1038,
+      "whole_shutter_covering_primitives": 16058,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "original",
+      "side": 0,
+      "frame": 138,
+      "pre_fallback_intervals": 788,
+      "whole_shutter_covering_primitives": 14547,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "original",
+      "side": 1,
+      "frame": 138,
+      "pre_fallback_intervals": 788,
+      "whole_shutter_covering_primitives": 14547,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "original",
+      "side": 0,
+      "frame": 142,
+      "pre_fallback_intervals": 518,
+      "whole_shutter_covering_primitives": 10606,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "original",
+      "side": 1,
+      "frame": 142,
+      "pre_fallback_intervals": 518,
+      "whole_shutter_covering_primitives": 10606,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "modified",
+      "side": 0,
+      "frame": 122,
+      "pre_fallback_intervals": 404,
+      "whole_shutter_covering_primitives": 12547,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "modified",
+      "side": 1,
+      "frame": 122,
+      "pre_fallback_intervals": 404,
+      "whole_shutter_covering_primitives": 12547,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "modified",
+      "side": 0,
+      "frame": 126,
+      "pre_fallback_intervals": 692,
+      "whole_shutter_covering_primitives": 16147,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "modified",
+      "side": 1,
+      "frame": 126,
+      "pre_fallback_intervals": 692,
+      "whole_shutter_covering_primitives": 16147,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "modified",
+      "side": 0,
+      "frame": 130,
+      "pre_fallback_intervals": 758,
+      "whole_shutter_covering_primitives": 17199,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "modified",
+      "side": 1,
+      "frame": 130,
+      "pre_fallback_intervals": 758,
+      "whole_shutter_covering_primitives": 17199,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "modified",
+      "side": 0,
+      "frame": 134,
+      "pre_fallback_intervals": 734,
+      "whole_shutter_covering_primitives": 17074,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "modified",
+      "side": 1,
+      "frame": 134,
+      "pre_fallback_intervals": 734,
+      "whole_shutter_covering_primitives": 17074,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "modified",
+      "side": 0,
+      "frame": 138,
+      "pre_fallback_intervals": 578,
+      "whole_shutter_covering_primitives": 15259,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "modified",
+      "side": 1,
+      "frame": 138,
+      "pre_fallback_intervals": 578,
+      "whole_shutter_covering_primitives": 15259,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "modified",
+      "side": 0,
+      "frame": 142,
+      "pre_fallback_intervals": 415,
+      "whole_shutter_covering_primitives": 11209,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "modified",
+      "side": 1,
+      "frame": 142,
+      "pre_fallback_intervals": 415,
+      "whole_shutter_covering_primitives": 11209,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "gauss",
+      "side": 0,
+      "frame": 122,
+      "pre_fallback_intervals": 403,
+      "whole_shutter_covering_primitives": 12544,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "gauss",
+      "side": 1,
+      "frame": 122,
+      "pre_fallback_intervals": 403,
+      "whole_shutter_covering_primitives": 12544,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "gauss",
+      "side": 0,
+      "frame": 126,
+      "pre_fallback_intervals": 686,
+      "whole_shutter_covering_primitives": 16150,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "gauss",
+      "side": 1,
+      "frame": 126,
+      "pre_fallback_intervals": 686,
+      "whole_shutter_covering_primitives": 16150,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "gauss",
+      "side": 0,
+      "frame": 130,
+      "pre_fallback_intervals": 760,
+      "whole_shutter_covering_primitives": 17198,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "gauss",
+      "side": 1,
+      "frame": 130,
+      "pre_fallback_intervals": 760,
+      "whole_shutter_covering_primitives": 17198,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "gauss",
+      "side": 0,
+      "frame": 134,
+      "pre_fallback_intervals": 724,
+      "whole_shutter_covering_primitives": 17081,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "gauss",
+      "side": 1,
+      "frame": 134,
+      "pre_fallback_intervals": 724,
+      "whole_shutter_covering_primitives": 17081,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "gauss",
+      "side": 0,
+      "frame": 138,
+      "pre_fallback_intervals": 578,
+      "whole_shutter_covering_primitives": 15263,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "gauss",
+      "side": 1,
+      "frame": 138,
+      "pre_fallback_intervals": 578,
+      "whole_shutter_covering_primitives": 15263,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "gauss",
+      "side": 0,
+      "frame": 142,
+      "pre_fallback_intervals": 416,
+      "whole_shutter_covering_primitives": 11210,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    },
+    {
+      "run": "dsec_n120_s2",
+      "method": "gauss",
+      "side": 1,
+      "frame": 142,
+      "pre_fallback_intervals": 416,
+      "whole_shutter_covering_primitives": 11210,
+      "fallback_at_order8": true,
+      "fallback_at_order32": true
+    }
+  ]
+}

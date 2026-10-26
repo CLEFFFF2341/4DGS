@@ -1,0 +1,266 @@
+{
+  "args": {
+    "root": "dataset/evdeblurnerf_real/ev-deblurnerf_cdavis",
+    "scene": "blurfigures",
+    "seed": 0,
+    "points": 8192,
+    "warmup": 1200,
+    "steps": 600,
+    "calls": 8,
+    "out": "output/real_cdavis_blurfigures_s0"
+  },
+  "dataset": {
+    "scene": "blurfigures",
+    "train": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "test": [
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "resolution": [
+      346,
+      260
+    ],
+    "exposure_seconds": [
+      0.099999,
+      0.099999,
+      0.099998,
+      0.09999799999999998,
+      0.099999,
+      0.09999900000000006,
+      0.09999900000000006,
+      0.09999899999999995,
+      0.09999900000000006,
+      0.09999899999999995,
+      0.09999800000000003,
+      0.09999899999999995,
+      0.09999800000000003,
+      0.09999899999999995,
+      0.09999800000000003
+    ],
+    "trajectory_seconds": [
+      0.00250825,
+      1.7525605
+    ],
+    "extrapolated_edge_seconds": [
+      0.00250825,
+      0.004213500000000092
+    ],
+    "test_times_from_slider_position": {
+      "15": 0.06315708821026984,
+      "16": 0.46577090357296513,
+      "17": 0.868383465703826,
+      "18": 1.2709719500831296,
+      "19": 1.6735869864978141
+    },
+    "file_sha256": {
+      "all_poses_bounds.npy": "51db5c0b390f07a0dd94ceb1f592bc9d143cf8aae5e7ca173210cdbfc718d91d",
+      "all_timestamps.npy": "ab35ee7f11119ff279e0b4c0a8d515f8618e2fc917e3542d00113d811163cbf5",
+      "ev_map.npz": "849d4e273d09a91c9aa889efa958f8807e7759b5072b5a49576509167e39e5ed",
+      "poses_bounds.npy": "ec33065199ef4545fae0bf8f67159e67cb50b2ff54c4434de7cd54e639e8637d",
+      "images_1\\00.png": "ad82ffc243e7ec8cfe2ea0cfd6f7bdf2d01773172812e16c48b71eaf4bf39d0b",
+      "images_1\\01.png": "55fb3457bcce745f727c5da7c4a52cead518f24e159c33f4d36759f9acfc7003",
+      "images_1\\02.png": "ff031d3ff11efc5762b031413027196db3b7740b1e147d34c3f20a84897fae52",
+      "images_1\\03.png": "a97e1c0482bc448ac3a39df85e1fd56b0d74263102edcfeb50f3abab15db4f0d",
+      "images_1\\04.png": "75fd57f38bf6ebab4a036086a601800af41a575793475533b9ef1d4b82755aad",
+      "images_1\\05.png": "a5b6e2443281735c7dc239b45e9ca87b2a583d09697c150e59aa60f278c8f00e",
+      "images_1\\06.png": "ea4124db20239ca7f878cc3d8ac1ab1e2a504472b5f0f4f82d767a443102adcf",
+      "images_1\\07.png": "ccaf407fb8df1aaf60ded32902d17bb67cad1d3a5d62a482ef0498e63441b24d",
+      "images_1\\08.png": "39033b953cb426228348110a1a3412b813bda38982efd4f8609138f0b57e3ced",
+      "images_1\\09.png": "ef7d8a92bef42135368501f29287f530fcfcc310dd75fadcb92bdeb0e95dfdfe",
+      "images_1\\10.png": "ffd628c122c6eb1621ebd68743a24fd32ca301c83f109ff1f4f4da178829c361",
+      "images_1\\11.png": "cfb1d14eb6e40a114cf396a7270ddda8a39eefb5d7d25e7a8837aa61f67b2927",
+      "images_1\\12.png": "5d85aafc18572e91e000071a8ad88e0520a902bf596e0624b6622671b6b08484",
+      "images_1\\13.png": "2c16945dd3b8257dc21a595219af3aee3bc2bda348a4721e6dad4629d5d8723a",
+      "images_1\\14.png": "5c502ecfb035e13ee9bad012b92ae051cf5e9f39b453c17825d00e6377721a3f",
+      "images_1\\15.png": "4ba43e51a9fde822e36957127587f05b29052f5e9f1add7df4224c999ba8982b",
+      "images_1\\16.png": "2293c638651ca21c8abeaecd7d439736562cbad330bdb691d2a978124db46c4d",
+      "images_1\\17.png": "d59094a76e1b74c716d2cc428cc45137f0dcb9356b100cf3cbd41830a5fd4dce",
+      "images_1\\18.png": "7ac9388853aa6316ca6eebd6a48beb4610bb3a986a412d93cf87435e7a0947a6",
+      "images_1\\19.png": "3cd277cd38d2d1985a7ca101e775028f73aa5ff0cafb2267506f432e0b32e0e9",
+      "images_1\\timestamps.npz": "4c62bacbace44e2dbd13a6bbe32844576acf45d99b0e581daca7047484f967d7"
+    }
+  },
+  "protocol": "shared train-only warmup; all arms same order and steps; no test selection; RGB frame loss only; all XYZ trainable; static slider scene",
+  "code_sha256": "95ea49507cba01df1713bed95d5515140c670f81e89f284b2fc1abb7b4279ab5",
+  "warmup_training": {
+    "seconds": 8.549760300003982,
+    "steps": 1200,
+    "global_gauss_identical_schedule_steps": 1200,
+    "loss_first": 0.030825799331068993,
+    "loss_last": 0.00020891100575681776
+  },
+  "initial": {
+    "sharp_test": [
+      {
+        "index": 15,
+        "psnr": 27.74060611831964,
+        "ssim": 0.7303581833839417
+      },
+      {
+        "index": 16,
+        "psnr": 27.941938923574334,
+        "ssim": 0.7239540219306946
+      },
+      {
+        "index": 17,
+        "psnr": 27.458038217445665,
+        "ssim": 0.7053762078285217
+      },
+      {
+        "index": 18,
+        "psnr": 27.429515623569817,
+        "ssim": 0.7138026356697083
+      },
+      {
+        "index": 19,
+        "psnr": 27.622409726005365,
+        "ssim": 0.7123607993125916
+      }
+    ],
+    "mean_psnr": 27.638501721782962,
+    "mean_ssim": 0.7171703696250915,
+    "train_mse_double_order": 0.00020452413106492411,
+    "quadrature_mse_calls_vs_double": 3.5301972426774836e-08
+  },
+  "arms": {
+    "original": {
+      "seconds": 4.543181699998968,
+      "steps": 600,
+      "global_gauss_identical_schedule_steps": 600,
+      "loss_first": 0.00019378625438548625,
+      "loss_last": 0.0006723231635987759,
+      "metrics": {
+        "sharp_test": [
+          {
+            "index": 15,
+            "psnr": 26.16073831220951,
+            "ssim": 0.7109935283660889
+          },
+          {
+            "index": 16,
+            "psnr": 26.22155754122733,
+            "ssim": 0.6907042860984802
+          },
+          {
+            "index": 17,
+            "psnr": 26.252122112312986,
+            "ssim": 0.6810823082923889
+          },
+          {
+            "index": 18,
+            "psnr": 26.049834868588476,
+            "ssim": 0.6839709281921387
+          },
+          {
+            "index": 19,
+            "psnr": 26.403240870829052,
+            "ssim": 0.6890107989311218
+          }
+        ],
+        "mean_psnr": 26.217498741033474,
+        "mean_ssim": 0.6911523699760437,
+        "train_mse_double_order": 0.0007417242120330533,
+        "quadrature_mse_calls_vs_double": 1.3321549552358647e-08
+      }
+    },
+    "modified": {
+      "seconds": 4.575412099999085,
+      "steps": 600,
+      "global_gauss_identical_schedule_steps": 500,
+      "loss_first": 0.00019378625438548625,
+      "loss_last": 0.00013051138375885785,
+      "metrics": {
+        "sharp_test": [
+          {
+            "index": 15,
+            "psnr": 28.564973506096315,
+            "ssim": 0.7627778053283691
+          },
+          {
+            "index": 16,
+            "psnr": 28.621467538280136,
+            "ssim": 0.754466712474823
+          },
+          {
+            "index": 17,
+            "psnr": 28.045529794957133,
+            "ssim": 0.7326121926307678
+          },
+          {
+            "index": 18,
+            "psnr": 28.116449877525696,
+            "ssim": 0.741352379322052
+          },
+          {
+            "index": 19,
+            "psnr": 28.316054152306936,
+            "ssim": 0.7403644919395447
+          }
+        ],
+        "mean_psnr": 28.33289497383324,
+        "mean_ssim": 0.7463147163391113,
+        "train_mse_double_order": 0.00012959678909586121,
+        "quadrature_mse_calls_vs_double": 3.5568053391443755e-08
+      }
+    },
+    "gauss": {
+      "seconds": 4.30252649999602,
+      "steps": 600,
+      "global_gauss_identical_schedule_steps": 600,
+      "loss_first": 0.00019378625438548625,
+      "loss_last": 0.00012773135676980019,
+      "metrics": {
+        "sharp_test": [
+          {
+            "index": 15,
+            "psnr": 28.56161371337045,
+            "ssim": 0.7627604007720947
+          },
+          {
+            "index": 16,
+            "psnr": 28.62216105475436,
+            "ssim": 0.7545078992843628
+          },
+          {
+            "index": 17,
+            "psnr": 28.050024594128455,
+            "ssim": 0.732658863067627
+          },
+          {
+            "index": 18,
+            "psnr": 28.115962328833653,
+            "ssim": 0.7413293719291687
+          },
+          {
+            "index": 19,
+            "psnr": 28.315882270859852,
+            "ssim": 0.7403401732444763
+          }
+        ],
+        "mean_psnr": 28.333128792389353,
+        "mean_ssim": 0.7463193416595459,
+        "train_mse_double_order": 0.00012904119212180375,
+        "quadrature_mse_calls_vs_double": 3.588633804933276e-08
+      }
+    }
+  }
+}

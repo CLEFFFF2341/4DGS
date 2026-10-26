@@ -1,0 +1,275 @@
+{
+  "args": {
+    "root": "dataset/evdeblurnerf_real/ev-deblurnerf_cdavis",
+    "scene": "blurpowersupplies",
+    "seed": 2,
+    "points": 8192,
+    "warmup": 1200,
+    "steps": 600,
+    "calls": 8,
+    "out": "output/real_cdavis_blurpowersupplies_s2"
+  },
+  "dataset": {
+    "scene": "blurpowersupplies",
+    "train": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "test": [
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "resolution": [
+      346,
+      260
+    ],
+    "exposure_seconds": [
+      0.1,
+      0.099999,
+      0.09999999999999998,
+      0.099999,
+      0.099999,
+      0.09999900000000006,
+      0.09999900000000006,
+      0.09999799999999992,
+      0.09999800000000014,
+      0.10000000000000009,
+      0.09999900000000017,
+      0.09999900000000017,
+      0.09999999999999987,
+      0.09999999999999987,
+      0.09999899999999995,
+      0.09999899999999995,
+      0.09999800000000003,
+      0.09999899999999995
+    ],
+    "trajectory_seconds": [
+      0.00181275,
+      2.101829
+    ],
+    "extrapolated_edge_seconds": [
+      0.00181275,
+      0.009968999999999895
+    ],
+    "test_times_from_slider_position": {
+      "18": 0.12124090074645663,
+      "19": 0.6101096936086068,
+      "20": 1.0012232027141672,
+      "21": 1.4900768423712947,
+      "22": 1.978956989104542
+    },
+    "file_sha256": {
+      "all_poses_bounds.npy": "f6bea0034161713eb0f615a35319b3f2fdaee302944efe47e8cad554273e159d",
+      "all_timestamps.npy": "ed0b985262058db2c3d8fab0c638e7ba02b4115f9bb4591e86b0bcfc77beff1b",
+      "ev_map.npz": "849d4e273d09a91c9aa889efa958f8807e7759b5072b5a49576509167e39e5ed",
+      "poses_bounds.npy": "5789e7f1bcd2a94f8b719e691c9a1338de8f9d634de706aa839c306994e8b3f3",
+      "images_1\\00.png": "481f4b854eea83efc003d6b28248a2e961c5b1eecb21405f77b9b3069a51d873",
+      "images_1\\01.png": "c737872b69567032aadf07ef52a3729124a5994cd169aa70a196426910867b1b",
+      "images_1\\02.png": "6e5bf4936761198e66f416fb31da65235b46321f2aca058562d1c6859fb0f02d",
+      "images_1\\03.png": "d55af592746016aad528049f1b84330192a6257f60c0b6d75b48fa1c5aff18de",
+      "images_1\\04.png": "867ace48dc15cb3fcec41f3837a8de65599c7e5996a2c2a2754e82c2df6be205",
+      "images_1\\05.png": "4cc11aaf5e7fa4ba6ca5ce62ea3bbee991c682bd2b1999e070afa816bc4ea71b",
+      "images_1\\06.png": "c26f6ed9182dfa6ae78855604c3cdf44dd7a06954ae59b2b81e85e79f1d7c002",
+      "images_1\\07.png": "de77d6cba78701541733675f42a2ba348b52bb2616ec2c15edeb0f8e0dd6a4ad",
+      "images_1\\08.png": "a8a78952133af5c9b07ca5f3c9329e7e02296e8f7e268d3aa0726fba5e2f2af3",
+      "images_1\\09.png": "47e03263fb9a4e46dfa8b4aa01bc894062a880db72cea90045facc54429da5bb",
+      "images_1\\10.png": "6e83c87e9f858f92ddf7566202447e3f830a7f4743f6a1f87b79c2b25803b067",
+      "images_1\\11.png": "ee1f8ac2f8cea881f494d2965081f29f5a3620cc5de524a228749dd564770c43",
+      "images_1\\12.png": "0c7277aee54d3acdda347165114f063887c4c3b783264abd05022a4c4bb9b180",
+      "images_1\\13.png": "3eb5531dc05357f08a612dfd4e32f1a3b9d2c7f202b31a475c68e6d76156013e",
+      "images_1\\14.png": "40f07197647a29792371d63f9553cfb7592f47d6130b521e978562ef268da79e",
+      "images_1\\15.png": "74318f16572d3bae789f00bcafbdca23858e221350503cddb95d7004e703b9f5",
+      "images_1\\16.png": "0f946a3cb10e3e8b2a17f362713989134328d822e4334da533d1967bd976b895",
+      "images_1\\17.png": "f1c89b6edd99d75b4109bfa0d97386972254992d3344f63d4e2c69996d36442b",
+      "images_1\\18.png": "44ea513e6b3aff2eb1e52da8aba16dc16786ffdd119f016cc0f4757d34f24ec5",
+      "images_1\\19.png": "b7089595084aca1f19b08648a638624e69161df1bcb5dd00f150b2099a8bd4e1",
+      "images_1\\20.png": "1f600d7c6c15c88f9fb9129e9aa2dfe1cbce6746abfac8f146e4b6db2973e840",
+      "images_1\\21.png": "148129627b3b0052d0a003e5b0811c8a40642b28177987188b9abb5e55a174b0",
+      "images_1\\22.png": "3fd4ad4d593b186a815efe1a48cfc4c5ad343c761d8d2ff603166aa58f03dcaa",
+      "images_1\\timestamps.npz": "a8ddabd02ca5c5fac734a2161e501cbb4ab2fb927b85e821bad5ffdd7c14272e"
+    }
+  },
+  "protocol": "shared train-only warmup; all arms same order and steps; no test selection; RGB frame loss only; all XYZ trainable; static slider scene",
+  "code_sha256": "95ea49507cba01df1713bed95d5515140c670f81e89f284b2fc1abb7b4279ab5",
+  "warmup_training": {
+    "seconds": 8.361192399999709,
+    "steps": 1200,
+    "global_gauss_identical_schedule_steps": 1200,
+    "loss_first": 0.05580584332346916,
+    "loss_last": 0.0004498168418649584
+  },
+  "initial": {
+    "sharp_test": [
+      {
+        "index": 18,
+        "psnr": 25.250317283482836,
+        "ssim": 0.6968942284584045
+      },
+      {
+        "index": 19,
+        "psnr": 25.62548514177419,
+        "ssim": 0.7176945805549622
+      },
+      {
+        "index": 20,
+        "psnr": 25.59950741011407,
+        "ssim": 0.7214425206184387
+      },
+      {
+        "index": 21,
+        "psnr": 25.740644526834675,
+        "ssim": 0.7240496873855591
+      },
+      {
+        "index": 22,
+        "psnr": 25.167859643101117,
+        "ssim": 0.7109405398368835
+      }
+    ],
+    "mean_psnr": 25.476762801061376,
+    "mean_ssim": 0.7142043113708496,
+    "train_mse_double_order": 0.0005047142589723484,
+    "quadrature_mse_calls_vs_double": 3.723346648282839e-08
+  },
+  "arms": {
+    "original": {
+      "seconds": 4.386996599998383,
+      "steps": 600,
+      "global_gauss_identical_schedule_steps": 600,
+      "loss_first": 0.0006523653864860535,
+      "loss_last": 0.0014537535607814789,
+      "metrics": {
+        "sharp_test": [
+          {
+            "index": 18,
+            "psnr": 24.131258576352373,
+            "ssim": 0.6722673773765564
+          },
+          {
+            "index": 19,
+            "psnr": 24.40699700502151,
+            "ssim": 0.671436071395874
+          },
+          {
+            "index": 20,
+            "psnr": 24.231275791409047,
+            "ssim": 0.6692101955413818
+          },
+          {
+            "index": 21,
+            "psnr": 23.90192896904926,
+            "ssim": 0.6612040400505066
+          },
+          {
+            "index": 22,
+            "psnr": 23.233618838995696,
+            "ssim": 0.6422598958015442
+          }
+        ],
+        "mean_psnr": 23.981015836165575,
+        "mean_ssim": 0.6632755160331726,
+        "train_mse_double_order": 0.0015113606285821232,
+        "quadrature_mse_calls_vs_double": 1.2721973795414165e-08
+      }
+    },
+    "modified": {
+      "seconds": 4.511206700000912,
+      "steps": 600,
+      "global_gauss_identical_schedule_steps": 519,
+      "loss_first": 0.0006523653864860535,
+      "loss_last": 0.00029174296651035547,
+      "metrics": {
+        "sharp_test": [
+          {
+            "index": 18,
+            "psnr": 26.365516966039007,
+            "ssim": 0.7512959241867065
+          },
+          {
+            "index": 19,
+            "psnr": 26.577503121220396,
+            "ssim": 0.7643575072288513
+          },
+          {
+            "index": 20,
+            "psnr": 26.529973289078256,
+            "ssim": 0.7679452300071716
+          },
+          {
+            "index": 21,
+            "psnr": 26.527330332990836,
+            "ssim": 0.7658685445785522
+          },
+          {
+            "index": 22,
+            "psnr": 26.019598662378893,
+            "ssim": 0.7533650398254395
+          }
+        ],
+        "mean_psnr": 26.403984474341474,
+        "mean_ssim": 0.7605664491653442,
+        "train_mse_double_order": 0.00029486642678319995,
+        "quadrature_mse_calls_vs_double": 3.6876330927131875e-08
+      }
+    },
+    "gauss": {
+      "seconds": 4.395296499998949,
+      "steps": 600,
+      "global_gauss_identical_schedule_steps": 600,
+      "loss_first": 0.0006523653864860535,
+      "loss_last": 0.00029174366500228643,
+      "metrics": {
+        "sharp_test": [
+          {
+            "index": 18,
+            "psnr": 26.36527568917382,
+            "ssim": 0.7512918710708618
+          },
+          {
+            "index": 19,
+            "psnr": 26.576853923481416,
+            "ssim": 0.7643340229988098
+          },
+          {
+            "index": 20,
+            "psnr": 26.529984204325217,
+            "ssim": 0.7679327130317688
+          },
+          {
+            "index": 21,
+            "psnr": 26.527138527805434,
+            "ssim": 0.7658517360687256
+          },
+          {
+            "index": 22,
+            "psnr": 26.01978346569354,
+            "ssim": 0.7533642053604126
+          }
+        ],
+        "mean_psnr": 26.403807162095887,
+        "mean_ssim": 0.7605549097061157,
+        "train_mse_double_order": 0.0002948515466414392,
+        "quadrature_mse_calls_vs_double": 3.7478290298369956e-08
+      }
+    }
+  }
+}

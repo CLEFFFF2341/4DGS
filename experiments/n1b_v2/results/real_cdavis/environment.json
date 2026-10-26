@@ -1,0 +1,16 @@
+{
+  "git_head": "2561d7dd9adbe729f35d39972b72c9f74752e19e",
+  "torch": "2.8.0",
+  "cuda": "12.8",
+  "backend_sha256": "a6f3241896769cee804dcdcac7b87c08a7cd75f1e2410fd389e28ef8263ff042",
+  "sources": {
+    "real_cdavis.py": "95ea49507cba01df1713bed95d5515140c670f81e89f284b2fc1abb7b4279ab5",
+    "real_cdavis_audit.py": "3b8674053ac8f0fca43daff5c1498df5b41cb27cf019ce7e35063715df8bfc2e",
+    "joint_optimization.py": "3d978d2a2de4d6937a90d6567b713615e772da1f748bb343043d795fb5b3defb",
+    "partition.py": "ce5891ba61dbc2a459159df0840ec966642db8959d49751125e1304ede890ca4",
+    "download_cdavis.py": "0cb95c22d3df4f5197cb635de8815f9670277115504d06ac44143e972ab65faf",
+    "test_real_cdavis.py": "9bc86d8afb62c03762165425aae3c73da719e4cebef9806ea156e458828f936f"
+  },
+  "validated_runs": 15,
+  "unit_tests_passed": 15
+}

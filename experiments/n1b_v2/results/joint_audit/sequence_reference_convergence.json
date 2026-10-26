@@ -1,0 +1,191 @@
+[
+  {
+    "seed": 14,
+    "model": "truth",
+    "shutter": 0,
+    "full_mse_change": 1.1980045396473632e-14,
+    "max_abs_change": 6.427353579363526e-07
+  },
+  {
+    "seed": 14,
+    "model": "sequence-gauss8",
+    "shutter": 0,
+    "full_mse_change": 3.1008008626197724e-15,
+    "max_abs_change": 3.7284941056814347e-07
+  },
+  {
+    "seed": 14,
+    "model": "sequence-partition8",
+    "shutter": 0,
+    "full_mse_change": 1.9414370927445437e-15,
+    "max_abs_change": 2.671242094187676e-07
+  },
+  {
+    "seed": 15,
+    "model": "truth",
+    "shutter": 0,
+    "full_mse_change": 2.3839525778696867e-16,
+    "max_abs_change": 2.135417800364081e-07
+  },
+  {
+    "seed": 15,
+    "model": "truth",
+    "shutter": 1,
+    "full_mse_change": 9.793043915449541e-17,
+    "max_abs_change": 1.396539154319143e-07
+  },
+  {
+    "seed": 15,
+    "model": "truth",
+    "shutter": 2,
+    "full_mse_change": 1.2212060427436637e-15,
+    "max_abs_change": 4.845011256082721e-07
+  },
+  {
+    "seed": 15,
+    "model": "truth",
+    "shutter": 3,
+    "full_mse_change": 1.119883374923705e-16,
+    "max_abs_change": 1.4309368173703874e-07
+  },
+  {
+    "seed": 15,
+    "model": "truth",
+    "shutter": 4,
+    "full_mse_change": 5.336997921502332e-15,
+    "max_abs_change": 1.0062216945216917e-06
+  },
+  {
+    "seed": 15,
+    "model": "truth",
+    "shutter": 5,
+    "full_mse_change": 2.997176767347175e-15,
+    "max_abs_change": 7.57172436527398e-07
+  },
+  {
+    "seed": 15,
+    "model": "truth",
+    "shutter": 6,
+    "full_mse_change": 5.597164694057507e-17,
+    "max_abs_change": 1.0673102712743798e-07
+  },
+  {
+    "seed": 15,
+    "model": "truth",
+    "shutter": 7,
+    "full_mse_change": 4.175139502529967e-15,
+    "max_abs_change": 8.857267232986743e-07
+  },
+  {
+    "seed": 15,
+    "model": "sequence-partition8",
+    "shutter": 0,
+    "full_mse_change": 4.197535780676359e-17,
+    "max_abs_change": 9.203528217316403e-08
+  },
+  {
+    "seed": 15,
+    "model": "sequence-partition8",
+    "shutter": 1,
+    "full_mse_change": 1.500793040147808e-16,
+    "max_abs_change": 1.7230114679467334e-07
+  },
+  {
+    "seed": 15,
+    "model": "sequence-partition8",
+    "shutter": 2,
+    "full_mse_change": 1.1202777777791048e-15,
+    "max_abs_change": 4.7150437632037523e-07
+  },
+  {
+    "seed": 15,
+    "model": "sequence-partition8",
+    "shutter": 3,
+    "full_mse_change": 1.1570151369371404e-16,
+    "max_abs_change": 1.5501498479286724e-07
+  },
+  {
+    "seed": 15,
+    "model": "sequence-partition8",
+    "shutter": 4,
+    "full_mse_change": 1.1935039359009614e-15,
+    "max_abs_change": 4.840473942779866e-07
+  },
+  {
+    "seed": 15,
+    "model": "sequence-partition8",
+    "shutter": 5,
+    "full_mse_change": 9.242429544792051e-16,
+    "max_abs_change": 4.324835544133876e-07
+  },
+  {
+    "seed": 15,
+    "model": "sequence-partition8",
+    "shutter": 6,
+    "full_mse_change": 1.7482806796501812e-16,
+    "max_abs_change": 1.9332947220895846e-07
+  },
+  {
+    "seed": 15,
+    "model": "sequence-partition8",
+    "shutter": 7,
+    "full_mse_change": 6.179504155293952e-16,
+    "max_abs_change": 3.5756982674772786e-07
+  },
+  {
+    "seed": 15,
+    "model": "sequence-gauss8",
+    "shutter": 0,
+    "full_mse_change": 4.645515980623517e-16,
+    "max_abs_change": 3.0546630125360963e-07
+  },
+  {
+    "seed": 15,
+    "model": "sequence-gauss8",
+    "shutter": 1,
+    "full_mse_change": 4.0719615051479514e-16,
+    "max_abs_change": 2.841702604339247e-07
+  },
+  {
+    "seed": 15,
+    "model": "sequence-gauss8",
+    "shutter": 2,
+    "full_mse_change": 1.4574179876120335e-16,
+    "max_abs_change": 1.700333239762486e-07
+  },
+  {
+    "seed": 15,
+    "model": "sequence-gauss8",
+    "shutter": 3,
+    "full_mse_change": 7.574947249498405e-17,
+    "max_abs_change": 1.2159148532475683e-07
+  },
+  {
+    "seed": 15,
+    "model": "sequence-gauss8",
+    "shutter": 4,
+    "full_mse_change": 3.207443984385546e-16,
+    "max_abs_change": 2.48394729673862e-07
+  },
+  {
+    "seed": 15,
+    "model": "sequence-gauss8",
+    "shutter": 5,
+    "full_mse_change": 6.390425988108813e-16,
+    "max_abs_change": 3.4897915779374955e-07
+  },
+  {
+    "seed": 15,
+    "model": "sequence-gauss8",
+    "shutter": 6,
+    "full_mse_change": 2.826031818569033e-17,
+    "max_abs_change": 7.562905013358545e-08
+  },
+  {
+    "seed": 15,
+    "model": "sequence-gauss8",
+    "shutter": 7,
+    "full_mse_change": 3.4852728901607235e-15,
+    "max_abs_change": 8.225859712274186e-07
+  }
+]

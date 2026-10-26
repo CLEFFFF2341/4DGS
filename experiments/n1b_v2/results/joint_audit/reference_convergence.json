@@ -1,0 +1,146 @@
+[
+  {
+    "seed": 6,
+    "model": "truth",
+    "camera": 0,
+    "merged_identical_float32_timestamps": true,
+    "full_mse_change": 2.982652016430425e-20,
+    "roi_mse_change": 3.2282422346065714e-19,
+    "max_abs_change": 1.3758408370923014e-09
+  },
+  {
+    "seed": 6,
+    "model": "truth",
+    "camera": 1,
+    "merged_identical_float32_timestamps": true,
+    "full_mse_change": 4.472845188452382e-18,
+    "roi_mse_change": 3.562722524296907e-17,
+    "max_abs_change": 1.1017776108124266e-08
+  },
+  {
+    "seed": 6,
+    "model": "partition32",
+    "camera": 0,
+    "merged_identical_float32_timestamps": true,
+    "full_mse_change": 7.439907105499809e-19,
+    "roi_mse_change": 6.296953747885593e-18,
+    "max_abs_change": 1.1850891615261538e-08
+  },
+  {
+    "seed": 6,
+    "model": "partition32",
+    "camera": 1,
+    "merged_identical_float32_timestamps": true,
+    "full_mse_change": 4.8665402561694605e-19,
+    "roi_mse_change": 3.9639930953761186e-18,
+    "max_abs_change": 6.2496038830128775e-09
+  },
+  {
+    "seed": 6,
+    "model": "gauss64",
+    "camera": 0,
+    "merged_identical_float32_timestamps": true,
+    "full_mse_change": 1.803024923570211e-18,
+    "roi_mse_change": 2.0440553266771202e-17,
+    "max_abs_change": 1.5390209828769486e-08
+  },
+  {
+    "seed": 6,
+    "model": "gauss64",
+    "camera": 1,
+    "merged_identical_float32_timestamps": true,
+    "full_mse_change": 1.0227383421656307e-18,
+    "roi_mse_change": 1.0160724593793389e-17,
+    "max_abs_change": 1.0398875691097764e-08
+  },
+  {
+    "seed": 6,
+    "model": "gauss128",
+    "camera": 0,
+    "merged_identical_float32_timestamps": true,
+    "full_mse_change": 7.42705745493489e-19,
+    "roi_mse_change": 7.174717833211588e-18,
+    "max_abs_change": 7.845906500880684e-09
+  },
+  {
+    "seed": 6,
+    "model": "gauss128",
+    "camera": 1,
+    "merged_identical_float32_timestamps": true,
+    "full_mse_change": 8.377325771489243e-19,
+    "roi_mse_change": 7.072965134180193e-18,
+    "max_abs_change": 6.9597850746450085e-09
+  },
+  {
+    "seed": 7,
+    "model": "truth",
+    "camera": 0,
+    "merged_identical_float32_timestamps": true,
+    "full_mse_change": 1.0385149641690524e-18,
+    "roi_mse_change": 1.0715318602760557e-17,
+    "max_abs_change": 1.0343939670087732e-08
+  },
+  {
+    "seed": 7,
+    "model": "truth",
+    "camera": 1,
+    "merged_identical_float32_timestamps": true,
+    "full_mse_change": 3.8808393479403415e-18,
+    "roi_mse_change": 3.956036854784858e-17,
+    "max_abs_change": 2.1540987826806912e-08
+  },
+  {
+    "seed": 7,
+    "model": "partition32",
+    "camera": 0,
+    "merged_identical_float32_timestamps": true,
+    "full_mse_change": 6.29161058159927e-19,
+    "roi_mse_change": 6.486789523027008e-18,
+    "max_abs_change": 8.20854243605007e-09
+  },
+  {
+    "seed": 7,
+    "model": "partition32",
+    "camera": 1,
+    "merged_identical_float32_timestamps": true,
+    "full_mse_change": 1.0134456633378118e-18,
+    "roi_mse_change": 1.0242793201383054e-17,
+    "max_abs_change": 1.1297714076763388e-08
+  },
+  {
+    "seed": 7,
+    "model": "gauss64",
+    "camera": 0,
+    "merged_identical_float32_timestamps": true,
+    "full_mse_change": 1.3671026587784707e-18,
+    "roi_mse_change": 1.4114376804618234e-17,
+    "max_abs_change": 1.584071512850116e-08
+  },
+  {
+    "seed": 7,
+    "model": "gauss64",
+    "camera": 1,
+    "merged_identical_float32_timestamps": true,
+    "full_mse_change": 3.913059912667561e-18,
+    "roi_mse_change": 4.0961699660319526e-17,
+    "max_abs_change": 2.5576107245961488e-08
+  },
+  {
+    "seed": 7,
+    "model": "gauss128",
+    "camera": 0,
+    "merged_identical_float32_timestamps": true,
+    "full_mse_change": 5.633135070417417e-19,
+    "roi_mse_change": 5.8741225408679176e-18,
+    "max_abs_change": 1.002393080345998e-08
+  },
+  {
+    "seed": 7,
+    "model": "gauss128",
+    "camera": 1,
+    "merged_identical_float32_timestamps": true,
+    "full_mse_change": 2.084884831724788e-18,
+    "roi_mse_change": 2.1764328530344348e-17,
+    "max_abs_change": 1.702234196654384e-08
+  }
+]

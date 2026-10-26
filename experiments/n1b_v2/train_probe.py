@@ -12,9 +12,17 @@ from dataclasses import replace
 from pathlib import Path
 import numpy as np
 import torch
-from experiments.n1b.narrow_benchmark import fixture, reference, render, proxy
+from experiments.n1b.narrow_benchmark import fixture, reference, proxy
 from experiments.n1b.benchmark import Proposal, sync
 from .partition import nodes
+from experiments.n1b.core import render_cuda
+
+
+def render_pixels(raw, cam, pix, bg, t):
+    """Select integer-center pixels without hard-coding the central 8x8 ROI."""
+    image = render_cuda(raw, cam, t, bg)
+    xy = pix.long()
+    return image[:, xy[:, 1], xy[:, 0]].T.double()
 
 
 def prediction(method, raw, cam, pix, bg, calls=32):
@@ -30,9 +38,9 @@ def prediction(method, raw, cam, pix, bg, calls=32):
         with torch.no_grad():
             h, w = Proposal(proxy(raw, cam, pix, bg)).sample(calls)
         ts = list(zip((h+.5).tolist(), (w/calls).tolist())); background = 0
-    result = bg.double().expand(64, 3)*background
+    result = bg.double().expand(len(pix), 3)*background
     for t, w in ts:
-        result = result+float(w)*render(raw, cam, bg, float(t))
+        result = result+float(w)*render_pixels(raw, cam, pix, bg, float(t))
     return result
 
 

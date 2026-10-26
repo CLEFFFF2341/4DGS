@@ -1,0 +1,613 @@
+{
+  "tests_passed": 10,
+  "compiled_all_new_python": true,
+  "all_frozen_sources_match": true,
+  "all_metrics_finite": true,
+  "verified_model_count": 97,
+  "incremental_training_renders": 895907,
+  "confirmation_gate_passed": true,
+  "torch": "2.8.0",
+  "cuda": "12.8",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "backend_path": "E:\\4D_Gaussian\\.conda\\nerficg\\Lib\\site-packages\\FasterGS4DCudaBackend\\_C.cp311-win_amd64.pyd",
+  "backend_sha256": "a6f3241896769cee804dcdcac7b87c08a7cd75f1e2410fd389e28ef8263ff042",
+  "git_head": "2561d7dd9adbe729f35d39972b72c9f74752e19e",
+  "source_checks": {
+    "experiments/n1b_v3/models.py": true,
+    "experiments/n1b_v3/search.py": true,
+    "experiments/n1b_v3/confirm.py": true,
+    "experiments/n1b_v3/CONFIRMATION01_PROTOCOL.md": true,
+    "experiments/n1b_v3/HELDOUT_PLAN.md": true,
+    "experiments/n1b_v2/real_dynamic.py": true,
+    "experiments/n1b_v2/real_fastergs.py": true,
+    "experiments/n1b_v2/joint_optimization.py": true,
+    "experiments/n1b/core.py": true,
+    "src/Methods/FasterGS4D/Loss.py": true,
+    "src/Methods/FasterGS4D/Trainer.py": true,
+    ".conda/nerficg/Lib/site-packages/FasterGS4DCudaBackend/torch_bindings/adam.py": true
+  },
+  "models": [
+    {
+      "run": "confirm01_c05_s3_renders",
+      "arm": "affine_spline:1:0.00003",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "confirm01_c05_s3_renders",
+      "arm": "native:1:0",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "confirm01_c05_s3_time",
+      "arm": "affine_spline:1:0.00003",
+      "hash_matches": true,
+      "renders": 7285
+    },
+    {
+      "run": "confirm01_c05_s3_time",
+      "arm": "native:1:0",
+      "hash_matches": true,
+      "renders": 9396
+    },
+    {
+      "run": "confirm01_c05_s4_renders",
+      "arm": "native:1:0",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "confirm01_c05_s4_renders",
+      "arm": "affine_spline:1:0.00003",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "confirm01_c05_s4_time",
+      "arm": "native:1:0",
+      "hash_matches": true,
+      "renders": 9987
+    },
+    {
+      "run": "confirm01_c05_s4_time",
+      "arm": "affine_spline:1:0.00003",
+      "hash_matches": true,
+      "renders": 7170
+    },
+    {
+      "run": "confirm01_c05_s5_renders",
+      "arm": "affine_spline:1:0.00003",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "confirm01_c05_s5_renders",
+      "arm": "native:1:0",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "confirm01_c05_s5_time",
+      "arm": "affine_spline:1:0.00003",
+      "hash_matches": true,
+      "renders": 7373
+    },
+    {
+      "run": "confirm01_c05_s5_time",
+      "arm": "native:1:0",
+      "hash_matches": true,
+      "renders": 10180
+    },
+    {
+      "run": "confirm01_c08_s3_renders",
+      "arm": "affine_spline:1:0.00003",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "confirm01_c08_s3_renders",
+      "arm": "native:1:0",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "confirm01_c08_s3_time",
+      "arm": "affine_spline:1:0.00003",
+      "hash_matches": true,
+      "renders": 6118
+    },
+    {
+      "run": "confirm01_c08_s3_time",
+      "arm": "native:1:0",
+      "hash_matches": true,
+      "renders": 8141
+    },
+    {
+      "run": "confirm01_c08_s4_renders",
+      "arm": "native:1:0",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "confirm01_c08_s4_renders",
+      "arm": "affine_spline:1:0.00003",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "confirm01_c08_s4_time",
+      "arm": "native:1:0",
+      "hash_matches": true,
+      "renders": 10370
+    },
+    {
+      "run": "confirm01_c08_s4_time",
+      "arm": "affine_spline:1:0.00003",
+      "hash_matches": true,
+      "renders": 7651
+    },
+    {
+      "run": "confirm01_c08_s5_renders",
+      "arm": "affine_spline:1:0.00003",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "confirm01_c08_s5_renders",
+      "arm": "native:1:0",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "confirm01_c08_s5_time",
+      "arm": "affine_spline:1:0.00003",
+      "hash_matches": true,
+      "renders": 7366
+    },
+    {
+      "run": "confirm01_c08_s5_time",
+      "arm": "native:1:0",
+      "hash_matches": true,
+      "renders": 9524
+    },
+    {
+      "run": "confirm01_n260_s3_renders",
+      "arm": "affine_spline:1:0.00003",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "confirm01_n260_s3_renders",
+      "arm": "native:1:0",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "confirm01_n260_s3_time",
+      "arm": "affine_spline:1:0.00003",
+      "hash_matches": true,
+      "renders": 7165
+    },
+    {
+      "run": "confirm01_n260_s3_time",
+      "arm": "native:1:0",
+      "hash_matches": true,
+      "renders": 9541
+    },
+    {
+      "run": "confirm01_n260_s4_renders",
+      "arm": "native:1:0",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "confirm01_n260_s4_renders",
+      "arm": "affine_spline:1:0.00003",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "confirm01_n260_s4_time",
+      "arm": "native:1:0",
+      "hash_matches": true,
+      "renders": 10234
+    },
+    {
+      "run": "confirm01_n260_s4_time",
+      "arm": "affine_spline:1:0.00003",
+      "hash_matches": true,
+      "renders": 6964
+    },
+    {
+      "run": "confirm01_n260_s5_renders",
+      "arm": "affine_spline:1:0.00003",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "confirm01_n260_s5_renders",
+      "arm": "native:1:0",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "confirm01_n260_s5_time",
+      "arm": "affine_spline:1:0.00003",
+      "hash_matches": true,
+      "renders": 7214
+    },
+    {
+      "run": "confirm01_n260_s5_time",
+      "arm": "native:1:0",
+      "hash_matches": true,
+      "renders": 10130
+    },
+    {
+      "run": "core01_c120_s0",
+      "arm": "native:1:0",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "core01_c120_s0",
+      "arm": "affine_spline:1:0.00003",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "core01_c120_s0",
+      "arm": "affine_spline:1:0.0001",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "core01_c120_s0",
+      "arm": "affine_curve:1:0.0001",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "core01_c120_s0",
+      "arm": "affine_linear:1:0.00003",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "core01_n120_s0",
+      "arm": "native:1:0",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "core01_n120_s0",
+      "arm": "affine_spline:1:0.00003",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "core01_n120_s0",
+      "arm": "affine_spline:1:0.0001",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "core01_n120_s0",
+      "arm": "affine_curve:1:0.0001",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "core01_n120_s0",
+      "arm": "affine_linear:1:0.00003",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "dev01_c120_s0",
+      "arm": "native:8:0",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "dev01_c120_s0",
+      "arm": "anchor:8:0",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "dev01_c120_s0",
+      "arm": "warp:8:0.001",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "dev01_c120_s0",
+      "arm": "curve:8:0.001",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "dev01_c120_s0",
+      "arm": "affine_curve:8:0.0001",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "dev01_n120_s0",
+      "arm": "native:8:0",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "dev01_n120_s0",
+      "arm": "anchor:8:0",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "dev01_n120_s0",
+      "arm": "warp:8:0.001",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "dev01_n120_s0",
+      "arm": "curve:8:0.001",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "dev01_n120_s0",
+      "arm": "affine_curve:8:0.0001",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "dev02_c120_s0",
+      "arm": "native:1:0",
+      "hash_matches": true,
+      "renders": 800
+    },
+    {
+      "run": "dev02_c120_s0",
+      "arm": "native:8:0",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "dev02_c120_s0",
+      "arm": "native:16:0",
+      "hash_matches": true,
+      "renders": 12800
+    },
+    {
+      "run": "dev02_c120_s0",
+      "arm": "weighted_edges:8:0",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "dev02_c120_s0",
+      "arm": "affine_spline:8:0.0001",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "dev02_c120_s0",
+      "arm": "affine_spline:8:0.001",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "dev02_c120_s0",
+      "arm": "affine_curve:8:0.001",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "dev02_n120_s0",
+      "arm": "native:1:0",
+      "hash_matches": true,
+      "renders": 800
+    },
+    {
+      "run": "dev02_n120_s0",
+      "arm": "native:8:0",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "dev02_n120_s0",
+      "arm": "native:16:0",
+      "hash_matches": true,
+      "renders": 12800
+    },
+    {
+      "run": "dev02_n120_s0",
+      "arm": "weighted_edges:8:0",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "dev02_n120_s0",
+      "arm": "affine_spline:8:0.0001",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "dev02_n120_s0",
+      "arm": "affine_spline:8:0.001",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "dev02_n120_s0",
+      "arm": "affine_curve:8:0.001",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "gauss8_c05_s3",
+      "arm": "native:8:0",
+      "hash_matches": true,
+      "renders": 51200
+    },
+    {
+      "run": "gauss8_c08_s3",
+      "arm": "native:8:0",
+      "hash_matches": true,
+      "renders": 51200
+    },
+    {
+      "run": "gauss8_n260_s3",
+      "arm": "native:8:0",
+      "hash_matches": true,
+      "renders": 51200
+    },
+    {
+      "run": "long01_c120_s0",
+      "arm": "native:1:0",
+      "hash_matches": true,
+      "renders": 30000
+    },
+    {
+      "run": "long01_c120_s0",
+      "arm": "affine_spline:1:0.00003",
+      "hash_matches": true,
+      "renders": 30000
+    },
+    {
+      "run": "long01_n120_s0",
+      "arm": "affine_spline:1:0.00003",
+      "hash_matches": true,
+      "renders": 30000
+    },
+    {
+      "run": "long01_n120_s0",
+      "arm": "native:1:0",
+      "hash_matches": true,
+      "renders": 30000
+    },
+    {
+      "run": "rep01_c120_s1",
+      "arm": "native:1:0",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "rep01_c120_s1",
+      "arm": "affine_spline:1:0.00003",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "rep01_c120_s2",
+      "arm": "native:1:0",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "rep01_c120_s2",
+      "arm": "affine_spline:1:0.00003",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "rep01_c260_s1",
+      "arm": "native:1:0",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "rep01_c260_s1",
+      "arm": "affine_spline:1:0.00003",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "rep01_c260_s2",
+      "arm": "native:1:0",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "rep01_c260_s2",
+      "arm": "affine_spline:1:0.00003",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "rep01_n120_s1",
+      "arm": "native:1:0",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "rep01_n120_s1",
+      "arm": "affine_spline:1:0.00003",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "rep01_n120_s2",
+      "arm": "native:1:0",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "rep01_n120_s2",
+      "arm": "affine_spline:1:0.00003",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "repeat_min_n260_s4_1",
+      "arm": "native:1:0",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "repeat_min_n260_s4_1",
+      "arm": "affine_spline:1:0.00003",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "repeat_min_n260_s4_2",
+      "arm": "affine_spline:1:0.00003",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "repeat_min_n260_s4_2",
+      "arm": "native:1:0",
+      "hash_matches": true,
+      "renders": 6400
+    },
+    {
+      "run": "time01_c120_s0",
+      "arm": "native:1:0",
+      "hash_matches": true,
+      "renders": 9518
+    },
+    {
+      "run": "time01_c120_s0",
+      "arm": "affine_spline:1:0.00003",
+      "hash_matches": true,
+      "renders": 7211
+    },
+    {
+      "run": "time01_n120_s0",
+      "arm": "affine_spline:1:0.00003",
+      "hash_matches": true,
+      "renders": 6890
+    },
+    {
+      "run": "time01_n120_s0",
+      "arm": "native:1:0",
+      "hash_matches": true,
+      "renders": 10079
+    }
+  ]
+}

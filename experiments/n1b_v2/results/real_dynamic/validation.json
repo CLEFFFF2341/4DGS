@@ -1,0 +1,17 @@
+{
+  "complete_runs": 9,
+  "methods_per_run": 3,
+  "unit_tests_passed": 18,
+  "downloaded_png_crc_and_sha_verified": 152,
+  "same_training_source_sha256": "b35f417227b16ef40acc46790872f783c9e7fa44444bdf613839111788378caf",
+  "native_backend_sha256": "a6f3241896769cee804dcdcac7b87c08a7cd75f1e2410fd389e28ef8263ff042",
+  "failed_attempts": [
+    {
+      "run": "dsec_n120_s2",
+      "exit_code": 3221225477,
+      "hex": "0xC0000005",
+      "stage": "startup before output directory creation",
+      "retry": "same command and seed succeeded; no result selected or excluded"
+    }
+  ]
+}

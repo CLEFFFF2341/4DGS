@@ -1,0 +1,832 @@
+{
+  "summary": {
+    "renders": {
+      "pairs": 9,
+      "positive_psnr": 9,
+      "mean_delta": {
+        "psnr": 0.29588246063983525,
+        "ssim": 0.0037024396437185863,
+        "roi_psnr": 0.5158517835415597,
+        "lpips": -0.007745475266818652
+      },
+      "min_delta_psnr": 0.09519512239450023,
+      "max_delta_psnr": 0.6881252567718938,
+      "clips": {
+        "zurich_city_05_a": {
+          "baseline": {
+            "psnr": 31.095370564547128,
+            "ssim": 0.9153351485729218,
+            "lpips": 0.30549657096465427,
+            "roi_psnr": 32.97922660209239
+          },
+          "candidate": {
+            "psnr": 31.606240773157904,
+            "ssim": 0.9197796367936664,
+            "lpips": 0.29497984300057095,
+            "roi_psnr": 33.90653789049969
+          },
+          "delta": {
+            "psnr": 0.5108702086107731,
+            "ssim": 0.004444488220744651,
+            "lpips": -0.010516727964083372,
+            "roi_psnr": 0.9273112884073006
+          }
+        },
+        "zurich_city_08_a": {
+          "baseline": {
+            "psnr": 26.030236438365634,
+            "ssim": 0.8120847360955343,
+            "lpips": 0.30096853358878034,
+            "roi_psnr": 30.31817826490912
+          },
+          "candidate": {
+            "psnr": 26.25731728087912,
+            "ssim": 0.8178183784087499,
+            "lpips": 0.29146599769592285,
+            "roi_psnr": 30.637108586660833
+          },
+          "delta": {
+            "psnr": 0.22708084251348618,
+            "ssim": 0.005733642313215492,
+            "lpips": -0.009502535892857452,
+            "roi_psnr": 0.318930321751715
+          }
+        },
+        "zurich_city_09_a": {
+          "baseline": {
+            "psnr": 34.03418286431151,
+            "ssim": 0.9544613692495557,
+            "lpips": 0.24883359215325782,
+            "roi_psnr": 37.189590197776205
+          },
+          "candidate": {
+            "psnr": 34.183879195106755,
+            "ssim": 0.9553905576467514,
+            "lpips": 0.24561643020974266,
+            "roi_psnr": 37.49090393824187
+          },
+          "delta": {
+            "psnr": 0.1496963307952465,
+            "ssim": 0.0009291883971956164,
+            "lpips": -0.0032171619435151324,
+            "roi_psnr": 0.30131374046566367
+          }
+        }
+      }
+    },
+    "time": {
+      "pairs": 9,
+      "positive_psnr": 8,
+      "mean_delta": {
+        "psnr": 0.18689103458900963,
+        "ssim": 0.003152550370604924,
+        "roi_psnr": 0.386631350403819,
+        "lpips": 0.002055610633558694
+      },
+      "min_delta_psnr": -0.048053978627464744,
+      "max_delta_psnr": 0.48566711717485944,
+      "clips": {
+        "zurich_city_05_a": {
+          "baseline": {
+            "psnr": 31.293830182158654,
+            "ssim": 0.9165519922971725,
+            "lpips": 0.2905249189999368,
+            "roi_psnr": 33.23174438747784
+          },
+          "candidate": {
+            "psnr": 31.65533399671743,
+            "ssim": 0.9201705637905332,
+            "lpips": 0.29000936531358296,
+            "roi_psnr": 33.89454606131415
+          },
+          "delta": {
+            "psnr": 0.3615038145587768,
+            "ssim": 0.003618571493360756,
+            "lpips": -0.0005155536863539015,
+            "roi_psnr": 0.6628016738363129
+          }
+        },
+        "zurich_city_08_a": {
+          "baseline": {
+            "psnr": 26.271465859334622,
+            "ssim": 0.8137910862763723,
+            "lpips": 0.2876361269089911,
+            "roi_psnr": 30.284777861737513
+          },
+          "candidate": {
+            "psnr": 26.390978906684296,
+            "ssim": 0.8191101418601142,
+            "lpips": 0.2884903831614389,
+            "roi_psnr": 30.70788614157999
+          },
+          "delta": {
+            "psnr": 0.11951304734967039,
+            "ssim": 0.005319055583741942,
+            "lpips": 0.000854256252447764,
+            "roi_psnr": 0.42310827984247606
+          }
+        },
+        "zurich_city_09_a": {
+          "baseline": {
+            "psnr": 34.18486920087354,
+            "ssim": 0.9552691711319817,
+            "lpips": 0.23623822339706954,
+            "roi_psnr": 37.61589604321002
+          },
+          "candidate": {
+            "psnr": 34.26452544273212,
+            "ssim": 0.9557891951666938,
+            "lpips": 0.24206635273165175,
+            "roi_psnr": 37.689880140742694
+          },
+          "delta": {
+            "psnr": 0.07965624185858171,
+            "ssim": 0.0005200240347120744,
+            "lpips": 0.00582812933458222,
+            "roi_psnr": 0.07398409753266814
+          }
+        }
+      }
+    }
+  },
+  "gate": {
+    "complete": true,
+    "mean_gain_at_least_0_2": true,
+    "at_least_8_positive_pairs": true,
+    "all_clip_mean_psnr_positive": true,
+    "all_clip_mean_ssim_nondecreasing": true,
+    "all_clip_mean_lpips_nonincreasing": true,
+    "time_all_clip_mean_psnr_positive": true,
+    "time_overall_psnr_positive": true,
+    "all_checkpoint_hashes_match": true
+  },
+  "gate_passed": true,
+  "rows": [
+    {
+      "run": "confirm01_c05_s3_renders",
+      "sequence": "zurich_city_05_a",
+      "start": 120,
+      "seed": 3,
+      "budget": "renders",
+      "baseline": {
+        "psnr": 30.839512947570864,
+        "ssim": 0.9137174089749655,
+        "roi_psnr": 32.730923088605024,
+        "lpips": 0.30621082584063214,
+        "seconds": 7.169850700000097,
+        "steps": 6400,
+        "renders": 6400,
+        "parameters": 2129920,
+        "quadrature_mse": 1.6146406043790473e-11,
+        "checkpoint_hash_ok": true
+      },
+      "candidate": {
+        "psnr": 31.296428474717207,
+        "ssim": 0.9177369872728983,
+        "roi_psnr": 33.4972680834185,
+        "lpips": 0.2954987908403079,
+        "seconds": 10.782818700000007,
+        "steps": 6400,
+        "renders": 6400,
+        "parameters": 2130016,
+        "quadrature_mse": 1.1798147474175597e-11,
+        "checkpoint_hash_ok": true
+      },
+      "delta": {
+        "psnr": 0.456915527146343,
+        "ssim": 0.004019578297932869,
+        "roi_psnr": 0.7663449948134726,
+        "lpips": -0.01071203500032425
+      }
+    },
+    {
+      "run": "confirm01_c05_s3_time",
+      "sequence": "zurich_city_05_a",
+      "start": 120,
+      "seed": 3,
+      "budget": "time",
+      "baseline": {
+        "psnr": 31.013549906297456,
+        "ssim": 0.9148584107557932,
+        "roi_psnr": 32.88480627529729,
+        "lpips": 0.29266952723264694,
+        "seconds": 12.000352400000338,
+        "steps": 9396,
+        "renders": 9396,
+        "parameters": 2129920,
+        "quadrature_mse": 3.91500032262751e-11,
+        "checkpoint_hash_ok": true
+      },
+      "candidate": {
+        "psnr": 31.499217023472315,
+        "ssim": 0.9190851251284281,
+        "roi_psnr": 33.78428325563052,
+        "lpips": 0.2877980371316274,
+        "seconds": 12.001240699999926,
+        "steps": 7285,
+        "renders": 7285,
+        "parameters": 2130016,
+        "quadrature_mse": 5.308089861752463e-11,
+        "checkpoint_hash_ok": true
+      },
+      "delta": {
+        "psnr": 0.48566711717485944,
+        "ssim": 0.004226714372634888,
+        "roi_psnr": 0.8994769803332332,
+        "lpips": -0.00487149010101956
+      }
+    },
+    {
+      "run": "confirm01_c05_s4_renders",
+      "sequence": "zurich_city_05_a",
+      "start": 120,
+      "seed": 4,
+      "budget": "renders",
+      "baseline": {
+        "psnr": 31.40895290909782,
+        "ssim": 0.917525182167689,
+        "roi_psnr": 33.26258952495977,
+        "lpips": 0.30283958713213605,
+        "seconds": 7.957637200000136,
+        "steps": 6400,
+        "renders": 6400,
+        "parameters": 2129920,
+        "quadrature_mse": 1.5674717491857837e-11,
+        "checkpoint_hash_ok": true
+      },
+      "candidate": {
+        "psnr": 31.796522751011903,
+        "ssim": 0.9211699714263281,
+        "roi_psnr": 34.18460467080635,
+        "lpips": 0.29316996534665424,
+        "seconds": 10.71916199999987,
+        "steps": 6400,
+        "renders": 6400,
+        "parameters": 2130016,
+        "quadrature_mse": 2.1869375848732515e-11,
+        "checkpoint_hash_ok": true
+      },
+      "delta": {
+        "psnr": 0.3875698419140825,
+        "ssim": 0.0036447892586390918,
+        "roi_psnr": 0.9220151458465793,
+        "lpips": -0.009669621785481808
+      }
+    },
+    {
+      "run": "confirm01_c05_s4_time",
+      "sequence": "zurich_city_05_a",
+      "start": 120,
+      "seed": 4,
+      "budget": "time",
+      "baseline": {
+        "psnr": 31.488954905350855,
+        "ssim": 0.9184094617764155,
+        "roi_psnr": 33.454097921374235,
+        "lpips": 0.28778790682554245,
+        "seconds": 12.001156300000275,
+        "steps": 9987,
+        "renders": 9987,
+        "parameters": 2129920,
+        "quadrature_mse": 8.13424837469573e-11,
+        "checkpoint_hash_ok": true
+      },
+      "candidate": {
+        "psnr": 31.691264875042194,
+        "ssim": 0.9201286981503168,
+        "roi_psnr": 33.703781173139085,
+        "lpips": 0.29129816343386966,
+        "seconds": 12.001578100000188,
+        "steps": 7170,
+        "renders": 7170,
+        "parameters": 2130016,
+        "quadrature_mse": 2.057109741518866e-11,
+        "checkpoint_hash_ok": true
+      },
+      "delta": {
+        "psnr": 0.2023099696913384,
+        "ssim": 0.0017192363739013672,
+        "roi_psnr": 0.24968325176484996,
+        "lpips": 0.0035102566083272113
+      }
+    },
+    {
+      "run": "confirm01_c05_s5_renders",
+      "sequence": "zurich_city_05_a",
+      "start": 120,
+      "seed": 5,
+      "budget": "renders",
+      "baseline": {
+        "psnr": 31.037645836972704,
+        "ssim": 0.9147628545761108,
+        "roi_psnr": 32.944167192712364,
+        "lpips": 0.30743929992119473,
+        "seconds": 7.795967299999575,
+        "steps": 6400,
+        "renders": 6400,
+        "parameters": 2129920,
+        "quadrature_mse": 4.898164823683345e-11,
+        "checkpoint_hash_ok": true
+      },
+      "candidate": {
+        "psnr": 31.725771093744598,
+        "ssim": 0.9204319516817728,
+        "roi_psnr": 34.03774091727421,
+        "lpips": 0.29627077281475067,
+        "seconds": 10.080124399999931,
+        "steps": 6400,
+        "renders": 6400,
+        "parameters": 2130016,
+        "quadrature_mse": 1.0929480121861049e-11,
+        "checkpoint_hash_ok": true
+      },
+      "delta": {
+        "psnr": 0.6881252567718938,
+        "ssim": 0.005669097105661991,
+        "roi_psnr": 1.0935737245618498,
+        "lpips": -0.01116852710644406
+      }
+    },
+    {
+      "run": "confirm01_c05_s5_time",
+      "sequence": "zurich_city_05_a",
+      "start": 120,
+      "seed": 5,
+      "budget": "time",
+      "baseline": {
+        "psnr": 31.378985734827655,
+        "ssim": 0.9163881043593088,
+        "roi_psnr": 33.356328965761996,
+        "lpips": 0.2911173229416211,
+        "seconds": 12.000316599999678,
+        "steps": 10180,
+        "renders": 10180,
+        "parameters": 2129920,
+        "quadrature_mse": 1.8413531297234904e-11,
+        "checkpoint_hash_ok": true
+      },
+      "candidate": {
+        "psnr": 31.775520091637787,
+        "ssim": 0.9212978680928549,
+        "roi_psnr": 34.19557375517285,
+        "lpips": 0.29093189537525177,
+        "seconds": 12.001413599999978,
+        "steps": 7373,
+        "renders": 7373,
+        "parameters": 2130016,
+        "quadrature_mse": 1.4121630188997092e-11,
+        "checkpoint_hash_ok": true
+      },
+      "delta": {
+        "psnr": 0.3965343568101325,
+        "ssim": 0.004909763733546013,
+        "roi_psnr": 0.8392447894108557,
+        "lpips": -0.0001854275663693561
+      }
+    },
+    {
+      "run": "confirm01_c08_s3_renders",
+      "sequence": "zurich_city_08_a",
+      "start": 120,
+      "seed": 3,
+      "budget": "renders",
+      "baseline": {
+        "psnr": 25.930734182340064,
+        "ssim": 0.8107574234406153,
+        "roi_psnr": 30.229589223287963,
+        "lpips": 0.2995121280352275,
+        "seconds": 7.55479430000014,
+        "steps": 6400,
+        "renders": 6400,
+        "parameters": 2129920,
+        "quadrature_mse": 1.569228057681412e-10,
+        "checkpoint_hash_ok": true
+      },
+      "candidate": {
+        "psnr": 26.21354448511178,
+        "ssim": 0.816628078619639,
+        "roi_psnr": 30.548310254601407,
+        "lpips": 0.2916867857178052,
+        "seconds": 10.805802600000334,
+        "steps": 6400,
+        "renders": 6400,
+        "parameters": 2130016,
+        "quadrature_mse": 8.490884557954548e-11,
+        "checkpoint_hash_ok": true
+      },
+      "delta": {
+        "psnr": 0.2828103027717148,
+        "ssim": 0.005870655179023743,
+        "roi_psnr": 0.3187210313134443,
+        "lpips": -0.007825342317422268
+      }
+    },
+    {
+      "run": "confirm01_c08_s3_time",
+      "sequence": "zurich_city_08_a",
+      "start": 120,
+      "seed": 3,
+      "budget": "time",
+      "baseline": {
+        "psnr": 26.12864066456754,
+        "ssim": 0.8124136328697205,
+        "roi_psnr": 30.26620474039359,
+        "lpips": 0.29029323409001034,
+        "seconds": 12.000042800000301,
+        "steps": 8141,
+        "renders": 8141,
+        "parameters": 2129920,
+        "quadrature_mse": 2.2397914194634735e-10,
+        "checkpoint_hash_ok": true
+      },
+      "candidate": {
+        "psnr": 26.27383807939444,
+        "ssim": 0.817719986041387,
+        "roi_psnr": 30.661407529268335,
+        "lpips": 0.29383663336435956,
+        "seconds": 12.000784700000168,
+        "steps": 6118,
+        "renders": 6118,
+        "parameters": 2130016,
+        "quadrature_mse": 9.850438202387475e-11,
+        "checkpoint_hash_ok": true
+      },
+      "delta": {
+        "psnr": 0.14519741482689952,
+        "ssim": 0.0053063531716665,
+        "roi_psnr": 0.39520278887474447,
+        "lpips": 0.0035433992743492126
+      }
+    },
+    {
+      "run": "confirm01_c08_s4_renders",
+      "sequence": "zurich_city_08_a",
+      "start": 120,
+      "seed": 4,
+      "budget": "renders",
+      "baseline": {
+        "psnr": 25.912519974652678,
+        "ssim": 0.813183143734932,
+        "roi_psnr": 30.469436880484906,
+        "lpips": 0.2996857116619746,
+        "seconds": 7.157855799999652,
+        "steps": 6400,
+        "renders": 6400,
+        "parameters": 2129920,
+        "quadrature_mse": 8.669099972024215e-11,
+        "checkpoint_hash_ok": true
+      },
+      "candidate": {
+        "psnr": 26.136042576002907,
+        "ssim": 0.8182771553595861,
+        "roi_psnr": 30.76781875554636,
+        "lpips": 0.2888880545894305,
+        "seconds": 10.072397099999762,
+        "steps": 6400,
+        "renders": 6400,
+        "parameters": 2130016,
+        "quadrature_mse": 9.269051961154536e-11,
+        "checkpoint_hash_ok": true
+      },
+      "delta": {
+        "psnr": 0.22352260135022917,
+        "ssim": 0.005094011624654171,
+        "roi_psnr": 0.2983818750614553,
+        "lpips": -0.010797657072544098
+      }
+    },
+    {
+      "run": "confirm01_c08_s4_time",
+      "sequence": "zurich_city_08_a",
+      "start": 120,
+      "seed": 4,
+      "budget": "time",
+      "baseline": {
+        "psnr": 26.407590676515188,
+        "ssim": 0.8154135545094808,
+        "roi_psnr": 30.32664764160289,
+        "lpips": 0.28448090702295303,
+        "seconds": 12.000613799999883,
+        "steps": 10370,
+        "renders": 10370,
+        "parameters": 2129920,
+        "quadrature_mse": 5.918917468418956e-11,
+        "checkpoint_hash_ok": true
+      },
+      "candidate": {
+        "psnr": 26.42072034010801,
+        "ssim": 0.819526677330335,
+        "roi_psnr": 30.81880850964842,
+        "lpips": 0.2840310235818227,
+        "seconds": 12.00032900000042,
+        "steps": 7651,
+        "renders": 7651,
+        "parameters": 2130016,
+        "quadrature_mse": 1.1826063493642716e-10,
+        "checkpoint_hash_ok": true
+      },
+      "delta": {
+        "psnr": 0.013129663592820862,
+        "ssim": 0.004113122820854187,
+        "roi_psnr": 0.4921608680455307,
+        "lpips": -0.00044988344113033873
+      }
+    },
+    {
+      "run": "confirm01_c08_s5_renders",
+      "sequence": "zurich_city_08_a",
+      "start": 120,
+      "seed": 5,
+      "budget": "renders",
+      "baseline": {
+        "psnr": 26.24745515810416,
+        "ssim": 0.812313641111056,
+        "roi_psnr": 30.255508690954482,
+        "lpips": 0.3037077610691388,
+        "seconds": 7.283621499999754,
+        "steps": 6400,
+        "renders": 6400,
+        "parameters": 2129920,
+        "quadrature_mse": 1.260430622720965e-10,
+        "checkpoint_hash_ok": true
+      },
+      "candidate": {
+        "psnr": 26.422364781522674,
+        "ssim": 0.8185499012470245,
+        "roi_psnr": 30.595196749834727,
+        "lpips": 0.29382315278053284,
+        "seconds": 9.966417999999976,
+        "steps": 6400,
+        "renders": 6400,
+        "parameters": 2130016,
+        "quadrature_mse": 1.5623650926240482e-10,
+        "checkpoint_hash_ok": true
+      },
+      "delta": {
+        "psnr": 0.17490962341851457,
+        "ssim": 0.006236260135968563,
+        "roi_psnr": 0.33968805888024534,
+        "lpips": -0.00988460828860599
+      }
+    },
+    {
+      "run": "confirm01_c08_s5_time",
+      "sequence": "zurich_city_08_a",
+      "start": 120,
+      "seed": 5,
+      "budget": "time",
+      "baseline": {
+        "psnr": 26.27816623692114,
+        "ssim": 0.8135460714499155,
+        "roi_psnr": 30.261481203216064,
+        "lpips": 0.28813423961400986,
+        "seconds": 12.001022100000228,
+        "steps": 9524,
+        "renders": 9524,
+        "parameters": 2129920,
+        "quadrature_mse": 2.1328434591377787e-10,
+        "checkpoint_hash_ok": true
+      },
+      "candidate": {
+        "psnr": 26.478378300550432,
+        "ssim": 0.8200837622086207,
+        "roi_psnr": 30.643442385823217,
+        "lpips": 0.2876034925381343,
+        "seconds": 12.001196800000344,
+        "steps": 7366,
+        "renders": 7366,
+        "parameters": 2130016,
+        "quadrature_mse": 5.495169073827891e-10,
+        "checkpoint_hash_ok": true
+      },
+      "delta": {
+        "psnr": 0.20021206362929078,
+        "ssim": 0.006537690758705139,
+        "roi_psnr": 0.38196118260715295,
+        "lpips": -0.0005307470758755817
+      }
+    },
+    {
+      "run": "confirm01_n260_s3_renders",
+      "sequence": "zurich_city_09_a",
+      "start": 260,
+      "seed": 3,
+      "budget": "renders",
+      "baseline": {
+        "psnr": 34.02613942550864,
+        "ssim": 0.9546609918276469,
+        "roi_psnr": 36.93927101919484,
+        "lpips": 0.2507110958298047,
+        "seconds": 7.6108211999999185,
+        "steps": 6400,
+        "renders": 6400,
+        "parameters": 2129920,
+        "quadrature_mse": 6.111428539160949e-10,
+        "checkpoint_hash_ok": true
+      },
+      "candidate": {
+        "psnr": 34.19635943549336,
+        "ssim": 0.9553036391735077,
+        "roi_psnr": 37.205307538773276,
+        "lpips": 0.24659504120548567,
+        "seconds": 11.350636600000144,
+        "steps": 6400,
+        "renders": 6400,
+        "parameters": 2130016,
+        "quadrature_mse": 4.971440759060641e-10,
+        "checkpoint_hash_ok": true
+      },
+      "delta": {
+        "psnr": 0.17022000998472464,
+        "ssim": 0.0006426473458608362,
+        "roi_psnr": 0.2660365195784351,
+        "lpips": -0.004116054624319049
+      }
+    },
+    {
+      "run": "confirm01_n260_s3_time",
+      "sequence": "zurich_city_09_a",
+      "start": 260,
+      "seed": 3,
+      "budget": "time",
+      "baseline": {
+        "psnr": 34.23011127381698,
+        "ssim": 0.9555108894904455,
+        "roi_psnr": 37.641423401965945,
+        "lpips": 0.23841476067900658,
+        "seconds": 12.000801600000159,
+        "steps": 9541,
+        "renders": 9541,
+        "parameters": 2129920,
+        "quadrature_mse": 4.056507028430782e-10,
+        "checkpoint_hash_ok": true
+      },
+      "candidate": {
+        "psnr": 34.33371896600449,
+        "ssim": 0.9558238138755163,
+        "roi_psnr": 37.58666520192491,
+        "lpips": 0.24291265135010084,
+        "seconds": 12.000585799999953,
+        "steps": 7165,
+        "renders": 7165,
+        "parameters": 2130016,
+        "quadrature_mse": 4.328780031185679e-10,
+        "checkpoint_hash_ok": true
+      },
+      "delta": {
+        "psnr": 0.10360769218750931,
+        "ssim": 0.0003129243850708008,
+        "roi_psnr": -0.05475820004103582,
+        "lpips": 0.004497890671094268
+      }
+    },
+    {
+      "run": "confirm01_n260_s4_renders",
+      "sequence": "zurich_city_09_a",
+      "start": 260,
+      "seed": 4,
+      "budget": "renders",
+      "baseline": {
+        "psnr": 34.13145573670547,
+        "ssim": 0.9549370110034943,
+        "roi_psnr": 37.307726217136086,
+        "lpips": 0.24819319198528925,
+        "seconds": 7.803243500000008,
+        "steps": 6400,
+        "renders": 6400,
+        "parameters": 2129920,
+        "quadrature_mse": 7.352464516848419e-10,
+        "checkpoint_hash_ok": true
+      },
+      "candidate": {
+        "psnr": 34.22665085909997,
+        "ssim": 0.9557484487692515,
+        "roi_psnr": 37.56618046225518,
+        "lpips": 0.24713367223739624,
+        "seconds": 10.19621750000033,
+        "steps": 6400,
+        "renders": 6400,
+        "parameters": 2130016,
+        "quadrature_mse": 7.086113744392275e-10,
+        "checkpoint_hash_ok": true
+      },
+      "delta": {
+        "psnr": 0.09519512239450023,
+        "ssim": 0.0008114377657572058,
+        "roi_psnr": 0.258454245119097,
+        "lpips": -0.0010595197478930063
+      }
+    },
+    {
+      "run": "confirm01_n260_s4_time",
+      "sequence": "zurich_city_09_a",
+      "start": 260,
+      "seed": 4,
+      "budget": "time",
+      "baseline": {
+        "psnr": 34.28042757521152,
+        "ssim": 0.9557063231865565,
+        "roi_psnr": 37.71413583249177,
+        "lpips": 0.2345356692870458,
+        "seconds": 12.00108979999959,
+        "steps": 10234,
+        "renders": 10234,
+        "parameters": 2129920,
+        "quadrature_mse": 3.364128362455994e-10,
+        "checkpoint_hash_ok": true
+      },
+      "candidate": {
+        "psnr": 34.232373596584054,
+        "ssim": 0.9558129409948984,
+        "roi_psnr": 37.688045943673785,
+        "lpips": 0.24329338471094766,
+        "seconds": 12.00065259999974,
+        "steps": 6964,
+        "renders": 6964,
+        "parameters": 2130016,
+        "quadrature_mse": 4.297852779685159e-10,
+        "checkpoint_hash_ok": true
+      },
+      "delta": {
+        "psnr": -0.048053978627464744,
+        "ssim": 0.00010661780834197998,
+        "roi_psnr": -0.02608988881798524,
+        "lpips": 0.008757715423901857
+      }
+    },
+    {
+      "run": "confirm01_n260_s5_renders",
+      "sequence": "zurich_city_09_a",
+      "start": 260,
+      "seed": 5,
+      "budget": "renders",
+      "baseline": {
+        "psnr": 33.944953430720425,
+        "ssim": 0.9537861049175262,
+        "roi_psnr": 37.32177335699769,
+        "lpips": 0.2475964886446794,
+        "seconds": 7.761894400000074,
+        "steps": 6400,
+        "renders": 6400,
+        "parameters": 2129920,
+        "quadrature_mse": 4.334169042182386e-10,
+        "checkpoint_hash_ok": true
+      },
+      "candidate": {
+        "psnr": 34.12862729072694,
+        "ssim": 0.955119584997495,
+        "roi_psnr": 37.70122381369715,
+        "lpips": 0.24312057718634605,
+        "seconds": 10.710356900000079,
+        "steps": 6400,
+        "renders": 6400,
+        "parameters": 2130016,
+        "quadrature_mse": 5.089987343646444e-10,
+        "checkpoint_hash_ok": true
+      },
+      "delta": {
+        "psnr": 0.18367386000651464,
+        "ssim": 0.0013334800799688074,
+        "roi_psnr": 0.379450456699459,
+        "lpips": -0.004475911458333343
+      }
+    },
+    {
+      "run": "confirm01_n260_s5_time",
+      "sequence": "zurich_city_09_a",
+      "start": 260,
+      "seed": 5,
+      "budget": "time",
+      "baseline": {
+        "psnr": 34.04406875359212,
+        "ssim": 0.9545903007189432,
+        "roi_psnr": 37.49212889517235,
+        "lpips": 0.23576424022515616,
+        "seconds": 12.000978699999905,
+        "steps": 10130,
+        "renders": 10130,
+        "parameters": 2129920,
+        "quadrature_mse": 7.034557658602836e-10,
+        "checkpoint_hash_ok": true
+      },
+      "candidate": {
+        "psnr": 34.22748376560782,
+        "ssim": 0.9557308306296667,
+        "roi_psnr": 37.794929276629375,
+        "lpips": 0.2399930221339067,
+        "seconds": 12.001051499999903,
+        "steps": 7214,
+        "renders": 7214,
+        "parameters": 2130016,
+        "quadrature_mse": 5.405253628946541e-10,
+        "checkpoint_hash_ok": true
+      },
+      "delta": {
+        "psnr": 0.18341501201570054,
+        "ssim": 0.0011405299107234423,
+        "roi_psnr": 0.3028003814570255,
+        "lpips": 0.004228781908750534
+      }
+    }
+  ]
+}

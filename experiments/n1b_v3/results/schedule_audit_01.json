@@ -1,0 +1,964 @@
+{
+  "rows": [
+    {
+      "run": "output/dsec_c120_s0",
+      "state": "shared_initial",
+      "side": 0,
+      "frame": 120,
+      "gauss8": {
+        "image_mse": 5.7129041081127596e-11,
+        "gradient_square_error": 7.970699222525377e-14,
+        "seconds": 0.005115200000091136
+      },
+      "proposals": {
+        "weighted_edges": {
+          "image_mse": 2.924762376732559e-10,
+          "gradient_square_error": 7.459987279373634e-13,
+          "image_ratio": 5.119571974924581,
+          "gradient_ratio": 9.359263310666071,
+          "seconds": 0.11198030000014114,
+          "schedule": {
+            "considered_edges": 9,
+            "cuts": [
+              0.0,
+              0.0001876354217529297,
+              0.00026650726795196533,
+              0.0005881637334823608,
+              0.0008408777791097467
+            ],
+            "counts": [
+              2,
+              1,
+              3,
+              2
+            ]
+          }
+        },
+        "top_edges": {
+          "image_mse": 2.2350993278408282e-10,
+          "gradient_square_error": 6.243638343607112e-13,
+          "image_ratio": 3.912369760708598,
+          "gradient_ratio": 7.833237924675978,
+          "seconds": 0.006209600000147475,
+          "schedule": {
+            "considered_edges": 9,
+            "cuts": [
+              0.0,
+              0.0001876354217529297,
+              0.00025984644889831543,
+              0.0008244514465332031,
+              0.0008408777791097467
+            ],
+            "counts": [
+              2,
+              1,
+              4,
+              1
+            ]
+          }
+        }
+      }
+    },
+    {
+      "run": "output/dsec_c120_s0",
+      "state": "shared_initial",
+      "side": 1,
+      "frame": 127,
+      "gauss8": {
+        "image_mse": 2.4038171453355517e-10,
+        "gradient_square_error": 5.090358196575823e-13,
+        "seconds": 0.004109200000129931
+      },
+      "proposals": {
+        "weighted_edges": {
+          "image_mse": 2.0815761614390027e-10,
+          "gradient_square_error": 8.329824050123134e-13,
+          "image_ratio": 0.8659461329985784,
+          "gradient_ratio": 1.6363925147205618,
+          "seconds": 0.005962299999737297,
+          "schedule": {
+            "considered_edges": 63,
+            "cuts": [
+              0.30403725575019674,
+              0.3041989505290985,
+              0.3045388460159302,
+              0.3047078847885132,
+              0.30497108179621224
+            ],
+            "counts": [
+              1,
+              3,
+              2,
+              2
+            ]
+          }
+        },
+        "top_edges": {
+          "image_mse": 1.8791092293302114e-10,
+          "gradient_square_error": 3.0973597993507677e-13,
+          "image_ratio": 0.7817188728254554,
+          "gradient_ratio": 0.6084758045974636,
+          "seconds": 0.005742400000144698,
+          "schedule": {
+            "considered_edges": 63,
+            "cuts": [
+              0.30403725575019674,
+              0.30408763885498047,
+              0.30466318130493164,
+              0.3046863079071045,
+              0.30497108179621224
+            ],
+            "counts": [
+              1,
+              4,
+              1,
+              2
+            ]
+          }
+        }
+      }
+    },
+    {
+      "run": "output/dsec_c120_s0",
+      "state": "shared_initial",
+      "side": 0,
+      "frame": 136,
+      "gauss8": {
+        "image_mse": 1.8891964381761994e-10,
+        "gradient_square_error": 3.5460506315599125e-13,
+        "seconds": 0.003930600000330742
+      },
+      "proposals": {
+        "weighted_edges": {
+          "image_mse": 1.1990893000746183e-10,
+          "gradient_square_error": 2.0033268544810024e-13,
+          "image_ratio": 0.6347086389979648,
+          "gradient_ratio": 0.5649459250951914,
+          "seconds": 0.005967499999769643,
+          "schedule": {
+            "considered_edges": 50,
+            "cuts": [
+              0.6949507374185399,
+              0.6952466368675232,
+              0.6955105066299438,
+              0.6956494450569153,
+              0.695805514003916
+            ],
+            "counts": [
+              3,
+              2,
+              1,
+              2
+            ]
+          }
+        },
+        "top_edges": {
+          "image_mse": 1.070297878102977e-10,
+          "gradient_square_error": 1.411463073509763e-13,
+          "image_ratio": 0.5665360448891307,
+          "gradient_ratio": 0.3980380485680935,
+          "seconds": 0.005863399999725516,
+          "schedule": {
+            "considered_edges": 50,
+            "cuts": [
+              0.6949507374185399,
+              0.6950288414955139,
+              0.6952700614929199,
+              0.6955105066299438,
+              0.695805514003916
+            ],
+            "counts": [
+              1,
+              2,
+              2,
+              3
+            ]
+          }
+        }
+      }
+    },
+    {
+      "run": "output/dsec_c120_s0",
+      "state": "shared_initial",
+      "side": 1,
+      "frame": 143,
+      "gauss8": {
+        "image_mse": 2.4158075540015034e-10,
+        "gradient_square_error": 6.589709899539788e-13,
+        "seconds": 0.0039046000001690118
+      },
+      "proposals": {
+        "weighted_edges": {
+          "image_mse": 1.560658963173367e-10,
+          "gradient_square_error": 1.5973035905572542e-13,
+          "image_ratio": 0.646019572456555,
+          "gradient_ratio": 0.242393612906815,
+          "seconds": 0.0058623999998417275,
+          "schedule": {
+            "considered_edges": 30,
+            "cuts": [
+              0.9989740943624703,
+              0.9991899728775024,
+              0.9996002316474915,
+              0.9997124671936035,
+              1.0
+            ],
+            "counts": [
+              2,
+              3,
+              1,
+              2
+            ]
+          }
+        },
+        "top_edges": {
+          "image_mse": 1.3241781282591347e-10,
+          "gradient_square_error": 2.6227098214073363e-13,
+          "image_ratio": 0.5481306348536696,
+          "gradient_ratio": 0.39800080146024347,
+          "seconds": 0.00579699999980221,
+          "schedule": {
+            "considered_edges": 30,
+            "cuts": [
+              0.9989740943624703,
+              0.9991899728775024,
+              0.9996562004089355,
+              0.9996970891952515,
+              1.0
+            ],
+            "counts": [
+              2,
+              3,
+              1,
+              2
+            ]
+          }
+        }
+      }
+    },
+    {
+      "run": "output/dsec_c120_s0",
+      "state": "gauss",
+      "side": 0,
+      "frame": 120,
+      "gauss8": {
+        "image_mse": 3.6600308894740863e-10,
+        "gradient_square_error": 6.232262415759711e-13,
+        "seconds": 0.005341300000054616
+      },
+      "proposals": {
+        "weighted_edges": {
+          "image_mse": 1.0162650582179467e-10,
+          "gradient_square_error": 1.569288355393156e-13,
+          "image_ratio": 0.27766570526512,
+          "gradient_ratio": 0.25180075078752284,
+          "seconds": 0.0068410999997468025,
+          "schedule": {
+            "considered_edges": 27,
+            "cuts": [
+              0.0,
+              0.0004008561372756958,
+              0.0004961788654327393,
+              0.0006573200225830078,
+              0.0008408777791097467
+            ],
+            "counts": [
+              3,
+              1,
+              2,
+              2
+            ]
+          }
+        },
+        "top_edges": {
+          "image_mse": 1.0685936163712384e-10,
+          "gradient_square_error": 1.9180822825066174e-13,
+          "image_ratio": 0.2919630048599906,
+          "gradient_ratio": 0.30776661099126773,
+          "seconds": 0.005610100000012608,
+          "schedule": {
+            "considered_edges": 27,
+            "cuts": [
+              0.0,
+              0.0004635751247406006,
+              0.0005140751600265503,
+              0.0007536411285400391,
+              0.0008408777791097467
+            ],
+            "counts": [
+              4,
+              1,
+              2,
+              1
+            ]
+          }
+        }
+      }
+    },
+    {
+      "run": "output/dsec_c120_s0",
+      "state": "gauss",
+      "side": 1,
+      "frame": 127,
+      "gauss8": {
+        "image_mse": 1.611286937208689e-10,
+        "gradient_square_error": 3.202113810792412e-13,
+        "seconds": 0.0038944999996601837
+      },
+      "proposals": {
+        "weighted_edges": {
+          "image_mse": 1.6560125493114697e-10,
+          "gradient_square_error": 3.7114641085857997e-13,
+          "image_ratio": 1.0277576954606613,
+          "gradient_ratio": 1.1590668938988589,
+          "seconds": 0.005862699999852339,
+          "schedule": {
+            "considered_edges": 48,
+            "cuts": [
+              0.30403725575019674,
+              0.3043587803840637,
+              0.30450689792633057,
+              0.30472689867019653,
+              0.30497108179621224
+            ],
+            "counts": [
+              3,
+              1,
+              2,
+              2
+            ]
+          }
+        },
+        "top_edges": {
+          "image_mse": 1.608539412778498e-10,
+          "gradient_square_error": 3.8235523682609865e-13,
+          "image_ratio": 0.9982948261003401,
+          "gradient_ratio": 1.1940713522967472,
+          "seconds": 0.005707700000129989,
+          "schedule": {
+            "considered_edges": 48,
+            "cuts": [
+              0.30403725575019674,
+              0.304355263710022,
+              0.30450689792633057,
+              0.30472689867019653,
+              0.30497108179621224
+            ],
+            "counts": [
+              3,
+              1,
+              2,
+              2
+            ]
+          }
+        }
+      }
+    },
+    {
+      "run": "output/dsec_c120_s0",
+      "state": "gauss",
+      "side": 0,
+      "frame": 136,
+      "gauss8": {
+        "image_mse": 4.45271625126864e-10,
+        "gradient_square_error": 5.613174934515715e-12,
+        "seconds": 0.003844200000003184
+      },
+      "proposals": {
+        "weighted_edges": {
+          "image_mse": 2.030407231234932e-10,
+          "gradient_square_error": 1.313779261187514e-12,
+          "image_ratio": 0.4559929527637071,
+          "gradient_ratio": 0.23405279124814277,
+          "seconds": 0.005704199999854609,
+          "schedule": {
+            "considered_edges": 46,
+            "cuts": [
+              0.6949507374185399,
+              0.6952323913574219,
+              0.6954370141029358,
+              0.6955952048301697,
+              0.695805514003916
+            ],
+            "counts": [
+              2,
+              2,
+              2,
+              2
+            ]
+          }
+        },
+        "top_edges": {
+          "image_mse": 5.032279593031319e-10,
+          "gradient_square_error": 3.378727188560234e-12,
+          "image_ratio": 1.1301595046838102,
+          "gradient_ratio": 0.601928004734764,
+          "seconds": 0.005551199999899836,
+          "schedule": {
+            "considered_edges": 46,
+            "cuts": [
+              0.6949507374185399,
+              0.6955952048301697,
+              0.695606529712677,
+              0.6956220865249634,
+              0.695805514003916
+            ],
+            "counts": [
+              4,
+              1,
+              1,
+              2
+            ]
+          }
+        }
+      }
+    },
+    {
+      "run": "output/dsec_c120_s0",
+      "state": "gauss",
+      "side": 1,
+      "frame": 143,
+      "gauss8": {
+        "image_mse": 1.7469493907018574e-10,
+        "gradient_square_error": 8.256948087126211e-13,
+        "seconds": 0.0037092000002303394
+      },
+      "proposals": {
+        "weighted_edges": {
+          "image_mse": 1.01769169480459e-10,
+          "gradient_square_error": 3.3984628123928016e-13,
+          "image_ratio": 0.582553621885818,
+          "gradient_ratio": 0.41158824986334863,
+          "seconds": 0.005608400000255642,
+          "schedule": {
+            "considered_edges": 30,
+            "cuts": [
+              0.9989740943624703,
+              0.9991796612739563,
+              0.9995297789573669,
+              0.9997882843017578,
+              1.0
+            ],
+            "counts": [
+              2,
+              2,
+              2,
+              2
+            ]
+          }
+        },
+        "top_edges": {
+          "image_mse": 1.3343728899606333e-10,
+          "gradient_square_error": 5.86590778508324e-13,
+          "image_ratio": 0.7638303073133295,
+          "gradient_ratio": 0.7104208144688529,
+          "seconds": 0.008683399999881658,
+          "schedule": {
+            "considered_edges": 30,
+            "cuts": [
+              0.9989740943624703,
+              0.9990324974060059,
+              0.9998397827148438,
+              0.9999661445617676,
+              1.0
+            ],
+            "counts": [
+              1,
+              5,
+              1,
+              1
+            ]
+          }
+        }
+      }
+    },
+    {
+      "run": "output/dsec_n120_s0",
+      "state": "shared_initial",
+      "side": 0,
+      "frame": 120,
+      "gauss8": {
+        "image_mse": 7.206291119388197e-10,
+        "gradient_square_error": 1.438674459124324e-12,
+        "seconds": 0.0058288999998694635
+      },
+      "proposals": {
+        "weighted_edges": {
+          "image_mse": 2.7351379494611194e-10,
+          "gradient_square_error": 2.4060065268370165e-13,
+          "image_ratio": 0.37954863384610643,
+          "gradient_ratio": 0.16723773134204922,
+          "seconds": 0.006123999999999796,
+          "schedule": {
+            "considered_edges": 142,
+            "cuts": [
+              0.0,
+              0.004907369613647461,
+              0.00913006067276001,
+              0.009546592831611633,
+              0.012872323988394652
+            ],
+            "counts": [
+              3,
+              2,
+              1,
+              2
+            ]
+          }
+        },
+        "top_edges": {
+          "image_mse": 3.419049765529536e-10,
+          "gradient_square_error": 1.4146005846356308e-13,
+          "image_ratio": 0.47445346141106326,
+          "gradient_ratio": 0.0983266628293835,
+          "seconds": 0.005619099999876198,
+          "schedule": {
+            "considered_edges": 142,
+            "cuts": [
+              0.0,
+              0.00913006067276001,
+              0.009546592831611633,
+              0.010055303573608398,
+              0.012872323988394652
+            ],
+            "counts": [
+              4,
+              1,
+              1,
+              2
+            ]
+          }
+        }
+      }
+    },
+    {
+      "run": "output/dsec_n120_s0",
+      "state": "shared_initial",
+      "side": 1,
+      "frame": 127,
+      "gauss8": {
+        "image_mse": 5.683845616388794e-10,
+        "gradient_square_error": 1.3644092955369846e-12,
+        "seconds": 0.003932399999939662
+      },
+      "proposals": {
+        "weighted_edges": {
+          "image_mse": 3.368628154198916e-10,
+          "gradient_square_error": 2.658350003843934e-13,
+          "image_ratio": 0.5926670746449935,
+          "gradient_ratio": 0.19483523108054604,
+          "seconds": 0.005670699999882345,
+          "schedule": {
+            "considered_edges": 706,
+            "cuts": [
+              0.30044120929114665,
+              0.3036455512046814,
+              0.30646198987960815,
+              0.30981260538101196,
+              0.3133135332795413
+            ],
+            "counts": [
+              2,
+              2,
+              2,
+              2
+            ]
+          }
+        },
+        "top_edges": {
+          "image_mse": 4.0946310231326777e-10,
+          "gradient_square_error": 7.912905770214314e-13,
+          "image_ratio": 0.7203980015442755,
+          "gradient_ratio": 0.5799510305373627,
+          "seconds": 0.005717400000321504,
+          "schedule": {
+            "considered_edges": 706,
+            "cuts": [
+              0.30044120929114665,
+              0.3018019199371338,
+              0.3077496886253357,
+              0.31047719717025757,
+              0.3133135332795413
+            ],
+            "counts": [
+              1,
+              3,
+              2,
+              2
+            ]
+          }
+        }
+      }
+    },
+    {
+      "run": "output/dsec_n120_s0",
+      "state": "shared_initial",
+      "side": 0,
+      "frame": 136,
+      "gauss8": {
+        "image_mse": 3.915516355590398e-09,
+        "gradient_square_error": 1.0324553826182593e-11,
+        "seconds": 0.003886899999997695
+      },
+      "proposals": {
+        "weighted_edges": {
+          "image_mse": 2.1256358895271887e-09,
+          "gradient_square_error": 5.192320746236366e-12,
+          "image_ratio": 0.5428749867159414,
+          "gradient_ratio": 0.5029099400953172,
+          "seconds": 0.00575280000020939,
+          "schedule": {
+            "considered_edges": 604,
+            "cuts": [
+              0.6867199436900205,
+              0.6898292303085327,
+              0.6931883096694946,
+              0.6960616111755371,
+              0.6995922676784152
+            ],
+            "counts": [
+              2,
+              2,
+              2,
+              2
+            ]
+          }
+        },
+        "top_edges": {
+          "image_mse": 1.3209147553538969e-08,
+          "gradient_square_error": 3.699752202081693e-11,
+          "image_ratio": 3.373539107984964,
+          "gradient_ratio": 3.5834499624567715,
+          "seconds": 0.005651099999795406,
+          "schedule": {
+            "considered_edges": 604,
+            "cuts": [
+              0.6867199436900205,
+              0.6914356350898743,
+              0.6937496662139893,
+              0.6960225105285645,
+              0.6995922676784152
+            ],
+            "counts": [
+              3,
+              2,
+              1,
+              2
+            ]
+          }
+        }
+      }
+    },
+    {
+      "run": "output/dsec_n120_s0",
+      "state": "shared_initial",
+      "side": 1,
+      "frame": 143,
+      "gauss8": {
+        "image_mse": 5.902657806977629e-10,
+        "gradient_square_error": 1.2530060285484278e-12,
+        "seconds": 0.003860199999962788
+      },
+      "proposals": {
+        "weighted_edges": {
+          "image_mse": 4.4781497954282656e-10,
+          "gradient_square_error": 9.781532724023248e-13,
+          "image_ratio": 0.7586666789551261,
+          "gradient_ratio": 0.7806453042652061,
+          "seconds": 0.005526100000224687,
+          "schedule": {
+            "considered_edges": 496,
+            "cuts": [
+              0.9871276760116053,
+              0.989675760269165,
+              0.992394208908081,
+              0.9962698817253113,
+              1.0
+            ],
+            "counts": [
+              2,
+              2,
+              2,
+              2
+            ]
+          }
+        },
+        "top_edges": {
+          "image_mse": 3.079637378444744e-10,
+          "gradient_square_error": 3.0440881490230343e-13,
+          "image_ratio": 0.5217374069701709,
+          "gradient_ratio": 0.2429428174858444,
+          "seconds": 0.005449900000257912,
+          "schedule": {
+            "considered_edges": 496,
+            "cuts": [
+              0.9871276760116053,
+              0.9922078847885132,
+              0.9963184595108032,
+              0.9981510639190674,
+              1.0
+            ],
+            "counts": [
+              3,
+              3,
+              1,
+              1
+            ]
+          }
+        }
+      }
+    },
+    {
+      "run": "output/dsec_n120_s0",
+      "state": "gauss",
+      "side": 0,
+      "frame": 120,
+      "gauss8": {
+        "image_mse": 5.010737935684517e-10,
+        "gradient_square_error": 4.922118813090177e-12,
+        "seconds": 0.0036486999997578096
+      },
+      "proposals": {
+        "weighted_edges": {
+          "image_mse": 2.825550904361762e-10,
+          "gradient_square_error": 1.102304407746149e-12,
+          "image_ratio": 0.5638991582934907,
+          "gradient_ratio": 0.22394916693490102,
+          "seconds": 0.008070599999882688,
+          "schedule": {
+            "considered_edges": 345,
+            "cuts": [
+              0.0,
+              0.0031481683254241943,
+              0.0063561201095581055,
+              0.009935498237609863,
+              0.012872323988394652
+            ],
+            "counts": [
+              2,
+              2,
+              2,
+              2
+            ]
+          }
+        },
+        "top_edges": {
+          "image_mse": 3.551680338720331e-10,
+          "gradient_square_error": 1.1257303966542278e-12,
+          "image_ratio": 0.7088138282839842,
+          "gradient_ratio": 0.22870849717410174,
+          "seconds": 0.010186299999986659,
+          "schedule": {
+            "considered_edges": 345,
+            "cuts": [
+              0.0,
+              0.003989279270172119,
+              0.006657302379608154,
+              0.009935498237609863,
+              0.012872323988394652
+            ],
+            "counts": [
+              2,
+              2,
+              2,
+              2
+            ]
+          }
+        }
+      }
+    },
+    {
+      "run": "output/dsec_n120_s0",
+      "state": "gauss",
+      "side": 1,
+      "frame": 127,
+      "gauss8": {
+        "image_mse": 5.833833971458091e-10,
+        "gradient_square_error": 1.706066637359601e-12,
+        "seconds": 0.0035000000002582965
+      },
+      "proposals": {
+        "weighted_edges": {
+          "image_mse": 3.9507408455818904e-10,
+          "gradient_square_error": 2.6463597786894742e-12,
+          "image_ratio": 0.6772117384400732,
+          "gradient_ratio": 1.5511467845037523,
+          "seconds": 0.007322199999634904,
+          "schedule": {
+            "considered_edges": 696,
+            "cuts": [
+              0.30044120929114665,
+              0.30334070324897766,
+              0.30653876066207886,
+              0.31006139516830444,
+              0.3133135332795413
+            ],
+            "counts": [
+              2,
+              2,
+              2,
+              2
+            ]
+          }
+        },
+        "top_edges": {
+          "image_mse": 3.717346430676116e-10,
+          "gradient_square_error": 6.584783853377938e-13,
+          "image_ratio": 0.6372047008645009,
+          "gradient_ratio": 0.3859628756101168,
+          "seconds": 0.005640500000026805,
+          "schedule": {
+            "considered_edges": 696,
+            "cuts": [
+              0.30044120929114665,
+              0.30241063237190247,
+              0.3079127073287964,
+              0.30861884355545044,
+              0.3133135332795413
+            ],
+            "counts": [
+              1,
+              3,
+              1,
+              3
+            ]
+          }
+        }
+      }
+    },
+    {
+      "run": "output/dsec_n120_s0",
+      "state": "gauss",
+      "side": 0,
+      "frame": 136,
+      "gauss8": {
+        "image_mse": 1.0182048537643595e-09,
+        "gradient_square_error": 3.407495308595967e-12,
+        "seconds": 0.0037099000001035165
+      },
+      "proposals": {
+        "weighted_edges": {
+          "image_mse": 7.37326366628821e-10,
+          "gradient_square_error": 3.104538192588668e-12,
+          "image_ratio": 0.7241434411777598,
+          "gradient_ratio": 0.9110909660702863,
+          "seconds": 0.005734000000302331,
+          "schedule": {
+            "considered_edges": 570,
+            "cuts": [
+              0.6867199436900205,
+              0.6901085376739502,
+              0.6932384967803955,
+              0.6962196826934814,
+              0.6995922676784152
+            ],
+            "counts": [
+              2,
+              2,
+              2,
+              2
+            ]
+          }
+        },
+        "top_edges": {
+          "image_mse": 9.990930305292522e-10,
+          "gradient_square_error": 4.4478906203769816e-12,
+          "image_ratio": 0.981229883982138,
+          "gradient_ratio": 1.305325530208786,
+          "seconds": 0.00660809999999401,
+          "schedule": {
+            "considered_edges": 570,
+            "cuts": [
+              0.6867199436900205,
+              0.6925485134124756,
+              0.6934845447540283,
+              0.6950201988220215,
+              0.6995922676784152
+            ],
+            "counts": [
+              3,
+              1,
+              1,
+              3
+            ]
+          }
+        }
+      }
+    },
+    {
+      "run": "output/dsec_n120_s0",
+      "state": "gauss",
+      "side": 1,
+      "frame": 143,
+      "gauss8": {
+        "image_mse": 5.848684314635477e-10,
+        "gradient_square_error": 6.644826604944226e-12,
+        "seconds": 0.004248900000220601
+      },
+      "proposals": {
+        "weighted_edges": {
+          "image_mse": 4.1313244492080514e-10,
+          "gradient_square_error": 3.334511334067877e-12,
+          "image_ratio": 0.7063681722178125,
+          "gradient_ratio": 0.5018206692687455,
+          "seconds": 0.005791499999759253,
+          "schedule": {
+            "considered_edges": 415,
+            "cuts": [
+              0.9871276760116053,
+              0.9897258281707764,
+              0.9931261539459229,
+              0.9966645240783691,
+              1.0
+            ],
+            "counts": [
+              2,
+              2,
+              2,
+              2
+            ]
+          }
+        },
+        "top_edges": {
+          "image_mse": 4.549194076997054e-10,
+          "gradient_square_error": 5.885709305538376e-12,
+          "image_ratio": 0.7778149464510097,
+          "gradient_ratio": 0.8857581477233714,
+          "seconds": 0.005659800000103132,
+          "schedule": {
+            "considered_edges": 415,
+            "cuts": [
+              0.9871276760116053,
+              0.9893703460693359,
+              0.9910756349563599,
+              0.9986357092857361,
+              1.0
+            ],
+            "counts": [
+              2,
+              1,
+              4,
+              1
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "summary": {
+    "weighted_edges": {
+      "image_wins": 14,
+      "gradient_wins": 12,
+      "median_image_ratio": 0.6403641057272599,
+      "median_gradient_ratio": 0.5023653046820313,
+      "median_time_ratio": 1.4926271942545655
+    },
+    "top_edges": {
+      "image_wins": 13,
+      "gradient_wins": 12,
+      "median_image_ratio": 0.7421141544288025,
+      "median_gradient_ratio": 0.5909395176360634,
+      "median_time_ratio": 1.4539024135484713
+    }
+  }
+}

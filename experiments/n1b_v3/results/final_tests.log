@@ -1,0 +1,18 @@
+test_anchor_conditional_path_invariance (experiments.n1b_v3.test_models.ModelsTest.test_anchor_conditional_path_invariance) ... ok
+test_extra_gradient_finite_and_nonzero (experiments.n1b_v3.test_models.ModelsTest.test_extra_gradient_finite_and_nonzero) ... ok
+test_warp_monotonicity_and_endpoints (experiments.n1b_v3.test_models.ModelsTest.test_warp_monotonicity_and_endpoints) ... E:\4D_Gaussian\experiments\n1b_v3\test_models.py:38: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\Users\task_177273154292614\croot\libtorch_1772731686702\work\torch\csrc\autograd\generated\python_variable_methods.cpp:836.)
+  self.assertEqual(float(w[0]),0.);self.assertEqual(float(w[-1]),1.)
+ok
+test_zero_initialization_and_saved_render (experiments.n1b_v3.test_models.ModelsTest.test_zero_initialization_and_saved_render) ... ok
+test_measured_time_units_and_split (experiments.n1b_v2.test_real_dynamic.DynamicDataTests.test_measured_time_units_and_split) ... ok
+test_stereo_geometry (experiments.n1b_v2.test_real_dynamic.DynamicDataTests.test_stereo_geometry) ... ok
+test_test_pixels_do_not_change_initialization (experiments.n1b_v2.test_real_dynamic.DynamicDataTests.test_test_pixels_do_not_change_initialization) ... ok
+test_exact_single_timestamp (experiments.n1b_v2.test_real_fastergs.FasterGSCoreTests.test_exact_single_timestamp) ... ok
+test_original_schedule_updates_spatial_means_only (experiments.n1b_v2.test_real_fastergs.FasterGSCoreTests.test_original_schedule_updates_spatial_means_only) ... ok
+test_unmodified_original_loss_and_gradient (experiments.n1b_v2.test_real_fastergs.FasterGSCoreTests.test_unmodified_original_loss_and_gradient) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 3.271s
+
+OK

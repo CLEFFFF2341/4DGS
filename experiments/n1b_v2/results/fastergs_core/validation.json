@@ -1,0 +1,18 @@
+{
+  "complete_runs": 9,
+  "core_checkpoints": 18,
+  "matched_midpoint_controls": 9,
+  "tests_passed": 21,
+  "all_results_finite": true,
+  "all_shared_initial_hashes_match": true,
+  "source_sha256": "66ea06357323341da9177d8fa6c36cf0096f4b2e0cadfb43767ad7ad238ed223",
+  "FusedAdam_source_matches_repository": true,
+  "full_trainer_attempt": {
+    "status": "failed during import",
+    "extension": "MortonEncoding._C",
+    "error": "DLL load failed while importing _C: An Application Control policy has blocked this file.",
+    "security_policy_changed": false,
+    "blocked_extension_substituted": false
+  },
+  "successful_scope": "original FasterGS rasterizer, FusedAdam and unmodified FasterGS4DLoss; fixed capacity; no default density/Morton/SH scheduling"
+}

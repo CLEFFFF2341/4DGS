@@ -1,0 +1,1031 @@
+{
+  "aggregate": {
+    "initial": {
+      "psnr": 26.53794346056209,
+      "ssim": 0.7331338016192118,
+      "lpips_vgg": 0.48614494641621914
+    },
+    "original": {
+      "psnr": 25.279037180610462,
+      "ssim": 0.6995885769526162,
+      "lpips_vgg": 0.5282828636964162
+    },
+    "modified": {
+      "psnr": 27.319871596799235,
+      "ssim": 0.7682222588857014,
+      "lpips_vgg": 0.44648001511891683
+    },
+    "gauss": {
+      "psnr": 27.31938914368327,
+      "ssim": 0.768195575873057,
+      "lpips_vgg": 0.446486349105835
+    }
+  },
+  "runs": [
+    {
+      "scene": "blurbatteries",
+      "seed": 0,
+      "path": "E:\\4D_Gaussian\\output\\real_cdavis_batteries_s0",
+      "arms": {
+        "initial": {
+          "mean_lpips_vgg": 0.46920243501663206,
+          "per_view_lpips_vgg": [
+            0.46661460399627686,
+            0.46134841442108154,
+            0.46998655796051025,
+            0.4768635630607605,
+            0.47119903564453125
+          ],
+          "mean_quadrature_mse_16_vs_32": 6.305320043864526e-09,
+          "train_mse_gauss32": 0.000352952095757549,
+          "mean_position_displacement_world_units": 0.0,
+          "p95_position_displacement_world_units": 0.0,
+          "checkpoint_sha256": "6d7d1779bbea2194ef681e4fcad80b6515bf2f5c1d614f56e4edc9fc8cd295e7"
+        },
+        "original": {
+          "mean_lpips_vgg": 0.5335301160812378,
+          "per_view_lpips_vgg": [
+            0.5425611734390259,
+            0.5318049192428589,
+            0.524367094039917,
+            0.5383034944534302,
+            0.530613899230957
+          ],
+          "mean_quadrature_mse_16_vs_32": 2.2721645182639034e-09,
+          "train_mse_gauss32": 0.0012681161493269934,
+          "mean_position_displacement_world_units": 0.18734940886497498,
+          "p95_position_displacement_world_units": 0.4109914004802704,
+          "checkpoint_sha256": "31d2c845814ee1e9b7210b2e0e1f381f0315bcd54d62410cc87f88373e5454ee"
+        },
+        "modified": {
+          "mean_lpips_vgg": 0.4231806755065918,
+          "per_view_lpips_vgg": [
+            0.4145028591156006,
+            0.4157748222351074,
+            0.4249389171600342,
+            0.43179136514663696,
+            0.42889541387557983
+          ],
+          "mean_quadrature_mse_16_vs_32": 5.708524739331564e-09,
+          "train_mse_gauss32": 0.00023131396301323548,
+          "mean_position_displacement_world_units": 0.004138272255659103,
+          "p95_position_displacement_world_units": 0.011168270371854305,
+          "checkpoint_sha256": "c1385d3517f372f3b1a02844fe39e429af1699f1219e64f623bf94e66708e19c"
+        },
+        "gauss": {
+          "mean_lpips_vgg": 0.42316535115242004,
+          "per_view_lpips_vgg": [
+            0.4145317077636719,
+            0.41567909717559814,
+            0.4248580038547516,
+            0.43178826570510864,
+            0.42896968126296997
+          ],
+          "mean_quadrature_mse_16_vs_32": 5.7342162129714325e-09,
+          "train_mse_gauss32": 0.00023128435714170337,
+          "mean_position_displacement_world_units": 0.004138275049626827,
+          "p95_position_displacement_world_units": 0.011163126677274704,
+          "checkpoint_sha256": "77d6d6a0046523987228dccb45bbd1eb28ff9666612ee4c9e942c11b01fcf2ae"
+        }
+      }
+    },
+    {
+      "scene": "blurbatteries",
+      "seed": 1,
+      "path": "E:\\4D_Gaussian\\output\\real_cdavis_blurbatteries_s1",
+      "arms": {
+        "initial": {
+          "mean_lpips_vgg": 0.4651492595672607,
+          "per_view_lpips_vgg": [
+            0.4733051657676697,
+            0.4675600528717041,
+            0.4524616003036499,
+            0.4632439613342285,
+            0.4691755175590515
+          ],
+          "mean_quadrature_mse_16_vs_32": 6.439297292912569e-09,
+          "train_mse_gauss32": 0.0003393410701796205,
+          "mean_position_displacement_world_units": 0.0,
+          "p95_position_displacement_world_units": 0.0,
+          "checkpoint_sha256": "cb21bc530dbdc617af137f0a8607aa8a57e711336e59ab6b1c97406cf5163b38"
+        },
+        "original": {
+          "mean_lpips_vgg": 0.5043144166469574,
+          "per_view_lpips_vgg": [
+            0.509249210357666,
+            0.49516382813453674,
+            0.483783483505249,
+            0.5102540254592896,
+            0.5231215357780457
+          ],
+          "mean_quadrature_mse_16_vs_32": 2.34292144327439e-09,
+          "train_mse_gauss32": 0.0008303584181703627,
+          "mean_position_displacement_world_units": 0.19152873754501343,
+          "p95_position_displacement_world_units": 0.42025068402290344,
+          "checkpoint_sha256": "38a7b63e664bc556b717f976311cf9c9c09cf0fc70d43c0109a2f199d51e01a5"
+        },
+        "modified": {
+          "mean_lpips_vgg": 0.422602117061615,
+          "per_view_lpips_vgg": [
+            0.42390769720077515,
+            0.42606329917907715,
+            0.41852766275405884,
+            0.423660010099411,
+            0.4208519160747528
+          ],
+          "mean_quadrature_mse_16_vs_32": 5.8432680669382204e-09,
+          "train_mse_gauss32": 0.00021898471863500567,
+          "mean_position_displacement_world_units": 0.004004995338618755,
+          "p95_position_displacement_world_units": 0.011029411107301712,
+          "checkpoint_sha256": "500e1e7e23dab30bfee510d29516eb6c86d3b94e6e9e812e8ed88a80f77c953d"
+        },
+        "gauss": {
+          "mean_lpips_vgg": 0.42263492941856384,
+          "per_view_lpips_vgg": [
+            0.4239412844181061,
+            0.4261261820793152,
+            0.41838324069976807,
+            0.42377400398254395,
+            0.42094993591308594
+          ],
+          "mean_quadrature_mse_16_vs_32": 5.851500790083403e-09,
+          "train_mse_gauss32": 0.00021897870546025742,
+          "mean_position_displacement_world_units": 0.004004752263426781,
+          "p95_position_displacement_world_units": 0.011038408614695072,
+          "checkpoint_sha256": "3cc53997c197218946ad48cba2ad2c27addd5cfe1b9a45aebd20651c2152b3af"
+        }
+      }
+    },
+    {
+      "scene": "blurbatteries",
+      "seed": 2,
+      "path": "E:\\4D_Gaussian\\output\\real_cdavis_blurbatteries_s2",
+      "arms": {
+        "initial": {
+          "mean_lpips_vgg": 0.4706541895866394,
+          "per_view_lpips_vgg": [
+            0.46126461029052734,
+            0.4610138535499573,
+            0.4706878662109375,
+            0.4797237515449524,
+            0.4805808663368225
+          ],
+          "mean_quadrature_mse_16_vs_32": 6.064314704722228e-09,
+          "train_mse_gauss32": 0.00033902143736162945,
+          "mean_position_displacement_world_units": 0.0,
+          "p95_position_displacement_world_units": 0.0,
+          "checkpoint_sha256": "0e6f71145b5faea3222ef267e6e1c066bbc27533e763544537b9b619f19894a7"
+        },
+        "original": {
+          "mean_lpips_vgg": 0.5263260006904602,
+          "per_view_lpips_vgg": [
+            0.525445818901062,
+            0.5136141180992126,
+            0.5148746967315674,
+            0.5322072505950928,
+            0.5454881191253662
+          ],
+          "mean_quadrature_mse_16_vs_32": 2.147880459910409e-09,
+          "train_mse_gauss32": 0.0009438500823711769,
+          "mean_position_displacement_world_units": 0.18555746972560883,
+          "p95_position_displacement_world_units": 0.40866774320602417,
+          "checkpoint_sha256": "2bb97c34bee5353aaffd5075c717675334f02f2eb5c36f318c690be96ee68e91"
+        },
+        "modified": {
+          "mean_lpips_vgg": 0.4290340542793274,
+          "per_view_lpips_vgg": [
+            0.42491501569747925,
+            0.41620999574661255,
+            0.4337705969810486,
+            0.43078845739364624,
+            0.43948620557785034
+          ],
+          "mean_quadrature_mse_16_vs_32": 5.541304699047739e-09,
+          "train_mse_gauss32": 0.0002298186591360718,
+          "mean_position_displacement_world_units": 0.004093213938176632,
+          "p95_position_displacement_world_units": 0.011086568236351013,
+          "checkpoint_sha256": "060fb6b755e97865df062d0c36cebd140ead7ede3ce9b3628764467a797ef5d8"
+        },
+        "gauss": {
+          "mean_lpips_vgg": 0.42901238799095154,
+          "per_view_lpips_vgg": [
+            0.42490077018737793,
+            0.4161357879638672,
+            0.4337681531906128,
+            0.4308030903339386,
+            0.4394541382789612
+          ],
+          "mean_quadrature_mse_16_vs_32": 5.548738999136857e-09,
+          "train_mse_gauss32": 0.000229740111131428,
+          "mean_position_displacement_world_units": 0.004093160852789879,
+          "p95_position_displacement_world_units": 0.011085662059485912,
+          "checkpoint_sha256": "0dc2ff6320728e41531e9cb52ed025ba29bec28e109b0f1a0fd2857080d4993a"
+        }
+      }
+    },
+    {
+      "scene": "blurdrones",
+      "seed": 0,
+      "path": "E:\\4D_Gaussian\\output\\real_cdavis_blurdrones_s0",
+      "arms": {
+        "initial": {
+          "mean_lpips_vgg": 0.46183388829231264,
+          "per_view_lpips_vgg": [
+            0.48231369256973267,
+            0.45890018343925476,
+            0.4479904770851135,
+            0.45260190963745117,
+            0.467363178730011
+          ],
+          "mean_quadrature_mse_16_vs_32": 9.41465095781847e-09,
+          "train_mse_gauss32": 0.00026651623986915433,
+          "mean_position_displacement_world_units": 0.0,
+          "p95_position_displacement_world_units": 0.0,
+          "checkpoint_sha256": "4af3c490c8c9f3ff192fe0c625d4fe060441462d0f3a1d3d9fd9f1f784888078"
+        },
+        "original": {
+          "mean_lpips_vgg": 0.47885951995849607,
+          "per_view_lpips_vgg": [
+            0.501487672328949,
+            0.4807712435722351,
+            0.4743524193763733,
+            0.4670632481575012,
+            0.4706230163574219
+          ],
+          "mean_quadrature_mse_16_vs_32": 3.0637833886066283e-09,
+          "train_mse_gauss32": 0.000613934791710397,
+          "mean_position_displacement_world_units": 0.1758860945701599,
+          "p95_position_displacement_world_units": 0.3974645137786865,
+          "checkpoint_sha256": "1cd68b5e6fcb148225ecc0f2b69915552ad21cf9f2c510b24a67cc7c26445375"
+        },
+        "modified": {
+          "mean_lpips_vgg": 0.42874146103858946,
+          "per_view_lpips_vgg": [
+            0.4509727954864502,
+            0.4294862747192383,
+            0.4190417230129242,
+            0.4139593839645386,
+            0.43024712800979614
+          ],
+          "mean_quadrature_mse_16_vs_32": 8.426612660175888e-09,
+          "train_mse_gauss32": 0.00015537307296075267,
+          "mean_position_displacement_world_units": 0.003970900550484657,
+          "p95_position_displacement_world_units": 0.011136707849800587,
+          "checkpoint_sha256": "e8ef5638e82ff0a3782b41ce59edbf6e21b5a440320644b1089edb87f809b40e"
+        },
+        "gauss": {
+          "mean_lpips_vgg": 0.4287836909294128,
+          "per_view_lpips_vgg": [
+            0.45095446705818176,
+            0.42942386865615845,
+            0.4191468358039856,
+            0.41415825486183167,
+            0.43023502826690674
+          ],
+          "mean_quadrature_mse_16_vs_32": 8.44101011310272e-09,
+          "train_mse_gauss32": 0.00015537696229082277,
+          "mean_position_displacement_world_units": 0.003970846068114042,
+          "p95_position_displacement_world_units": 0.011167116463184357,
+          "checkpoint_sha256": "6acd4346118c5be972f64e8f3cbaa110cfc0f7ce239b0f0f51e1fd4211d57a1a"
+        }
+      }
+    },
+    {
+      "scene": "blurdrones",
+      "seed": 1,
+      "path": "E:\\4D_Gaussian\\output\\real_cdavis_blurdrones_s1",
+      "arms": {
+        "initial": {
+          "mean_lpips_vgg": 0.46428853273391724,
+          "per_view_lpips_vgg": [
+            0.4807082414627075,
+            0.45814549922943115,
+            0.4610869288444519,
+            0.45823925733566284,
+            0.46326273679733276
+          ],
+          "mean_quadrature_mse_16_vs_32": 9.707857063677817e-09,
+          "train_mse_gauss32": 0.00026840247499587184,
+          "mean_position_displacement_world_units": 0.0,
+          "p95_position_displacement_world_units": 0.0,
+          "checkpoint_sha256": "efed0040a4d6e5db09f15ef9057e6b209fe0dcf91be03eb6715d8c9112128371"
+        },
+        "original": {
+          "mean_lpips_vgg": 0.4817219376564026,
+          "per_view_lpips_vgg": [
+            0.49426883459091187,
+            0.48046332597732544,
+            0.4697105288505554,
+            0.4733814597129822,
+            0.49078553915023804
+          ],
+          "mean_quadrature_mse_16_vs_32": 3.0793140562676317e-09,
+          "train_mse_gauss32": 0.0006841515847058458,
+          "mean_position_displacement_world_units": 0.1720990538597107,
+          "p95_position_displacement_world_units": 0.3899485766887665,
+          "checkpoint_sha256": "078f7f8f285b4ee6ce1ce3ae4dc3297ba5cdc3e37c5678fcfcbfaf1e7faf8eb3"
+        },
+        "modified": {
+          "mean_lpips_vgg": 0.4368293046951294,
+          "per_view_lpips_vgg": [
+            0.45856502652168274,
+            0.42804473638534546,
+            0.43192538619041443,
+            0.42933928966522217,
+            0.4362720847129822
+          ],
+          "mean_quadrature_mse_16_vs_32": 8.706741994046752e-09,
+          "train_mse_gauss32": 0.0001550477238858796,
+          "mean_position_displacement_world_units": 0.004009841475635767,
+          "p95_position_displacement_world_units": 0.011049658060073853,
+          "checkpoint_sha256": "b24da8a1347145811abce1bf12c47481507b99a61d03064633321a0b38d9c018"
+        },
+        "gauss": {
+          "mean_lpips_vgg": 0.43684884905815125,
+          "per_view_lpips_vgg": [
+            0.45868226885795593,
+            0.4281060993671417,
+            0.4319629669189453,
+            0.42922672629356384,
+            0.4362661838531494
+          ],
+          "mean_quadrature_mse_16_vs_32": 8.693502443176985e-09,
+          "train_mse_gauss32": 0.00015478328251364556,
+          "mean_position_displacement_world_units": 0.00400936882942915,
+          "p95_position_displacement_world_units": 0.011038077995181084,
+          "checkpoint_sha256": "dadcff259f2bf56454b49e9a28dbcc777f465c1c50b00e5ab399c7cf6cc958f4"
+        }
+      }
+    },
+    {
+      "scene": "blurdrones",
+      "seed": 2,
+      "path": "E:\\4D_Gaussian\\output\\real_cdavis_blurdrones_s2",
+      "arms": {
+        "initial": {
+          "mean_lpips_vgg": 0.4639653444290161,
+          "per_view_lpips_vgg": [
+            0.476820170879364,
+            0.4654465913772583,
+            0.4572131633758545,
+            0.4593501687049866,
+            0.4609966278076172
+          ],
+          "mean_quadrature_mse_16_vs_32": 9.031071042513035e-09,
+          "train_mse_gauss32": 0.0002746330164055425,
+          "mean_position_displacement_world_units": 0.0,
+          "p95_position_displacement_world_units": 0.0,
+          "checkpoint_sha256": "24a9ac0bbc5039d28cc18b332bc3b0c468daf78ae68d879ed7327c39537373e1"
+        },
+        "original": {
+          "mean_lpips_vgg": 0.488579261302948,
+          "per_view_lpips_vgg": [
+            0.4976855516433716,
+            0.49103856086730957,
+            0.4772598147392273,
+            0.4785658121109009,
+            0.49834656715393066
+          ],
+          "mean_quadrature_mse_16_vs_32": 2.9973377719210766e-09,
+          "train_mse_gauss32": 0.000880513906436549,
+          "mean_position_displacement_world_units": 0.16694311797618866,
+          "p95_position_displacement_world_units": 0.38030046224594116,
+          "checkpoint_sha256": "aa6582564bf2c195ba6fefadcc84bfc0290f346845cc0fa0ea7297f826ed9c2b"
+        },
+        "modified": {
+          "mean_lpips_vgg": 0.4288511335849762,
+          "per_view_lpips_vgg": [
+            0.44186103343963623,
+            0.42920634150505066,
+            0.42204809188842773,
+            0.42073196172714233,
+            0.430408239364624
+          ],
+          "mean_quadrature_mse_16_vs_32": 8.074411442490518e-09,
+          "train_mse_gauss32": 0.00015717946040571076,
+          "mean_position_displacement_world_units": 0.004059575963765383,
+          "p95_position_displacement_world_units": 0.011135648004710674,
+          "checkpoint_sha256": "270af3fbce17dd5cbeb52f8575aec29d0427bf97a7d5a54364a3a4a9ccfec18c"
+        },
+        "gauss": {
+          "mean_lpips_vgg": 0.4288597822189331,
+          "per_view_lpips_vgg": [
+            0.44189661741256714,
+            0.429212361574173,
+            0.42208606004714966,
+            0.4207358658313751,
+            0.43036800622940063
+          ],
+          "mean_quadrature_mse_16_vs_32": 8.07716818681828e-09,
+          "train_mse_gauss32": 0.00015717947892633012,
+          "mean_position_displacement_world_units": 0.004059673752635717,
+          "p95_position_displacement_world_units": 0.011137861758470535,
+          "checkpoint_sha256": "b39a2ab446cb75d305dcbdb49d3906315a843f1c98bed7a7df6c249e883b2863"
+        }
+      }
+    },
+    {
+      "scene": "blurfigures",
+      "seed": 0,
+      "path": "E:\\4D_Gaussian\\output\\real_cdavis_blurfigures_s0",
+      "arms": {
+        "initial": {
+          "mean_lpips_vgg": 0.50627401471138,
+          "per_view_lpips_vgg": [
+            0.5110104084014893,
+            0.48447421193122864,
+            0.5051249265670776,
+            0.5048775672912598,
+            0.5258829593658447
+          ],
+          "mean_quadrature_mse_16_vs_32": 7.782381405974093e-09,
+          "train_mse_gauss32": 0.00020451932214200498,
+          "mean_position_displacement_world_units": 0.0,
+          "p95_position_displacement_world_units": 0.0,
+          "checkpoint_sha256": "5712856957ad77192e88797be02d6d6162f31332419dd09cff57ed0bcecb0087"
+        },
+        "original": {
+          "mean_lpips_vgg": 0.5504618287086487,
+          "per_view_lpips_vgg": [
+            0.5503343343734741,
+            0.5494517087936401,
+            0.5361968874931335,
+            0.55669105052948,
+            0.5596351623535156
+          ],
+          "mean_quadrature_mse_16_vs_32": 3.3183592466438465e-09,
+          "train_mse_gauss32": 0.0007417230401188136,
+          "mean_position_displacement_world_units": 0.1733989119529724,
+          "p95_position_displacement_world_units": 0.3733854293823242,
+          "checkpoint_sha256": "d0bee6ec16206517ea9fed2e6079323de138fda60932a82800095da704bd3b01"
+        },
+        "modified": {
+          "mean_lpips_vgg": 0.471215683221817,
+          "per_view_lpips_vgg": [
+            0.4685841202735901,
+            0.4538476765155792,
+            0.46837466955184937,
+            0.47360581159591675,
+            0.49166613817214966
+          ],
+          "mean_quadrature_mse_16_vs_32": 7.190525271501732e-09,
+          "train_mse_gauss32": 0.00012959226442035287,
+          "mean_position_displacement_world_units": 0.004033502656966448,
+          "p95_position_displacement_world_units": 0.010857188142836094,
+          "checkpoint_sha256": "13f750494f10690fe97f2d015bd787f3f8bc9c7c4c7ed0bc8cf502cd469fc143"
+        },
+        "gauss": {
+          "mean_lpips_vgg": 0.4712400436401367,
+          "per_view_lpips_vgg": [
+            0.4686684012413025,
+            0.45403367280960083,
+            0.4683681130409241,
+            0.4735872745513916,
+            0.4915427565574646
+          ],
+          "mean_quadrature_mse_16_vs_32": 7.20251417026437e-09,
+          "train_mse_gauss32": 0.00012903691482885432,
+          "mean_position_displacement_world_units": 0.004033253528177738,
+          "p95_position_displacement_world_units": 0.010850934311747551,
+          "checkpoint_sha256": "7ec51c137dcd9442becd9a1aacd71616e4ce32191e5d9d5d8a0924bd00095cbe"
+        }
+      }
+    },
+    {
+      "scene": "blurfigures",
+      "seed": 1,
+      "path": "E:\\4D_Gaussian\\output\\real_cdavis_blurfigures_s1",
+      "arms": {
+        "initial": {
+          "mean_lpips_vgg": 0.5067399144172668,
+          "per_view_lpips_vgg": [
+            0.5176405310630798,
+            0.49438852071762085,
+            0.49799132347106934,
+            0.505196213722229,
+            0.5184829831123352
+          ],
+          "mean_quadrature_mse_16_vs_32": 7.886454215603559e-09,
+          "train_mse_gauss32": 0.00019906662928406149,
+          "mean_position_displacement_world_units": 0.0,
+          "p95_position_displacement_world_units": 0.0,
+          "checkpoint_sha256": "e14425f49ec9a3cd6cc3bbd51fb7833c689408c80995f3954a9e5693a7dc2b23"
+        },
+        "original": {
+          "mean_lpips_vgg": 0.5553284049034118,
+          "per_view_lpips_vgg": [
+            0.5617186427116394,
+            0.5520495176315308,
+            0.5464534759521484,
+            0.5512635707855225,
+            0.5651568174362183
+          ],
+          "mean_quadrature_mse_16_vs_32": 3.4801460232121903e-09,
+          "train_mse_gauss32": 0.000595372001407668,
+          "mean_position_displacement_world_units": 0.17888879776000977,
+          "p95_position_displacement_world_units": 0.38770395517349243,
+          "checkpoint_sha256": "009cd989d64fa860b3a9608c3b44709e755e5549985b1761f0e53924d80c9b96"
+        },
+        "modified": {
+          "mean_lpips_vgg": 0.4742369413375854,
+          "per_view_lpips_vgg": [
+            0.481465607881546,
+            0.45621025562286377,
+            0.4622637927532196,
+            0.4781581163406372,
+            0.49308693408966064
+          ],
+          "mean_quadrature_mse_16_vs_32": 7.157924949060164e-09,
+          "train_mse_gauss32": 0.00012682995681340497,
+          "mean_position_displacement_world_units": 0.003871507942676544,
+          "p95_position_displacement_world_units": 0.010303816758096218,
+          "checkpoint_sha256": "ff550e0eb232aee75af28e942ada5af612fcf585a0f82517e99ab1f8fd7bdacb"
+        },
+        "gauss": {
+          "mean_lpips_vgg": 0.4742142200469971,
+          "per_view_lpips_vgg": [
+            0.48147717118263245,
+            0.4561748802661896,
+            0.4622960090637207,
+            0.4780760407447815,
+            0.49304699897766113
+          ],
+          "mean_quadrature_mse_16_vs_32": 7.160138082440426e-09,
+          "train_mse_gauss32": 0.00012682720456117143,
+          "mean_position_displacement_world_units": 0.00387141783721745,
+          "p95_position_displacement_world_units": 0.01030567567795515,
+          "checkpoint_sha256": "faacb5501ebd28e1ebf2a9e294e0eaa092c05853d81d85e1aaab08727b1c3a8a"
+        }
+      }
+    },
+    {
+      "scene": "blurfigures",
+      "seed": 2,
+      "path": "E:\\4D_Gaussian\\output\\real_cdavis_blurfigures_s2",
+      "arms": {
+        "initial": {
+          "mean_lpips_vgg": 0.49863195419311523,
+          "per_view_lpips_vgg": [
+            0.5140984058380127,
+            0.48849236965179443,
+            0.49001550674438477,
+            0.4946317672729492,
+            0.5059217214584351
+          ],
+          "mean_quadrature_mse_16_vs_32": 7.72912791546787e-09,
+          "train_mse_gauss32": 0.0001984100827636818,
+          "mean_position_displacement_world_units": 0.0,
+          "p95_position_displacement_world_units": 0.0,
+          "checkpoint_sha256": "e405d947c8c998bc7229c6e7a309976428ea58dd5b2122d85be88c726a6c303e"
+        },
+        "original": {
+          "mean_lpips_vgg": 0.5486422777175903,
+          "per_view_lpips_vgg": [
+            0.5478906035423279,
+            0.5364826321601868,
+            0.5383601188659668,
+            0.5561296939849854,
+            0.5643483400344849
+          ],
+          "mean_quadrature_mse_16_vs_32": 3.478192548792928e-09,
+          "train_mse_gauss32": 0.0006465284153819084,
+          "mean_position_displacement_world_units": 0.17312896251678467,
+          "p95_position_displacement_world_units": 0.37709859013557434,
+          "checkpoint_sha256": "05d827ece5afa4bdadb4772948916c3c342a1d952543f3c874bb44043d496a4b"
+        },
+        "modified": {
+          "mean_lpips_vgg": 0.47064103484153746,
+          "per_view_lpips_vgg": [
+            0.4777922034263611,
+            0.4628651440143585,
+            0.46564555168151855,
+            0.4718908667564392,
+            0.47501140832901
+          ],
+          "mean_quadrature_mse_16_vs_32": 7.104320332018687e-09,
+          "train_mse_gauss32": 0.0001272312617705514,
+          "mean_position_displacement_world_units": 0.003988888114690781,
+          "p95_position_displacement_world_units": 0.010532066226005554,
+          "checkpoint_sha256": "0d7e82c3c2667eac151fee017e4222cb00de878326117fe90c3fb8a091c870c6"
+        },
+        "gauss": {
+          "mean_lpips_vgg": 0.470676976442337,
+          "per_view_lpips_vgg": [
+            0.4778475761413574,
+            0.46289920806884766,
+            0.4659080505371094,
+            0.4718555212020874,
+            0.4748745262622833
+          ],
+          "mean_quadrature_mse_16_vs_32": 7.100380727820266e-09,
+          "train_mse_gauss32": 0.00012722839746857063,
+          "mean_position_displacement_world_units": 0.003988523967564106,
+          "p95_position_displacement_world_units": 0.010533115826547146,
+          "checkpoint_sha256": "fbbe7582bb4b00cbc717fa1b6215eaf673a6a213a526ca99bb93e2451ccd1d4d"
+        }
+      }
+    },
+    {
+      "scene": "blurlabequipment",
+      "seed": 0,
+      "path": "E:\\4D_Gaussian\\output\\real_cdavis_blurlabequipment_s0",
+      "arms": {
+        "initial": {
+          "mean_lpips_vgg": 0.4950474739074707,
+          "per_view_lpips_vgg": [
+            0.5166543126106262,
+            0.4914093613624573,
+            0.47767525911331177,
+            0.4875333905220032,
+            0.5019650459289551
+          ],
+          "mean_quadrature_mse_16_vs_32": 7.202357586150503e-09,
+          "train_mse_gauss32": 0.00033530520158819854,
+          "mean_position_displacement_world_units": 0.0,
+          "p95_position_displacement_world_units": 0.0,
+          "checkpoint_sha256": "a2da835046b1b69c9f0984e5f5108678e1ebc72e85c521a9538ffe78476340df"
+        },
+        "original": {
+          "mean_lpips_vgg": 0.5502542853355408,
+          "per_view_lpips_vgg": [
+            0.5706868767738342,
+            0.538185179233551,
+            0.5294758677482605,
+            0.5275128483772278,
+            0.5854106545448303
+          ],
+          "mean_quadrature_mse_16_vs_32": 2.474197840071798e-09,
+          "train_mse_gauss32": 0.0012300422052195406,
+          "mean_position_displacement_world_units": 0.19601541757583618,
+          "p95_position_displacement_world_units": 0.42926672101020813,
+          "checkpoint_sha256": "65abfd84531ed5958e27f2e38e42f5691b14fd388b0e9f3505e83c56ae02039d"
+        },
+        "modified": {
+          "mean_lpips_vgg": 0.45462948083877563,
+          "per_view_lpips_vgg": [
+            0.4763736128807068,
+            0.44900524616241455,
+            0.4405415654182434,
+            0.44389116764068604,
+            0.4633358120918274
+          ],
+          "mean_quadrature_mse_16_vs_32": 6.187093060106008e-09,
+          "train_mse_gauss32": 0.00021224314696155488,
+          "mean_position_displacement_world_units": 0.004128624219447374,
+          "p95_position_displacement_world_units": 0.011088143102824688,
+          "checkpoint_sha256": "4b273178a222d496d48ec080811a275e26ce513bc1bf2827b7d758519bb05df9"
+        },
+        "gauss": {
+          "mean_lpips_vgg": 0.45464218854904176,
+          "per_view_lpips_vgg": [
+            0.47636860609054565,
+            0.4490474462509155,
+            0.4405546188354492,
+            0.44396817684173584,
+            0.4632720947265625
+          ],
+          "mean_quadrature_mse_16_vs_32": 6.187290627558602e-09,
+          "train_mse_gauss32": 0.00021224118074100902,
+          "mean_position_displacement_world_units": 0.004128741100430489,
+          "p95_position_displacement_world_units": 0.011084668338298798,
+          "checkpoint_sha256": "159ab5eb49f46b01d2002c04c1315c06aae9edd25059c61d92544f387fbec808"
+        }
+      }
+    },
+    {
+      "scene": "blurlabequipment",
+      "seed": 1,
+      "path": "E:\\4D_Gaussian\\output\\real_cdavis_blurlabequipment_s1",
+      "arms": {
+        "initial": {
+          "mean_lpips_vgg": 0.4934729516506195,
+          "per_view_lpips_vgg": [
+            0.5189533233642578,
+            0.48933812975883484,
+            0.47432005405426025,
+            0.48468637466430664,
+            0.500066876411438
+          ],
+          "mean_quadrature_mse_16_vs_32": 7.187635924352395e-09,
+          "train_mse_gauss32": 0.0003396418161334141,
+          "mean_position_displacement_world_units": 0.0,
+          "p95_position_displacement_world_units": 0.0,
+          "checkpoint_sha256": "4cb72767d26beb16960ce23ef0f6f79cff5ea14061bebb310629e3c5e13aba44"
+        },
+        "original": {
+          "mean_lpips_vgg": 0.5495998144149781,
+          "per_view_lpips_vgg": [
+            0.5551077723503113,
+            0.5372799634933472,
+            0.5410922765731812,
+            0.5461369156837463,
+            0.5683821439743042
+          ],
+          "mean_quadrature_mse_16_vs_32": 2.402744826631132e-09,
+          "train_mse_gauss32": 0.0011295825174516614,
+          "mean_position_displacement_world_units": 0.19617179036140442,
+          "p95_position_displacement_world_units": 0.4323935806751251,
+          "checkpoint_sha256": "11e0f29044947e2dbb76d435c45af3c1672305ad8af4919a39c6fefc1b4f09e4"
+        },
+        "modified": {
+          "mean_lpips_vgg": 0.4548431634902954,
+          "per_view_lpips_vgg": [
+            0.47866469621658325,
+            0.44728365540504456,
+            0.4387478232383728,
+            0.4484844505786896,
+            0.46103519201278687
+          ],
+          "mean_quadrature_mse_16_vs_32": 6.228685097110041e-09,
+          "train_mse_gauss32": 0.00021640794875565916,
+          "mean_position_displacement_world_units": 0.004163793288171291,
+          "p95_position_displacement_world_units": 0.011337580159306526,
+          "checkpoint_sha256": "8c0a4bfae55268e78169deef7cf5a0338fea002f51ffc0bc4c66bf1ad3e5bd52"
+        },
+        "gauss": {
+          "mean_lpips_vgg": 0.4548758387565613,
+          "per_view_lpips_vgg": [
+            0.4786161482334137,
+            0.44742169976234436,
+            0.43865010142326355,
+            0.4486274719238281,
+            0.46106377243995667
+          ],
+          "mean_quadrature_mse_16_vs_32": 6.235703378490933e-09,
+          "train_mse_gauss32": 0.0002163169624776963,
+          "mean_position_displacement_world_units": 0.004163698293268681,
+          "p95_position_displacement_world_units": 0.011326689273118973,
+          "checkpoint_sha256": "634c3942bf3f2aba0eb454fe0051bdef04f204e68bec3b4fe2e8c7cb0f0c9451"
+        }
+      }
+    },
+    {
+      "scene": "blurlabequipment",
+      "seed": 2,
+      "path": "E:\\4D_Gaussian\\output\\real_cdavis_blurlabequipment_s2",
+      "arms": {
+        "initial": {
+          "mean_lpips_vgg": 0.4915353000164032,
+          "per_view_lpips_vgg": [
+            0.5171818733215332,
+            0.4830342233181,
+            0.47813647985458374,
+            0.48056191205978394,
+            0.49876201152801514
+          ],
+          "mean_quadrature_mse_16_vs_32": 7.272894600288617e-09,
+          "train_mse_gauss32": 0.0003339827457881149,
+          "mean_position_displacement_world_units": 0.0,
+          "p95_position_displacement_world_units": 0.0,
+          "checkpoint_sha256": "87a37c4c30e5d77b6b2f6f8310565cdf86dd7d981a00be76ee4f521f6105a9d3"
+        },
+        "original": {
+          "mean_lpips_vgg": 0.5508227109909057,
+          "per_view_lpips_vgg": [
+            0.5628837943077087,
+            0.5441031455993652,
+            0.5372430086135864,
+            0.5337611436843872,
+            0.5761224627494812
+          ],
+          "mean_quadrature_mse_16_vs_32": 2.4470626048365404e-09,
+          "train_mse_gauss32": 0.001228905115139616,
+          "mean_position_displacement_world_units": 0.19410637021064758,
+          "p95_position_displacement_world_units": 0.4297281503677368,
+          "checkpoint_sha256": "02edd78bf8402646abbc131440616001b546e56b3ddf54fddb8e2d230b78aeb4"
+        },
+        "modified": {
+          "mean_lpips_vgg": 0.45109065175056456,
+          "per_view_lpips_vgg": [
+            0.47081321477890015,
+            0.43685978651046753,
+            0.434378445148468,
+            0.4453020989894867,
+            0.4680997133255005
+          ],
+          "mean_quadrature_mse_16_vs_32": 6.31572723531302e-09,
+          "train_mse_gauss32": 0.00021641392360085293,
+          "mean_position_displacement_world_units": 0.004102103412151337,
+          "p95_position_displacement_world_units": 0.010859240777790546,
+          "checkpoint_sha256": "dd96ee16b74e7809385facc0a3194c4d411972562caa74b1eafa08f74386461f"
+        },
+        "gauss": {
+          "mean_lpips_vgg": 0.45111057758331297,
+          "per_view_lpips_vgg": [
+            0.4708110988140106,
+            0.4368985593318939,
+            0.43438416719436646,
+            0.44533228874206543,
+            0.4681267738342285
+          ],
+          "mean_quadrature_mse_16_vs_32": 6.3246657061915144e-09,
+          "train_mse_gauss32": 0.00021644117762608563,
+          "mean_position_displacement_world_units": 0.0041022952646017075,
+          "p95_position_displacement_world_units": 0.010849183425307274,
+          "checkpoint_sha256": "d4c33632b73216f4b1ccf115bf5c20c4b3cbec060c87062371f4c6d5152e9af9"
+        }
+      }
+    },
+    {
+      "scene": "blurpowersupplies",
+      "seed": 0,
+      "path": "E:\\4D_Gaussian\\output\\real_cdavis_blurpowersupplies_s0",
+      "arms": {
+        "initial": {
+          "mean_lpips_vgg": 0.5064298987388611,
+          "per_view_lpips_vgg": [
+            0.5180463790893555,
+            0.5025522708892822,
+            0.5097479224205017,
+            0.4980733394622803,
+            0.5037295818328857
+          ],
+          "mean_quadrature_mse_16_vs_32": 9.171806425456452e-09,
+          "train_mse_gauss32": 0.0005281972246141069,
+          "mean_position_displacement_world_units": 0.0,
+          "p95_position_displacement_world_units": 0.0,
+          "checkpoint_sha256": "291a82ecc8c349930c0974ac8fafbd11ef9415fd94a983da07e506f4004f9946"
+        },
+        "original": {
+          "mean_lpips_vgg": 0.5385754823684692,
+          "per_view_lpips_vgg": [
+            0.5380122661590576,
+            0.5438001155853271,
+            0.541429877281189,
+            0.5326360464096069,
+            0.5369991064071655
+          ],
+          "mean_quadrature_mse_16_vs_32": 3.2859128381209266e-09,
+          "train_mse_gauss32": 0.0018599156949979563,
+          "mean_position_displacement_world_units": 0.18017584085464478,
+          "p95_position_displacement_world_units": 0.39256349205970764,
+          "checkpoint_sha256": "98fe180ece85cd2f5b57f82c69168ab221730c87f0068887e7b49f61751ad97d"
+        },
+        "modified": {
+          "mean_lpips_vgg": 0.4542263031005859,
+          "per_view_lpips_vgg": [
+            0.46297597885131836,
+            0.45428478717803955,
+            0.4466075599193573,
+            0.45202067494392395,
+            0.4552425146102905
+          ],
+          "mean_quadrature_mse_16_vs_32": 7.886084353437973e-09,
+          "train_mse_gauss32": 0.0003093097216656639,
+          "mean_position_displacement_world_units": 0.004676074255257845,
+          "p95_position_displacement_world_units": 0.012211578898131847,
+          "checkpoint_sha256": "5b41a1fd821d25ee73639ca7f6ede9f0edadd6059b65d3dab9a99530ccc4b6dd"
+        },
+        "gauss": {
+          "mean_lpips_vgg": 0.4541465938091278,
+          "per_view_lpips_vgg": [
+            0.462989866733551,
+            0.4541630148887634,
+            0.44646185636520386,
+            0.45190197229385376,
+            0.45521625876426697
+          ],
+          "mean_quadrature_mse_16_vs_32": 7.894564656317648e-09,
+          "train_mse_gauss32": 0.0003092986913139208,
+          "mean_position_displacement_world_units": 0.0046761780977249146,
+          "p95_position_displacement_world_units": 0.012200480327010155,
+          "checkpoint_sha256": "0cd369eff469a4ea9eb09637d0273be06b48c06984d088360bff40b4ec95c627"
+        }
+      }
+    },
+    {
+      "scene": "blurpowersupplies",
+      "seed": 1,
+      "path": "E:\\4D_Gaussian\\output\\real_cdavis_blurpowersupplies_s1",
+      "arms": {
+        "initial": {
+          "mean_lpips_vgg": 0.4973560571670532,
+          "per_view_lpips_vgg": [
+            0.5207615494728088,
+            0.49011868238449097,
+            0.4876611530780792,
+            0.4910082221031189,
+            0.4972306787967682
+          ],
+          "mean_quadrature_mse_16_vs_32": 9.53114120960663e-09,
+          "train_mse_gauss32": 0.0004829764705694591,
+          "mean_position_displacement_world_units": 0.0,
+          "p95_position_displacement_world_units": 0.0,
+          "checkpoint_sha256": "ea8bd3800cc3c2b603b300d3aa14c128da0fb9dafd18367675aef302aacd1f9e"
+        },
+        "original": {
+          "mean_lpips_vgg": 0.5271483421325683,
+          "per_view_lpips_vgg": [
+            0.5374711751937866,
+            0.5238333940505981,
+            0.5106581449508667,
+            0.5290064811706543,
+            0.534772515296936
+          ],
+          "mean_quadrature_mse_16_vs_32": 3.1568564182491183e-09,
+          "train_mse_gauss32": 0.001129960605693567,
+          "mean_position_displacement_world_units": 0.18979525566101074,
+          "p95_position_displacement_world_units": 0.41366106271743774,
+          "checkpoint_sha256": "9dd1aa30e5fe1a1b50112cb2dba575c7abdf7db09210374cde4d96184baa1faa"
+        },
+        "modified": {
+          "mean_lpips_vgg": 0.4478700280189514,
+          "per_view_lpips_vgg": [
+            0.46166306734085083,
+            0.43945759534835815,
+            0.4463958144187927,
+            0.44481539726257324,
+            0.44701826572418213
+          ],
+          "mean_quadrature_mse_16_vs_32": 7.787770773938341e-09,
+          "train_mse_gauss32": 0.00028526687593613233,
+          "mean_position_displacement_world_units": 0.004601518623530865,
+          "p95_position_displacement_world_units": 0.01222762931138277,
+          "checkpoint_sha256": "2029ed3202fc90a678d206a6d1b99fd893bcf4e10508eaaeea71b94c78bae510"
+        },
+        "gauss": {
+          "mean_lpips_vgg": 0.44786816239356997,
+          "per_view_lpips_vgg": [
+            0.461676687002182,
+            0.4394427239894867,
+            0.44635796546936035,
+            0.44485023617744446,
+            0.4470131993293762
+          ],
+          "mean_quadrature_mse_16_vs_32": 7.790765292151983e-09,
+          "train_mse_gauss32": 0.0002852590082006322,
+          "mean_position_displacement_world_units": 0.004601410590112209,
+          "p95_position_displacement_world_units": 0.012228036299347878,
+          "checkpoint_sha256": "a13537fa990bf052699093c062e47536c0600545044dcc78805d3d491e333964"
+        }
+      }
+    },
+    {
+      "scene": "blurpowersupplies",
+      "seed": 2,
+      "path": "E:\\4D_Gaussian\\output\\real_cdavis_blurpowersupplies_s2",
+      "arms": {
+        "initial": {
+          "mean_lpips_vgg": 0.5015929818153382,
+          "per_view_lpips_vgg": [
+            0.5150378942489624,
+            0.4983603060245514,
+            0.5028796195983887,
+            0.4925093352794647,
+            0.4991777539253235
+          ],
+          "mean_quadrature_mse_16_vs_32": 8.935718535478069e-09,
+          "train_mse_gauss32": 0.0005047037217688436,
+          "mean_position_displacement_world_units": 0.0,
+          "p95_position_displacement_world_units": 0.0,
+          "checkpoint_sha256": "fe39d1324d6e85381cd5a602ac1af913b6c82b617827a964b75a6b98a6a67241"
+        },
+        "original": {
+          "mean_lpips_vgg": 0.5400785565376282,
+          "per_view_lpips_vgg": [
+            0.540590226650238,
+            0.5256072282791138,
+            0.5293248295783997,
+            0.5515878796577454,
+            0.553282618522644
+          ],
+          "mean_quadrature_mse_16_vs_32": 3.2352255319167966e-09,
+          "train_mse_gauss32": 0.0015113618703455562,
+          "mean_position_displacement_world_units": 0.18238942325115204,
+          "p95_position_displacement_world_units": 0.4016216993331909,
+          "checkpoint_sha256": "744f8903327c4fcd15ae38c1f22f1bdc3458e779061b37750cbe04a57679de63"
+        },
+        "modified": {
+          "mean_lpips_vgg": 0.4492081940174103,
+          "per_view_lpips_vgg": [
+            0.45502978563308716,
+            0.44889432191848755,
+            0.4476062059402466,
+            0.4458906352519989,
+            0.4486200213432312
+          ],
+          "mean_quadrature_mse_16_vs_32": 7.3921694938090035e-09,
+          "train_mse_gauss32": 0.00029486264490212005,
+          "mean_position_displacement_world_units": 0.0046625686809420586,
+          "p95_position_displacement_world_units": 0.012118925340473652,
+          "checkpoint_sha256": "1f87e433bfd2ef94ae9cf6cb598b40203df72b85a21790ecff0b6aafec6c0436"
+        },
+        "gauss": {
+          "mean_lpips_vgg": 0.4492156445980072,
+          "per_view_lpips_vgg": [
+            0.4550936222076416,
+            0.44888436794281006,
+            0.44760632514953613,
+            0.4458271265029907,
+            0.4486667811870575
+          ],
+          "mean_quadrature_mse_16_vs_32": 7.392289422567286e-09,
+          "train_mse_gauss32": 0.0002948468593078562,
+          "mean_position_displacement_world_units": 0.0046623884700238705,
+          "p95_position_displacement_world_units": 0.012113958597183228,
+          "checkpoint_sha256": "0df1c842f0f2bbea4d125c8535c4d289c94a27d36978ee1170d31dfce9afbbdf"
+        }
+      }
+    }
+  ]
+}
