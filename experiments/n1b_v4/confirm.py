@@ -5,6 +5,17 @@ from pathlib import Path
 import subprocess
 import sys
 
+def invoke(command, log_path):
+    with log_path.open('x') as log:
+        return subprocess.run(command, stdout=log, stderr=subprocess.STDOUT).returncode
+
+def recover_evaluation(out, root):
+    if (out/'training.json').exists() and (out/'final.pt').exists():
+        return invoke([sys.executable,'-u','-X','faulthandler','-m',
+            'experiments.n1b_v4.evaluate_saved','--run',str(out)],
+            root/(out.name+'.recovery.log')) == 0
+    return False
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument('--seed', type=int, required=True)
@@ -36,14 +47,24 @@ def main():
             print(json.dumps({'already_completed':str(out)}),flush=True)
             continue
         if out.exists():
+            if recover_evaluation(out, root):
+                print(json.dumps({'recovered_evaluation':str(out)}),flush=True)
+                continue
             raise RuntimeError(f'Incomplete run preserved: {out}')
         print(json.dumps({'starting':str(out)}),flush=True)
-        with (root/(out.name+'.log')).open('w') as log:
-            result = subprocess.run([sys.executable,'-u','-X','faulthandler','-m','experiments.n1b_v4.run',
-                '--seed',str(a.seed),'--out',str(out),*(['--full'] if a.full else []),*args],
-                stdout=log,stderr=subprocess.STDOUT)
-        if result.returncode:
-            raise RuntimeError(f'{out}: exit {result.returncode}')
+        command = [sys.executable,'-u','-X','faulthandler','-m','experiments.n1b_v4.run',
+                   '--seed',str(a.seed),'--out',str(out),*(['--full'] if a.full else []),*args]
+        code = invoke(command, root/(out.name+'.log'))
+        if code:
+            with (root/'process_failures.jsonl').open('a') as f:
+                f.write(json.dumps({'run':str(out),'exit':code,'created_output':out.exists()})+'\n')
+            if not out.exists():
+                # Retry once only when failure preceded output creation/training.
+                code = invoke(command, root/(out.name+'.startup_retry.log'))
+            elif recover_evaluation(out, root):
+                code = 0
+        if code:
+            raise RuntimeError(f'{out}: exit {code}')
         r = json.loads((out/'results.json').read_text())
         print(json.dumps({'completed':str(out),'validation':r.get('validation',{}).get('mean')}),flush=True)
 

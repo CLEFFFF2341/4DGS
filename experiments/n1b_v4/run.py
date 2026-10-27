@@ -68,6 +68,8 @@ def main():
     sources = {str(path.relative_to(ROOT)): sha(path) for path in Path(__file__).parent.glob('*.py')}
     record = {'args': vars(a), 'source_sha256': sources,
               'commit': subprocess.check_output(['git','rev-parse','HEAD'], text=True).strip()}
+    record['native_source_sha256'] = {name:sha(ROOT/'src/Methods/FasterGS4D'/name)
+                                     for name in ('Model.py','Renderer.py','Trainer.py','Loss.py')}
     (out/'protocol.json').write_text(json.dumps(record, indent=2))
     Framework.setup(config_path=config_path)
     torch.set_num_threads(4)
