@@ -8,6 +8,10 @@ Read `PROTOCOL.md` for the predeclared comparison, `TRANSFER_GATE.md` for the
 coffee replication criterion, and `RUN_LOG.md` for infrastructure diagnostics.
 Completed metrics and conclusions are archived in `results/` and `RESULTS.md`.
 
+The revised local-acceleration structure and its completed three-seed Coffee
+comparison are in [N1b v4](../n1b_v4/README.md). That is a separate experiment;
+the global-affine results archived here remain unchanged.
+
 ## Implementation boundary
 
 - `native.py`: inherited native training/density/opacity/Morton/SH callbacks;

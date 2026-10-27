@@ -91,3 +91,14 @@ SSIM +0.005085, LPIPS -0.008403. Before reading any candidate cam16 metric,
 the reserved-view decision is: positive PSNR at both seeds and non-regressing
 mean SSIM/LPIPS across the two pairs. Failure blocks full confirmation for this
 frozen candidate; do not tune to the reserved camera.
+
+## Completed frozen confirmation
+
+The reserved check passed. Full native seeds 1, 2 and 3 then completed without
+changing the frozen structural candidate. Paired PSNR gains were +0.121179,
++0.044526 and +0.145171 dB; mean +0.103625 dB. Overall mean SSIM improved
+by +0.000800 and LPIPS by -0.000149. This passes the predeclared Coffee gate.
+Seed 2 LPIPS regressed by +0.000483, and 57 of its 300 frames lost PSNR. Do not
+describe every metric or frame as improved, or generalize to other scenes.
+The threshold was not changed after observing these results. No additional
+variant was selected using these full-test results.

@@ -23,6 +23,9 @@ def main():
     state = torch.load(out/'final.pt', map_location='cpu', weights_only=True)
     assert sha(out/'final.pt') == source['checkpoint_sha256']
     model = FasterGS4DModel(out.name).build()
+    model.output_directory = out
+    model.num_iterations_trained = state.get('steps', source['steps'])
+    assert model.num_iterations_trained == source['steps']
     model.gaussians = g = ResidualGaussians(model.SH_DEGREE, False)
     for key, value in state['raw'].items():
         setattr(g, '_'+key, torch.nn.Parameter(value.cuda()))

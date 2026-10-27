@@ -1,11 +1,55 @@
 {
   "scope": "Coffee only; frozen three-seed full native confirmation",
-  "complete": false,
-  "passes_predeclared_gate": false,
+  "complete": true,
+  "passes_predeclared_gate": true,
+  "matched_config_data_and_core_sources": true,
+  "expected_seeds": [
+    1,
+    2,
+    3
+  ],
+  "gate": {
+    "all_seed_psnr_positive": true,
+    "minimum_mean_psnr_delta": 0.1,
+    "minimum_mean_ssim_delta": 0,
+    "maximum_mean_lpips_delta": 0
+  },
+  "frozen_candidate": {
+    "kind": "accel",
+    "accel_lr": 0.05,
+    "activation_step": 15000,
+    "color": false,
+    "mse_weight": 0
+  },
+  "common_settings": {
+    "total_steps": 30000,
+    "batch_size": 4,
+    "image_scale_factor": 0.5
+  },
+  "dataset": {
+    "train_views": 5100,
+    "test_views": 300,
+    "metadata_sha256": {
+      "transforms_train.json": "05fede15473ab828ababd6a3d178c64c603f34f49520ba9a123fe36a3005a1e0",
+      "transforms_test.json": "792c0d87f1a0d4989f7e496d125bf20495312e97e96a6ce078891fa5f74b15bf",
+      "points3d.ply": "9efe0d9626f0ea13a991af3008874a6accb3827ad82d2ba32367c6435188017b"
+    }
+  },
+  "native_source_sha256": {
+    "Model.py": "c80aabb09194475869acfd6a84f169b1f4624c4c207c4a32593aa9421205abe1",
+    "Renderer.py": "1ea23aaeb8d0c16cffc9b97c6f4761792acdf1dc8eb03d1fbdb80c687b613c0e",
+    "Trainer.py": "283a22459534993b7af691bfb9ccbdf8bc99da360e572e7dddb1a7d334aaaad1",
+    "Loss.py": "2bf65d4dc596df6b41f1eea1cb772ae4fd6f1b2836d2d78a81d6a30455ddc5d3"
+  },
+  "core_source_sha256": {
+    "model.py": "237b90401983ae5fd1a86beac8f66d6f28af1a1e60ca3e3f6d3afef830ac5187",
+    "run.py": "433b3a62f26afca42b1de24481ae035ed3f80c0b504a111eca2af2894d5f660c",
+    "train.py": "c6ab135c38e04875c0fd8435f6b475e7f40988710ffcccbbe918751e7ab70a93"
+  },
   "mean_delta": {
-    "psnr": 0.08285248438517279,
-    "ssim": 0.0007933005690574091,
-    "lpips": -0.00013779337207475706
+    "psnr": 0.10362542046440974,
+    "ssim": 0.0008004148801167658,
+    "lpips": -0.00014949192603428788
   },
   "pairs": [
     {
@@ -178,6 +222,93 @@
             "psnr": 0.006169662475585937,
             "ssim": 0.0004215133190155029,
             "lpips": -0.0007123667001724244
+          }
+        }
+      ]
+    },
+    {
+      "seed": 3,
+      "native": {
+        "psnr": 26.708421993255616,
+        "ssim": 0.897767360607783,
+        "lpips": 0.21082530299822488
+      },
+      "candidate": {
+        "psnr": 26.8535932858785,
+        "ssim": 0.8985820041100184,
+        "lpips": 0.21065241396427153
+      },
+      "delta": {
+        "psnr": 0.14517129262288364,
+        "ssim": 0.0008146435022354792,
+        "lpips": -0.00017288903395334954
+      },
+      "positive_psnr_frames": 300,
+      "per_50_frames": [
+        {
+          "frames": [
+            0,
+            49
+          ],
+          "mean_delta": {
+            "psnr": 0.10629928588867188,
+            "ssim": 0.0005802464485168457,
+            "lpips": 0.0005663624405860901
+          }
+        },
+        {
+          "frames": [
+            50,
+            99
+          ],
+          "mean_delta": {
+            "psnr": 0.13367095947265625,
+            "ssim": 0.0007237529754638672,
+            "lpips": -0.0004474309086799622
+          }
+        },
+        {
+          "frames": [
+            100,
+            149
+          ],
+          "mean_delta": {
+            "psnr": 0.1509482192993164,
+            "ssim": 0.0010151875019073487,
+            "lpips": -0.0006542050838470459
+          }
+        },
+        {
+          "frames": [
+            150,
+            199
+          ],
+          "mean_delta": {
+            "psnr": 0.15479301452636718,
+            "ssim": 0.0008411872386932373,
+            "lpips": -0.0005924275517463684
+          }
+        },
+        {
+          "frames": [
+            200,
+            249
+          ],
+          "mean_delta": {
+            "psnr": 0.17253070831298828,
+            "ssim": 0.0010008251667022706,
+            "lpips": -0.00047642052173614503
+          }
+        },
+        {
+          "frames": [
+            250,
+            299
+          ],
+          "mean_delta": {
+            "psnr": 0.1527855682373047,
+            "ssim": 0.0007266616821289063,
+            "lpips": 0.0005667874217033386
           }
         }
       ]
