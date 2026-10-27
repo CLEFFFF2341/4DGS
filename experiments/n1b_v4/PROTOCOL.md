@@ -85,3 +85,9 @@ Run a fresh shared native seed-1 prefix and native/candidate continuations;
 do not adjust the frozen candidate using seed-1 or reserved cam16 outcomes.
 Finish the already declared other round-2 arms for transparent evidence, without
 silently replacing this candidate based on confirmation results.
+
+Seed-1 primary replication passed without changing settings: +0.152331 dB,
+SSIM +0.005085, LPIPS -0.008403. Before reading any candidate cam16 metric,
+the reserved-view decision is: positive PSNR at both seeds and non-regressing
+mean SSIM/LPIPS across the two pairs. Failure blocks full confirmation for this
+frozen candidate; do not tune to the reserved camera.

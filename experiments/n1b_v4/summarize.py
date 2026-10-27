@@ -7,13 +7,13 @@ DEST = Path('experiments/n1b_v4/results')
 
 def main():
     rows = []
-    for path in sorted(ROOT.glob('*/results.json')):
+    for path in sorted([*ROOT.glob('*/results.json'), *ROOT.glob('*/reserved.json')]):
         r = json.loads(path.read_text())
         if 'validation' not in r:
             continue
         seed = r['args']['seed']
         full = r['args'].get('full', False)
-        base_path = ROOT/f'{"full" if full else "dev"}_s{seed}_native/results.json'
+        base_path = ROOT/f'{"full" if full else "dev"}_s{seed}_native'/path.name
         if not base_path.exists():
             continue
         b = json.loads(base_path.read_text())
@@ -23,7 +23,8 @@ def main():
             assert r['pixel_hash'] == b['pixel_hash']
         metrics = r['validation']['mean']
         delta = {k:metrics[k]-b['validation']['mean'][k] for k in metrics}
-        rows.append({'run':path.parent.name, 'args':r['args'],
+        label = path.parent.name + ('@reserved' if path.name == 'reserved.json' else '')
+        rows.append({'run':label, 'args':r['args'],
             'split':r.get('evaluation_split','primary'),
             'mean':metrics,'delta_vs_native':delta,
             'passes_primary_gate':delta['psnr'] >= .1 and delta['ssim'] >= 0 and delta['lpips'] <= 0,
@@ -33,7 +34,7 @@ def main():
             'gaussians':r['final_gaussians'], 'continuation_seconds':r['seconds'],
             'source_sha256':r['source_sha256'], 'prefix_sha256':r['prefix_sha256'],
             'checkpoint_sha256':r['checkpoint_sha256'], 'views':r['validation']['views']})
-        print(f'{path.parent.name:30s} {metrics["psnr"]:.6f}  delta {delta["psnr"]:+.6f} / {delta["ssim"]:+.6f} / {delta["lpips"]:+.6f}')
+        print(f'{label:38s} {metrics["psnr"]:.6f}  delta {delta["psnr"]:+.6f} / {delta["ssim"]:+.6f} / {delta["lpips"]:+.6f}')
     DEST.mkdir(exist_ok=True)
     (DEST/'development.json').write_text(json.dumps(rows,indent=2))
 

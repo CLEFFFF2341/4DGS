@@ -9,12 +9,14 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument('--run', required=True)
     p.add_argument('--secondary', action='store_true')
+    p.add_argument('--verify-primary', action='store_true')
     a = p.parse_args()
     out = Path(a.run).resolve()
     source = json.loads((out/'training.json').read_text())
     full = source['args'].get('full', False)
     assert not (full and a.secondary)
-    destination = out/('reserved.json' if a.secondary else 'results.json')
+    assert not (a.secondary and a.verify_primary)
+    destination = out/('reload_check.json' if a.verify_primary else ('reserved.json' if a.secondary else 'results.json'))
     assert not destination.exists(), destination
     Framework.setup(config_path=out/'config.yaml')
     torch.set_num_threads(4)
@@ -45,6 +47,11 @@ def main():
     source['evaluation_split'] = 'official_test' if full else ('reserved' if a.secondary else 'primary')
     source['evaluation_only'] = True
     source['validation'] = evaluate(renderer, views)
+    if a.verify_primary:
+        expected = json.loads((out/'results.json').read_text())['validation']['mean']
+        delta = {k:source['validation']['mean'][k]-expected[k] for k in expected}
+        assert abs(delta['psnr']) < .001 and abs(delta['ssim']) < 1e-5 and abs(delta['lpips']) < 1e-5, delta
+        source['reload_mean_delta'] = delta
     destination.write_text(json.dumps(source, indent=2))
     print(json.dumps({'file':str(destination),'validation':source['validation']['mean']}), flush=True)
 
