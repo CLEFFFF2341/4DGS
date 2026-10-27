@@ -1,0 +1,1097 @@
+{
+  "args": {
+    "dataset": "dsec",
+    "arm": "native",
+    "root": "dataset/dsec_dynamic/zurich_city_05_a",
+    "start": 120,
+    "seed": 3,
+    "steps": 30000,
+    "out": "output/n1b_native/native03_c05_s3_native",
+    "skip_eval": false
+  },
+  "source_sha256": {
+    "experiments\\n1b_native\\assess.py": "cca1c747a6bc05dca07aca7a15f75539748c5041b8efe95be1a42d62d14a6a89",
+    "experiments\\n1b_native\\data.py": "11cabdba86989a2c5f14f9e80da5e477cca56bb06989229a07b0a4459af118ef",
+    "experiments\\n1b_native\\native.py": "da33109fdca7e137839c7ffba56525617e04ed4eaa2d9515c0793d5cbe9c30a4",
+    "experiments\\n1b_native\\run.py": "d8c03c27ed8028514b49f0fdb364b1820fcef94185efe8777e9bf6faf8926c36",
+    "experiments\\n1b_native\\suite.py": "0ac1dc4f5a365e69e3e8ce6176818bad24cf4a6b0a6d71fddc32dfa9194cfd99",
+    "experiments\\n1b_native\\__init__.py": "0c07ef2e1df5ac0b690348a7e7bb8627218e4e33f2675061c7724f0a09bc68c3",
+    "src\\Methods\\FasterGS4D\\Trainer.py": "283a22459534993b7af691bfb9ccbdf8bc99da360e572e7dddb1a7d334aaaad1",
+    "src\\Methods\\FasterGS4D\\Model.py": "c80aabb09194475869acfd6a84f169b1f4624c4c207c4a32593aa9421205abe1",
+    "src\\Methods\\FasterGS4D\\Renderer.py": "1ea23aaeb8d0c16cffc9b97c6f4761792acdf1dc8eb03d1fbdb80c687b613c0e",
+    "src\\Methods\\FasterGS4D\\Loss.py": "2bf65d4dc596df6b41f1eea1cb772ae4fd6f1b2836d2d78a81d6a30455ddc5d3",
+    "src\\Methods\\Base\\Trainer.py": "0ecde8cfea7e029be1c7d75c50bf2a0ccb6b2d2c11bbf58c2d95928a5643ffb6",
+    "src\\Optim\\Samplers\\DatasetSamplers.py": "bc4489f8a062c419195a5e73c7978cbd97e2802b7fb6bd132a46648dd0cb8a3d",
+    "src\\Optim\\Samplers\\utils.py": "647ed41491fd8bf37f706e87dfb650485a92a500e174e7ef43fe02c824fd2191",
+    "experiments\\n1b_v2\\real_dynamic.py": "b35f417227b16ef40acc46790872f783c9e7fa44444bdf613839111788378caf"
+  },
+  "git_commit": "c8aefa5a43da0b75ab558825d422b40a28132b29",
+  "dataset": {
+    "sequence": "zurich_city_05_a",
+    "global_frames": [
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143
+    ],
+    "train_frame_indices": [
+      120,
+      121,
+      123,
+      124,
+      125,
+      127,
+      128,
+      129,
+      131,
+      132,
+      133,
+      135,
+      136,
+      137,
+      139,
+      140,
+      141,
+      143
+    ],
+    "test_frame_indices": [
+      122,
+      126,
+      130,
+      134,
+      138,
+      142
+    ],
+    "origin_us": 37385400140.0,
+    "time_span_seconds": 1.150698,
+    "measured_exposure_seconds": [
+      [
+        0.000711,
+        0.0007059999999999968,
+        0.0006999999999999908,
+        0.0006950000000000178,
+        0.0006900000000000129,
+        0.0006840000000000069,
+        0.00067899999999997,
+        0.00067899999999997,
+        0.0006790000000000339,
+        0.00067899999999997,
+        0.00067899999999997,
+        0.00067899999999997,
+        0.00067899999999997,
+        0.00067899999999997,
+        0.00067899999999997,
+        0.00067899999999997,
+        0.00067899999999997,
+        0.00067899999999997,
+        0.0006790000000000977,
+        0.00067899999999997,
+        0.0006790000000000977,
+        0.0006789999999998423,
+        0.0006790000000000977,
+        0.0006790000000000977
+      ],
+      [
+        0.000727,
+        0.0007159999999999986,
+        0.0007109999999999857,
+        0.0007060000000000287,
+        0.0006999999999999908,
+        0.0006949999999999859,
+        0.000689999999999917,
+        0.0006899999999999809,
+        0.0006900000000000447,
+        0.0006899999999999809,
+        0.000689999999999917,
+        0.000689999999999917,
+        0.0006900000000000447,
+        0.000689999999999917,
+        0.0006900000000000447,
+        0.000689999999999917,
+        0.000689999999999917,
+        0.0006900000000000447,
+        0.0006900000000000447,
+        0.0006900000000000447,
+        0.0006900000000001726,
+        0.0006899999999997893,
+        0.0006900000000001726,
+        0.0006900000000000447
+      ]
+    ],
+    "normalized_exposure_bounds": [
+      [
+        [
+          0.0,
+          0.0006178858397251061
+        ],
+        [
+          0.04345623265183393,
+          0.044069773302812726
+        ],
+        [
+          0.08690290588842599,
+          0.0875112323129092
+        ],
+        [
+          0.1303591385402599,
+          0.13096311977599684
+        ],
+        [
+          0.1738118950410968,
+          0.1744115310880874
+        ],
+        [
+          0.2172646515419337,
+          0.21785907336242874
+        ],
+        [
+          0.2607174080427706,
+          0.2613074846745193
+        ],
+        [
+          0.30417450973235377,
+          0.3047645863641025
+        ],
+        [
+          0.3476203139311965,
+          0.3482103905629453
+        ],
+        [
+          0.39107307043203343,
+          0.39166314706378214
+        ],
+        [
+          0.43452582693287034,
+          0.43511590356461904
+        ],
+        [
+          0.4779855357357013,
+          0.47857561236745
+        ],
+        [
+          0.5213800667073376,
+          0.5219701433390863
+        ],
+        [
+          0.5648606324161509,
+          0.5654507090478996
+        ],
+        [
+          0.6083272935209759,
+          0.6089173701527246
+        ],
+        [
+          0.6517765738708159,
+          0.6523666505025646
+        ],
+        [
+          0.6952128186544168,
+          0.6958028952861655
+        ],
+        [
+          0.7386655751552536,
+          0.7392556517870023
+        ],
+        [
+          0.7821183316560905,
+          0.7827084082878393
+        ],
+        [
+          0.8255849927609156,
+          0.8261750693926643
+        ],
+        [
+          0.8690386182995016,
+          0.8696286949312504
+        ],
+        [
+          0.9124913748003387,
+          0.9130814514320873
+        ],
+        [
+          0.9559476074521724,
+          0.9565376840839213
+        ],
+        [
+          0.9994003639530094,
+          0.9999904405847582
+        ]
+      ],
+      [
+        [
+          0.0,
+          0.000631790443713294
+        ],
+        [
+          0.04345623265183393,
+          0.044078463680305345
+        ],
+        [
+          0.08690290588842599,
+          0.08752079172815108
+        ],
+        [
+          0.1303591385402599,
+          0.13097267919123873
+        ],
+        [
+          0.1738118950410968,
+          0.17442022146558
+        ],
+        [
+          0.2172646515419337,
+          0.2178686327776706
+        ],
+        [
+          0.2607174080427706,
+          0.26131704408976114
+        ],
+        [
+          0.30417450973235377,
+          0.30477414577934436
+        ],
+        [
+          0.3476203139311965,
+          0.34821994997818717
+        ],
+        [
+          0.39107307043203343,
+          0.391672706479024
+        ],
+        [
+          0.43452582693287034,
+          0.4351254629798609
+        ],
+        [
+          0.4779855357357013,
+          0.47858517178269183
+        ],
+        [
+          0.5213800667073376,
+          0.5219797027543283
+        ],
+        [
+          0.5648606324161509,
+          0.5654602684631415
+        ],
+        [
+          0.6083272935209759,
+          0.6089269295679666
+        ],
+        [
+          0.6517765738708159,
+          0.6523762099178064
+        ],
+        [
+          0.6952128186544168,
+          0.6958124547014073
+        ],
+        [
+          0.7386655751552536,
+          0.7392652112022442
+        ],
+        [
+          0.7821183316560905,
+          0.7827179677030811
+        ],
+        [
+          0.8255849927609156,
+          0.8261846288079062
+        ],
+        [
+          0.8690386182995016,
+          0.8696382543464923
+        ],
+        [
+          0.9124913748003387,
+          0.9130910108473291
+        ],
+        [
+          0.9559476074521724,
+          0.9565472434991632
+        ],
+        [
+          0.9994003639530094,
+          1.0
+        ]
+      ]
+    ],
+    "resolution": [
+      360,
+      270
+    ],
+    "w2c": [
+      [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      [
+        [
+          1.0,
+          -7.892991815694472e-15,
+          7.402525857916342e-16,
+          -0.5092833638191223
+        ],
+        [
+          7.896461262646426e-15,
+          1.0,
+          3.2461013044216003e-15,
+          -5.340779901663595e-15
+        ],
+        [
+          -7.408692257772354e-16,
+          -3.2443665809456235e-15,
+          1.0,
+          -8.850537151577041e-15
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    ],
+    "coordinate_gauge": "calibrated camera rig; scene includes ego-induced and independent motion",
+    "calibration_sha256": "418ff1ca2293433fbbbd33b9ab4a2036286501ff63e8fb11064798452083b08c",
+    "download_manifest_sha256": "8b46dc0235f93c765e674874807f4b9d592218028481b4ad74f2ebd0547c29a7"
+  },
+  "run_seconds_including_setup_cleanup": 362.63455969999995,
+  "initial_sha256": "5e6df05c35b7b58b261c9043b4002de5da8510c15bed9c5e3c370dc537ffdf31",
+  "initial_count": 32768,
+  "zero_field_check": null,
+  "steps": 30000,
+  "final_count": 5612491,
+  "progress": [
+    {
+      "iteration": 1,
+      "count": 32768,
+      "active_sh_degree": 0,
+      "cuda_allocated": 91236864,
+      "cuda_reserved": 138412032,
+      "requires_empty_cache": true,
+      "seconds": 0.03280810000069323
+    },
+    {
+      "iteration": 1001,
+      "count": 39826,
+      "active_sh_degree": 1,
+      "cuda_allocated": 98126336,
+      "cuda_reserved": 165675008,
+      "requires_empty_cache": true,
+      "seconds": 1.72990050000044
+    },
+    {
+      "iteration": 2001,
+      "count": 138860,
+      "active_sh_degree": 2,
+      "cuda_allocated": 177998848,
+      "cuda_reserved": 270532608,
+      "requires_empty_cache": true,
+      "seconds": 3.429161699999895
+    },
+    {
+      "iteration": 3001,
+      "count": 345627,
+      "active_sh_degree": 3,
+      "cuda_allocated": 347227648,
+      "cuda_reserved": 532676608,
+      "requires_empty_cache": true,
+      "seconds": 5.592457700000523
+    },
+    {
+      "iteration": 4001,
+      "count": 453140,
+      "active_sh_degree": 3,
+      "cuda_allocated": 428623360,
+      "cuda_reserved": 643825664,
+      "requires_empty_cache": true,
+      "seconds": 7.827545399999508
+    },
+    {
+      "iteration": 5001,
+      "count": 969666,
+      "active_sh_degree": 3,
+      "cuda_allocated": 831557120,
+      "cuda_reserved": 1459617792,
+      "requires_empty_cache": true,
+      "seconds": 11.318410300000323
+    },
+    {
+      "iteration": 6001,
+      "count": 1719440,
+      "active_sh_degree": 3,
+      "cuda_allocated": 1424725504,
+      "cuda_reserved": 2401239040,
+      "requires_empty_cache": true,
+      "seconds": 16.64385140000013
+    },
+    {
+      "iteration": 7001,
+      "count": 2437433,
+      "active_sh_degree": 3,
+      "cuda_allocated": 1987666944,
+      "cuda_reserved": 3072327680,
+      "requires_empty_cache": true,
+      "seconds": 23.902241900001172
+    },
+    {
+      "iteration": 8001,
+      "count": 3330082,
+      "active_sh_degree": 3,
+      "cuda_allocated": 2691228672,
+      "cuda_reserved": 4422893568,
+      "requires_empty_cache": true,
+      "seconds": 33.739816999999675
+    },
+    {
+      "iteration": 9001,
+      "count": 4033545,
+      "active_sh_degree": 3,
+      "cuda_allocated": 3248073216,
+      "cuda_reserved": 5513412608,
+      "requires_empty_cache": true,
+      "seconds": 45.67432680000093
+    },
+    {
+      "iteration": 10001,
+      "count": 4477055,
+      "active_sh_degree": 3,
+      "cuda_allocated": 3593797120,
+      "cuda_reserved": 6184501248,
+      "requires_empty_cache": true,
+      "seconds": 59.143704800000705
+    },
+    {
+      "iteration": 11001,
+      "count": 4793428,
+      "active_sh_degree": 3,
+      "cuda_allocated": 3846170112,
+      "cuda_reserved": 6178209792,
+      "requires_empty_cache": true,
+      "seconds": 73.77840640000068
+    },
+    {
+      "iteration": 12001,
+      "count": 5049900,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4046011392,
+      "cuda_reserved": 6387924992,
+      "requires_empty_cache": true,
+      "seconds": 89.36547390000123
+    },
+    {
+      "iteration": 13001,
+      "count": 5270799,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4220003328,
+      "cuda_reserved": 7065305088,
+      "requires_empty_cache": true,
+      "seconds": 105.36553780000031
+    },
+    {
+      "iteration": 14001,
+      "count": 5453119,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4364957696,
+      "cuda_reserved": 7216300032,
+      "requires_empty_cache": true,
+      "seconds": 122.03867790000004
+    },
+    {
+      "iteration": 15001,
+      "count": 5618028,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4447836160,
+      "cuda_reserved": 7983857664,
+      "requires_empty_cache": true,
+      "seconds": 139.17233119999946
+    },
+    {
+      "iteration": 16001,
+      "count": 5618028,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4447836160,
+      "cuda_reserved": 7983857664,
+      "requires_empty_cache": true,
+      "seconds": 154.12583210000048
+    },
+    {
+      "iteration": 17001,
+      "count": 5618028,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4447836160,
+      "cuda_reserved": 7983857664,
+      "requires_empty_cache": true,
+      "seconds": 168.88194750000002
+    },
+    {
+      "iteration": 18001,
+      "count": 5618028,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4447836160,
+      "cuda_reserved": 7983857664,
+      "requires_empty_cache": true,
+      "seconds": 183.62110700000085
+    },
+    {
+      "iteration": 19001,
+      "count": 5618028,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4447836160,
+      "cuda_reserved": 7983857664,
+      "requires_empty_cache": true,
+      "seconds": 198.59284359999947
+    },
+    {
+      "iteration": 20001,
+      "count": 5618028,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4447836160,
+      "cuda_reserved": 7983857664,
+      "requires_empty_cache": true,
+      "seconds": 213.5946629000009
+    },
+    {
+      "iteration": 21001,
+      "count": 5618028,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4447836160,
+      "cuda_reserved": 7983857664,
+      "requires_empty_cache": true,
+      "seconds": 228.5366352000001
+    },
+    {
+      "iteration": 22001,
+      "count": 5618028,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4447836160,
+      "cuda_reserved": 7983857664,
+      "requires_empty_cache": true,
+      "seconds": 243.38594250000097
+    },
+    {
+      "iteration": 23001,
+      "count": 5618028,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4447836160,
+      "cuda_reserved": 7983857664,
+      "requires_empty_cache": true,
+      "seconds": 258.2573486000001
+    },
+    {
+      "iteration": 24001,
+      "count": 5618028,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4447836160,
+      "cuda_reserved": 7983857664,
+      "requires_empty_cache": true,
+      "seconds": 273.1766877000009
+    },
+    {
+      "iteration": 25001,
+      "count": 5618028,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4447836160,
+      "cuda_reserved": 7983857664,
+      "requires_empty_cache": true,
+      "seconds": 287.98342890000094
+    },
+    {
+      "iteration": 26001,
+      "count": 5618028,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4447836160,
+      "cuda_reserved": 7983857664,
+      "requires_empty_cache": true,
+      "seconds": 302.75546960000065
+    },
+    {
+      "iteration": 27001,
+      "count": 5618028,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4447836160,
+      "cuda_reserved": 7983857664,
+      "requires_empty_cache": true,
+      "seconds": 317.7074038999999
+    },
+    {
+      "iteration": 28001,
+      "count": 5618028,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4447836160,
+      "cuda_reserved": 7983857664,
+      "requires_empty_cache": true,
+      "seconds": 332.69799480000074
+    },
+    {
+      "iteration": 29001,
+      "count": 5618028,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4447836160,
+      "cuda_reserved": 7983857664,
+      "requires_empty_cache": true,
+      "seconds": 347.5956817999995
+    }
+  ],
+  "cache_checks": 0,
+  "callback_counts": {
+    "_commit_wandb": 0,
+    "_log_test_metrics_wandb": 0,
+    "_prepare_dataset": 1,
+    "_save_final_checkpoint": 0,
+    "_save_intermediate_checkpoint": 0,
+    "audit_initialization": 1,
+    "audit_progress": 30,
+    "create_sampler": 1,
+    "densify": 144,
+    "finalize": 1,
+    "increase_sh_degree": 29,
+    "log_wandb": 0,
+    "morton_ordering": 4,
+    "reset_opacities": 4,
+    "reset_opacities_extra": 1,
+    "setup_gaussians": 1,
+    "training_iteration": 30000
+  },
+  "callback_seconds": {
+    "_commit_wandb": 0,
+    "_log_test_metrics_wandb": 0,
+    "_prepare_dataset": 1.869999869086314e-05,
+    "_save_final_checkpoint": 0,
+    "_save_intermediate_checkpoint": 0,
+    "audit_initialization": 0.0069517000010819174,
+    "audit_progress": 0.01542679999693064,
+    "create_sampler": 0.026283299999704468,
+    "densify": 11.003401199997825,
+    "finalize": 0.08783820000098785,
+    "increase_sh_degree": 0.0006298999960563378,
+    "log_wandb": 0,
+    "morton_ordering": 0.163862399998834,
+    "reset_opacities": 0.00036100000033911783,
+    "reset_opacities_extra": 0.0128645000004326,
+    "setup_gaussians": 0.03839780000089377,
+    "training_iteration": 350.9517903997548
+  },
+  "checkpoint_sha256": "7c9d0113526df7c5a899c144a4bcb14523903df941708559da1999ff7146a468",
+  "metrics": {
+    "mean": {
+      "midpoint": {
+        "float": {
+          "psnr": 24.45967165629069,
+          "ssim": 0.6892417818307877,
+          "lpips": 0.5326463878154755
+        },
+        "8bit": {
+          "psnr": 24.458027680714924,
+          "ssim": 0.6885363360246023,
+          "lpips": 0.5323159297307333
+        }
+      },
+      "gauss32": {
+        "float": {
+          "psnr": 24.46047035853068,
+          "ssim": 0.6893069644769033,
+          "lpips": 0.5326150904099146
+        },
+        "8bit": {
+          "psnr": 24.458828290303547,
+          "ssim": 0.6886022090911865,
+          "lpips": 0.53225310643514
+        }
+      }
+    },
+    "views": [
+      {
+        "frame": 2,
+        "camera": 0,
+        "timestamp": 0.0872070691006676,
+        "midpoint": {
+          "float": {
+            "psnr": 23.422908782958984,
+            "ssim": 0.6750176548957825,
+            "lpips": 0.532155454158783
+          },
+          "8bit": {
+            "psnr": 23.421749114990234,
+            "ssim": 0.6743427515029907,
+            "lpips": 0.5316950082778931
+          }
+        },
+        "gauss32": {
+          "float": {
+            "psnr": 23.422378540039062,
+            "ssim": 0.6750586032867432,
+            "lpips": 0.5321393013000488
+          },
+          "8bit": {
+            "psnr": 23.421512603759766,
+            "ssim": 0.6743839979171753,
+            "lpips": 0.531780481338501
+          }
+        }
+      },
+      {
+        "frame": 2,
+        "camera": 1,
+        "timestamp": 0.08721184880828853,
+        "midpoint": {
+          "float": {
+            "psnr": 22.368911743164062,
+            "ssim": 0.6462071537971497,
+            "lpips": 0.5435230731964111
+          },
+          "8bit": {
+            "psnr": 22.36780548095703,
+            "ssim": 0.6454967856407166,
+            "lpips": 0.5431540608406067
+          }
+        },
+        "gauss32": {
+          "float": {
+            "psnr": 22.36821174621582,
+            "ssim": 0.6462225914001465,
+            "lpips": 0.5435275435447693
+          },
+          "8bit": {
+            "psnr": 22.36721420288086,
+            "ssim": 0.6455277800559998,
+            "lpips": 0.5429887771606445
+          }
+        }
+      },
+      {
+        "frame": 6,
+        "camera": 0,
+        "timestamp": 0.26101244635864496,
+        "midpoint": {
+          "float": {
+            "psnr": 25.050241470336914,
+            "ssim": 0.7147761583328247,
+            "lpips": 0.5190355777740479
+          },
+          "8bit": {
+            "psnr": 25.04906463623047,
+            "ssim": 0.7140456438064575,
+            "lpips": 0.5183664560317993
+          }
+        },
+        "gauss32": {
+          "float": {
+            "psnr": 25.050954818725586,
+            "ssim": 0.7148153781890869,
+            "lpips": 0.5190558433532715
+          },
+          "8bit": {
+            "psnr": 25.049612045288086,
+            "ssim": 0.7140750288963318,
+            "lpips": 0.5184584856033325
+          }
+        }
+      },
+      {
+        "frame": 6,
+        "camera": 1,
+        "timestamp": 0.2610172260662659,
+        "midpoint": {
+          "float": {
+            "psnr": 24.755666732788086,
+            "ssim": 0.6919512748718262,
+            "lpips": 0.535449206829071
+          },
+          "8bit": {
+            "psnr": 24.75349235534668,
+            "ssim": 0.6912253499031067,
+            "lpips": 0.5349886417388916
+          }
+        },
+        "gauss32": {
+          "float": {
+            "psnr": 24.756574630737305,
+            "ssim": 0.6919901371002197,
+            "lpips": 0.5353904962539673
+          },
+          "8bit": {
+            "psnr": 24.754451751708984,
+            "ssim": 0.6912893056869507,
+            "lpips": 0.5349116325378418
+          }
+        }
+      },
+      {
+        "frame": 10,
+        "camera": 0,
+        "timestamp": 0.4348208652487447,
+        "midpoint": {
+          "float": {
+            "psnr": 24.72884750366211,
+            "ssim": 0.7068549394607544,
+            "lpips": 0.5230283737182617
+          },
+          "8bit": {
+            "psnr": 24.727062225341797,
+            "ssim": 0.7060707211494446,
+            "lpips": 0.5232419967651367
+          }
+        },
+        "gauss32": {
+          "float": {
+            "psnr": 24.72983169555664,
+            "ssim": 0.7069128751754761,
+            "lpips": 0.5230700373649597
+          },
+          "8bit": {
+            "psnr": 24.72820472717285,
+            "ssim": 0.7061463594436646,
+            "lpips": 0.5231670141220093
+          }
+        }
+      },
+      {
+        "frame": 10,
+        "camera": 1,
+        "timestamp": 0.4348256449563656,
+        "midpoint": {
+          "float": {
+            "psnr": 24.61136245727539,
+            "ssim": 0.6936885118484497,
+            "lpips": 0.537648618221283
+          },
+          "8bit": {
+            "psnr": 24.609886169433594,
+            "ssim": 0.6930212378501892,
+            "lpips": 0.537081778049469
+          }
+        },
+        "gauss32": {
+          "float": {
+            "psnr": 24.612590789794922,
+            "ssim": 0.6937543153762817,
+            "lpips": 0.5375338196754456
+          },
+          "8bit": {
+            "psnr": 24.61069107055664,
+            "ssim": 0.6930769085884094,
+            "lpips": 0.5369685292243958
+          }
+        }
+      },
+      {
+        "frame": 14,
+        "camera": 0,
+        "timestamp": 0.6086223318368502,
+        "midpoint": {
+          "float": {
+            "psnr": 25.293405532836914,
+            "ssim": 0.706503689289093,
+            "lpips": 0.5199497938156128
+          },
+          "8bit": {
+            "psnr": 25.291255950927734,
+            "ssim": 0.7057618498802185,
+            "lpips": 0.5198510885238647
+          }
+        },
+        "gauss32": {
+          "float": {
+            "psnr": 25.29327392578125,
+            "ssim": 0.7065731287002563,
+            "lpips": 0.5199804902076721
+          },
+          "8bit": {
+            "psnr": 25.290912628173828,
+            "ssim": 0.7058232426643372,
+            "lpips": 0.519889771938324
+          }
+        }
+      },
+      {
+        "frame": 14,
+        "camera": 1,
+        "timestamp": 0.6086271115444712,
+        "midpoint": {
+          "float": {
+            "psnr": 24.648605346679688,
+            "ssim": 0.6907999515533447,
+            "lpips": 0.5382165908813477
+          },
+          "8bit": {
+            "psnr": 24.64667320251465,
+            "ssim": 0.6900678277015686,
+            "lpips": 0.5382552146911621
+          }
+        },
+        "gauss32": {
+          "float": {
+            "psnr": 24.649322509765625,
+            "ssim": 0.690855860710144,
+            "lpips": 0.5381978750228882
+          },
+          "8bit": {
+            "psnr": 24.647560119628906,
+            "ssim": 0.6901335120201111,
+            "lpips": 0.538245439529419
+          }
+        }
+      },
+      {
+        "frame": 18,
+        "camera": 0,
+        "timestamp": 0.7824133699719649,
+        "midpoint": {
+          "float": {
+            "psnr": 25.046613693237305,
+            "ssim": 0.6956983208656311,
+            "lpips": 0.5273982286453247
+          },
+          "8bit": {
+            "psnr": 25.045135498046875,
+            "ssim": 0.6950697898864746,
+            "lpips": 0.5270616412162781
+          }
+        },
+        "gauss32": {
+          "float": {
+            "psnr": 25.0483341217041,
+            "ssim": 0.6957915425300598,
+            "lpips": 0.5274522304534912
+          },
+          "8bit": {
+            "psnr": 25.046892166137695,
+            "ssim": 0.6951541304588318,
+            "lpips": 0.5270365476608276
+          }
+        }
+      },
+      {
+        "frame": 18,
+        "camera": 1,
+        "timestamp": 0.7824181496795858,
+        "midpoint": {
+          "float": {
+            "psnr": 24.626569747924805,
+            "ssim": 0.6778353452682495,
+            "lpips": 0.5433787703514099
+          },
+          "8bit": {
+            "psnr": 24.625152587890625,
+            "ssim": 0.6771748065948486,
+            "lpips": 0.5430861711502075
+          }
+        },
+        "gauss32": {
+          "float": {
+            "psnr": 24.627132415771484,
+            "ssim": 0.6779121160507202,
+            "lpips": 0.5432538986206055
+          },
+          "8bit": {
+            "psnr": 24.625762939453125,
+            "ssim": 0.6772545576095581,
+            "lpips": 0.5428394675254822
+          }
+        }
+      },
+      {
+        "frame": 22,
+        "camera": 0,
+        "timestamp": 0.9562426457680469,
+        "midpoint": {
+          "float": {
+            "psnr": 24.6064453125,
+            "ssim": 0.6934390068054199,
+            "lpips": 0.531206488609314
+          },
+          "8bit": {
+            "psnr": 24.604618072509766,
+            "ssim": 0.692729115486145,
+            "lpips": 0.5310418605804443
+          }
+        },
+        "gauss32": {
+          "float": {
+            "psnr": 24.60845947265625,
+            "ssim": 0.6935442090034485,
+            "lpips": 0.5310934782028198
+          },
+          "8bit": {
+            "psnr": 24.606578826904297,
+            "ssim": 0.6928207278251648,
+            "lpips": 0.5308884978294373
+          }
+        }
+      },
+      {
+        "frame": 22,
+        "camera": 1,
+        "timestamp": 0.9562474254756679,
+        "midpoint": {
+          "float": {
+            "psnr": 24.356481552124023,
+            "ssim": 0.6781293749809265,
+            "lpips": 0.5407664775848389
+          },
+          "8bit": {
+            "psnr": 24.35443687438965,
+            "ssim": 0.6774301528930664,
+            "lpips": 0.5399672389030457
+          }
+        },
+        "gauss32": {
+          "float": {
+            "psnr": 24.358579635620117,
+            "ssim": 0.6782528162002563,
+            "lpips": 0.5406860709190369
+          },
+          "8bit": {
+            "psnr": 24.35654640197754,
+            "ssim": 0.6775409579277039,
+            "lpips": 0.5398626327514648
+          }
+        }
+      }
+    ]
+  }
+}

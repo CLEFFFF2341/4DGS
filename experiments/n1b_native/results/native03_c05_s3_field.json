@@ -1,0 +1,1110 @@
+{
+  "args": {
+    "dataset": "dsec",
+    "arm": "field",
+    "root": "dataset/dsec_dynamic/zurich_city_05_a",
+    "start": 120,
+    "seed": 3,
+    "steps": 30000,
+    "out": "output\\n1b_native\\native03_c05_s3_field",
+    "skip_eval": false
+  },
+  "source_sha256": {
+    "experiments\\n1b_native\\assess.py": "cca1c747a6bc05dca07aca7a15f75539748c5041b8efe95be1a42d62d14a6a89",
+    "experiments\\n1b_native\\data.py": "11cabdba86989a2c5f14f9e80da5e477cca56bb06989229a07b0a4459af118ef",
+    "experiments\\n1b_native\\native.py": "da33109fdca7e137839c7ffba56525617e04ed4eaa2d9515c0793d5cbe9c30a4",
+    "experiments\\n1b_native\\run.py": "d8c03c27ed8028514b49f0fdb364b1820fcef94185efe8777e9bf6faf8926c36",
+    "experiments\\n1b_native\\suite.py": "0ac1dc4f5a365e69e3e8ce6176818bad24cf4a6b0a6d71fddc32dfa9194cfd99",
+    "experiments\\n1b_native\\__init__.py": "0c07ef2e1df5ac0b690348a7e7bb8627218e4e33f2675061c7724f0a09bc68c3",
+    "src\\Methods\\FasterGS4D\\Trainer.py": "283a22459534993b7af691bfb9ccbdf8bc99da360e572e7dddb1a7d334aaaad1",
+    "src\\Methods\\FasterGS4D\\Model.py": "c80aabb09194475869acfd6a84f169b1f4624c4c207c4a32593aa9421205abe1",
+    "src\\Methods\\FasterGS4D\\Renderer.py": "1ea23aaeb8d0c16cffc9b97c6f4761792acdf1dc8eb03d1fbdb80c687b613c0e",
+    "src\\Methods\\FasterGS4D\\Loss.py": "2bf65d4dc596df6b41f1eea1cb772ae4fd6f1b2836d2d78a81d6a30455ddc5d3",
+    "src\\Methods\\Base\\Trainer.py": "0ecde8cfea7e029be1c7d75c50bf2a0ccb6b2d2c11bbf58c2d95928a5643ffb6",
+    "src\\Optim\\Samplers\\DatasetSamplers.py": "bc4489f8a062c419195a5e73c7978cbd97e2802b7fb6bd132a46648dd0cb8a3d",
+    "src\\Optim\\Samplers\\utils.py": "647ed41491fd8bf37f706e87dfb650485a92a500e174e7ef43fe02c824fd2191",
+    "experiments\\n1b_v2\\real_dynamic.py": "b35f417227b16ef40acc46790872f783c9e7fa44444bdf613839111788378caf"
+  },
+  "git_commit": "37f3b9cbc2ceffca05441a8c03d2112892aa336e",
+  "dataset": {
+    "sequence": "zurich_city_05_a",
+    "global_frames": [
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143
+    ],
+    "train_frame_indices": [
+      120,
+      121,
+      123,
+      124,
+      125,
+      127,
+      128,
+      129,
+      131,
+      132,
+      133,
+      135,
+      136,
+      137,
+      139,
+      140,
+      141,
+      143
+    ],
+    "test_frame_indices": [
+      122,
+      126,
+      130,
+      134,
+      138,
+      142
+    ],
+    "origin_us": 37385400140.0,
+    "time_span_seconds": 1.150698,
+    "measured_exposure_seconds": [
+      [
+        0.000711,
+        0.0007059999999999968,
+        0.0006999999999999908,
+        0.0006950000000000178,
+        0.0006900000000000129,
+        0.0006840000000000069,
+        0.00067899999999997,
+        0.00067899999999997,
+        0.0006790000000000339,
+        0.00067899999999997,
+        0.00067899999999997,
+        0.00067899999999997,
+        0.00067899999999997,
+        0.00067899999999997,
+        0.00067899999999997,
+        0.00067899999999997,
+        0.00067899999999997,
+        0.00067899999999997,
+        0.0006790000000000977,
+        0.00067899999999997,
+        0.0006790000000000977,
+        0.0006789999999998423,
+        0.0006790000000000977,
+        0.0006790000000000977
+      ],
+      [
+        0.000727,
+        0.0007159999999999986,
+        0.0007109999999999857,
+        0.0007060000000000287,
+        0.0006999999999999908,
+        0.0006949999999999859,
+        0.000689999999999917,
+        0.0006899999999999809,
+        0.0006900000000000447,
+        0.0006899999999999809,
+        0.000689999999999917,
+        0.000689999999999917,
+        0.0006900000000000447,
+        0.000689999999999917,
+        0.0006900000000000447,
+        0.000689999999999917,
+        0.000689999999999917,
+        0.0006900000000000447,
+        0.0006900000000000447,
+        0.0006900000000000447,
+        0.0006900000000001726,
+        0.0006899999999997893,
+        0.0006900000000001726,
+        0.0006900000000000447
+      ]
+    ],
+    "normalized_exposure_bounds": [
+      [
+        [
+          0.0,
+          0.0006178858397251061
+        ],
+        [
+          0.04345623265183393,
+          0.044069773302812726
+        ],
+        [
+          0.08690290588842599,
+          0.0875112323129092
+        ],
+        [
+          0.1303591385402599,
+          0.13096311977599684
+        ],
+        [
+          0.1738118950410968,
+          0.1744115310880874
+        ],
+        [
+          0.2172646515419337,
+          0.21785907336242874
+        ],
+        [
+          0.2607174080427706,
+          0.2613074846745193
+        ],
+        [
+          0.30417450973235377,
+          0.3047645863641025
+        ],
+        [
+          0.3476203139311965,
+          0.3482103905629453
+        ],
+        [
+          0.39107307043203343,
+          0.39166314706378214
+        ],
+        [
+          0.43452582693287034,
+          0.43511590356461904
+        ],
+        [
+          0.4779855357357013,
+          0.47857561236745
+        ],
+        [
+          0.5213800667073376,
+          0.5219701433390863
+        ],
+        [
+          0.5648606324161509,
+          0.5654507090478996
+        ],
+        [
+          0.6083272935209759,
+          0.6089173701527246
+        ],
+        [
+          0.6517765738708159,
+          0.6523666505025646
+        ],
+        [
+          0.6952128186544168,
+          0.6958028952861655
+        ],
+        [
+          0.7386655751552536,
+          0.7392556517870023
+        ],
+        [
+          0.7821183316560905,
+          0.7827084082878393
+        ],
+        [
+          0.8255849927609156,
+          0.8261750693926643
+        ],
+        [
+          0.8690386182995016,
+          0.8696286949312504
+        ],
+        [
+          0.9124913748003387,
+          0.9130814514320873
+        ],
+        [
+          0.9559476074521724,
+          0.9565376840839213
+        ],
+        [
+          0.9994003639530094,
+          0.9999904405847582
+        ]
+      ],
+      [
+        [
+          0.0,
+          0.000631790443713294
+        ],
+        [
+          0.04345623265183393,
+          0.044078463680305345
+        ],
+        [
+          0.08690290588842599,
+          0.08752079172815108
+        ],
+        [
+          0.1303591385402599,
+          0.13097267919123873
+        ],
+        [
+          0.1738118950410968,
+          0.17442022146558
+        ],
+        [
+          0.2172646515419337,
+          0.2178686327776706
+        ],
+        [
+          0.2607174080427706,
+          0.26131704408976114
+        ],
+        [
+          0.30417450973235377,
+          0.30477414577934436
+        ],
+        [
+          0.3476203139311965,
+          0.34821994997818717
+        ],
+        [
+          0.39107307043203343,
+          0.391672706479024
+        ],
+        [
+          0.43452582693287034,
+          0.4351254629798609
+        ],
+        [
+          0.4779855357357013,
+          0.47858517178269183
+        ],
+        [
+          0.5213800667073376,
+          0.5219797027543283
+        ],
+        [
+          0.5648606324161509,
+          0.5654602684631415
+        ],
+        [
+          0.6083272935209759,
+          0.6089269295679666
+        ],
+        [
+          0.6517765738708159,
+          0.6523762099178064
+        ],
+        [
+          0.6952128186544168,
+          0.6958124547014073
+        ],
+        [
+          0.7386655751552536,
+          0.7392652112022442
+        ],
+        [
+          0.7821183316560905,
+          0.7827179677030811
+        ],
+        [
+          0.8255849927609156,
+          0.8261846288079062
+        ],
+        [
+          0.8690386182995016,
+          0.8696382543464923
+        ],
+        [
+          0.9124913748003387,
+          0.9130910108473291
+        ],
+        [
+          0.9559476074521724,
+          0.9565472434991632
+        ],
+        [
+          0.9994003639530094,
+          1.0
+        ]
+      ]
+    ],
+    "resolution": [
+      360,
+      270
+    ],
+    "w2c": [
+      [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      [
+        [
+          1.0,
+          -7.892991815694472e-15,
+          7.402525857916342e-16,
+          -0.5092833638191223
+        ],
+        [
+          7.896461262646426e-15,
+          1.0,
+          3.2461013044216003e-15,
+          -5.340779901663595e-15
+        ],
+        [
+          -7.408692257772354e-16,
+          -3.2443665809456235e-15,
+          1.0,
+          -8.850537151577041e-15
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    ],
+    "coordinate_gauge": "calibrated camera rig; scene includes ego-induced and independent motion",
+    "calibration_sha256": "418ff1ca2293433fbbbd33b9ab4a2036286501ff63e8fb11064798452083b08c",
+    "download_manifest_sha256": "8b46dc0235f93c765e674874807f4b9d592218028481b4ad74f2ebd0547c29a7"
+  },
+  "run_seconds_including_setup_cleanup": 436.0311018000011,
+  "initial_sha256": "5e6df05c35b7b58b261c9043b4002de5da8510c15bed9c5e3c370dc537ffdf31",
+  "initial_count": 32768,
+  "zero_field_check": {
+    "image_max_abs": 0.0008299946784973145,
+    "native_repeat_max_abs": 0.0014774799346923828,
+    "image_rmse": 3.895179179380648e-05,
+    "native_repeat_rmse": 4.9365382437827066e-05,
+    "means_gradient_max_abs": 1.7167612895718776e-06,
+    "means_gradient_relative_l2": 0.002622398780658841,
+    "native_gradient_repeat_relative_l2": 0.00292655685916543,
+    "transformed_means_bitwise_equal": true,
+    "field_gradient_norm": 0.5961323976516724,
+    "field_gradient_finite": true
+  },
+  "steps": 30000,
+  "final_count": 6057524,
+  "progress": [
+    {
+      "iteration": 1,
+      "count": 32768,
+      "active_sh_degree": 0,
+      "cuda_allocated": 100477440,
+      "cuda_reserved": 180355072,
+      "requires_empty_cache": true,
+      "seconds": 0.029090399999404326
+    },
+    {
+      "iteration": 1001,
+      "count": 39495,
+      "active_sh_degree": 1,
+      "cuda_allocated": 105784832,
+      "cuda_reserved": 163577856,
+      "requires_empty_cache": true,
+      "seconds": 2.110252099999343
+    },
+    {
+      "iteration": 2001,
+      "count": 134044,
+      "active_sh_degree": 2,
+      "cuda_allocated": 185902080,
+      "cuda_reserved": 293601280,
+      "requires_empty_cache": true,
+      "seconds": 4.2313216000002285
+    },
+    {
+      "iteration": 3001,
+      "count": 341841,
+      "active_sh_degree": 3,
+      "cuda_allocated": 348019712,
+      "cuda_reserved": 534773760,
+      "requires_empty_cache": true,
+      "seconds": 6.706551299999774
+    },
+    {
+      "iteration": 4001,
+      "count": 460308,
+      "active_sh_degree": 3,
+      "cuda_allocated": 444587520,
+      "cuda_reserved": 713031680,
+      "requires_empty_cache": true,
+      "seconds": 9.254069999999047
+    },
+    {
+      "iteration": 5001,
+      "count": 1012451,
+      "active_sh_degree": 3,
+      "cuda_allocated": 876874752,
+      "cuda_reserved": 1470103552,
+      "requires_empty_cache": true,
+      "seconds": 12.907271800000672
+    },
+    {
+      "iteration": 6001,
+      "count": 1846277,
+      "active_sh_degree": 3,
+      "cuda_allocated": 1530073600,
+      "cuda_reserved": 2617245696,
+      "requires_empty_cache": true,
+      "seconds": 18.650267499999245
+    },
+    {
+      "iteration": 7001,
+      "count": 2648415,
+      "active_sh_degree": 3,
+      "cuda_allocated": 2162961920,
+      "cuda_reserved": 3642753024,
+      "requires_empty_cache": true,
+      "seconds": 26.810658700000204
+    },
+    {
+      "iteration": 8001,
+      "count": 3640372,
+      "active_sh_degree": 3,
+      "cuda_allocated": 2943873536,
+      "cuda_reserved": 4607442944,
+      "requires_empty_cache": true,
+      "seconds": 38.314794699999766
+    },
+    {
+      "iteration": 9001,
+      "count": 4394020,
+      "active_sh_degree": 3,
+      "cuda_allocated": 3538093568,
+      "cuda_reserved": 5662310400,
+      "requires_empty_cache": true,
+      "seconds": 52.94546149999951
+    },
+    {
+      "iteration": 10001,
+      "count": 4850400,
+      "active_sh_degree": 3,
+      "cuda_allocated": 3898565632,
+      "cuda_reserved": 6635388928,
+      "requires_empty_cache": true,
+      "seconds": 69.39749250000023
+    },
+    {
+      "iteration": 11001,
+      "count": 5189164,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4165479424,
+      "cuda_reserved": 6545211392,
+      "requires_empty_cache": true,
+      "seconds": 86.73298989999967
+    },
+    {
+      "iteration": 12001,
+      "count": 5466889,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4386371072,
+      "cuda_reserved": 7079985152,
+      "requires_empty_cache": true,
+      "seconds": 105.18828770000073
+    },
+    {
+      "iteration": 13001,
+      "count": 5696757,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4566360064,
+      "cuda_reserved": 7172259840,
+      "requires_empty_cache": true,
+      "seconds": 124.37489780000033
+    },
+    {
+      "iteration": 14001,
+      "count": 5902980,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4729519616,
+      "cuda_reserved": 7400849408,
+      "requires_empty_cache": true,
+      "seconds": 144.07698039999923
+    },
+    {
+      "iteration": 15001,
+      "count": 6077797,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4817976320,
+      "cuda_reserved": 8642363392,
+      "requires_empty_cache": true,
+      "seconds": 164.34221489999982
+    },
+    {
+      "iteration": 16001,
+      "count": 6077797,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4817976320,
+      "cuda_reserved": 8642363392,
+      "requires_empty_cache": true,
+      "seconds": 182.48793060000025
+    },
+    {
+      "iteration": 17001,
+      "count": 6077797,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4817976320,
+      "cuda_reserved": 8642363392,
+      "requires_empty_cache": true,
+      "seconds": 200.53983349999908
+    },
+    {
+      "iteration": 18001,
+      "count": 6077797,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4817976320,
+      "cuda_reserved": 8642363392,
+      "requires_empty_cache": true,
+      "seconds": 218.58022209999945
+    },
+    {
+      "iteration": 19001,
+      "count": 6077797,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4817976320,
+      "cuda_reserved": 8642363392,
+      "requires_empty_cache": true,
+      "seconds": 236.6931194000008
+    },
+    {
+      "iteration": 20001,
+      "count": 6077797,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4817976320,
+      "cuda_reserved": 8642363392,
+      "requires_empty_cache": true,
+      "seconds": 254.72045629999957
+    },
+    {
+      "iteration": 21001,
+      "count": 6077797,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4817976320,
+      "cuda_reserved": 8642363392,
+      "requires_empty_cache": true,
+      "seconds": 272.70494599999984
+    },
+    {
+      "iteration": 22001,
+      "count": 6077797,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4817976320,
+      "cuda_reserved": 8642363392,
+      "requires_empty_cache": true,
+      "seconds": 290.84118599999965
+    },
+    {
+      "iteration": 23001,
+      "count": 6077797,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4817976320,
+      "cuda_reserved": 8642363392,
+      "requires_empty_cache": true,
+      "seconds": 309.00276569999914
+    },
+    {
+      "iteration": 24001,
+      "count": 6077797,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4817976320,
+      "cuda_reserved": 8642363392,
+      "requires_empty_cache": true,
+      "seconds": 327.11207509999986
+    },
+    {
+      "iteration": 25001,
+      "count": 6077797,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4817976320,
+      "cuda_reserved": 8642363392,
+      "requires_empty_cache": true,
+      "seconds": 345.21467850000045
+    },
+    {
+      "iteration": 26001,
+      "count": 6077797,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4817976320,
+      "cuda_reserved": 8642363392,
+      "requires_empty_cache": true,
+      "seconds": 363.37198940000053
+    },
+    {
+      "iteration": 27001,
+      "count": 6077797,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4817976320,
+      "cuda_reserved": 8642363392,
+      "requires_empty_cache": true,
+      "seconds": 381.36304139999993
+    },
+    {
+      "iteration": 28001,
+      "count": 6077797,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4817976320,
+      "cuda_reserved": 8642363392,
+      "requires_empty_cache": true,
+      "seconds": 399.39482789999965
+    },
+    {
+      "iteration": 29001,
+      "count": 6077797,
+      "active_sh_degree": 3,
+      "cuda_allocated": 4817976320,
+      "cuda_reserved": 8642363392,
+      "requires_empty_cache": true,
+      "seconds": 417.62782060000063
+    }
+  ],
+  "cache_checks": 0,
+  "callback_counts": {
+    "_commit_wandb": 0,
+    "_log_test_metrics_wandb": 0,
+    "_prepare_dataset": 1,
+    "_save_final_checkpoint": 0,
+    "_save_intermediate_checkpoint": 0,
+    "audit_initialization": 1,
+    "audit_progress": 30,
+    "create_sampler": 1,
+    "densify": 144,
+    "finalize": 1,
+    "increase_sh_degree": 29,
+    "log_wandb": 0,
+    "morton_ordering": 4,
+    "reset_opacities": 4,
+    "reset_opacities_extra": 1,
+    "setup_gaussians": 1,
+    "step_temporal_field": 30000,
+    "training_iteration": 30000
+  },
+  "callback_seconds": {
+    "_commit_wandb": 0,
+    "_log_test_metrics_wandb": 0,
+    "_prepare_dataset": 1.8999999156221747e-05,
+    "_save_final_checkpoint": 0,
+    "_save_intermediate_checkpoint": 0,
+    "audit_initialization": 0.10564729999896372,
+    "audit_progress": 0.013203000004068599,
+    "create_sampler": 0.020556899999064626,
+    "densify": 11.805435900001612,
+    "finalize": 0.08908920000067155,
+    "increase_sh_degree": 0.0003835000006802147,
+    "log_wandb": 0,
+    "morton_ordering": 0.1788429999978689,
+    "reset_opacities": 0.00037649999831046443,
+    "reset_opacities_extra": 9.069999941857532e-05,
+    "setup_gaussians": 0.03497069999866653,
+    "step_temporal_field": 2.835407600239705,
+    "training_iteration": 420.6811244002165
+  },
+  "checkpoint_sha256": "56e4467353dff26c43b8e2788ef4e65f0de6f9e13b9519f64c15c4f0f34fd217",
+  "metrics": {
+    "mean": {
+      "midpoint": {
+        "float": {
+          "psnr": 24.441539923350017,
+          "ssim": 0.6683515260616938,
+          "lpips": 0.5466507921616236
+        },
+        "8bit": {
+          "psnr": 24.43995730082194,
+          "ssim": 0.6676905254522959,
+          "lpips": 0.5462183306614558
+        }
+      },
+      "gauss32": {
+        "float": {
+          "psnr": 24.442099571228027,
+          "ssim": 0.6684219539165497,
+          "lpips": 0.5466301739215851
+        },
+        "8bit": {
+          "psnr": 24.440505504608154,
+          "ssim": 0.66775910059611,
+          "lpips": 0.5462002158164978
+        }
+      }
+    },
+    "views": [
+      {
+        "frame": 2,
+        "camera": 0,
+        "timestamp": 0.0872070691006676,
+        "midpoint": {
+          "float": {
+            "psnr": 23.858654022216797,
+            "ssim": 0.6657747030258179,
+            "lpips": 0.5402450561523438
+          },
+          "8bit": {
+            "psnr": 23.857419967651367,
+            "ssim": 0.6651298999786377,
+            "lpips": 0.539800226688385
+          }
+        },
+        "gauss32": {
+          "float": {
+            "psnr": 23.859630584716797,
+            "ssim": 0.6658591628074646,
+            "lpips": 0.5402746200561523
+          },
+          "8bit": {
+            "psnr": 23.85838508605957,
+            "ssim": 0.6652209162712097,
+            "lpips": 0.5398387908935547
+          }
+        }
+      },
+      {
+        "frame": 2,
+        "camera": 1,
+        "timestamp": 0.08721184880828853,
+        "midpoint": {
+          "float": {
+            "psnr": 22.678836822509766,
+            "ssim": 0.6357413530349731,
+            "lpips": 0.5511720180511475
+          },
+          "8bit": {
+            "psnr": 22.677583694458008,
+            "ssim": 0.6350656747817993,
+            "lpips": 0.5507502555847168
+          }
+        },
+        "gauss32": {
+          "float": {
+            "psnr": 22.67871856689453,
+            "ssim": 0.6358140707015991,
+            "lpips": 0.5511138439178467
+          },
+          "8bit": {
+            "psnr": 22.677425384521484,
+            "ssim": 0.6351420879364014,
+            "lpips": 0.5506077408790588
+          }
+        }
+      },
+      {
+        "frame": 6,
+        "camera": 0,
+        "timestamp": 0.26101244635864496,
+        "midpoint": {
+          "float": {
+            "psnr": 24.832448959350586,
+            "ssim": 0.6754359006881714,
+            "lpips": 0.535844624042511
+          },
+          "8bit": {
+            "psnr": 24.830188751220703,
+            "ssim": 0.6747915744781494,
+            "lpips": 0.5353952646255493
+          }
+        },
+        "gauss32": {
+          "float": {
+            "psnr": 24.83247947692871,
+            "ssim": 0.6754935383796692,
+            "lpips": 0.5358355641365051
+          },
+          "8bit": {
+            "psnr": 24.83017349243164,
+            "ssim": 0.6748365759849548,
+            "lpips": 0.5353710651397705
+          }
+        }
+      },
+      {
+        "frame": 6,
+        "camera": 1,
+        "timestamp": 0.2610172260662659,
+        "midpoint": {
+          "float": {
+            "psnr": 24.680301666259766,
+            "ssim": 0.6517246961593628,
+            "lpips": 0.5575156211853027
+          },
+          "8bit": {
+            "psnr": 24.67870330810547,
+            "ssim": 0.6510526537895203,
+            "lpips": 0.5574092268943787
+          }
+        },
+        "gauss32": {
+          "float": {
+            "psnr": 24.679386138916016,
+            "ssim": 0.6517722010612488,
+            "lpips": 0.5575511455535889
+          },
+          "8bit": {
+            "psnr": 24.67738914489746,
+            "ssim": 0.6510875821113586,
+            "lpips": 0.5574265718460083
+          }
+        }
+      },
+      {
+        "frame": 10,
+        "camera": 0,
+        "timestamp": 0.4348208652487447,
+        "midpoint": {
+          "float": {
+            "psnr": 24.473878860473633,
+            "ssim": 0.6723803877830505,
+            "lpips": 0.5395863652229309
+          },
+          "8bit": {
+            "psnr": 24.47199058532715,
+            "ssim": 0.6716814637184143,
+            "lpips": 0.5390303134918213
+          }
+        },
+        "gauss32": {
+          "float": {
+            "psnr": 24.474668502807617,
+            "ssim": 0.6724721193313599,
+            "lpips": 0.5394812822341919
+          },
+          "8bit": {
+            "psnr": 24.47290802001953,
+            "ssim": 0.6717593669891357,
+            "lpips": 0.538861870765686
+          }
+        }
+      },
+      {
+        "frame": 10,
+        "camera": 1,
+        "timestamp": 0.4348256449563656,
+        "midpoint": {
+          "float": {
+            "psnr": 24.156841278076172,
+            "ssim": 0.6468018293380737,
+            "lpips": 0.5515827536582947
+          },
+          "8bit": {
+            "psnr": 24.15554428100586,
+            "ssim": 0.6462363004684448,
+            "lpips": 0.551338255405426
+          }
+        },
+        "gauss32": {
+          "float": {
+            "psnr": 24.15797233581543,
+            "ssim": 0.6468899250030518,
+            "lpips": 0.5515159964561462
+          },
+          "8bit": {
+            "psnr": 24.156597137451172,
+            "ssim": 0.6463138461112976,
+            "lpips": 0.551345944404602
+          }
+        }
+      },
+      {
+        "frame": 14,
+        "camera": 0,
+        "timestamp": 0.6086223318368502,
+        "midpoint": {
+          "float": {
+            "psnr": 24.97892189025879,
+            "ssim": 0.6853536367416382,
+            "lpips": 0.5389881730079651
+          },
+          "8bit": {
+            "psnr": 24.977266311645508,
+            "ssim": 0.6847336888313293,
+            "lpips": 0.5390286445617676
+          }
+        },
+        "gauss32": {
+          "float": {
+            "psnr": 24.979690551757812,
+            "ssim": 0.6854276657104492,
+            "lpips": 0.5389729738235474
+          },
+          "8bit": {
+            "psnr": 24.978008270263672,
+            "ssim": 0.6847941279411316,
+            "lpips": 0.5391068458557129
+          }
+        }
+      },
+      {
+        "frame": 14,
+        "camera": 1,
+        "timestamp": 0.6086271115444712,
+        "midpoint": {
+          "float": {
+            "psnr": 24.47338104248047,
+            "ssim": 0.6651550531387329,
+            "lpips": 0.5519008636474609
+          },
+          "8bit": {
+            "psnr": 24.471851348876953,
+            "ssim": 0.6644608378410339,
+            "lpips": 0.5517346858978271
+          }
+        },
+        "gauss32": {
+          "float": {
+            "psnr": 24.474613189697266,
+            "ssim": 0.6652461290359497,
+            "lpips": 0.5519633293151855
+          },
+          "8bit": {
+            "psnr": 24.47335433959961,
+            "ssim": 0.6645830273628235,
+            "lpips": 0.5518063902854919
+          }
+        }
+      },
+      {
+        "frame": 18,
+        "camera": 0,
+        "timestamp": 0.7824133699719649,
+        "midpoint": {
+          "float": {
+            "psnr": 25.244314193725586,
+            "ssim": 0.7063340544700623,
+            "lpips": 0.5379490852355957
+          },
+          "8bit": {
+            "psnr": 25.2426700592041,
+            "ssim": 0.7056109309196472,
+            "lpips": 0.5370336174964905
+          }
+        },
+        "gauss32": {
+          "float": {
+            "psnr": 25.244333267211914,
+            "ssim": 0.7063665986061096,
+            "lpips": 0.5379765629768372
+          },
+          "8bit": {
+            "psnr": 25.242645263671875,
+            "ssim": 0.7056428790092468,
+            "lpips": 0.5371309518814087
+          }
+        }
+      },
+      {
+        "frame": 18,
+        "camera": 1,
+        "timestamp": 0.7824181496795858,
+        "midpoint": {
+          "float": {
+            "psnr": 24.90764617919922,
+            "ssim": 0.6851877570152283,
+            "lpips": 0.5486422777175903
+          },
+          "8bit": {
+            "psnr": 24.905776977539062,
+            "ssim": 0.6845146417617798,
+            "lpips": 0.5484164357185364
+          }
+        },
+        "gauss32": {
+          "float": {
+            "psnr": 24.908857345581055,
+            "ssim": 0.6852576732635498,
+            "lpips": 0.5486149787902832
+          },
+          "8bit": {
+            "psnr": 24.9071102142334,
+            "ssim": 0.6845987439155579,
+            "lpips": 0.548374354839325
+          }
+        }
+      },
+      {
+        "frame": 22,
+        "camera": 0,
+        "timestamp": 0.9562426457680469,
+        "midpoint": {
+          "float": {
+            "psnr": 24.636003494262695,
+            "ssim": 0.6759830117225647,
+            "lpips": 0.5436882972717285
+          },
+          "8bit": {
+            "psnr": 24.63445281982422,
+            "ssim": 0.6753422021865845,
+            "lpips": 0.5428914427757263
+          }
+        },
+        "gauss32": {
+          "float": {
+            "psnr": 24.637176513671875,
+            "ssim": 0.6760517358779907,
+            "lpips": 0.5435633063316345
+          },
+          "8bit": {
+            "psnr": 24.635629653930664,
+            "ssim": 0.6754049062728882,
+            "lpips": 0.542690634727478
+          }
+        }
+      },
+      {
+        "frame": 22,
+        "camera": 1,
+        "timestamp": 0.9562474254756679,
+        "midpoint": {
+          "float": {
+            "psnr": 24.37725067138672,
+            "ssim": 0.6543459296226501,
+            "lpips": 0.5626943707466125
+          },
+          "8bit": {
+            "psnr": 24.376039505004883,
+            "ssim": 0.6536664366722107,
+            "lpips": 0.5617915987968445
+          }
+        },
+        "gauss32": {
+          "float": {
+            "psnr": 24.377668380737305,
+            "ssim": 0.6544126272201538,
+            "lpips": 0.562698483467102
+          },
+          "8bit": {
+            "psnr": 24.376440048217773,
+            "ssim": 0.6537251472473145,
+            "lpips": 0.5618414282798767
+          }
+        }
+      }
+    ]
+  }
+}

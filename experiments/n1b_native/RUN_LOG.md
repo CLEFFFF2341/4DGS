@@ -34,3 +34,10 @@
   4,033,545 Gaussians in 45.67 seconds with about 5.5 GB reserved. This restores
   feasibility of the original full DSEC plan; earlier resource-pressure notes
   describe the interrupted attempts, not a native algorithm limitation.
+- On continuation on 2026-10-27, no Python training process remained. The queue
+  had stopped with exit code 3221225622 for city_05 seed 4 native. Its training
+  JSON and final checkpoint showed all 30,000 steps had completed. The saved
+  checkpoint hash was verified and `recover_eval.py` completed only the missing
+  evaluation. No model update, replacement training run, or seed substitution.
+  Two matched DSEC pairs are complete. The resumed queue prioritizes the full
+  coffee pair and then resumes the remaining DSEC jobs, skipping completed runs.
