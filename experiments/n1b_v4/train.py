@@ -8,6 +8,16 @@ from Optim.Samplers.DatasetSamplers import DatasetSampler
 from experiments.n1b_native.native import raw_state, tensor_hash
 
 
+class MSEAugmentedLoss(torch.nn.Module):
+    """Keep native L1/DSSIM and add an explicitly reported RGB MSE term."""
+    def __init__(self, native, weight):
+        super().__init__()
+        self.native, self.weight = native, weight
+
+    def forward(self, image, target):
+        return self.native(image, target) + self.weight * (image-target).square().mean()
+
+
 class Trainer(FasterGS4DTrainer):
     def __init__(self, *, prefix=False, **kwargs):
         super().__init__(**kwargs)
@@ -53,6 +63,10 @@ class Trainer(FasterGS4DTrainer):
 
 
 def resume(trainer, dataset, checkpoint, kind, accel_lr=.01, color_lr=.001):
+    # Native run() skips pre-training callbacks on resume, but its timing writer
+    # still visits their timers. Initialize their metadata/timers without running
+    # setup, reinitializing the model, or touching the restored sampler.
+    trainer._gather_callbacks(-1)
     saved = torch.load(checkpoint, map_location='cpu', weights_only=True)
     model, g = trainer.model, trainer.model.gaussians
     assert saved['steps'] >= trainer.DENSIFICATION_END_ITERATION

@@ -59,3 +59,29 @@ Then run full-resolution, all-training-camera, batch-4 native comparisons at
 three seeds, mean >= +0.10 dB, and no overall SSIM/LPIPS regression for a claim
 of repeatable improvement on coffee. Do not generalize that claim to other scenes
 without further frozen validation. Never guarantee that the search will succeed.
+
+## Round 2 (declared after round 1 primary results, before new metrics)
+
+Native, affine, acceleration and color primary PSNR were 23.074614, 23.088057,
+23.073717 and 23.066907 dB. None advances. The combination process failed during
+startup with Windows access violation and an empty log, before creating an output
+directory; retry it unchanged and retain the failure log.
+
+Next arms use the same native seed-0 prefix: acceleration LR 0.05; color LR 0.005;
+native + 2*MSE; native + 8*MSE; acceleration LR 0.01 + 2*MSE. MSE is mean RGB
+squared error on the same rendered images. Original 0.8*L1 + 0.2*DSSIM remains.
+These are late-stage training-objective experiments, not evidence of a new
+representation by themselves. Compare acceleration+MSE against native+sameMSE
+to separate any structural contribution. No official test or reserved camera
+is evaluated in this round. The original advancement gate remains unchanged.
+
+## First frozen structural candidate
+
+After acceleration LR 0.05 completed, before the round-2 MSE arms completed,
+freeze **kind=accel, accel_lr=0.05, no color, no MSE**, activated after step 15,000.
+Seed-0 primary: PSNR 23.22826570 (+0.15365124 dB), SSIM 0.86067807
+(+0.00254131), LPIPS 0.10891085 (-0.00251786). This passes the development gate.
+Run a fresh shared native seed-1 prefix and native/candidate continuations;
+do not adjust the frozen candidate using seed-1 or reserved cam16 outcomes.
+Finish the already declared other round-2 arms for transparent evidence, without
+silently replacing this candidate based on confirmation results.

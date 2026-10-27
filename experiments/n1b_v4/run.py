@@ -17,7 +17,7 @@ from experiments.n1b_native.run import sha
 from experiments.n1b_native.native import raw_state
 from .data import DevelopmentDataset
 from .model import ResidualGaussians, ResidualRenderer
-from .train import Trainer, resume
+from .train import Trainer, resume, MSEAugmentedLoss
 
 
 @torch.no_grad()
@@ -49,16 +49,20 @@ def main():
     p.add_argument('--steps', type=int, default=30000)
     p.add_argument('--accel-lr', type=float, default=.01)
     p.add_argument('--color-lr', type=float, default=.001)
+    p.add_argument('--mse-weight', type=float, default=0.)
     p.add_argument('--secondary', action='store_true')
+    p.add_argument('--full', action='store_true', help='Frozen confirmation on all native training/test images')
     a = p.parse_args()
     assert a.prefix != bool(a.checkpoint)
+    assert a.mse_weight >= 0 and (not a.prefix or a.mse_weight == 0)
+    assert not (a.full and a.secondary)
     out = Path(a.out).resolve()
     out.mkdir(parents=True, exist_ok=False)
     config = yaml.safe_load((ROOT/'configs/fastergs4d_coffee_martini.yaml').read_text())
     config['GLOBAL'].update(RANDOM_SEED=a.seed, LOG_LEVEL=0)
-    config['TRAINING'].update(NUM_ITERATIONS=a.steps, BATCH_SIZE=1, MODEL_NAME=out.name)
+    config['TRAINING'].update(NUM_ITERATIONS=a.steps, BATCH_SIZE=4 if a.full else 1, MODEL_NAME=out.name)
     config['TRAINING']['BACKUP'].update(FINAL_CHECKPOINT=False, TRAINING_STATE=False)
-    config['DATASET']['IMAGE_SCALE_FACTOR'] = .125
+    config['DATASET']['IMAGE_SCALE_FACTOR'] = .5 if a.full else .125
     config_path = out/'config.yaml'
     config_path.write_text(yaml.safe_dump(config))
     sources = {str(path.relative_to(ROOT)): sha(path) for path in Path(__file__).parent.glob('*.py')}
@@ -73,10 +77,22 @@ def main():
     model.output_directory = out
     renderer = ResidualRenderer(model)
     trainer = Trainer(model=model, renderer=renderer, prefix=a.prefix)
-    dataset = DevelopmentDataset(config['DATASET']['PATH'])
-    dataset.preload(secondary=a.secondary)
-    record['selection'] = dataset.selection
-    record['pixel_hash'] = dataset.pixel_hash
+    if a.mse_weight:
+        trainer.loss = MSEAugmentedLoss(trainer.loss, a.mse_weight)
+    if a.full:
+        from experiments.n1b_native.data import install_coffee_cache
+        from Datasets.PlenopticVideoBlender import CustomDataset
+        verified = install_coffee_cache(ROOT)
+        dataset = CustomDataset(config['DATASET']['PATH'])
+        record['dataset'] = {'train_views': len(dataset.train()), 'test_views': len(dataset.test()),
+            'metadata_sha256': {name: sha(dataset.dataset_path/name) for name in
+                ('transforms_train.json','transforms_test.json','points3d.ply')}}
+        assert record['dataset']['train_views'] == 5100 and record['dataset']['test_views'] == 300
+    else:
+        dataset = DevelopmentDataset(config['DATASET']['PATH'])
+        dataset.preload(secondary=a.secondary)
+        record['selection'] = dataset.selection
+        record['pixel_hash'] = dataset.pixel_hash
     if a.checkpoint:
         record['shared_prefix'] = resume(trainer, dataset, a.checkpoint, a.kind, a.accel_lr, a.color_lr)
         record['prefix_sha256'] = sha(a.checkpoint)
@@ -89,8 +105,9 @@ def main():
             z, _ = base.render_image_training(view, False, view.camera.background_color)
             error = float((x-y).square().mean().sqrt())
             repeat = float((x-z).square().mean().sqrt())
-            assert error <= 3*repeat + 1e-7
             record['zero_residual_audit'] = {'rmse': error, 'native_repeat_rmse': repeat}
+            (out/'zero_residual_audit.json').write_text(json.dumps(record['zero_residual_audit']))
+            assert error <= 3*repeat + 1e-7, record['zero_residual_audit']
     torch.cuda.synchronize()
     begin = trainer.started = time.perf_counter()
     trainer.run(dataset)
@@ -103,6 +120,8 @@ def main():
     assert record['steps'] == a.steps
     if not a.prefix:
         state = {'raw': raw_state(model),
+            'active_sh_degree': model.gaussians.active_sh_degree,
+            'steps': model.num_iterations_trained,
             'residuals': {k:v.detach().cpu() for k,v in model.gaussians.residuals.items()},
             'sigma_t': None if model.gaussians.reference_sigma_t is None else model.gaussians.reference_sigma_t.cpu(),
             'sigma_xyz': None if model.gaussians.reference_sigma_xyz is None else model.gaussians.reference_sigma_xyz.cpu()}
@@ -110,7 +129,10 @@ def main():
         torch.save(state, out/'final.pt')
         record['checkpoint_sha256'] = sha(out/'final.pt')
         (out/'training.json').write_text(json.dumps(record, indent=2))
-        views = dataset.secondary if a.secondary else dataset.data['val']
+        views = dataset.test() if a.full else (dataset.secondary if a.secondary else dataset.data['val'])
+        record['evaluation_split'] = 'official_test' if a.full else ('reserved' if a.secondary else 'primary')
+        if a.full:
+            record['cache_checks'] = len(verified)
         record['validation'] = evaluate(renderer, views)
     else:
         record['checkpoint_sha256'] = sha(out/'prefix.pt')

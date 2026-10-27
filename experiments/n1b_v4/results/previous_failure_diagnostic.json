@@ -1,0 +1,74 @@
+{
+  "source": "previously evaluated frozen v3 seed0; diagnostic only",
+  "affine_parameter_norm": 0.019212406116576975,
+  "nonlinear_parameter_energy_fraction": 0.00046702433999050745,
+  "per_50_frames": [
+    {
+      "frames": [
+        0,
+        49
+      ],
+      "delta": {
+        "psnr": 0.019096527099609375,
+        "ssim": 0.0019580578804016114,
+        "lpips": -0.0015553700923919677
+      }
+    },
+    {
+      "frames": [
+        50,
+        99
+      ],
+      "delta": {
+        "psnr": -0.06057411193847656,
+        "ssim": 0.0006568491458892822,
+        "lpips": -0.0006032291054725646
+      }
+    },
+    {
+      "frames": [
+        100,
+        149
+      ],
+      "delta": {
+        "psnr": -0.06380977630615234,
+        "ssim": 0.0008354318141937255,
+        "lpips": -0.0003654545545578003
+      }
+    },
+    {
+      "frames": [
+        150,
+        199
+      ],
+      "delta": {
+        "psnr": -0.07797992706298829,
+        "ssim": 0.0006533730030059815,
+        "lpips": -0.0005302253365516663
+      }
+    },
+    {
+      "frames": [
+        200,
+        249
+      ],
+      "delta": {
+        "psnr": -0.12297874450683594,
+        "ssim": 0.00023869037628173828,
+        "lpips": -0.00039014160633087157
+      }
+    },
+    {
+      "frames": [
+        250,
+        299
+      ],
+      "delta": {
+        "psnr": -0.14738037109375,
+        "ssim": -8.551239967346192e-05,
+        "lpips": -0.0009597313404083252
+      }
+    }
+  ],
+  "note": "Coefficient energy decomposition is descriptive; it does not establish a causal failure mechanism."
+}
