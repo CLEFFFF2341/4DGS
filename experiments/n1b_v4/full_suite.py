@@ -4,13 +4,42 @@ import json
 from pathlib import Path
 import subprocess
 import sys
+import time
+
+def wait_for_seed1(root, pid):
+    """Read-only process wait on Windows; do not signal or terminate training."""
+    import ctypes
+    from ctypes import wintypes
+    kernel = ctypes.WinDLL('kernel32', use_last_error=True)
+    kernel.OpenProcess.argtypes = [wintypes.DWORD, wintypes.BOOL, wintypes.DWORD]
+    kernel.OpenProcess.restype = wintypes.HANDLE
+    kernel.WaitForSingleObject.argtypes = [wintypes.HANDLE, wintypes.DWORD]
+    kernel.WaitForSingleObject.restype = wintypes.DWORD
+    kernel.CloseHandle.argtypes = [wintypes.HANDLE]
+    handle = kernel.OpenProcess(0x100000, False, pid)  # SYNCHRONIZE only
+    if not handle:
+        raise ctypes.WinError(ctypes.get_last_error())
+    deadline = time.monotonic()+7200
+    try:
+        while not (root/'full_s1_candidate/results.json').exists():
+            if kernel.WaitForSingleObject(handle, 0) != 258:
+                raise RuntimeError('Seed 1 coordinator stopped before candidate results')
+            if time.monotonic() > deadline:
+                raise TimeoutError('Seed 1 queue wait exceeded two hours')
+            time.sleep(10)
+    finally:
+        kernel.CloseHandle(handle)
 
 def main():
     p = argparse.ArgumentParser()
     p.add_argument('--seeds', type=int, nargs='+', default=[1,2,3])
+    p.add_argument('--wait-pid', type=int)
     a = p.parse_args()
     assert len(set(a.seeds)) == len(a.seeds) and all(s in (1,2,3) for s in a.seeds)
     root = Path('output/n1b_v4')
+    if a.wait_pid:
+        print(json.dumps({'waiting_for_seed1_pid':a.wait_pid}),flush=True)
+        wait_for_seed1(root,a.wait_pid)
     for seed in a.seeds:
         r = subprocess.run([sys.executable,'-u','-m','experiments.n1b_v4.confirm',
                             '--full','--seed',str(seed),'--kind','accel','--accel-lr','.05'])
