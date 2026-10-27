@@ -20,6 +20,12 @@ Completed metrics and conclusions are archived in `results/` and `RESULTS.md`.
   **before** Dataset loading, full training, checkpoint integrity and evaluation.
 - `suite.py`: sequential GPU queue; refuses to overwrite unfinished runs.
 - `assess.py`: pairs completed 30k-step runs and checks hashes/callback counts.
+- `recover_eval.py`: verifies a completed checkpoint and restores missing
+  evaluation without training again.
+- `finish.py`: one-shot continuation after the active queue exits. It completes
+  missing jobs, applies the predeclared coffee replication gate, audits all
+  pairs, writes the final report and optionally commits/pushes this experiment.
+  Incomplete training is preserved for inspection, never overwritten.
 
 No source file in the native FasterGS4D submodule is changed. Its revision is
 `3dbbb985c5e0f29825d0960563f3c39f29eb3987`. Native source hashes are recorded for
@@ -34,6 +40,18 @@ $env:PATH = "$PWD\.conda\nerficg\Library\bin;" + $env:PATH
 .\.conda\nerficg\python.exe -m experiments.n1b_native.suite --dataset coffee --prefix replication_
 .\.conda\nerficg\python.exe -m experiments.n1b_native.assess
 ```
+
+The active continuation uses prefix `native03_`. Its final status will be written
+to `output/n1b_native/completion.json`, or a failure to `completion_error.json`.
+The one-shot continuation can also be invoked after the queue is stopped:
+
+```powershell
+.\.conda\nerficg\python.exe -m experiments.n1b_native.finish --publish
+```
+
+Do not start a second continuation while one is already running. The `--wait-pid`
+option waits for the specifically identified active queue process before doing
+any work; it does not interrupt that process or alter GPU scheduling.
 
 The official local datasets, CUDA extensions and VGG metric weights must already
 be installed. See `deployment/` and the earlier N1b data manifests. Models and
