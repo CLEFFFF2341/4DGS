@@ -3,7 +3,7 @@ import argparse
 import json
 from pathlib import Path
 import torch
-from .run import Framework, FasterGS4DModel, ResidualGaussians, ResidualRenderer, DevelopmentDataset, evaluate, sha, ROOT
+from .run import Framework, FasterGS4DModel, FasterGS4DRenderer, ResidualGaussians, ResidualRenderer, DevelopmentDataset, evaluate, sha, ROOT
 
 def main():
     p = argparse.ArgumentParser()
@@ -33,7 +33,9 @@ def main():
     if state['sigma_t'] is not None:
         g.reference_sigma_t = state['sigma_t'].cuda()
         g.reference_sigma_xyz = state['sigma_xyz'].cuda()
-    renderer = ResidualRenderer(model)
+    # Also audit the native arm through the original inference entry point.
+    renderer = ResidualRenderer(model) if len(g.residuals) else FasterGS4DRenderer(model)
+    source['evaluation_renderer'] = type(renderer).__name__
     if full:
         from experiments.n1b_native.data import install_coffee_cache
         from Datasets.PlenopticVideoBlender import CustomDataset
@@ -52,6 +54,14 @@ def main():
         delta = {k:source['validation']['mean'][k]-expected[k] for k in expected}
         assert abs(delta['psnr']) < .001 and abs(delta['ssim']) < 1e-5 and abs(delta['lpips']) < 1e-5, delta
         source['reload_mean_delta'] = delta
+        if full:
+            from Datasets.utils import save_image
+            for index in (0,150,299):
+                view = views[index]
+                save_image(out/f'audit_view{index}_prediction.png',
+                           renderer.render_image_inference(view, True)['rgb'])
+                if not len(g.residuals):
+                    save_image(out/f'audit_view{index}_target.png', view.rgb)
     destination.write_text(json.dumps(source, indent=2))
     print(json.dumps({'file':str(destination),'validation':source['validation']['mean']}), flush=True)
 

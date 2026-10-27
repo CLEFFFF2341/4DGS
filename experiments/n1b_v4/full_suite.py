@@ -62,8 +62,16 @@ def main():
             if Path(key).name in ('model.py','train.py','run.py'):
                 assert b['source_sha256'][key] == c['source_sha256'][key]
         assert len(b['validation']['views']) == len(c['validation']['views']) == 300
+        before, after = b['validation']['views'], c['validation']['views']
+        names = [v['image'] for v in before]
+        assert names == [v['image'] for v in after] and len(set(names)) == 300
         delta = {k:c['validation']['mean'][k]-b['validation']['mean'][k] for k in ('psnr','ssim','lpips')}
-        pairs.append({'seed':seed,'native':b['validation']['mean'],'candidate':c['validation']['mean'],'delta':delta})
+        blocks = [{'frames':[start,start+49], 'mean_delta':{
+                    k:sum(after[i][k]-before[i][k] for i in range(start,start+50))/50
+                    for k in ('psnr','ssim','lpips')}} for start in range(0,300,50)]
+        pairs.append({'seed':seed,'native':b['validation']['mean'],'candidate':c['validation']['mean'],
+                      'delta':delta,'positive_psnr_frames':sum(y['psnr'] > x['psnr'] for x,y in zip(before,after)),
+                      'per_50_frames':blocks})
     mean = {k:sum(p['delta'][k] for p in pairs)/len(pairs) for k in ('psnr','ssim','lpips')} if pairs else {}
     passed = len(pairs) == 3 and all(p['delta']['psnr'] > 0 for p in pairs) and mean['psnr'] >= .1 and mean['ssim'] >= 0 and mean['lpips'] <= 0
     report = {'scope':'Coffee only; frozen three-seed full native confirmation',

@@ -22,6 +22,7 @@ def main():
         if not full:
             assert r['pixel_hash'] == b['pixel_hash']
         metrics = r['validation']['mean']
+        assert [v['image'] for v in r['validation']['views']] == [v['image'] for v in b['validation']['views']]
         delta = {k:metrics[k]-b['validation']['mean'][k] for k in metrics}
         label = path.parent.name + ('@reserved' if path.name == 'reserved.json' else '')
         rows.append({'run':label, 'args':r['args'],
