@@ -46,3 +46,6 @@ __pycache__/
 /deployment/*-options.json
 /deployment/conda-runtime-options.json
 /deployment/*-release.json
+
+# Downloaded third-party matcher checkout; revision is recorded in the snapshot.
+/experiments/f1m/match_dependencies/
