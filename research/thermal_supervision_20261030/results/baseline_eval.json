@@ -1,0 +1,18 @@
+[
+  {
+    "view": "frame_00013_rgb",
+    "mse_scaled_raw": 25.122255325317383,
+    "psnr_scaled_raw": -14.000586251675953,
+    "mse_distributed_raw_01": 0.00018533268689580867,
+    "mse_fixed_reliable_mask_scaled_raw": 0.004476477392017841,
+    "reliable_fraction": 0.9379881620407104
+  },
+  {
+    "view": "frame_00015_rgb",
+    "mse_scaled_raw": 43.81728744506836,
+    "psnr_scaled_raw": -16.41645488603462,
+    "mse_distributed_raw_01": 0.00032325026194987566,
+    "mse_fixed_reliable_mask_scaled_raw": 0.0023076580837368965,
+    "reliable_fraction": 0.9421601295471191
+  }
+]

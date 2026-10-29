@@ -1,0 +1,10 @@
+{
+  "source": "https://github.com/XuJiacong/Thermal-NeRF",
+  "download": "https://drive.google.com/file/d/1lVOaV5RCd6lnOMjaUM2Sdz2g0IpajZjT/view",
+  "archive": "E:/4D_Gaussian/downloads/rgb_thermal/mvtv/mvtv.zip",
+  "bytes": 1417015707,
+  "sha256": "d0e28b583e5af245a2824306604ab11c177091c53fd76b70e288ba0db24c8ee5",
+  "extracted": "E:/4D_Gaussian/dataset/rgb_thermal/mvtv/vs",
+  "scope": "10 VS scenes extracted; TS remains in complete archive",
+  "date": "2026-10-30"
+}

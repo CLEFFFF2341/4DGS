@@ -1,0 +1,125 @@
+{
+  "warning": "Distribution check only; masked ratios are biased/noisy and must not be mistaken for exposure metadata or used to fit test gains.",
+  "training_frame_ratios": [
+    {
+      "stem": "frame_00025",
+      "masked_long_short_median": 7.105263157894737,
+      "samples": 104855
+    },
+    {
+      "stem": "frame_00026",
+      "masked_long_short_median": 7.138783089580764,
+      "samples": 96266
+    },
+    {
+      "stem": "frame_00024",
+      "masked_long_short_median": 6.585365853658536,
+      "samples": 129368
+    },
+    {
+      "stem": "frame_00001",
+      "masked_long_short_median": 5.090909090909091,
+      "samples": 209221
+    },
+    {
+      "stem": "frame_00023",
+      "masked_long_short_median": 6.711538461538462,
+      "samples": 141719
+    },
+    {
+      "stem": "frame_00022",
+      "masked_long_short_median": 6.589743589743589,
+      "samples": 147845
+    },
+    {
+      "stem": "frame_00021",
+      "masked_long_short_median": 6.507692307692308,
+      "samples": 134271
+    },
+    {
+      "stem": "frame_00020",
+      "masked_long_short_median": 6.762711864406779,
+      "samples": 156511
+    },
+    {
+      "stem": "frame_00019",
+      "masked_long_short_median": 5.395348837209302,
+      "samples": 119676
+    },
+    {
+      "stem": "frame_00018",
+      "masked_long_short_median": 5.225806451612903,
+      "samples": 99291
+    },
+    {
+      "stem": "frame_00017",
+      "masked_long_short_median": 6.577319587628866,
+      "samples": 61599
+    },
+    {
+      "stem": "frame_00016",
+      "masked_long_short_median": 6.203464826758662,
+      "samples": 68496
+    },
+    {
+      "stem": "frame_00002",
+      "masked_long_short_median": 6.533333333333333,
+      "samples": 165444
+    },
+    {
+      "stem": "frame_00003",
+      "masked_long_short_median": 7.361111111111111,
+      "samples": 69445
+    },
+    {
+      "stem": "frame_00004",
+      "masked_long_short_median": 6.942857142857143,
+      "samples": 71637
+    },
+    {
+      "stem": "frame_00005",
+      "masked_long_short_median": 7.170731707317073,
+      "samples": 64610
+    },
+    {
+      "stem": "frame_00006",
+      "masked_long_short_median": 7.373626373626373,
+      "samples": 61565
+    },
+    {
+      "stem": "frame_00007",
+      "masked_long_short_median": 7.092783505154639,
+      "samples": 69653
+    },
+    {
+      "stem": "frame_00008",
+      "masked_long_short_median": 6.806451612903226,
+      "samples": 73843
+    },
+    {
+      "stem": "frame_00009",
+      "masked_long_short_median": 4.805555555555555,
+      "samples": 121700
+    },
+    {
+      "stem": "frame_00010",
+      "masked_long_short_median": 7.029985614098184,
+      "samples": 65540
+    },
+    {
+      "stem": "frame_00011",
+      "masked_long_short_median": 6.972972972972973,
+      "samples": 69052
+    },
+    {
+      "stem": "frame_00012",
+      "masked_long_short_median": 7.1063829787234045,
+      "samples": 72088
+    },
+    {
+      "stem": "frame_00014",
+      "masked_long_short_median": 6.823529411764706,
+      "samples": 80652
+    }
+  ]
+}

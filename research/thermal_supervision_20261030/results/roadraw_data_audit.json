@@ -1,0 +1,2569 @@
+{
+  "scene": "E:\\4D_Gaussian\\dataset\\rgb_thermal\\mvtv\\vs\\roadraw",
+  "train_stems": [
+    "frame_00001",
+    "frame_00002",
+    "frame_00003",
+    "frame_00004",
+    "frame_00005",
+    "frame_00006",
+    "frame_00007",
+    "frame_00008",
+    "frame_00009",
+    "frame_00010",
+    "frame_00011",
+    "frame_00012",
+    "frame_00014",
+    "frame_00016",
+    "frame_00017",
+    "frame_00018",
+    "frame_00019",
+    "frame_00020",
+    "frame_00021",
+    "frame_00022",
+    "frame_00023",
+    "frame_00024",
+    "frame_00025",
+    "frame_00026"
+  ],
+  "eval_stems": [
+    "frame_00013",
+    "frame_00015"
+  ],
+  "split_overlap": [],
+  "registered_images": 26,
+  "database_images": 26,
+  "eval_registered_names": [
+    "frame_00013.jpg",
+    "frame_00015.jpg"
+  ],
+  "eval_in_database": [
+    "frame_00013.jpg",
+    "frame_00015.jpg"
+  ],
+  "cameras": {
+    "1": {
+      "model": 4,
+      "width": 568,
+      "height": 422,
+      "parameters": [
+        498.1711364591672,
+        488.5431265641894,
+        287.1480097469207,
+        215.61291100943956,
+        0.17333741951921774,
+        -0.27732792465102013,
+        -0.002797143813437846,
+        0.009552385423239534
+      ]
+    }
+  },
+  "point_count": 886,
+  "points_touching_eval": 343,
+  "points_with_train_and_eval": 343,
+  "points_only_train": 543,
+  "points_with_at_least_two_train_views": 870,
+  "points_with_unknown_tracks": 0,
+  "observed_point_reprojection_pixels": {
+    "count": 4277,
+    "min": 0.006159211670531634,
+    "max": 3.723643730376293,
+    "p01": 0.045118681476030285,
+    "median": 0.5617505700518506,
+    "p95": 2.1998562001006277,
+    "p99": 3.0118431571668838
+  },
+  "after_cv2_undistort_reprojection_pixels": {
+    "count": 4277,
+    "min": 0.006087393091912983,
+    "max": 3.621735953516833,
+    "p01": 0.0440018138381481,
+    "median": 0.5484718613093982,
+    "p95": 2.159921969424294,
+    "p99": 2.9265866756186876
+  },
+  "observed_depth": {
+    "count": 4277,
+    "min": 1.1085723590108927,
+    "max": 58.663690775886415,
+    "p01": 7.430877412405078,
+    "median": 17.592726201234232,
+    "p95": 39.792675690991814,
+    "p99": 50.99396681693984
+  },
+  "transform_global_matrix": [
+    [
+      1.5262230581911331e-18,
+      1.0,
+      2.76888554819375e-18,
+      1.0575141190089381e-17
+    ],
+    [
+      1.0,
+      3.4027268182621984e-18,
+      -5.919506040981817e-18,
+      1.772086750844e-16
+    ],
+    [
+      -1.5698599151603553e-17,
+      -7.631115290955666e-19,
+      -1.0,
+      -1.1102230246251565e-16
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "transform_global_max_deviation": 1.6653345369377348e-15,
+  "missing_json_file_paths": 26,
+  "sensors": {
+    "images": {
+      "count": 26,
+      "files": [
+        {
+          "name": "frame_00001.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 63416,
+          "median": 17.0,
+          "p99": 272.0,
+          "mean": 65.85296097278776,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00002.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 63262,
+          "median": 14.0,
+          "p99": 228.0,
+          "mean": 55.061188616692256,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00003.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 61819,
+          "median": 8.0,
+          "p99": 159.0,
+          "mean": 46.30786079033442,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00004.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 64451,
+          "median": 9.0,
+          "p99": 146.0,
+          "mean": 43.84427775181897,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00005.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 61515,
+          "median": 9.0,
+          "p99": 115.0,
+          "mean": 30.72728789800414,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00006.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 62400,
+          "median": 9.0,
+          "p99": 113.0,
+          "mean": 31.886585508310528,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00007.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 63439,
+          "median": 10.0,
+          "p99": 123.0,
+          "mean": 33.90692933271032,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00008.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 64023,
+          "median": 10.0,
+          "p99": 142.0,
+          "mean": 49.97858954675923,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00009.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 65118,
+          "median": 13.0,
+          "p99": 194.0,
+          "mean": 72.30303801481877,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00010.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 62620,
+          "median": 10.0,
+          "p99": 123.0,
+          "mean": 38.99535939968404,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00011.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 63930,
+          "median": 10.0,
+          "p99": 147.0,
+          "mean": 49.27913412544779,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00012.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 62595,
+          "median": 10.0,
+          "p99": 149.0,
+          "mean": 49.676380359566565,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00013.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 60742,
+          "median": 15.0,
+          "p99": 230.0,
+          "mean": 55.70672296019402,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00014.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 64954,
+          "median": 10.0,
+          "p99": 158.0,
+          "mean": 53.12015636472866,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00015.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 63825,
+          "median": 10.0,
+          "p99": 159.0,
+          "mean": 51.33754283203169,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00016.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 63895,
+          "median": 9.0,
+          "p99": 143.0,
+          "mean": 43.701213203390964,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00017.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 64376,
+          "median": 8.0,
+          "p99": 138.0,
+          "mean": 38.480633802816904,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00018.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 63679,
+          "median": 10.0,
+          "p99": 189.0,
+          "mean": 49.67149778608459,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00019.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 63317,
+          "median": 12.0,
+          "p99": 204.0,
+          "mean": 61.41722988007031,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00020.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 62397,
+          "median": 14.0,
+          "p99": 230.0,
+          "mean": 56.387033297732685,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00021.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 63937,
+          "median": 13.0,
+          "p99": 204.0,
+          "mean": 57.66310660169548,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00022.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 63234,
+          "median": 14.0,
+          "p99": 229.0,
+          "mean": 60.07574594486349,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00023.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 63717,
+          "median": 14.0,
+          "p99": 222.0,
+          "mean": 61.15255712791758,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00024.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 64094,
+          "median": 14.0,
+          "p99": 203.0,
+          "mean": 59.871075584629416,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00025.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 63243,
+          "median": 14.0,
+          "p99": 194.0,
+          "mean": 54.89412283336671,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00026.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 62831,
+          "median": 14.0,
+          "p99": 196.0,
+          "mean": 53.58144343946777,
+          "channels_equal": false
+        }
+      ]
+    },
+    "images_2": {
+      "count": 26,
+      "files": [
+        {
+          "name": "frame_00001.png",
+          "shape": [
+            211,
+            284,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 62694,
+          "median": 17.0,
+          "p99": 282.29000000000815,
+          "mean": 65.44074160603431,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00002.png",
+          "shape": [
+            211,
+            284,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 60027,
+          "median": 14.0,
+          "p99": 246.0,
+          "mean": 54.65131944907995,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00003.png",
+          "shape": [
+            211,
+            284,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 60510,
+          "median": 8.0,
+          "p99": 166.0,
+          "mean": 45.89795963776339,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00004.png",
+          "shape": [
+            211,
+            284,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 62692,
+          "median": 9.0,
+          "p99": 151.29000000000815,
+          "mean": 43.436252586609704,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00005.png",
+          "shape": [
+            211,
+            284,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 56227,
+          "median": 9.0,
+          "p99": 117.0,
+          "mean": 30.309097078521685,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00006.png",
+          "shape": [
+            211,
+            284,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 59716,
+          "median": 9.0,
+          "p99": 116.0,
+          "mean": 31.472531873706696,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00007.png",
+          "shape": [
+            211,
+            284,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 62518,
+          "median": 9.0,
+          "p99": 125.29000000000815,
+          "mean": 33.49183410097234,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00008.png",
+          "shape": [
+            211,
+            284,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 63274,
+          "median": 10.0,
+          "p99": 139.0,
+          "mean": 49.56521037758939,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00009.png",
+          "shape": [
+            211,
+            284,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 64592,
+          "median": 13.0,
+          "p99": 194.0,
+          "mean": 71.89080056961039,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00010.png",
+          "shape": [
+            211,
+            284,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 60885,
+          "median": 10.0,
+          "p99": 123.0,
+          "mean": 38.58644282758161,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00011.png",
+          "shape": [
+            211,
+            284,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 62718,
+          "median": 9.0,
+          "p99": 145.0,
+          "mean": 48.87899116658879,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00012.png",
+          "shape": [
+            211,
+            284,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 61427,
+          "median": 10.0,
+          "p99": 148.0,
+          "mean": 49.27142714104532,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00013.png",
+          "shape": [
+            211,
+            284,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 55984,
+          "median": 15.0,
+          "p99": 253.29000000000815,
+          "mean": 55.29857819905213,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00014.png",
+          "shape": [
+            211,
+            284,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 64012,
+          "median": 10.0,
+          "p99": 156.0,
+          "mean": 52.713175577954296,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00015.png",
+          "shape": [
+            211,
+            284,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 62251,
+          "median": 10.0,
+          "p99": 158.0,
+          "mean": 50.935351445163874,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00016.png",
+          "shape": [
+            211,
+            284,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 55331,
+          "median": 9.0,
+          "p99": 141.0,
+          "mean": 43.29535189017199,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00017.png",
+          "shape": [
+            211,
+            284,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 59452,
+          "median": 7.0,
+          "p99": 133.0,
+          "mean": 38.08024608949113,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00018.png",
+          "shape": [
+            211,
+            284,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 54771,
+          "median": 10.0,
+          "p99": 183.0,
+          "mean": 49.267166188282935,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00019.png",
+          "shape": [
+            211,
+            284,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 61332,
+          "median": 12.0,
+          "p99": 205.0,
+          "mean": 61.009450859978195,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00020.png",
+          "shape": [
+            211,
+            284,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 61660,
+          "median": 14.0,
+          "p99": 251.29000000000815,
+          "mean": 55.97514629641991,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00021.png",
+          "shape": [
+            211,
+            284,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 62347,
+          "median": 12.0,
+          "p99": 212.0,
+          "mean": 57.25298155441337,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00022.png",
+          "shape": [
+            211,
+            284,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 62191,
+          "median": 14.0,
+          "p99": 241.0,
+          "mean": 59.6606312440202,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00023.png",
+          "shape": [
+            211,
+            284,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 62724,
+          "median": 14.0,
+          "p99": 232.0,
+          "mean": 60.74093295952651,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00024.png",
+          "shape": [
+            211,
+            284,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 62670,
+          "median": 14.0,
+          "p99": 214.0,
+          "mean": 59.45809136016732,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00025.png",
+          "shape": [
+            211,
+            284,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 62524,
+          "median": 14.0,
+          "p99": 198.0,
+          "mean": 54.48162116458625,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00026.png",
+          "shape": [
+            211,
+            284,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 61530,
+          "median": 14.0,
+          "p99": 205.0,
+          "mean": 53.169798411321004,
+          "channels_equal": false
+        }
+      ]
+    },
+    "images_4": {
+      "count": 26,
+      "files": [
+        {
+          "name": "frame_00001.png",
+          "shape": [
+            105,
+            142,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 43986,
+          "median": 16.0,
+          "p99": 321.0,
+          "mean": 65.31202772188688,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00002.png",
+          "shape": [
+            105,
+            142,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 52809,
+          "median": 14.0,
+          "p99": 285.7099999999991,
+          "mean": 54.53183545718757,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00003.png",
+          "shape": [
+            105,
+            142,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 51889,
+          "median": 8.0,
+          "p99": 174.70999999999913,
+          "mean": 45.761971830985914,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00004.png",
+          "shape": [
+            105,
+            142,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 46792,
+          "median": 9.0,
+          "p99": 165.70999999999913,
+          "mean": 43.30015649452269,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00005.png",
+          "shape": [
+            105,
+            142,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 42642,
+          "median": 9.0,
+          "p99": 121.0,
+          "mean": 30.177956628660855,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00006.png",
+          "shape": [
+            105,
+            142,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 51837,
+          "median": 9.0,
+          "p99": 120.0,
+          "mean": 31.33863179074447,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00007.png",
+          "shape": [
+            105,
+            142,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 55007,
+          "median": 9.0,
+          "p99": 125.70999999999913,
+          "mean": 33.3591102168567,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00008.png",
+          "shape": [
+            105,
+            142,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 53189,
+          "median": 10.0,
+          "p99": 145.0,
+          "mean": 49.431276548177955,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00009.png",
+          "shape": [
+            105,
+            142,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 63884,
+          "median": 13.0,
+          "p99": 205.70999999999913,
+          "mean": 71.7488486474402,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00010.png",
+          "shape": [
+            105,
+            142,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 56082,
+          "median": 10.0,
+          "p99": 129.0,
+          "mean": 38.36013860943439,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00011.png",
+          "shape": [
+            105,
+            142,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 60357,
+          "median": 9.0,
+          "p99": 150.70999999999913,
+          "mean": 48.7342499441091,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00012.png",
+          "shape": [
+            105,
+            142,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 52171,
+          "median": 10.0,
+          "p99": 155.0,
+          "mean": 49.130315224681425,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00013.png",
+          "shape": [
+            105,
+            142,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 35230,
+          "median": 15.0,
+          "p99": 277.41999999999825,
+          "mean": 55.16420746702437,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00014.png",
+          "shape": [
+            105,
+            142,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 61366,
+          "median": 10.0,
+          "p99": 158.0,
+          "mean": 52.57961099932931,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00015.png",
+          "shape": [
+            105,
+            142,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 57294,
+          "median": 10.0,
+          "p99": 164.0,
+          "mean": 50.79472389894925,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00016.png",
+          "shape": [
+            105,
+            142,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 46010,
+          "median": 8.0,
+          "p99": 142.0,
+          "mean": 43.15394589760787,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00017.png",
+          "shape": [
+            105,
+            142,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 40153,
+          "median": 7.0,
+          "p99": 132.0,
+          "mean": 37.938117594455626,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00018.png",
+          "shape": [
+            105,
+            142,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 41494,
+          "median": 10.0,
+          "p99": 177.70999999999913,
+          "mean": 49.138028169014085,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00019.png",
+          "shape": [
+            105,
+            142,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 57756,
+          "median": 12.0,
+          "p99": 208.0,
+          "mean": 60.88305387882853,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00020.png",
+          "shape": [
+            105,
+            142,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 51055,
+          "median": 14.0,
+          "p99": 298.7099999999991,
+          "mean": 55.838654147104855,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00021.png",
+          "shape": [
+            105,
+            142,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 43822,
+          "median": 12.0,
+          "p99": 233.0,
+          "mean": 57.11383858707802,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00022.png",
+          "shape": [
+            105,
+            142,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 47013,
+          "median": 14.0,
+          "p99": 274.0,
+          "mean": 59.53103062821373,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00023.png",
+          "shape": [
+            105,
+            142,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 55053,
+          "median": 14.0,
+          "p99": 258.0,
+          "mean": 60.61439749608763,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00024.png",
+          "shape": [
+            105,
+            142,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 45697,
+          "median": 14.0,
+          "p99": 230.0,
+          "mean": 59.32727475966912,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00025.png",
+          "shape": [
+            105,
+            142,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 57368,
+          "median": 14.0,
+          "p99": 216.70999999999913,
+          "mean": 54.352112676056336,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00026.png",
+          "shape": [
+            105,
+            142,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 45789,
+          "median": 14.0,
+          "p99": 211.0,
+          "mean": 53.032170802593335,
+          "channels_equal": false
+        }
+      ]
+    },
+    "images_8": {
+      "count": 26,
+      "files": [
+        {
+          "name": "frame_00001.png",
+          "shape": [
+            52,
+            71,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 2,
+          "max": 24138,
+          "median": 17.0,
+          "p99": 494.75,
+          "mean": 65.25911881545684,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00002.png",
+          "shape": [
+            52,
+            71,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 16499,
+          "median": 15.0,
+          "p99": 477.0,
+          "mean": 54.518689057421454,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00003.png",
+          "shape": [
+            52,
+            71,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 19619,
+          "median": 8.0,
+          "p99": 231.75,
+          "mean": 45.70016251354279,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00004.png",
+          "shape": [
+            52,
+            71,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 27923,
+          "median": 9.0,
+          "p99": 193.75,
+          "mean": 43.237630913687255,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00005.png",
+          "shape": [
+            52,
+            71,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 14211,
+          "median": 9.0,
+          "p99": 130.25,
+          "mean": 30.132538822679667,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00006.png",
+          "shape": [
+            52,
+            71,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 28619,
+          "median": 9.0,
+          "p99": 121.0,
+          "mean": 31.290538100397256,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00007.png",
+          "shape": [
+            52,
+            71,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 24277,
+          "median": 10.0,
+          "p99": 134.25,
+          "mean": 33.307331166486094,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00008.png",
+          "shape": [
+            52,
+            71,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 20632,
+          "median": 10.0,
+          "p99": 171.75,
+          "mean": 49.394907908992415,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00009.png",
+          "shape": [
+            52,
+            71,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 42377,
+          "median": 13.0,
+          "p99": 231.0,
+          "mean": 71.74106175514626,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00010.png",
+          "shape": [
+            52,
+            71,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 21460,
+          "median": 10.0,
+          "p99": 152.25,
+          "mean": 37.94609967497291,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00011.png",
+          "shape": [
+            52,
+            71,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 27412,
+          "median": 9.0,
+          "p99": 174.5,
+          "mean": 48.70016251354279,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00012.png",
+          "shape": [
+            52,
+            71,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 18907,
+          "median": 10.0,
+          "p99": 169.75,
+          "mean": 49.088750451426506,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00013.png",
+          "shape": [
+            52,
+            71,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 15132,
+          "median": 15.0,
+          "p99": 762.0,
+          "mean": 55.12016973636692,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00014.png",
+          "shape": [
+            52,
+            71,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 28135,
+          "median": 10.0,
+          "p99": 175.0,
+          "mean": 52.539364391477065,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00015.png",
+          "shape": [
+            52,
+            71,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 24674,
+          "median": 10.0,
+          "p99": 178.0,
+          "mean": 50.75758396533045,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00016.png",
+          "shape": [
+            52,
+            71,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 22501,
+          "median": 9.0,
+          "p99": 153.0,
+          "mean": 43.11592632719393,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00017.png",
+          "shape": [
+            52,
+            71,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 18979,
+          "median": 8.0,
+          "p99": 151.0,
+          "mean": 37.893011917659805,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00018.png",
+          "shape": [
+            52,
+            71,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 22086,
+          "median": 10.0,
+          "p99": 223.25,
+          "mean": 49.079992777175875,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00019.png",
+          "shape": [
+            52,
+            71,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 34103,
+          "median": 12.0,
+          "p99": 290.25,
+          "mean": 60.84344528710726,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00020.png",
+          "shape": [
+            52,
+            71,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 25148,
+          "median": 14.0,
+          "p99": 460.5,
+          "mean": 55.776002166847235,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00021.png",
+          "shape": [
+            52,
+            71,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 25887,
+          "median": 13.0,
+          "p99": 608.0,
+          "mean": 57.07078367641748,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00022.png",
+          "shape": [
+            52,
+            71,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 2,
+          "max": 24028,
+          "median": 14.0,
+          "p99": 668.5,
+          "mean": 59.43968941856266,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00023.png",
+          "shape": [
+            52,
+            71,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 23079,
+          "median": 14.0,
+          "p99": 726.5,
+          "mean": 60.538280967858434,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00024.png",
+          "shape": [
+            52,
+            71,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 2,
+          "max": 15976,
+          "median": 14.0,
+          "p99": 439.25,
+          "mean": 59.276453593355,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00025.png",
+          "shape": [
+            52,
+            71,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 16665,
+          "median": 14.0,
+          "p99": 338.0,
+          "mean": 54.30281690140845,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00026.png",
+          "shape": [
+            52,
+            71,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 1,
+          "max": 24454,
+          "median": 14.0,
+          "p99": 319.75,
+          "mean": 52.98311664860961,
+          "channels_equal": false
+        }
+      ]
+    },
+    "longs": {
+      "count": 26,
+      "files": [
+        {
+          "name": "frame_00001.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 63465,
+          "median": 95.0,
+          "p99": 1477.0,
+          "mean": 242.46744626526933,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00002.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 62465,
+          "median": 110.0,
+          "p99": 1584.0,
+          "mean": 255.2037928598447,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00003.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 62743,
+          "median": 77.0,
+          "p99": 1188.0,
+          "mean": 184.430582905013,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00004.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 62942,
+          "median": 75.0,
+          "p99": 1028.0,
+          "mean": 169.71614461651424,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00005.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 61761,
+          "median": 83.0,
+          "p99": 929.0,
+          "mean": 158.76187337293905,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00006.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 62916,
+          "median": 84.0,
+          "p99": 880.0,
+          "mean": 157.09919509156043,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00007.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 63182,
+          "median": 83.0,
+          "p99": 907.0,
+          "mean": 161.06420354671474,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00008.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 62171,
+          "median": 80.0,
+          "p99": 1033.0,
+          "mean": 178.7047885655163,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00009.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 60881,
+          "median": 78.0,
+          "p99": 1028.0,
+          "mean": 178.87766448612686,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00010.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 63214,
+          "median": 95.0,
+          "p99": 965.0,
+          "mean": 177.08289527846384,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00011.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 61235,
+          "median": 82.0,
+          "p99": 1089.0,
+          "mean": 183.44148699463764,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00012.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 60852,
+          "median": 85.0,
+          "p99": 1126.0,
+          "mean": 187.91519118661415,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00013.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 63277,
+          "median": 118.0,
+          "p99": 1649.0,
+          "mean": 272.6949093852213,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00014.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 63237,
+          "median": 86.0,
+          "p99": 1139.0,
+          "mean": 189.74064092294685,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00015.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 61271,
+          "median": 87.0,
+          "p99": 1178.0,
+          "mean": 194.25894883519123,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00016.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 59362,
+          "median": 69.0,
+          "p99": 986.0,
+          "mean": 159.02729151369513,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00017.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 61383,
+          "median": 65.0,
+          "p99": 989.0,
+          "mean": 154.16569460205147,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00018.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 62041,
+          "median": 63.0,
+          "p99": 1028.0,
+          "mean": 160.40878167901565,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00019.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 62196,
+          "median": 75.0,
+          "p99": 1143.0,
+          "mean": 192.45298767327503,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00020.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 62720,
+          "median": 110.0,
+          "p99": 1623.0,
+          "mean": 258.72577626104174,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00021.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 62390,
+          "median": 105.0,
+          "p99": 1463.1300000000047,
+          "mean": 243.13742546113966,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00022.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 62079,
+          "median": 110.0,
+          "p99": 1574.1300000000047,
+          "mean": 251.82978578421557,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00023.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 63163,
+          "median": 116.0,
+          "p99": 1536.0,
+          "mean": 254.98453596778143,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00024.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 62112,
+          "median": 110.0,
+          "p99": 1401.0,
+          "mean": 232.3107408272701,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00025.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 64604,
+          "median": 115.0,
+          "p99": 1422.1300000000047,
+          "mean": 231.42193166900296,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00026.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 62061,
+          "median": 118.0,
+          "p99": 1393.0,
+          "mean": 224.03319760585632,
+          "channels_equal": false
+        }
+      ]
+    },
+    "brights_raw": {
+      "count": 2,
+      "files": [
+        {
+          "name": "frame_00013.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 63277,
+          "median": 118.0,
+          "p99": 1649.0,
+          "mean": 272.6949093852213,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00015.png",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint16",
+          "min": 0,
+          "max": 61271,
+          "median": 87.0,
+          "p99": 1178.0,
+          "mean": 194.25894883519123,
+          "channels_equal": false
+        }
+      ]
+    },
+    "brights_gt": {
+      "count": 2,
+      "files": [
+        {
+          "name": "frame_00013.jpg",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 2,
+          "max": 255,
+          "median": 60.0,
+          "p99": 110.0,
+          "mean": 61.593060932737025,
+          "channels_equal": false
+        },
+        {
+          "name": "frame_00015.jpg",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 11,
+          "max": 255,
+          "median": 56.0,
+          "p99": 102.0,
+          "mean": 57.867859010301935,
+          "channels_equal": false
+        }
+      ]
+    },
+    "thermals": {
+      "count": 26,
+      "files": [
+        {
+          "name": "frame_00001.jpg",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 13,
+          "max": 85,
+          "median": 41.0,
+          "p99": 53.0,
+          "mean": 40.786095721246916,
+          "channels_equal": true
+        },
+        {
+          "name": "frame_00002.jpg",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 7,
+          "max": 82,
+          "median": 40.0,
+          "p99": 52.0,
+          "mean": 38.49968710366464,
+          "channels_equal": true
+        },
+        {
+          "name": "frame_00003.jpg",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 8,
+          "max": 111,
+          "median": 40.0,
+          "p99": 51.0,
+          "mean": 39.196110907149055,
+          "channels_equal": true
+        },
+        {
+          "name": "frame_00004.jpg",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 8,
+          "max": 118,
+          "median": 40.0,
+          "p99": 50.0,
+          "mean": 38.42056187837928,
+          "channels_equal": true
+        },
+        {
+          "name": "frame_00005.jpg",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 8,
+          "max": 121,
+          "median": 40.0,
+          "p99": 50.0,
+          "mean": 37.843301515252655,
+          "channels_equal": true
+        },
+        {
+          "name": "frame_00006.jpg",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 6,
+          "max": 132,
+          "median": 39.0,
+          "p99": 50.0,
+          "mean": 37.09386890060743,
+          "channels_equal": true
+        },
+        {
+          "name": "frame_00007.jpg",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 7,
+          "max": 131,
+          "median": 40.0,
+          "p99": 50.0,
+          "mean": 37.629134403577865,
+          "channels_equal": true
+        },
+        {
+          "name": "frame_00008.jpg",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 6,
+          "max": 128,
+          "median": 41.0,
+          "p99": 51.0,
+          "mean": 37.93780872438422,
+          "channels_equal": true
+        },
+        {
+          "name": "frame_00009.jpg",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 4,
+          "max": 129,
+          "median": 40.0,
+          "p99": 50.0,
+          "mean": 36.58569187637674,
+          "channels_equal": true
+        },
+        {
+          "name": "frame_00010.jpg",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 3,
+          "max": 141,
+          "median": 40.0,
+          "p99": 50.0,
+          "mean": 34.72261114077832,
+          "channels_equal": true
+        },
+        {
+          "name": "frame_00011.jpg",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 3,
+          "max": 141,
+          "median": 40.0,
+          "p99": 50.0,
+          "mean": 36.156564982310925,
+          "channels_equal": true
+        },
+        {
+          "name": "frame_00012.jpg",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 3,
+          "max": 143,
+          "median": 40.0,
+          "p99": 51.0,
+          "mean": 36.33903360923837,
+          "channels_equal": true
+        },
+        {
+          "name": "frame_00013.jpg",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 5,
+          "max": 83,
+          "median": 39.0,
+          "p99": 52.0,
+          "mean": 37.61952222815567,
+          "channels_equal": true
+        },
+        {
+          "name": "frame_00014.jpg",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 4,
+          "max": 142,
+          "median": 40.0,
+          "p99": 51.0,
+          "mean": 36.835120319070825,
+          "channels_equal": true
+        },
+        {
+          "name": "frame_00015.jpg",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 4,
+          "max": 140,
+          "median": 40.0,
+          "p99": 51.0,
+          "mean": 36.490479607502834,
+          "channels_equal": true
+        },
+        {
+          "name": "frame_00016.jpg",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 4,
+          "max": 175,
+          "median": 41.0,
+          "p99": 52.0,
+          "mean": 37.51298311194179,
+          "channels_equal": true
+        },
+        {
+          "name": "frame_00017.jpg",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 5,
+          "max": 185,
+          "median": 40.0,
+          "p99": 51.0,
+          "mean": 37.15943111274281,
+          "channels_equal": true
+        },
+        {
+          "name": "frame_00018.jpg",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 6,
+          "max": 190,
+          "median": 40.0,
+          "p99": 50.0,
+          "mean": 37.47271543955677,
+          "channels_equal": true
+        },
+        {
+          "name": "frame_00019.jpg",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 5,
+          "max": 172,
+          "median": 40.0,
+          "p99": 52.0,
+          "mean": 38.25500216941459,
+          "channels_equal": true
+        },
+        {
+          "name": "frame_00020.jpg",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 7,
+          "max": 85,
+          "median": 39.0,
+          "p99": 51.0,
+          "mean": 38.050693378279156,
+          "channels_equal": true
+        },
+        {
+          "name": "frame_00021.jpg",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 5,
+          "max": 92,
+          "median": 39.0,
+          "p99": 50.0,
+          "mean": 37.842258527468125,
+          "channels_equal": true
+        },
+        {
+          "name": "frame_00022.jpg",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 9,
+          "max": 97,
+          "median": 39.0,
+          "p99": 51.0,
+          "mean": 39.33631766904746,
+          "channels_equal": true
+        },
+        {
+          "name": "frame_00023.jpg",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 9,
+          "max": 92,
+          "median": 38.0,
+          "p99": 50.0,
+          "mean": 38.196069187637676,
+          "channels_equal": true
+        },
+        {
+          "name": "frame_00024.jpg",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 9,
+          "max": 90,
+          "median": 37.0,
+          "p99": 49.0,
+          "mean": 37.55994259395234,
+          "channels_equal": true
+        },
+        {
+          "name": "frame_00025.jpg",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 12,
+          "max": 99,
+          "median": 39.0,
+          "p99": 51.0,
+          "mean": 39.87874224017089,
+          "channels_equal": true
+        },
+        {
+          "name": "frame_00026.jpg",
+          "shape": [
+            422,
+            568,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 11,
+          "max": 98,
+          "median": 39.0,
+          "p99": 51.0,
+          "mean": 39.43955259995995,
+          "channels_equal": true
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Author SfM contains eval images; dropping eval-connected points does not undo global BA.",
+    "File encoding and intensity statistics do not establish RAW black level, white level, exposure ratio, or thermal radiometric linearity.",
+    "Thermal shares author homography-aligned cropped grid, not independently calibrated 3D sensor rays."
+  ]
+}

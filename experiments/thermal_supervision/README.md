@@ -1,5 +1,12 @@
 # CTG-GS native thermal refinement
 
+Real-data pilot is now available via `python -m experiments.thermal_supervision.mvtv_pilot`.
+It explicitly uses MVTV author homography proxies and processed thermal intensity,
+separate from the strict calibrated manifest below. The first Road experiment
+completed but did **not** improve held-out RGB error. See the
+[real training record](../../research/thermal_supervision_20261030/REAL_TRAINING_zh.md)
+for the command, checkpoints, protocol limitations and measured negative result.
+
 Current implementation: a runnable static, fixed-topology post-density refinement adapter using the real FasterGS4D CUDA rasterizer. It freezes native RGB parameters, uses independent RGB/thermal cameras and linear exposure integration, and commits guarded thermal geometry corrections. It is not the full native training loop or a validated dynamic-scene method.
 
 V1 (`engine.py`) matches geometry and appearance source improvements. Controlled tests found that this rejected every correct geometry case. V2 (`profiled.py`) first fits the thermal head on the source for a fixed budget, holds it fixed during geometry search, then requires independent thermal-view improvement plus local/global/anchor RGB protection. Only the exact witnessed head and geometry offset are committed. No persistent thermal optimizer is used; do not attach an external optimizer to the thermal head or mutate the model concurrently. Rejection preserves model tensors and gradients; diagnostic counters and newly established anchors may change.
