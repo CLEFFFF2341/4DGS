@@ -1,0 +1,516 @@
+{
+  "scope": "synthetic known 20-Gaussian scenes, same native renderer for generation/evaluation; no real-data claim",
+  "config": {
+    "geometry_radii": [
+      0.5,
+      0.25,
+      0.125,
+      0.0625
+    ],
+    "appearance_radii": [
+      1.0,
+      0.5,
+      0.25,
+      0.125,
+      0.0625,
+      0.03125
+    ],
+    "cumulative_radius": 2.0,
+    "thermal_weight": 1.0,
+    "static_scene": true,
+    "gate": {
+      "min_pixels": 64,
+      "min_source_gain": 1e-05,
+      "min_witness_gain": 1e-05,
+      "appearance_advantage_margin": 1e-05,
+      "source_gain_relative_tolerance": 0.2,
+      "max_source_change": 2.0,
+      "max_rgb_loss_increase": 1e-06,
+      "max_rgb_anchor_increase": 1e-06,
+      "min_witness_views": 1,
+      "synchronization_tolerance": 0.0001
+    },
+    "appearance_steps": 8,
+    "min_baseline_scales": 0.5,
+    "min_local_pixels": 64,
+    "min_local_coverage": 0.5,
+    "support_threshold": 0.01
+  },
+  "steps": 3,
+  "rows": [
+    {
+      "seed": 10,
+      "case": "cold_start",
+      "before": {
+        "rgb_mse": 0.00011487268784549087,
+        "rgb_psnr": 39.39783216986031,
+        "center_rmse": 0.0317542664706707
+      },
+      "after": {
+        "rgb_mse": 2.538445005484391e-05,
+        "rgb_psnr": 45.95432240994211,
+        "center_rmse": 0.015789706259965897
+      },
+      "seconds": 0.6358609999879263,
+      "transactions": [
+        {
+          "accepted": true,
+          "reason": "profiled geometry accepted",
+          "start_version": 0,
+          "source_original_loss": 0.7093942165374756,
+          "source_profiled_loss": 0.36351278424263,
+          "geometry_grad_norm": 2.4687108993530273,
+          "source_geometry_gain": 0.26734334230422974,
+          "geometry_radius": 0.5,
+          "witness_gains": [
+            {
+              "over_profiled": 0.2678466737270355,
+              "over_live": 0.6194103062152863
+            }
+          ],
+          "rgb_local_coverage": [
+            1.0
+          ],
+          "end_version": 1,
+          "renders": 77
+        },
+        {
+          "accepted": false,
+          "reason": "independent witness rejects profiled geometry",
+          "start_version": 1,
+          "source_original_loss": 0.09616944193840027,
+          "source_profiled_loss": 0.02322901412844658,
+          "geometry_grad_norm": 0.8783668279647827,
+          "source_geometry_gain": 0.0025409236550331116,
+          "geometry_radius": 0.0625,
+          "witness_gains": [
+            {
+              "over_profiled": -0.0014947466552257538,
+              "over_live": 0.06880256906151772
+            }
+          ],
+          "end_version": 1,
+          "renders": 65
+        },
+        {
+          "accepted": false,
+          "reason": "independent witness rejects profiled geometry",
+          "start_version": 1,
+          "source_original_loss": 0.09616944193840027,
+          "source_profiled_loss": 0.02322901412844658,
+          "geometry_grad_norm": 0.8783668279647827,
+          "source_geometry_gain": 0.0025409236550331116,
+          "geometry_radius": 0.0625,
+          "witness_gains": [
+            {
+              "over_profiled": -0.0014947466552257538,
+              "over_live": 0.06880256906151772
+            }
+          ],
+          "end_version": 1,
+          "renders": 65
+        }
+      ]
+    },
+    {
+      "seed": 10,
+      "case": "thermal_only_shift",
+      "before": {
+        "rgb_mse": 0.0,
+        "rgb_psnr": 150.0,
+        "center_rmse": 0.0
+      },
+      "after": {
+        "rgb_mse": 0.0,
+        "rgb_psnr": 150.0,
+        "center_rmse": 0.0
+      },
+      "seconds": 0.5564582000079099,
+      "transactions": [
+        {
+          "accepted": false,
+          "reason": "RGB local/global/anchor guard rejects geometry",
+          "start_version": 0,
+          "source_original_loss": 0.38695603609085083,
+          "source_profiled_loss": 0.36205148696899414,
+          "geometry_grad_norm": 2.4834718704223633,
+          "source_geometry_gain": 0.2806570902466774,
+          "geometry_radius": 0.5,
+          "witness_gains": [
+            {
+              "over_profiled": 0.27822941541671753,
+              "over_live": 0.30293017625808716
+            }
+          ],
+          "rgb_local_coverage": [
+            1.0
+          ],
+          "end_version": 0,
+          "renders": 77
+        },
+        {
+          "accepted": false,
+          "reason": "RGB local/global/anchor guard rejects geometry",
+          "start_version": 0,
+          "source_original_loss": 0.38695603609085083,
+          "source_profiled_loss": 0.36205148696899414,
+          "geometry_grad_norm": 2.4834718704223633,
+          "source_geometry_gain": 0.2806570902466774,
+          "geometry_radius": 0.5,
+          "witness_gains": [
+            {
+              "over_profiled": 0.27822941541671753,
+              "over_live": 0.30293017625808716
+            }
+          ],
+          "rgb_local_coverage": [
+            1.0
+          ],
+          "end_version": 0,
+          "renders": 77
+        },
+        {
+          "accepted": false,
+          "reason": "RGB local/global/anchor guard rejects geometry",
+          "start_version": 0,
+          "source_original_loss": 0.38695603609085083,
+          "source_profiled_loss": 0.36205148696899414,
+          "geometry_grad_norm": 2.4834718704223633,
+          "source_geometry_gain": 0.2806570902466774,
+          "geometry_radius": 0.5,
+          "witness_gains": [
+            {
+              "over_profiled": 0.27822941541671753,
+              "over_live": 0.30293017625808716
+            }
+          ],
+          "rgb_local_coverage": [
+            1.0
+          ],
+          "end_version": 0,
+          "renders": 77
+        }
+      ]
+    },
+    {
+      "seed": 11,
+      "case": "cold_start",
+      "before": {
+        "rgb_mse": 0.00012169861292932183,
+        "rgb_psnr": 39.14714371651401,
+        "center_rmse": 0.0317542664706707
+      },
+      "after": {
+        "rgb_mse": 2.8501549422799144e-06,
+        "rgb_psnr": 55.45131529904438,
+        "center_rmse": 0.007490940857678652
+      },
+      "seconds": 0.558847499982221,
+      "transactions": [
+        {
+          "accepted": true,
+          "reason": "profiled geometry accepted",
+          "start_version": 0,
+          "source_original_loss": 0.8029392957687378,
+          "source_profiled_loss": 0.38983485102653503,
+          "geometry_grad_norm": 2.6554718017578125,
+          "source_geometry_gain": 0.2277553826570511,
+          "geometry_radius": 0.25,
+          "witness_gains": [
+            {
+              "over_profiled": 0.22866885364055634,
+              "over_live": 0.6261896342039108
+            }
+          ],
+          "rgb_local_coverage": [
+            1.0
+          ],
+          "end_version": 1,
+          "renders": 77
+        },
+        {
+          "accepted": true,
+          "reason": "profiled geometry accepted",
+          "start_version": 1,
+          "source_original_loss": 0.16207946836948395,
+          "source_profiled_loss": 0.1375400573015213,
+          "geometry_grad_norm": 2.3574588298797607,
+          "source_geometry_gain": 0.10254745185375214,
+          "geometry_radius": 0.25,
+          "witness_gains": [
+            {
+              "over_profiled": 0.11968264728784561,
+              "over_live": 0.14165478199720383
+            }
+          ],
+          "rgb_local_coverage": [
+            1.0
+          ],
+          "end_version": 2,
+          "renders": 77
+        },
+        {
+          "accepted": false,
+          "reason": "independent witness rejects profiled geometry",
+          "start_version": 2,
+          "source_original_loss": 0.034992605447769165,
+          "source_profiled_loss": 0.012291163206100464,
+          "geometry_grad_norm": 0.8532741665840149,
+          "source_geometry_gain": 0.000955674797296524,
+          "geometry_radius": 0.0625,
+          "witness_gains": [
+            {
+              "over_profiled": -0.007339516654610634,
+              "over_live": 0.013010380789637566
+            }
+          ],
+          "end_version": 2,
+          "renders": 65
+        }
+      ]
+    },
+    {
+      "seed": 11,
+      "case": "thermal_only_shift",
+      "before": {
+        "rgb_mse": 0.0,
+        "rgb_psnr": 150.0,
+        "center_rmse": 0.0
+      },
+      "after": {
+        "rgb_mse": 0.0,
+        "rgb_psnr": 150.0,
+        "center_rmse": 0.0
+      },
+      "seconds": 0.5445035000157077,
+      "transactions": [
+        {
+          "accepted": false,
+          "reason": "RGB local/global/anchor guard rejects geometry",
+          "start_version": 0,
+          "source_original_loss": 0.4258154630661011,
+          "source_profiled_loss": 0.39547520875930786,
+          "geometry_grad_norm": 2.680229663848877,
+          "source_geometry_gain": 0.2989647835493088,
+          "geometry_radius": 0.5,
+          "witness_gains": [
+            {
+              "over_profiled": 0.3163001462817192,
+              "over_live": 0.34563057869672775
+            }
+          ],
+          "rgb_local_coverage": [
+            1.0
+          ],
+          "end_version": 0,
+          "renders": 77
+        },
+        {
+          "accepted": false,
+          "reason": "RGB local/global/anchor guard rejects geometry",
+          "start_version": 0,
+          "source_original_loss": 0.4258154630661011,
+          "source_profiled_loss": 0.39547520875930786,
+          "geometry_grad_norm": 2.680229663848877,
+          "source_geometry_gain": 0.2989647835493088,
+          "geometry_radius": 0.5,
+          "witness_gains": [
+            {
+              "over_profiled": 0.3163001462817192,
+              "over_live": 0.34563057869672775
+            }
+          ],
+          "rgb_local_coverage": [
+            1.0
+          ],
+          "end_version": 0,
+          "renders": 77
+        },
+        {
+          "accepted": false,
+          "reason": "RGB local/global/anchor guard rejects geometry",
+          "start_version": 0,
+          "source_original_loss": 0.4258154630661011,
+          "source_profiled_loss": 0.39547520875930786,
+          "geometry_grad_norm": 2.680229663848877,
+          "source_geometry_gain": 0.2989647835493088,
+          "geometry_radius": 0.5,
+          "witness_gains": [
+            {
+              "over_profiled": 0.3163001462817192,
+              "over_live": 0.34563057869672775
+            }
+          ],
+          "rgb_local_coverage": [
+            1.0
+          ],
+          "end_version": 0,
+          "renders": 77
+        }
+      ]
+    },
+    {
+      "seed": 12,
+      "case": "cold_start",
+      "before": {
+        "rgb_mse": 0.00012403227447066456,
+        "rgb_psnr": 39.06465292251289,
+        "center_rmse": 0.0317542664706707
+      },
+      "after": {
+        "rgb_mse": 7.517758149333531e-07,
+        "rgb_psnr": 61.2391164990438,
+        "center_rmse": 0.0072638061828911304
+      },
+      "seconds": 0.5376622000185307,
+      "transactions": [
+        {
+          "accepted": true,
+          "reason": "profiled geometry accepted",
+          "start_version": 0,
+          "source_original_loss": 0.8279842734336853,
+          "source_profiled_loss": 0.34623897075653076,
+          "geometry_grad_norm": 2.223405599594116,
+          "source_geometry_gain": 0.2083686888217926,
+          "geometry_radius": 0.25,
+          "witness_gains": [
+            {
+              "over_profiled": 0.21105340123176575,
+              "over_live": 0.67287877202034
+            }
+          ],
+          "rgb_local_coverage": [
+            1.0
+          ],
+          "end_version": 1,
+          "renders": 77
+        },
+        {
+          "accepted": true,
+          "reason": "profiled geometry accepted",
+          "start_version": 1,
+          "source_original_loss": 0.13787028193473816,
+          "source_profiled_loss": 0.12146881222724915,
+          "geometry_grad_norm": 1.9741880893707275,
+          "source_geometry_gain": 0.09542315825819969,
+          "geometry_radius": 0.25,
+          "witness_gains": [
+            {
+              "over_profiled": 0.10361381992697716,
+              "over_live": 0.11954064294695854
+            }
+          ],
+          "rgb_local_coverage": [
+            1.0
+          ],
+          "end_version": 2,
+          "renders": 77
+        },
+        {
+          "accepted": false,
+          "reason": "no source residual geometry improvement",
+          "start_version": 2,
+          "source_original_loss": 0.026045653969049454,
+          "source_profiled_loss": 0.006911751814186573,
+          "geometry_grad_norm": 0.6098649501800537,
+          "end_version": 2,
+          "renders": 62
+        }
+      ]
+    },
+    {
+      "seed": 12,
+      "case": "thermal_only_shift",
+      "before": {
+        "rgb_mse": 0.0,
+        "rgb_psnr": 150.0,
+        "center_rmse": 0.0
+      },
+      "after": {
+        "rgb_mse": 0.0,
+        "rgb_psnr": 150.0,
+        "center_rmse": 0.0
+      },
+      "seconds": 0.5604616999917198,
+      "transactions": [
+        {
+          "accepted": false,
+          "reason": "RGB local/global/anchor guard rejects geometry",
+          "start_version": 0,
+          "source_original_loss": 0.37716144323349,
+          "source_profiled_loss": 0.34673506021499634,
+          "geometry_grad_norm": 2.2795071601867676,
+          "source_geometry_gain": 0.2672051638364792,
+          "geometry_radius": 0.5,
+          "witness_gains": [
+            {
+              "over_profiled": 0.2775590121746063,
+              "over_live": 0.3066159784793854
+            }
+          ],
+          "rgb_local_coverage": [
+            1.0
+          ],
+          "end_version": 0,
+          "renders": 77
+        },
+        {
+          "accepted": false,
+          "reason": "RGB local/global/anchor guard rejects geometry",
+          "start_version": 0,
+          "source_original_loss": 0.37716144323349,
+          "source_profiled_loss": 0.34673506021499634,
+          "geometry_grad_norm": 2.2795071601867676,
+          "source_geometry_gain": 0.2672051638364792,
+          "geometry_radius": 0.5,
+          "witness_gains": [
+            {
+              "over_profiled": 0.2775590121746063,
+              "over_live": 0.3066159784793854
+            }
+          ],
+          "rgb_local_coverage": [
+            1.0
+          ],
+          "end_version": 0,
+          "renders": 77
+        },
+        {
+          "accepted": false,
+          "reason": "RGB local/global/anchor guard rejects geometry",
+          "start_version": 0,
+          "source_original_loss": 0.37716144323349,
+          "source_profiled_loss": 0.34673506021499634,
+          "geometry_grad_norm": 2.2795071601867676,
+          "source_geometry_gain": 0.2672051638364792,
+          "geometry_radius": 0.5,
+          "witness_gains": [
+            {
+              "over_profiled": 0.2775590121746063,
+              "over_live": 0.3066159784793854
+            }
+          ],
+          "rgb_local_coverage": [
+            1.0
+          ],
+          "end_version": 0,
+          "renders": 77
+        }
+      ]
+    }
+  ],
+  "source_sha256": {
+    "core.py": "8589dad9f8620d681d3f40a6239fc5c139152b6d85775afb33b3f1a442158f0d",
+    "data.py": "1f56526bfd904d8c91fcdb9e5beba8e2c47b14c901d46d5db31061c4e01e55db",
+    "engine.py": "a8bfe131ccaa355234948f372e8e89c7cc8c01d50c6d14eea4f080f6be108f7a",
+    "probe.py": "69e69bac4a9dc00dfda5e56a5418b412d1648408413b546456e7387bdab11e4d",
+    "profiled.py": "aacc2355165fd50a6fca98e586d669c48f8f566fc75baf47027c7105c4e35011",
+    "run.py": "20c429e1813e9a7e35ade2e2bcf4105cb3f5f5e4b4968330f20fd2bd8a1514cf",
+    "runtime.py": "e971020a0b7b72a8623e6e55b959861b6d1b1c1262cabb9ea99181700ed965d4",
+    "synthetic.py": "cd35f4e54dee991bc61aa52b619707ea84af77b20a739d103b49902767ff5a47",
+    "test_core.py": "1fd2f12d1e685b6e5a5e3be8c33cd52bdd3093798b3bd645e994abbe50e14440",
+    "test_profiled.py": "1774fa74b80eb7329c04b57a72ff908c0027ec6d8093ea7d65f63c2aa5d1de36",
+    "test_runtime.py": "668c8ddab7e2d8974b9f697a1de64e0ed637b8ec3f8652d1af0202b13c830e09",
+    "__init__.py": "f8ac7a670953761546cb9df181545c97cb6725798e4c2b82c183a62c1ceaa0ea"
+  }
+}

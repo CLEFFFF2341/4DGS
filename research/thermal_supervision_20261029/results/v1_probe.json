@@ -1,0 +1,1153 @@
+{
+  "scope": "synthetic known 20-Gaussian scenes, same native renderer for generation/evaluation; no real-data claim",
+  "config": {
+    "geometry_radii": [
+      0.5,
+      0.25,
+      0.125,
+      0.0625
+    ],
+    "appearance_radii": [
+      1.0,
+      0.5,
+      0.25,
+      0.125,
+      0.0625,
+      0.03125
+    ],
+    "cumulative_radius": 2.0,
+    "thermal_weight": 1.0,
+    "static_scene": true,
+    "gate": {
+      "min_pixels": 64,
+      "min_source_gain": 1e-05,
+      "min_witness_gain": 1e-05,
+      "appearance_advantage_margin": 1e-05,
+      "source_gain_relative_tolerance": 0.2,
+      "max_source_change": 2.0,
+      "max_rgb_loss_increase": 1e-06,
+      "max_rgb_anchor_increase": 1e-06,
+      "min_witness_views": 1,
+      "synchronization_tolerance": 0.0001
+    }
+  },
+  "steps": 3,
+  "rows": [
+    {
+      "seed": 0,
+      "case": "geometry",
+      "before": {
+        "rgb_mse": 0.00013607085566036403,
+        "rgb_psnr": 38.662348842109196,
+        "center_rmse": 0.0317542664706707
+      },
+      "after": {
+        "rgb_mse": 0.00013607085566036403,
+        "rgb_psnr": 38.662348842109196,
+        "center_rmse": 0.0317542664706707
+      },
+      "seconds": 0.25365310002234764,
+      "transactions": [
+        {
+          "accepted": false,
+          "reason": "unmatched source fit; geometry attribution is inconclusive",
+          "source_base_loss": 0.38310766220092773,
+          "geometry_grad_norm": 2.7223026752471924,
+          "appearance_grad_norm": 0.1141321137547493,
+          "geometry_source_gains": [
+            0.32498447597026825,
+            0.2386104166507721,
+            0.1281372606754303,
+            0.06588971614837646
+          ],
+          "appearance_source_gains": [
+            -0.27506381273269653,
+            -0.0327146053314209,
+            0.013075381517410278,
+            0.014171719551086426,
+            0.009053289890289307
+          ],
+          "start_version": 0,
+          "source_geometry_gain": 0.0,
+          "source_appearance_gain": 0.0,
+          "geometry_radius": 0.5,
+          "appearance_radius": 0.0625,
+          "witness_advantages": [],
+          "renders": 20,
+          "end_version": 0
+        },
+        {
+          "accepted": false,
+          "reason": "unmatched source fit; geometry attribution is inconclusive",
+          "source_base_loss": 0.38310766220092773,
+          "geometry_grad_norm": 2.7223026752471924,
+          "appearance_grad_norm": 0.1141321137547493,
+          "geometry_source_gains": [
+            0.32498447597026825,
+            0.2386104166507721,
+            0.1281372606754303,
+            0.06588971614837646
+          ],
+          "appearance_source_gains": [
+            -0.27506381273269653,
+            -0.0327146053314209,
+            0.013075381517410278,
+            0.014171719551086426,
+            0.009053289890289307
+          ],
+          "start_version": 0,
+          "source_geometry_gain": 0.0,
+          "source_appearance_gain": 0.0,
+          "geometry_radius": 0.5,
+          "appearance_radius": 0.0625,
+          "witness_advantages": [],
+          "renders": 20,
+          "end_version": 0
+        },
+        {
+          "accepted": false,
+          "reason": "unmatched source fit; geometry attribution is inconclusive",
+          "source_base_loss": 0.38310766220092773,
+          "geometry_grad_norm": 2.7223026752471924,
+          "appearance_grad_norm": 0.1141321137547493,
+          "geometry_source_gains": [
+            0.32498447597026825,
+            0.2386104166507721,
+            0.1281372606754303,
+            0.06588971614837646
+          ],
+          "appearance_source_gains": [
+            -0.27506381273269653,
+            -0.0327146053314209,
+            0.013075381517410278,
+            0.014171719551086426,
+            0.009053289890289307
+          ],
+          "start_version": 0,
+          "source_geometry_gain": 0.0,
+          "source_appearance_gain": 0.0,
+          "geometry_radius": 0.5,
+          "appearance_radius": 0.0625,
+          "witness_advantages": [],
+          "renders": 20,
+          "end_version": 0
+        }
+      ]
+    },
+    {
+      "seed": 0,
+      "case": "appearance",
+      "before": {
+        "rgb_mse": 0.0,
+        "rgb_psnr": 150.0,
+        "center_rmse": 0.0
+      },
+      "after": {
+        "rgb_mse": 0.0,
+        "rgb_psnr": 150.0,
+        "center_rmse": 0.0
+      },
+      "seconds": 0.13332589998026378,
+      "transactions": [
+        {
+          "accepted": false,
+          "reason": "unmatched source fit; geometry attribution is inconclusive",
+          "source_base_loss": 0.6397128105163574,
+          "geometry_grad_norm": 0.7563888430595398,
+          "appearance_grad_norm": 0.6421176195144653,
+          "geometry_source_gains": [
+            0.04776108264923096,
+            0.03289163112640381,
+            0.018107593059539795
+          ],
+          "appearance_source_gains": [
+            0.5597435384988785,
+            0.31642821431159973,
+            0.16465997695922852,
+            0.0837552547454834
+          ],
+          "start_version": 0,
+          "source_geometry_gain": 0.0,
+          "source_appearance_gain": 0.0,
+          "geometry_radius": 0.25,
+          "appearance_radius": 0.03125,
+          "witness_advantages": [],
+          "renders": 20,
+          "end_version": 0
+        },
+        {
+          "accepted": false,
+          "reason": "unmatched source fit; geometry attribution is inconclusive",
+          "source_base_loss": 0.6397128105163574,
+          "geometry_grad_norm": 0.7563888430595398,
+          "appearance_grad_norm": 0.6421176195144653,
+          "geometry_source_gains": [
+            0.04776108264923096,
+            0.03289163112640381,
+            0.018107593059539795
+          ],
+          "appearance_source_gains": [
+            0.5597435384988785,
+            0.31642821431159973,
+            0.16465997695922852,
+            0.0837552547454834
+          ],
+          "start_version": 0,
+          "source_geometry_gain": 0.0,
+          "source_appearance_gain": 0.0,
+          "geometry_radius": 0.25,
+          "appearance_radius": 0.03125,
+          "witness_advantages": [],
+          "renders": 20,
+          "end_version": 0
+        },
+        {
+          "accepted": false,
+          "reason": "unmatched source fit; geometry attribution is inconclusive",
+          "source_base_loss": 0.6397128105163574,
+          "geometry_grad_norm": 0.7563888430595398,
+          "appearance_grad_norm": 0.6421176195144653,
+          "geometry_source_gains": [
+            0.04776108264923096,
+            0.03289163112640381,
+            0.018107593059539795
+          ],
+          "appearance_source_gains": [
+            0.5597435384988785,
+            0.31642821431159973,
+            0.16465997695922852,
+            0.0837552547454834
+          ],
+          "start_version": 0,
+          "source_geometry_gain": 0.0,
+          "source_appearance_gain": 0.0,
+          "geometry_radius": 0.25,
+          "appearance_radius": 0.03125,
+          "witness_advantages": [],
+          "renders": 20,
+          "end_version": 0
+        }
+      ]
+    },
+    {
+      "seed": 0,
+      "case": "mixed",
+      "before": {
+        "rgb_mse": 0.00013607085566036403,
+        "rgb_psnr": 38.662348842109196,
+        "center_rmse": 0.0317542664706707
+      },
+      "after": {
+        "rgb_mse": 0.00013607085566036403,
+        "rgb_psnr": 38.662348842109196,
+        "center_rmse": 0.0317542664706707
+      },
+      "seconds": 0.16060239999205805,
+      "transactions": [
+        {
+          "accepted": false,
+          "reason": "unmatched source fit; geometry attribution is inconclusive",
+          "source_base_loss": 0.8248111009597778,
+          "geometry_grad_norm": 2.4837303161621094,
+          "appearance_grad_norm": 0.5190218091011047,
+          "geometry_source_gains": [
+            0.17405039072036743,
+            0.15507763624191284,
+            0.09242403507232666,
+            0.049492835998535156
+          ],
+          "appearance_source_gains": [
+            0.3878112733364105,
+            0.23632270097732544,
+            0.12813609838485718,
+            0.06643372774124146
+          ],
+          "start_version": 0,
+          "source_geometry_gain": 0.0,
+          "source_appearance_gain": 0.0,
+          "geometry_radius": 0.5,
+          "appearance_radius": 0.0625,
+          "witness_advantages": [],
+          "renders": 20,
+          "end_version": 0
+        },
+        {
+          "accepted": false,
+          "reason": "unmatched source fit; geometry attribution is inconclusive",
+          "source_base_loss": 0.8248111009597778,
+          "geometry_grad_norm": 2.4837303161621094,
+          "appearance_grad_norm": 0.5190218091011047,
+          "geometry_source_gains": [
+            0.17405039072036743,
+            0.15507763624191284,
+            0.09242403507232666,
+            0.049492835998535156
+          ],
+          "appearance_source_gains": [
+            0.3878112733364105,
+            0.23632270097732544,
+            0.12813609838485718,
+            0.06643372774124146
+          ],
+          "start_version": 0,
+          "source_geometry_gain": 0.0,
+          "source_appearance_gain": 0.0,
+          "geometry_radius": 0.5,
+          "appearance_radius": 0.0625,
+          "witness_advantages": [],
+          "renders": 20,
+          "end_version": 0
+        },
+        {
+          "accepted": false,
+          "reason": "unmatched source fit; geometry attribution is inconclusive",
+          "source_base_loss": 0.8248111009597778,
+          "geometry_grad_norm": 2.4837303161621094,
+          "appearance_grad_norm": 0.5190218091011047,
+          "geometry_source_gains": [
+            0.17405039072036743,
+            0.15507763624191284,
+            0.09242403507232666,
+            0.049492835998535156
+          ],
+          "appearance_source_gains": [
+            0.3878112733364105,
+            0.23632270097732544,
+            0.12813609838485718,
+            0.06643372774124146
+          ],
+          "start_version": 0,
+          "source_geometry_gain": 0.0,
+          "source_appearance_gain": 0.0,
+          "geometry_radius": 0.5,
+          "appearance_radius": 0.0625,
+          "witness_advantages": [],
+          "renders": 20,
+          "end_version": 0
+        }
+      ]
+    },
+    {
+      "seed": 0,
+      "case": "unchanged",
+      "before": {
+        "rgb_mse": 0.0,
+        "rgb_psnr": 150.0,
+        "center_rmse": 0.0
+      },
+      "after": {
+        "rgb_mse": 0.0,
+        "rgb_psnr": 150.0,
+        "center_rmse": 0.0
+      },
+      "seconds": 0.119530299998587,
+      "transactions": [
+        {
+          "accepted": false,
+          "reason": "no finite improving geometry / bounded appearance candidate",
+          "source_base_loss": 0.0,
+          "geometry_grad_norm": 0.0,
+          "appearance_grad_norm": 0.0,
+          "geometry_source_gains": [],
+          "appearance_source_gains": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_version": 0,
+          "renders": 11,
+          "end_version": 0
+        },
+        {
+          "accepted": false,
+          "reason": "no finite improving geometry / bounded appearance candidate",
+          "source_base_loss": 0.0,
+          "geometry_grad_norm": 0.0,
+          "appearance_grad_norm": 0.0,
+          "geometry_source_gains": [],
+          "appearance_source_gains": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_version": 0,
+          "renders": 11,
+          "end_version": 0
+        },
+        {
+          "accepted": false,
+          "reason": "no finite improving geometry / bounded appearance candidate",
+          "source_base_loss": 0.0,
+          "geometry_grad_norm": 0.0,
+          "appearance_grad_norm": 0.0,
+          "geometry_source_gains": [],
+          "appearance_source_gains": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_version": 0,
+          "renders": 11,
+          "end_version": 0
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "case": "geometry",
+      "before": {
+        "rgb_mse": 0.00012107317161280662,
+        "rgb_psnr": 39.169520807325036,
+        "center_rmse": 0.0317542664706707
+      },
+      "after": {
+        "rgb_mse": 0.00012107317161280662,
+        "rgb_psnr": 39.169520807325036,
+        "center_rmse": 0.0317542664706707
+      },
+      "seconds": 0.13971529999980703,
+      "transactions": [
+        {
+          "accepted": false,
+          "reason": "unmatched source fit; geometry attribution is inconclusive",
+          "source_base_loss": 0.35322487354278564,
+          "geometry_grad_norm": 2.4823696613311768,
+          "appearance_grad_norm": 0.10249867290258408,
+          "geometry_source_gains": [
+            0.33448549173772335,
+            0.23123587667942047,
+            0.12198571860790253,
+            0.06202811002731323
+          ],
+          "appearance_source_gains": [
+            -0.2881343364715576,
+            -0.04090148210525513,
+            0.010533273220062256,
+            0.013216912746429443,
+            0.008640289306640625
+          ],
+          "start_version": 0,
+          "source_geometry_gain": 0.0,
+          "source_appearance_gain": 0.0,
+          "geometry_radius": 0.5,
+          "appearance_radius": 0.0625,
+          "witness_advantages": [],
+          "renders": 20,
+          "end_version": 0
+        },
+        {
+          "accepted": false,
+          "reason": "unmatched source fit; geometry attribution is inconclusive",
+          "source_base_loss": 0.35322487354278564,
+          "geometry_grad_norm": 2.4823696613311768,
+          "appearance_grad_norm": 0.10249867290258408,
+          "geometry_source_gains": [
+            0.33448549173772335,
+            0.23123587667942047,
+            0.12198571860790253,
+            0.06202811002731323
+          ],
+          "appearance_source_gains": [
+            -0.2881343364715576,
+            -0.04090148210525513,
+            0.010533273220062256,
+            0.013216912746429443,
+            0.008640289306640625
+          ],
+          "start_version": 0,
+          "source_geometry_gain": 0.0,
+          "source_appearance_gain": 0.0,
+          "geometry_radius": 0.5,
+          "appearance_radius": 0.0625,
+          "witness_advantages": [],
+          "renders": 20,
+          "end_version": 0
+        },
+        {
+          "accepted": false,
+          "reason": "unmatched source fit; geometry attribution is inconclusive",
+          "source_base_loss": 0.35322487354278564,
+          "geometry_grad_norm": 2.4823696613311768,
+          "appearance_grad_norm": 0.10249867290258408,
+          "geometry_source_gains": [
+            0.33448549173772335,
+            0.23123587667942047,
+            0.12198571860790253,
+            0.06202811002731323
+          ],
+          "appearance_source_gains": [
+            -0.2881343364715576,
+            -0.04090148210525513,
+            0.010533273220062256,
+            0.013216912746429443,
+            0.008640289306640625
+          ],
+          "start_version": 0,
+          "source_geometry_gain": 0.0,
+          "source_appearance_gain": 0.0,
+          "geometry_radius": 0.5,
+          "appearance_radius": 0.0625,
+          "witness_advantages": [],
+          "renders": 20,
+          "end_version": 0
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "case": "appearance",
+      "before": {
+        "rgb_mse": 0.0,
+        "rgb_psnr": 150.0,
+        "center_rmse": 0.0
+      },
+      "after": {
+        "rgb_mse": 0.0,
+        "rgb_psnr": 150.0,
+        "center_rmse": 0.0
+      },
+      "seconds": 0.13805190002312884,
+      "transactions": [
+        {
+          "accepted": false,
+          "reason": "unmatched source fit; geometry attribution is inconclusive",
+          "source_base_loss": 0.6103068590164185,
+          "geometry_grad_norm": 0.6568783521652222,
+          "appearance_grad_norm": 0.6086543798446655,
+          "geometry_source_gains": [
+            0.0419163703918457,
+            0.03168678283691406,
+            0.01758265495300293
+          ],
+          "appearance_source_gains": [
+            0.5359595194458961,
+            0.3045159578323364,
+            0.15872827172279358,
+            0.08079516887664795
+          ],
+          "start_version": 0,
+          "source_geometry_gain": 0.0,
+          "source_appearance_gain": 0.0,
+          "geometry_radius": 0.25,
+          "appearance_radius": 0.03125,
+          "witness_advantages": [],
+          "renders": 20,
+          "end_version": 0
+        },
+        {
+          "accepted": false,
+          "reason": "unmatched source fit; geometry attribution is inconclusive",
+          "source_base_loss": 0.6103068590164185,
+          "geometry_grad_norm": 0.6568783521652222,
+          "appearance_grad_norm": 0.6086543798446655,
+          "geometry_source_gains": [
+            0.0419163703918457,
+            0.03168678283691406,
+            0.01758265495300293
+          ],
+          "appearance_source_gains": [
+            0.5359595194458961,
+            0.3045159578323364,
+            0.15872827172279358,
+            0.08079516887664795
+          ],
+          "start_version": 0,
+          "source_geometry_gain": 0.0,
+          "source_appearance_gain": 0.0,
+          "geometry_radius": 0.25,
+          "appearance_radius": 0.03125,
+          "witness_advantages": [],
+          "renders": 20,
+          "end_version": 0
+        },
+        {
+          "accepted": false,
+          "reason": "unmatched source fit; geometry attribution is inconclusive",
+          "source_base_loss": 0.6103068590164185,
+          "geometry_grad_norm": 0.6568783521652222,
+          "appearance_grad_norm": 0.6086543798446655,
+          "geometry_source_gains": [
+            0.0419163703918457,
+            0.03168678283691406,
+            0.01758265495300293
+          ],
+          "appearance_source_gains": [
+            0.5359595194458961,
+            0.3045159578323364,
+            0.15872827172279358,
+            0.08079516887664795
+          ],
+          "start_version": 0,
+          "source_geometry_gain": 0.0,
+          "source_appearance_gain": 0.0,
+          "geometry_radius": 0.25,
+          "appearance_radius": 0.03125,
+          "witness_advantages": [],
+          "renders": 20,
+          "end_version": 0
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "case": "mixed",
+      "before": {
+        "rgb_mse": 0.00012107317161280662,
+        "rgb_psnr": 39.169520807325036,
+        "center_rmse": 0.0317542664706707
+      },
+      "after": {
+        "rgb_mse": 0.00012107317161280662,
+        "rgb_psnr": 39.169520807325036,
+        "center_rmse": 0.0317542664706707
+      },
+      "seconds": 0.1533439999911934,
+      "transactions": [
+        {
+          "accepted": false,
+          "reason": "unmatched source fit; geometry attribution is inconclusive",
+          "source_base_loss": 0.7630897760391235,
+          "geometry_grad_norm": 1.929421067237854,
+          "appearance_grad_norm": 0.5050933957099915,
+          "geometry_source_gains": [
+            0.15555024147033691,
+            0.13323646783828735,
+            0.0849924087524414,
+            0.04637181758880615
+          ],
+          "appearance_source_gains": [
+            0.3652004897594452,
+            0.2270430326461792,
+            0.12395632266998291,
+            0.06441473960876465
+          ],
+          "start_version": 0,
+          "source_geometry_gain": 0.0,
+          "source_appearance_gain": 0.0,
+          "geometry_radius": 0.5,
+          "appearance_radius": 0.0625,
+          "witness_advantages": [],
+          "renders": 20,
+          "end_version": 0
+        },
+        {
+          "accepted": false,
+          "reason": "unmatched source fit; geometry attribution is inconclusive",
+          "source_base_loss": 0.7630897760391235,
+          "geometry_grad_norm": 1.929421067237854,
+          "appearance_grad_norm": 0.5050933957099915,
+          "geometry_source_gains": [
+            0.15555024147033691,
+            0.13323646783828735,
+            0.0849924087524414,
+            0.04637181758880615
+          ],
+          "appearance_source_gains": [
+            0.3652004897594452,
+            0.2270430326461792,
+            0.12395632266998291,
+            0.06441473960876465
+          ],
+          "start_version": 0,
+          "source_geometry_gain": 0.0,
+          "source_appearance_gain": 0.0,
+          "geometry_radius": 0.5,
+          "appearance_radius": 0.0625,
+          "witness_advantages": [],
+          "renders": 20,
+          "end_version": 0
+        },
+        {
+          "accepted": false,
+          "reason": "unmatched source fit; geometry attribution is inconclusive",
+          "source_base_loss": 0.7630897760391235,
+          "geometry_grad_norm": 1.929421067237854,
+          "appearance_grad_norm": 0.5050933957099915,
+          "geometry_source_gains": [
+            0.15555024147033691,
+            0.13323646783828735,
+            0.0849924087524414,
+            0.04637181758880615
+          ],
+          "appearance_source_gains": [
+            0.3652004897594452,
+            0.2270430326461792,
+            0.12395632266998291,
+            0.06441473960876465
+          ],
+          "start_version": 0,
+          "source_geometry_gain": 0.0,
+          "source_appearance_gain": 0.0,
+          "geometry_radius": 0.5,
+          "appearance_radius": 0.0625,
+          "witness_advantages": [],
+          "renders": 20,
+          "end_version": 0
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "case": "unchanged",
+      "before": {
+        "rgb_mse": 0.0,
+        "rgb_psnr": 150.0,
+        "center_rmse": 0.0
+      },
+      "after": {
+        "rgb_mse": 0.0,
+        "rgb_psnr": 150.0,
+        "center_rmse": 0.0
+      },
+      "seconds": 0.11053700000047684,
+      "transactions": [
+        {
+          "accepted": false,
+          "reason": "no finite improving geometry / bounded appearance candidate",
+          "source_base_loss": 0.0,
+          "geometry_grad_norm": 0.0,
+          "appearance_grad_norm": 0.0,
+          "geometry_source_gains": [],
+          "appearance_source_gains": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_version": 0,
+          "renders": 11,
+          "end_version": 0
+        },
+        {
+          "accepted": false,
+          "reason": "no finite improving geometry / bounded appearance candidate",
+          "source_base_loss": 0.0,
+          "geometry_grad_norm": 0.0,
+          "appearance_grad_norm": 0.0,
+          "geometry_source_gains": [],
+          "appearance_source_gains": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_version": 0,
+          "renders": 11,
+          "end_version": 0
+        },
+        {
+          "accepted": false,
+          "reason": "no finite improving geometry / bounded appearance candidate",
+          "source_base_loss": 0.0,
+          "geometry_grad_norm": 0.0,
+          "appearance_grad_norm": 0.0,
+          "geometry_source_gains": [],
+          "appearance_source_gains": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_version": 0,
+          "renders": 11,
+          "end_version": 0
+        }
+      ]
+    },
+    {
+      "seed": 2,
+      "case": "geometry",
+      "before": {
+        "rgb_mse": 0.00010792591638164595,
+        "rgb_psnr": 39.66874255131249,
+        "center_rmse": 0.0317542664706707
+      },
+      "after": {
+        "rgb_mse": 0.00010792591638164595,
+        "rgb_psnr": 39.66874255131249,
+        "center_rmse": 0.0317542664706707
+      },
+      "seconds": 0.14720599999418482,
+      "transactions": [
+        {
+          "accepted": false,
+          "reason": "unmatched source fit; geometry attribution is inconclusive",
+          "source_base_loss": 0.3707704246044159,
+          "geometry_grad_norm": 2.634038209915161,
+          "appearance_grad_norm": 0.11606783419847488,
+          "geometry_source_gains": [
+            0.304800420999527,
+            0.22983887791633606,
+            0.1259961575269699,
+            0.06499400734901428
+          ],
+          "appearance_source_gains": [
+            -0.27563050389289856,
+            -0.02489340305328369,
+            0.020251601934432983,
+            0.01871711015701294,
+            0.011501312255859375
+          ],
+          "start_version": 0,
+          "source_geometry_gain": 0.0,
+          "source_appearance_gain": 0.0,
+          "geometry_radius": 0.5,
+          "appearance_radius": 0.125,
+          "witness_advantages": [],
+          "renders": 20,
+          "end_version": 0
+        },
+        {
+          "accepted": false,
+          "reason": "unmatched source fit; geometry attribution is inconclusive",
+          "source_base_loss": 0.3707704246044159,
+          "geometry_grad_norm": 2.634038209915161,
+          "appearance_grad_norm": 0.11606783419847488,
+          "geometry_source_gains": [
+            0.304800420999527,
+            0.22983887791633606,
+            0.1259961575269699,
+            0.06499400734901428
+          ],
+          "appearance_source_gains": [
+            -0.27563050389289856,
+            -0.02489340305328369,
+            0.020251601934432983,
+            0.01871711015701294,
+            0.011501312255859375
+          ],
+          "start_version": 0,
+          "source_geometry_gain": 0.0,
+          "source_appearance_gain": 0.0,
+          "geometry_radius": 0.5,
+          "appearance_radius": 0.125,
+          "witness_advantages": [],
+          "renders": 20,
+          "end_version": 0
+        },
+        {
+          "accepted": false,
+          "reason": "unmatched source fit; geometry attribution is inconclusive",
+          "source_base_loss": 0.3707704246044159,
+          "geometry_grad_norm": 2.634038209915161,
+          "appearance_grad_norm": 0.11606783419847488,
+          "geometry_source_gains": [
+            0.304800420999527,
+            0.22983887791633606,
+            0.1259961575269699,
+            0.06499400734901428
+          ],
+          "appearance_source_gains": [
+            -0.27563050389289856,
+            -0.02489340305328369,
+            0.020251601934432983,
+            0.01871711015701294,
+            0.011501312255859375
+          ],
+          "start_version": 0,
+          "source_geometry_gain": 0.0,
+          "source_appearance_gain": 0.0,
+          "geometry_radius": 0.5,
+          "appearance_radius": 0.125,
+          "witness_advantages": [],
+          "renders": 20,
+          "end_version": 0
+        }
+      ]
+    },
+    {
+      "seed": 2,
+      "case": "appearance",
+      "before": {
+        "rgb_mse": 0.0,
+        "rgb_psnr": 150.0,
+        "center_rmse": 0.0
+      },
+      "after": {
+        "rgb_mse": 0.0,
+        "rgb_psnr": 150.0,
+        "center_rmse": 0.0
+      },
+      "seconds": 0.14650639999308623,
+      "transactions": [
+        {
+          "accepted": false,
+          "reason": "unmatched source fit; geometry attribution is inconclusive",
+          "source_base_loss": 0.6191729307174683,
+          "geometry_grad_norm": 0.690150260925293,
+          "appearance_grad_norm": 0.6177513599395752,
+          "geometry_source_gains": [
+            0.001728653907775879,
+            0.05238616466522217,
+            0.03589451313018799,
+            0.02027207612991333
+          ],
+          "appearance_source_gains": [
+            0.5433339327573776,
+            0.3083515465259552,
+            0.16065359115600586,
+            0.08175826072692871
+          ],
+          "start_version": 0,
+          "source_geometry_gain": 0.0,
+          "source_appearance_gain": 0.0,
+          "geometry_radius": 0.25,
+          "appearance_radius": 0.03125,
+          "witness_advantages": [],
+          "renders": 20,
+          "end_version": 0
+        },
+        {
+          "accepted": false,
+          "reason": "unmatched source fit; geometry attribution is inconclusive",
+          "source_base_loss": 0.6191729307174683,
+          "geometry_grad_norm": 0.690150260925293,
+          "appearance_grad_norm": 0.6177513599395752,
+          "geometry_source_gains": [
+            0.001728653907775879,
+            0.05238616466522217,
+            0.03589451313018799,
+            0.02027207612991333
+          ],
+          "appearance_source_gains": [
+            0.5433339327573776,
+            0.3083515465259552,
+            0.16065359115600586,
+            0.08175826072692871
+          ],
+          "start_version": 0,
+          "source_geometry_gain": 0.0,
+          "source_appearance_gain": 0.0,
+          "geometry_radius": 0.25,
+          "appearance_radius": 0.03125,
+          "witness_advantages": [],
+          "renders": 20,
+          "end_version": 0
+        },
+        {
+          "accepted": false,
+          "reason": "unmatched source fit; geometry attribution is inconclusive",
+          "source_base_loss": 0.6191729307174683,
+          "geometry_grad_norm": 0.690150260925293,
+          "appearance_grad_norm": 0.6177513599395752,
+          "geometry_source_gains": [
+            0.001728653907775879,
+            0.05238616466522217,
+            0.03589451313018799,
+            0.02027207612991333
+          ],
+          "appearance_source_gains": [
+            0.5433339327573776,
+            0.3083515465259552,
+            0.16065359115600586,
+            0.08175826072692871
+          ],
+          "start_version": 0,
+          "source_geometry_gain": 0.0,
+          "source_appearance_gain": 0.0,
+          "geometry_radius": 0.25,
+          "appearance_radius": 0.03125,
+          "witness_advantages": [],
+          "renders": 20,
+          "end_version": 0
+        }
+      ]
+    },
+    {
+      "seed": 2,
+      "case": "mixed",
+      "before": {
+        "rgb_mse": 0.00010792591638164595,
+        "rgb_psnr": 39.66874255131249,
+        "center_rmse": 0.0317542664706707
+      },
+      "after": {
+        "rgb_mse": 0.00010792591638164595,
+        "rgb_psnr": 39.66874255131249,
+        "center_rmse": 0.0317542664706707
+      },
+      "seconds": 0.14145270001608878,
+      "transactions": [
+        {
+          "accepted": false,
+          "reason": "unmatched source fit; geometry attribution is inconclusive",
+          "source_base_loss": 0.8016180992126465,
+          "geometry_grad_norm": 2.47830867767334,
+          "appearance_grad_norm": 0.49709993600845337,
+          "geometry_source_gains": [
+            0.17010879516601562,
+            0.1574116349220276,
+            0.09863734245300293,
+            0.05458718538284302
+          ],
+          "appearance_source_gains": [
+            0.3768630027770996,
+            0.230002760887146,
+            0.12482911348342896,
+            0.06477272510528564
+          ],
+          "start_version": 0,
+          "source_geometry_gain": 0.0,
+          "source_appearance_gain": 0.0,
+          "geometry_radius": 0.5,
+          "appearance_radius": 0.0625,
+          "witness_advantages": [],
+          "renders": 20,
+          "end_version": 0
+        },
+        {
+          "accepted": false,
+          "reason": "unmatched source fit; geometry attribution is inconclusive",
+          "source_base_loss": 0.8016180992126465,
+          "geometry_grad_norm": 2.47830867767334,
+          "appearance_grad_norm": 0.49709993600845337,
+          "geometry_source_gains": [
+            0.17010879516601562,
+            0.1574116349220276,
+            0.09863734245300293,
+            0.05458718538284302
+          ],
+          "appearance_source_gains": [
+            0.3768630027770996,
+            0.230002760887146,
+            0.12482911348342896,
+            0.06477272510528564
+          ],
+          "start_version": 0,
+          "source_geometry_gain": 0.0,
+          "source_appearance_gain": 0.0,
+          "geometry_radius": 0.5,
+          "appearance_radius": 0.0625,
+          "witness_advantages": [],
+          "renders": 20,
+          "end_version": 0
+        },
+        {
+          "accepted": false,
+          "reason": "unmatched source fit; geometry attribution is inconclusive",
+          "source_base_loss": 0.8016180992126465,
+          "geometry_grad_norm": 2.47830867767334,
+          "appearance_grad_norm": 0.49709993600845337,
+          "geometry_source_gains": [
+            0.17010879516601562,
+            0.1574116349220276,
+            0.09863734245300293,
+            0.05458718538284302
+          ],
+          "appearance_source_gains": [
+            0.3768630027770996,
+            0.230002760887146,
+            0.12482911348342896,
+            0.06477272510528564
+          ],
+          "start_version": 0,
+          "source_geometry_gain": 0.0,
+          "source_appearance_gain": 0.0,
+          "geometry_radius": 0.5,
+          "appearance_radius": 0.0625,
+          "witness_advantages": [],
+          "renders": 20,
+          "end_version": 0
+        }
+      ]
+    },
+    {
+      "seed": 2,
+      "case": "unchanged",
+      "before": {
+        "rgb_mse": 0.0,
+        "rgb_psnr": 150.0,
+        "center_rmse": 0.0
+      },
+      "after": {
+        "rgb_mse": 0.0,
+        "rgb_psnr": 150.0,
+        "center_rmse": 0.0
+      },
+      "seconds": 0.10861490000388585,
+      "transactions": [
+        {
+          "accepted": false,
+          "reason": "no finite improving geometry / bounded appearance candidate",
+          "source_base_loss": 0.0,
+          "geometry_grad_norm": 0.0,
+          "appearance_grad_norm": 0.0,
+          "geometry_source_gains": [],
+          "appearance_source_gains": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_version": 0,
+          "renders": 11,
+          "end_version": 0
+        },
+        {
+          "accepted": false,
+          "reason": "no finite improving geometry / bounded appearance candidate",
+          "source_base_loss": 0.0,
+          "geometry_grad_norm": 0.0,
+          "appearance_grad_norm": 0.0,
+          "geometry_source_gains": [],
+          "appearance_source_gains": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_version": 0,
+          "renders": 11,
+          "end_version": 0
+        },
+        {
+          "accepted": false,
+          "reason": "no finite improving geometry / bounded appearance candidate",
+          "source_base_loss": 0.0,
+          "geometry_grad_norm": 0.0,
+          "appearance_grad_norm": 0.0,
+          "geometry_source_gains": [],
+          "appearance_source_gains": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_version": 0,
+          "renders": 11,
+          "end_version": 0
+        }
+      ]
+    }
+  ],
+  "source_sha256": {
+    "core.py": "8589dad9f8620d681d3f40a6239fc5c139152b6d85775afb33b3f1a442158f0d",
+    "engine.py": "f69773bc551c176a4d83e41a000201c6c4747f76471dc05c262199aafa1ce21c",
+    "probe.py": "f7aeb259299585e572ed93cc75605a74cf8d421892b86e842640105d73fd6fb4",
+    "runtime.py": "5192af0038ee36eb8036e9682cc54fb190ed9b8c48e5b15bdfbea9aeb47075ec",
+    "synthetic.py": "c321b7d69c106baa5554a170a252367cbf126f5aa2b4814527c354639accafbf",
+    "test_core.py": "1fd2f12d1e685b6e5a5e3be8c33cd52bdd3093798b3bd645e994abbe50e14440",
+    "__init__.py": "f8ac7a670953761546cb9df181545c97cb6725798e4c2b82c183a62c1ceaa0ea"
+  }
+}

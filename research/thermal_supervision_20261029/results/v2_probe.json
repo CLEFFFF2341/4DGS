@@ -1,0 +1,808 @@
+{
+  "scope": "synthetic known 20-Gaussian scenes, same native renderer for generation/evaluation; no real-data claim",
+  "config": {
+    "geometry_radii": [
+      0.5,
+      0.25,
+      0.125,
+      0.0625
+    ],
+    "appearance_radii": [
+      1.0,
+      0.5,
+      0.25,
+      0.125,
+      0.0625,
+      0.03125
+    ],
+    "cumulative_radius": 2.0,
+    "thermal_weight": 1.0,
+    "static_scene": true,
+    "gate": {
+      "min_pixels": 64,
+      "min_source_gain": 1e-05,
+      "min_witness_gain": 1e-05,
+      "appearance_advantage_margin": 1e-05,
+      "source_gain_relative_tolerance": 0.2,
+      "max_source_change": 2.0,
+      "max_rgb_loss_increase": 1e-06,
+      "max_rgb_anchor_increase": 1e-06,
+      "min_witness_views": 1,
+      "synchronization_tolerance": 0.0001
+    },
+    "appearance_steps": 8,
+    "min_baseline_scales": 0.5,
+    "min_local_pixels": 64,
+    "min_local_coverage": 0.5,
+    "support_threshold": 0.01
+  },
+  "steps": 3,
+  "rows": [
+    {
+      "seed": 0,
+      "case": "geometry",
+      "before": {
+        "rgb_mse": 0.00013607085566036403,
+        "rgb_psnr": 38.662348842109196,
+        "center_rmse": 0.0317542664706707
+      },
+      "after": {
+        "rgb_mse": 1.925717697304208e-05,
+        "rgb_psnr": 47.154073784207746,
+        "center_rmse": 0.014294378459453583
+      },
+      "seconds": 0.6760379000043031,
+      "transactions": [
+        {
+          "accepted": true,
+          "reason": "profiled geometry accepted",
+          "start_version": 0,
+          "source_original_loss": 0.38310766220092773,
+          "source_profiled_loss": 0.35386866331100464,
+          "geometry_grad_norm": 2.464348316192627,
+          "source_geometry_gain": 0.2474840134382248,
+          "geometry_radius": 0.5,
+          "witness_gains": [
+            {
+              "over_profiled": 0.2603553235530853,
+              "over_live": 0.28403568267822266
+            }
+          ],
+          "rgb_local_coverage": [
+            1.0
+          ],
+          "end_version": 1,
+          "renders": 77
+        },
+        {
+          "accepted": true,
+          "reason": "profiled geometry accepted",
+          "start_version": 1,
+          "source_original_loss": 0.10638464987277985,
+          "source_profiled_loss": 0.04567224532365799,
+          "geometry_grad_norm": 1.243677020072937,
+          "source_geometry_gain": 0.010677330195903778,
+          "geometry_radius": 0.0625,
+          "witness_gains": [
+            {
+              "over_profiled": 0.006313014775514603,
+              "over_live": 0.06667107343673706
+            }
+          ],
+          "rgb_local_coverage": [
+            1.0
+          ],
+          "end_version": 2,
+          "renders": 77
+        },
+        {
+          "accepted": true,
+          "reason": "profiled geometry accepted",
+          "start_version": 2,
+          "source_original_loss": 0.03499491512775421,
+          "source_profiled_loss": 0.03499491512775421,
+          "geometry_grad_norm": 0.9655463099479675,
+          "source_geometry_gain": 0.00480588898062706,
+          "geometry_radius": 0.0625,
+          "witness_gains": [
+            {
+              "over_profiled": 0.003050573170185089,
+              "over_live": 0.003050573170185089
+            }
+          ],
+          "rgb_local_coverage": [
+            1.0
+          ],
+          "end_version": 3,
+          "renders": 77
+        }
+      ]
+    },
+    {
+      "seed": 0,
+      "case": "appearance",
+      "before": {
+        "rgb_mse": 0.0,
+        "rgb_psnr": 150.0,
+        "center_rmse": 0.0
+      },
+      "after": {
+        "rgb_mse": 0.0,
+        "rgb_psnr": 150.0,
+        "center_rmse": 0.0
+      },
+      "seconds": 0.5482868000108283,
+      "transactions": [
+        {
+          "accepted": false,
+          "reason": "no source residual geometry improvement",
+          "start_version": 0,
+          "source_original_loss": 0.6397128105163574,
+          "source_profiled_loss": 0.000340066384524107,
+          "geometry_grad_norm": 0.02239322103559971,
+          "end_version": 0,
+          "renders": 62
+        },
+        {
+          "accepted": false,
+          "reason": "no source residual geometry improvement",
+          "start_version": 0,
+          "source_original_loss": 0.6397128105163574,
+          "source_profiled_loss": 0.000340066384524107,
+          "geometry_grad_norm": 0.02239321917295456,
+          "end_version": 0,
+          "renders": 62
+        },
+        {
+          "accepted": false,
+          "reason": "no source residual geometry improvement",
+          "start_version": 0,
+          "source_original_loss": 0.6397128105163574,
+          "source_profiled_loss": 0.000340066384524107,
+          "geometry_grad_norm": 0.02239321917295456,
+          "end_version": 0,
+          "renders": 62
+        }
+      ]
+    },
+    {
+      "seed": 0,
+      "case": "mixed",
+      "before": {
+        "rgb_mse": 0.00013607085566036403,
+        "rgb_psnr": 38.662348842109196,
+        "center_rmse": 0.0317542664706707
+      },
+      "after": {
+        "rgb_mse": 3.1271313218894647e-06,
+        "rgb_psnr": 55.04853880453769,
+        "center_rmse": 0.007946309633553028
+      },
+      "seconds": 0.5690044999937527,
+      "transactions": [
+        {
+          "accepted": true,
+          "reason": "profiled geometry accepted",
+          "start_version": 0,
+          "source_original_loss": 0.8248111009597778,
+          "source_profiled_loss": 0.35390135645866394,
+          "geometry_grad_norm": 2.4467663764953613,
+          "source_geometry_gain": 0.1130148321390152,
+          "geometry_radius": 0.125,
+          "witness_gains": [
+            {
+              "over_profiled": 0.11256521940231323,
+              "over_live": 0.5553506314754486
+            }
+          ],
+          "rgb_local_coverage": [
+            1.0
+          ],
+          "end_version": 1,
+          "renders": 77
+        },
+        {
+          "accepted": true,
+          "reason": "profiled geometry accepted",
+          "start_version": 1,
+          "source_original_loss": 0.24088652431964874,
+          "source_profiled_loss": 0.23708376288414001,
+          "geometry_grad_norm": 2.3402442932128906,
+          "source_geometry_gain": 0.17722639441490173,
+          "geometry_radius": 0.25,
+          "witness_gains": [
+            {
+              "over_profiled": 0.1828363537788391,
+              "over_live": 0.18640479445457458
+            }
+          ],
+          "rgb_local_coverage": [
+            1.0
+          ],
+          "end_version": 2,
+          "renders": 77
+        },
+        {
+          "accepted": true,
+          "reason": "profiled geometry accepted",
+          "start_version": 2,
+          "source_original_loss": 0.05985736846923828,
+          "source_profiled_loss": 0.0392267182469368,
+          "geometry_grad_norm": 1.459675669670105,
+          "source_geometry_gain": 0.025573907420039177,
+          "geometry_radius": 0.125,
+          "witness_gains": [
+            {
+              "over_profiled": 0.031910499557852745,
+              "over_live": 0.05222065560519695
+            }
+          ],
+          "rgb_local_coverage": [
+            1.0
+          ],
+          "end_version": 3,
+          "renders": 77
+        }
+      ]
+    },
+    {
+      "seed": 0,
+      "case": "unchanged",
+      "before": {
+        "rgb_mse": 0.0,
+        "rgb_psnr": 150.0,
+        "center_rmse": 0.0
+      },
+      "after": {
+        "rgb_mse": 0.0,
+        "rgb_psnr": 150.0,
+        "center_rmse": 0.0
+      },
+      "seconds": 0.5186132000235375,
+      "transactions": [
+        {
+          "accepted": false,
+          "reason": "no source residual geometry improvement",
+          "start_version": 0,
+          "source_original_loss": 0.0,
+          "source_profiled_loss": 0.0,
+          "geometry_grad_norm": 0.0,
+          "end_version": 0,
+          "renders": 62
+        },
+        {
+          "accepted": false,
+          "reason": "no source residual geometry improvement",
+          "start_version": 0,
+          "source_original_loss": 0.0,
+          "source_profiled_loss": 0.0,
+          "geometry_grad_norm": 0.0,
+          "end_version": 0,
+          "renders": 62
+        },
+        {
+          "accepted": false,
+          "reason": "no source residual geometry improvement",
+          "start_version": 0,
+          "source_original_loss": 0.0,
+          "source_profiled_loss": 0.0,
+          "geometry_grad_norm": 0.0,
+          "end_version": 0,
+          "renders": 62
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "case": "geometry",
+      "before": {
+        "rgb_mse": 0.00012107317161280662,
+        "rgb_psnr": 39.169520807325036,
+        "center_rmse": 0.0317542664706707
+      },
+      "after": {
+        "rgb_mse": 1.1033938790205866e-05,
+        "rgb_psnr": 49.572694295816106,
+        "center_rmse": 0.009788453578948975
+      },
+      "seconds": 0.54702329999418,
+      "transactions": [
+        {
+          "accepted": true,
+          "reason": "profiled geometry accepted",
+          "start_version": 0,
+          "source_original_loss": 0.35322487354278564,
+          "source_profiled_loss": 0.3283173441886902,
+          "geometry_grad_norm": 2.210040807723999,
+          "source_geometry_gain": 0.2438129484653473,
+          "geometry_radius": 0.5,
+          "witness_gains": [
+            {
+              "over_profiled": 0.2527078241109848,
+              "over_live": 0.28116707503795624
+            }
+          ],
+          "rgb_local_coverage": [
+            1.0
+          ],
+          "end_version": 1,
+          "renders": 77
+        },
+        {
+          "accepted": false,
+          "reason": "independent witness rejects profiled geometry",
+          "start_version": 1,
+          "source_original_loss": 0.0845043957233429,
+          "source_profiled_loss": 0.013030091300606728,
+          "geometry_grad_norm": 0.8214824199676514,
+          "source_geometry_gain": 0.0023760413751006126,
+          "geometry_radius": 0.0625,
+          "witness_gains": [
+            {
+              "over_profiled": -0.0021679215133190155,
+              "over_live": 0.06592602096498013
+            }
+          ],
+          "end_version": 1,
+          "renders": 65
+        },
+        {
+          "accepted": false,
+          "reason": "independent witness rejects profiled geometry",
+          "start_version": 1,
+          "source_original_loss": 0.0845043957233429,
+          "source_profiled_loss": 0.013030091300606728,
+          "geometry_grad_norm": 0.8214824199676514,
+          "source_geometry_gain": 0.0023760413751006126,
+          "geometry_radius": 0.0625,
+          "witness_gains": [
+            {
+              "over_profiled": -0.0021679215133190155,
+              "over_live": 0.06592602096498013
+            }
+          ],
+          "end_version": 1,
+          "renders": 65
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "case": "appearance",
+      "before": {
+        "rgb_mse": 0.0,
+        "rgb_psnr": 150.0,
+        "center_rmse": 0.0
+      },
+      "after": {
+        "rgb_mse": 0.0,
+        "rgb_psnr": 150.0,
+        "center_rmse": 0.0
+      },
+      "seconds": 0.5307564999966417,
+      "transactions": [
+        {
+          "accepted": false,
+          "reason": "no source residual geometry improvement",
+          "start_version": 0,
+          "source_original_loss": 0.6103068590164185,
+          "source_profiled_loss": 0.0003113684942945838,
+          "geometry_grad_norm": 0.019036896526813507,
+          "end_version": 0,
+          "renders": 62
+        },
+        {
+          "accepted": false,
+          "reason": "no source residual geometry improvement",
+          "start_version": 0,
+          "source_original_loss": 0.6103068590164185,
+          "source_profiled_loss": 0.0003113684942945838,
+          "geometry_grad_norm": 0.019036896526813507,
+          "end_version": 0,
+          "renders": 62
+        },
+        {
+          "accepted": false,
+          "reason": "no source residual geometry improvement",
+          "start_version": 0,
+          "source_original_loss": 0.6103068590164185,
+          "source_profiled_loss": 0.0003113684942945838,
+          "geometry_grad_norm": 0.019036896526813507,
+          "end_version": 0,
+          "renders": 62
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "case": "mixed",
+      "before": {
+        "rgb_mse": 0.00012107317161280662,
+        "rgb_psnr": 39.169520807325036,
+        "center_rmse": 0.0317542664706707
+      },
+      "after": {
+        "rgb_mse": 6.695634965581121e-06,
+        "rgb_psnr": 51.74208231352193,
+        "center_rmse": 0.008271994069218636
+      },
+      "seconds": 0.55480539999553,
+      "transactions": [
+        {
+          "accepted": true,
+          "reason": "profiled geometry accepted",
+          "start_version": 0,
+          "source_original_loss": 0.7630897760391235,
+          "source_profiled_loss": 0.32837244868278503,
+          "geometry_grad_norm": 2.227022171020508,
+          "source_geometry_gain": 0.19231624901294708,
+          "geometry_radius": 0.25,
+          "witness_gains": [
+            {
+              "over_profiled": 0.19345450401306152,
+              "over_live": 0.6077265739440918
+            }
+          ],
+          "rgb_local_coverage": [
+            1.0
+          ],
+          "end_version": 1,
+          "renders": 77
+        },
+        {
+          "accepted": true,
+          "reason": "profiled geometry accepted",
+          "start_version": 1,
+          "source_original_loss": 0.13605619966983795,
+          "source_profiled_loss": 0.11746273934841156,
+          "geometry_grad_norm": 1.9228862524032593,
+          "source_geometry_gain": 0.08977371454238892,
+          "geometry_radius": 0.25,
+          "witness_gains": [
+            {
+              "over_profiled": 0.0983114019036293,
+              "over_live": 0.1139618381857872
+            }
+          ],
+          "rgb_local_coverage": [
+            1.0
+          ],
+          "end_version": 2,
+          "renders": 77
+        },
+        {
+          "accepted": true,
+          "reason": "profiled geometry accepted",
+          "start_version": 2,
+          "source_original_loss": 0.027689024806022644,
+          "source_profiled_loss": 0.014329740777611732,
+          "geometry_grad_norm": 1.0071568489074707,
+          "source_geometry_gain": 0.005074383690953255,
+          "geometry_radius": 0.0625,
+          "witness_gains": [
+            {
+              "over_profiled": 0.000554429367184639,
+              "over_live": 0.012912062928080559
+            }
+          ],
+          "rgb_local_coverage": [
+            1.0
+          ],
+          "end_version": 3,
+          "renders": 77
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "case": "unchanged",
+      "before": {
+        "rgb_mse": 0.0,
+        "rgb_psnr": 150.0,
+        "center_rmse": 0.0
+      },
+      "after": {
+        "rgb_mse": 0.0,
+        "rgb_psnr": 150.0,
+        "center_rmse": 0.0
+      },
+      "seconds": 0.5224057000014,
+      "transactions": [
+        {
+          "accepted": false,
+          "reason": "no source residual geometry improvement",
+          "start_version": 0,
+          "source_original_loss": 0.0,
+          "source_profiled_loss": 0.0,
+          "geometry_grad_norm": 0.0,
+          "end_version": 0,
+          "renders": 62
+        },
+        {
+          "accepted": false,
+          "reason": "no source residual geometry improvement",
+          "start_version": 0,
+          "source_original_loss": 0.0,
+          "source_profiled_loss": 0.0,
+          "geometry_grad_norm": 0.0,
+          "end_version": 0,
+          "renders": 62
+        },
+        {
+          "accepted": false,
+          "reason": "no source residual geometry improvement",
+          "start_version": 0,
+          "source_original_loss": 0.0,
+          "source_profiled_loss": 0.0,
+          "geometry_grad_norm": 0.0,
+          "end_version": 0,
+          "renders": 62
+        }
+      ]
+    },
+    {
+      "seed": 2,
+      "case": "geometry",
+      "before": {
+        "rgb_mse": 0.00010792591638164595,
+        "rgb_psnr": 39.66874255131249,
+        "center_rmse": 0.0317542664706707
+      },
+      "after": {
+        "rgb_mse": 4.573385012918152e-05,
+        "rgb_psnr": 43.39762235761823,
+        "center_rmse": 0.018588842824101448
+      },
+      "seconds": 0.5555466999940109,
+      "transactions": [
+        {
+          "accepted": true,
+          "reason": "profiled geometry accepted",
+          "start_version": 0,
+          "source_original_loss": 0.3707704246044159,
+          "source_profiled_loss": 0.33998584747314453,
+          "geometry_grad_norm": 2.293156623840332,
+          "source_geometry_gain": 0.20253363251686096,
+          "geometry_radius": 0.5,
+          "witness_gains": [
+            {
+              "over_profiled": 0.209978848695755,
+              "over_live": 0.23764142394065857
+            }
+          ],
+          "rgb_local_coverage": [
+            1.0
+          ],
+          "end_version": 1,
+          "renders": 77
+        },
+        {
+          "accepted": true,
+          "reason": "profiled geometry accepted",
+          "start_version": 1,
+          "source_original_loss": 0.13745221495628357,
+          "source_profiled_loss": 0.06156216561794281,
+          "geometry_grad_norm": 1.0709304809570312,
+          "source_geometry_gain": 0.010529469698667526,
+          "geometry_radius": 0.0625,
+          "witness_gains": [
+            {
+              "over_profiled": 0.007864896208047867,
+              "over_live": 0.07921746745705605
+            }
+          ],
+          "rgb_local_coverage": [
+            1.0
+          ],
+          "end_version": 2,
+          "renders": 77
+        },
+        {
+          "accepted": true,
+          "reason": "profiled geometry accepted",
+          "start_version": 2,
+          "source_original_loss": 0.051032695919275284,
+          "source_profiled_loss": 0.051032695919275284,
+          "geometry_grad_norm": 0.9026888608932495,
+          "source_geometry_gain": 0.005913142114877701,
+          "geometry_radius": 0.0625,
+          "witness_gains": [
+            {
+              "over_profiled": 0.006267182528972626,
+              "over_live": 0.006267182528972626
+            }
+          ],
+          "rgb_local_coverage": [
+            1.0
+          ],
+          "end_version": 3,
+          "renders": 77
+        }
+      ]
+    },
+    {
+      "seed": 2,
+      "case": "appearance",
+      "before": {
+        "rgb_mse": 0.0,
+        "rgb_psnr": 150.0,
+        "center_rmse": 0.0
+      },
+      "after": {
+        "rgb_mse": 0.0,
+        "rgb_psnr": 150.0,
+        "center_rmse": 0.0
+      },
+      "seconds": 0.5082298000052106,
+      "transactions": [
+        {
+          "accepted": false,
+          "reason": "no source residual geometry improvement",
+          "start_version": 0,
+          "source_original_loss": 0.6191729307174683,
+          "source_profiled_loss": 0.0003187706461176276,
+          "geometry_grad_norm": 0.021237825974822044,
+          "end_version": 0,
+          "renders": 62
+        },
+        {
+          "accepted": false,
+          "reason": "no source residual geometry improvement",
+          "start_version": 0,
+          "source_original_loss": 0.6191729307174683,
+          "source_profiled_loss": 0.0003187706461176276,
+          "geometry_grad_norm": 0.021237825974822044,
+          "end_version": 0,
+          "renders": 62
+        },
+        {
+          "accepted": false,
+          "reason": "no source residual geometry improvement",
+          "start_version": 0,
+          "source_original_loss": 0.6191729307174683,
+          "source_profiled_loss": 0.0003187706461176276,
+          "geometry_grad_norm": 0.021237825974822044,
+          "end_version": 0,
+          "renders": 62
+        }
+      ]
+    },
+    {
+      "seed": 2,
+      "case": "mixed",
+      "before": {
+        "rgb_mse": 0.00010792591638164595,
+        "rgb_psnr": 39.66874255131249,
+        "center_rmse": 0.0317542664706707
+      },
+      "after": {
+        "rgb_mse": 1.3205399227445014e-05,
+        "rgb_psnr": 48.79248464608097,
+        "center_rmse": 0.011228426359593868
+      },
+      "seconds": 0.5649816000077408,
+      "transactions": [
+        {
+          "accepted": true,
+          "reason": "profiled geometry accepted",
+          "start_version": 0,
+          "source_original_loss": 0.8016180992126465,
+          "source_profiled_loss": 0.3400009274482727,
+          "geometry_grad_norm": 2.3088207244873047,
+          "source_geometry_gain": 0.18858590722084045,
+          "geometry_radius": 0.25,
+          "witness_gains": [
+            {
+              "over_profiled": 0.18839558959007263,
+              "over_live": 0.641300767660141
+            }
+          ],
+          "rgb_local_coverage": [
+            1.0
+          ],
+          "end_version": 1,
+          "renders": 77
+        },
+        {
+          "accepted": true,
+          "reason": "profiled geometry accepted",
+          "start_version": 1,
+          "source_original_loss": 0.15141502022743225,
+          "source_profiled_loss": 0.13224375247955322,
+          "geometry_grad_norm": 1.8785407543182373,
+          "source_geometry_gain": 0.09382465481758118,
+          "geometry_radius": 0.25,
+          "witness_gains": [
+            {
+              "over_profiled": 0.09944931045174599,
+              "over_live": 0.11682604625821114
+            }
+          ],
+          "rgb_local_coverage": [
+            1.0
+          ],
+          "end_version": 2,
+          "renders": 77
+        },
+        {
+          "accepted": true,
+          "reason": "profiled geometry accepted",
+          "start_version": 2,
+          "source_original_loss": 0.038419097661972046,
+          "source_profiled_loss": 0.022992469370365143,
+          "geometry_grad_norm": 0.791269838809967,
+          "source_geometry_gain": 0.002766944468021393,
+          "geometry_radius": 0.0625,
+          "witness_gains": [
+            {
+              "over_profiled": 0.0011966843158006668,
+              "over_live": 0.014473885297775269
+            }
+          ],
+          "rgb_local_coverage": [
+            1.0
+          ],
+          "end_version": 3,
+          "renders": 77
+        }
+      ]
+    },
+    {
+      "seed": 2,
+      "case": "unchanged",
+      "before": {
+        "rgb_mse": 0.0,
+        "rgb_psnr": 150.0,
+        "center_rmse": 0.0
+      },
+      "after": {
+        "rgb_mse": 0.0,
+        "rgb_psnr": 150.0,
+        "center_rmse": 0.0
+      },
+      "seconds": 0.5387150000024121,
+      "transactions": [
+        {
+          "accepted": false,
+          "reason": "no source residual geometry improvement",
+          "start_version": 0,
+          "source_original_loss": 0.0,
+          "source_profiled_loss": 0.0,
+          "geometry_grad_norm": 0.0,
+          "end_version": 0,
+          "renders": 62
+        },
+        {
+          "accepted": false,
+          "reason": "no source residual geometry improvement",
+          "start_version": 0,
+          "source_original_loss": 0.0,
+          "source_profiled_loss": 0.0,
+          "geometry_grad_norm": 0.0,
+          "end_version": 0,
+          "renders": 62
+        },
+        {
+          "accepted": false,
+          "reason": "no source residual geometry improvement",
+          "start_version": 0,
+          "source_original_loss": 0.0,
+          "source_profiled_loss": 0.0,
+          "geometry_grad_norm": 0.0,
+          "end_version": 0,
+          "renders": 62
+        }
+      ]
+    }
+  ],
+  "source_sha256": {
+    "core.py": "8589dad9f8620d681d3f40a6239fc5c139152b6d85775afb33b3f1a442158f0d",
+    "engine.py": "f69773bc551c176a4d83e41a000201c6c4747f76471dc05c262199aafa1ce21c",
+    "probe.py": "b9dca688512f1ec8710f1bf4de33f5b8f8a66b3fcc409f99031a8021dbb216ed",
+    "profiled.py": "88685442841513573de6eea8d3e02f59e6cd8810de75d693146c16425f21da84",
+    "runtime.py": "b17706d31359c098dbef61928131b1e2645159fb86a357c9877a702c3c522d18",
+    "synthetic.py": "c321b7d69c106baa5554a170a252367cbf126f5aa2b4814527c354639accafbf",
+    "test_core.py": "1fd2f12d1e685b6e5a5e3be8c33cd52bdd3093798b3bd645e994abbe50e14440",
+    "__init__.py": "f8ac7a670953761546cb9df181545c97cb6725798e4c2b82c183a62c1ceaa0ea"
+  }
+}

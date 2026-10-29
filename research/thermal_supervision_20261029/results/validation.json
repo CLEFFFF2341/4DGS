@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-29",
+  "command": "python -m unittest discover -s experiments/thermal_supervision -t . -p test_*.py",
+  "tests": 52,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "device": "NVIDIA GeForce RTX 4090",
+  "scope": "CPU contracts, real native CUDA rendering, synthetic finite refinement, manifest and checkpoint integration; no real-data training"
+}
